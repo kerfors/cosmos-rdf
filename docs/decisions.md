@@ -4,10 +4,11 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 `docs/iri-and-governance.md` (D1–D6 there). Each is an argument, not a code
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
-D1–D12 are settled. D5 is settled but not yet exercised, since the layer it
-governs is deferred. D13–D18 are open and listed at the end: they are the
-questions the overlay phase has to answer, recorded here so that what is
-unresolved is visible rather than merely unmentioned.
+D1–D17, D19 and D20 are settled. D5 is settled but not yet exercised, since the
+layer it governs is deferred; D3 is now exercised by the overlay (see D17).
+**D18 and D21 are open with their direction settled and their implementation
+pending** — both change the core A-Box, and they ship together in one re-render,
+so there is one set of baselines rather than two.
 
 ---
 
@@ -192,8 +193,11 @@ guarantees it, and a future collision would silently merge two different
 specializations onto one IRI. The scoping costs nothing and removes that failure
 mode.
 
-**Not yet exercised.** Decision D4 defers the DSS layer, so no IRI in this scheme
-has been minted yet.
+**Now exercised, by the overlay rather than by the layer it was written for.**
+Decision D4 still defers the Dataset Specialization A-Box, so no specialization is
+rendered — but decision D17 makes a recording's subject the Dataset Specialization
+IRI, so eight IRIs in this scheme are minted in `cosmos_qbc_v1.instances.ttl` and
+carry no other triples until that layer lands.
 
 ---
 
@@ -519,56 +523,434 @@ on both sides, derived on every run.
 
 ---
 
-## Open — the questions P4 has to answer
+## D13 — The namespace for qualified concepts SETTLED 2026-09-01
 
-Stubs. Each will get the same treatment as D1–D12 — an argument with the
-measurement that settled it — when it is acted on.
+**Question.** A qualified concept has no CDISC identity — that is the point of it —
+so minting is unavoidable and is not renaming. Under which namespace?
 
-### D13 — the namespace for qualified concepts OPEN
+**Settled: `https://w3id.org/cdisc/cosmos/qbc/`**, and the overlay schema's own id
+and default prefix move there with it. The draft carried
+`id: https://w3id.org/cdisc/cosmos/sibling_bc_sketch_v0.1` and prefix `sbc:`; both
+are gone.
 
-Sibling concepts have no CDISC identity, so minting is unavoidable and is not
-renaming. But the draft instances mint them at
-`https://w3id.org/cdisc/cosmos/bc/…`, which decision D7 made the **ontology IRI of
-the core BC graph** — an authored concept inside the namespace reserved for the
-mechanical rendering. Needs a distinct segment. Settle before rendering anything:
-every instance IRI moves with it.
+**Why it had to move at all.** The draft minted concepts at
+`https://w3id.org/cdisc/cosmos/bc/GlucoseBloodQuantitative` — inside the namespace
+decision D7 made the **ontology IRI of the core BC graph**. Authored content sitting
+in the namespace reserved for the mechanical rendering of the published standard is
+precisely the core/overlay boundary this repo exists to keep. Fourteen instance IRIs
+moved with the decision, ten in the glucose file and four in HCV RNA.
 
-### D14 — how a qualified concept links to its broader concept OPEN
+**Why `qbc` and not `sibling`.** "Sibling" is the working nickname; the class the
+schema declares is `QualifiedBiomedicalConcept`. Naming the artifact after the
+metaphor rather than the class would have to be explained every time.
 
-The link target already exists: the BC A-Box renders `obo:NCIT_C105585` as a real
-node. Open is which predicate carries the relation, and whether the class-level
-`skos:broadMatch` that `gen-owl` derives from `broad_mappings` stays alongside it.
+**Why still under `/cdisc/`.** The alternative was a namespace of this repo's own,
+which is cleaner on authorship and worse on everything else: it would make a later
+transfer to CDISC an IRI change rather than a redirect change, and it would need its
+own w3id registration. The schema header already states the intent — this is
+demonstration authority, meant to transfer. Governance moves by changing the
+redirect target, exactly as `iri-and-governance.md` describes.
 
-### D15 — interpretation regimes OPEN
+**This is where decision D7 gets revisited, and the revisit is deliberate.** D7
+option A holds that this repo names its ontologies and not CDISC's terms. The
+overlay is the first deliverable that names **terms** under w3id — nine classes and
+thirty-two properties. That is legitimate on the same grounds as the concepts: none
+of them is CDISC's to rename, because CDISC never declared them. The argument
+belongs in `iri-and-governance.md`, and the guard in `30_validate.ipynb` and
+`scripts/ci_check.py` must admit the `qbc` segment **by name** rather than by
+accident.
 
-The draft schema declares the slot; no instance populates it, and no governed
-vocabulary exists behind it. Emit a stub vocabulary marked ungoverned, emit
-nothing, or emit only the fact that the slot exists. Note that D2 and D11 both
-lean toward reporting an absence rather than manufacturing a presence.
+**One hazard the scheme creates, and the guard for it.** Concepts and classes share
+one namespace, so a qualified concept named `Recording` would collide with the class
+`Recording`. Measured at this pin: **zero collisions**, asserted on every run by
+`75_render_qbc.ipynb`.
 
-### D16 — external mappings as real predicates OPEN
+---
 
-`exactMatch` / `narrowMatch` / `broadMatch` map cleanly onto SKOS. This is the one
-place the repo would **assert** a mapping relation, in deliberate contrast to
-decision D10, which refuses to assert one for a published COSMoS coding. The
-difference — these are authored, curated and reviewable; those are not — is the
-argument, and it has to be written rather than assumed.
+## D14 — How a qualified concept links to its broader concept SETTLED 2026-09-01: `skos:broader`
 
-### D17 — recordings that point at Dataset Specializations OPEN
+**Question.** The schema says `broaderConceptId: C105585`; the core A-Box already
+renders `obo:NCIT_C105585` as a real node. Which predicate carries the relation?
 
-Recordings reference DSS mnemonics. D3 settled the DSS IRI scheme, but D4 deferred
-the DSS A-Box, so the targets do not exist yet. Link anyway and accept dangling
-references, or hold recordings until that layer lands.
+**Settled: `skos:broader`. This decision was reversed mid-implementation, and the
+reversal is the argument.**
 
-### D18 — `categories` as nodes OPEN — direction settled, implementation pending
+**What was settled first, and why it looked right.** `skos:broadMatch`, on the
+grounds that SKOS declares it `rdfs:subPropertyOf skos:broader`, so the weaker
+statement follows by entailment and is never asserted twice — and on the grounds
+that a mapping property is the honest reading when one concept is authored here and
+the other is CDISC's.
 
-**Direction settled 2026-09-01: a category becomes an unresolved label-node in
-core; the resolution of a token to the concept it names is authored, and belongs
-to the overlay.** The token is published; the identity behind the token is
-inferred. Synonyms stay literals.
+**What rendering it showed.** Decision D16 asserts a mapping relation for every
+authored external mapping, and HCV RNA maps to LOINC `111469-3` with relation
+`broadMatch`. So one subject carried **eight `skos:broadMatch` triples — six analyte
+links and two external mappings — distinguishable only by inspecting the target's
+namespace.** A consumer asking what a concept is a specialization of would get a
+LOINC order-term back. The entailment argument was correct and worth less than an
+unambiguous graph.
+
+**Settled therefore:** `skos:broader` for this repo's own concept hierarchy, the
+`*Match` properties reserved for mappings out to external code systems. That is also
+what `README.md` and `iri-and-governance.md` already promised in prose.
+
+**Measured after the change.** Six `skos:broader` triples; all six targets are typed
+`BiomedicalConcept` in `cosmos_bc_v1.instances.ttl`. Three `skos:exactMatch`,
+twenty-three `skos:narrowMatch`, two `skos:broadMatch`, none of them landing on a
+node the core graph describes.
+
+**The guard has to test graph membership, not the target's host.** NCIt PURLs are
+both this repo's identity scheme (D2) **and** a code system the overlay maps out to —
+`GlucosePlasmaEquivalent` has an `exactMatch` to `obo:NCIT_C163446`. So
+`purl.obolibrary.org` appears on both sides of the split, and a host-based check
+gives a false failure. `75_render_qbc.ipynb` asserts that every `broader` target is
+inside the core graph and no `*Match` target is.
+
+**Also emitted, and it is not redundant.** `qbc:broaderConceptId` carries the same
+link as an edge — the schema's own slot rendered graph-style, exactly as the core
+A-Box renders `parentConceptId`, and violating the published shape in exactly the
+same way (decision D11, third cause). `skos:broader` carries the meaning to a
+consumer that has not read the schema; the slot carries what the schema says.
+
+**The class-level `skos:broadMatch` stays.** `gen-owl` derives it from the schema's
+`broad_mappings`, it is a statement about classes rather than instances, and it is
+generated rather than authored. It is the machine-readable form of the own-class
+decision: `QualifiedBiomedicalConcept` is not `is_a` `BiomedicalConcept`, it
+broad-matches it.
+
+---
+
+## D15 — Interpretation regimes SETTLED 2026-09-01: the assertion without the pointer
+
+**Question.** The schema declares `interpretationRegimes`, the one genuinely new
+construct in the overlay. What is emitted?
+
+**A correction first, because the decision turns on it.** The P4 hand-off note
+recorded this slot as "declared and populated nowhere — 0 of 6 siblings". Measured
+2026-09-01: **3 of 6 siblings, 5 assertions, 3 distinct regime URIs** — two on
+blood-derived glucose, two on plasma-equivalent, one on urine categorical. Every one
+carried `sourceAnchor: "[VERIFY] regime vocabulary does not exist; URI invented for
+illustration"`.
+
+So the question was never "is there anything to emit". It was "does an identifier
+the author marked as invented go into a published deliverable".
+
+**Settled: emit the assertion, omit the pointer.** The `regime` slot changes from
+required to optional, and the five invented URIs are removed from the instance files
+rather than carried and suppressed at render time — source and deliverable agree,
+and nothing invented exists anywhere.
+
+**What survives is still the ask.** An `InterpretationRegimeAssertion` renders with
+its state data element concept, its state value and its source anchor. For glucose
+that says: *a distinct interpretation regime applies when Fasting Status Indicator
+C93566 is Y, and a different one when it is N.* What it cannot say is which. That is
+precisely the governance gap — the regime vocabulary does not exist — and stating it
+as a structured absence is worth more than three invented URIs that imply it does.
+
+**Rejected: emit nothing.** It would have removed the overlay's only new construct,
+and with it the reason the regime ask is legible at all.
+
+**Rejected: emit the invented URIs with their `[VERIFY]` anchors.** Decision D2
+declined to mint an identifier for a concept that has none, and rendered it absent
+instead. Minting three here would make the repo's only fabricated identifiers the
+ones it published most prominently.
+
+**Guarded.** `75_render_qbc.ipynb` raises if any instance carries a `regime` value,
+and asserts zero `qbc:regime` triples in the output. Five assertion nodes render.
+
+---
+
+## D16 — External mappings as real predicates SETTLED 2026-09-01
+
+**Question.** `MappingRelationEnum` maps cleanly onto `skos:exactMatch` /
+`narrowMatch` / `broadMatch`. Assert them, or keep the mapping reified and say
+nothing about what it means?
+
+**Settled: assert them, and keep the reified node as well.** Twenty-eight mappings
+render as 3 `skos:exactMatch`, 23 `skos:narrowMatch` and 2 `skos:broadMatch`, each
+alongside an `ExternalMapping` node carrying `code`, `system` and the comment.
+
+**This is the one place the repo asserts a mapping relation, in deliberate contrast
+to decision D10, and the contrast is the argument.** D10 refuses to emit any
+predicate between a concept and its published COSMoS coding, because what the coding
+means relative to the concept is frequently not equivalence and the package does not
+say. Here the package is not the source: each relation was curated one at a time
+against the LOINC service, is stated explicitly in the authored instance, and is
+reviewable by anyone reading `overlay/*.instances.yaml`. Authored and inspectable may
+assert; published and silent may not.
+
+**Why both forms.** The SKOS triple is what makes the mapping queryable without
+reading the schema. The reified node is what carries *why* — "mass concentration
+(MCnc), Ser/Plas, Qn — unit axis" — which is the content that makes a `narrowMatch`
+reviewable rather than merely typed. Neither is derivable from the other.
+
+**The measurement that makes the case worth publishing.** HCV RNA carries nineteen
+mappings and **not one `exactMatch`**: seventeen `narrowMatch` and two `broadMatch`,
+because LOINC has no method-neutral leaf for the concept. A model in which a concept
+has one code cannot hold that. A model in which the relation carries the cardinality
+can.
+
+**Where the line falls, and it is D10's line.** `externalMappings` composes an IRI
+from `system` + `code` because the instance states a system. `loincPins` on a
+recording states none — the system lives in the slot's name — so those stay
+literals. Composing there would be an authored act the slot does not license.
+
+---
+
+## D17 — Recordings that point at Dataset Specializations SETTLED 2026-09-01
+
+**Question.** Eight recordings reference DSS mnemonics. D3 settled the DSS IRI
+scheme, but D4 deferred the DSS A-Box, so the targets do not exist. Link anyway, or
+hold the recordings back?
+
+**Settled: the recording's subject IS the Dataset Specialization IRI** —
+`https://w3id.org/cdisc/cosmos/dss/{DOMAIN}/{MNEMONIC}`, typed `qbc:Recording`, with
+the mnemonic as `dcterms:identifier`. Not a separate node pointing at one.
+
+**Why identity rather than reference.** A recording and a dataset specialization are
+the same specialization described at two grains: the overlay says what survives once
+the qualified concept carries scale, specimen and result type; the DSS layer will say
+the rest. Giving them one IRI means the two descriptions **merge on one node** when
+that layer lands, rather than requiring a mapping between them to be maintained. The
+thinness of a recording is a fact about which triples this graph asserts, not about
+what the thing is.
+
+**It also costs nothing to be wrong about.** D3 mints these IRIs under this repo's
+own namespace; no external authority is being claimed, and nothing dereferences yet.
+
+**Measured.** Eight recordings, all eight under the D3 namespace, and all eight with
+no other triple in the graph — dangling by design while D4 defers the layer.
+`75_render_qbc.ipynb` reports the count rather than hiding it, and asserts the IRI
+form. When the DSS A-Box lands the number should go to zero, which makes it a
+regression test for that phase.
+
+**Rejected: a separate `qbc:recording/{ID}` node.** It needs a predicate to relate it
+to the specialization, the schema declares none, and minting one would be authored
+vocabulary invented to work around a self-inflicted split.
+
+**Rejected: hold recordings back.** It would lose the inherit-once story — the result
+data type living on the concept and not re-declared on the recording — which is half
+of what the HCV RNA case demonstrates.
+
+---
+
+## D18 — `categories` as nodes OPEN — direction settled, implementation pending
+
+**Direction settled 2026-09-01: a category becomes an unresolved label-node in core;
+the resolution of a token to the concept it names is authored, and belongs to the
+overlay.** The token is published; the identity behind the token is inferred.
+Synonyms stay literals — measured, 2,866 synonym tokens of which only 23 are shared
+by more than one concept, so making them nodes would add 2,839 nodes and almost no
+edges, where 408 category tokens are shared heavily.
 
 See `known-gaps.md` §7f for what the current deliverable does and why it is a gap.
-Implementation waits for the overlay so both halves ship together.
+
+**Implementation waits so that it ships with D21**, which changes the same notebook
+and the same baselines. One re-render, one set of baselines, one release.
+
+**A caution added 2026-09-01.** An earlier reading of NCIt held that CDISC publishes
+a governed codelist for category values. It does not — see the verification
+recorded under D20. `Biomedical Concept Category` (NCIt C201346) is a
+CDISC-contributed **entity name** with no value set behind it, so the 408 tokens
+are ungoverned strings. That makes the label-node treatment more
+clearly right, not less: there is nothing upstream to resolve them against, and the
+overlay's authored resolution is the only join available. The write-up must not claim
+CDISC governs the values.
+
+---
+
+## D19 — The overlay schema's stand-ins for the SDTM import SETTLED 2026-09-01
+
+**Question.** `sibling_bc.schema.yaml` imported both published models — exactly the
+configuration decision D1 proved broken. What replaces it?
+
+**Settled: the SDTM model is not imported. `AssignedTerm` and the `domain` slot are
+declared locally, and the BC import is this repo's own patched copy.**
+
+**Measured, as published.** `gen-owl` succeeds at 147,624 bytes; `gen-json-schema`
+succeeds at 46,352 bytes, byte-identical to the JSON Schema committed in
+`cdisc-for-ai`; `gen-jsonld-context` **fails** with
+`Conflicting URIs (…/biomedical_concept_v1.0, …/sdtm_v1.0) for item: conceptId`; both
+instance files validate.
+
+**Measured, after dropping the import.** All four generators succeed, and both
+instance files still validate — which is the check that is not vacuous: the BC
+`dataType` enum still governs `float` / `string` / `boolean` on the data element
+concepts, as the source repo's README notes it must.
+
+**The two stand-ins are two lines of published content, copied verbatim** from
+`cosmos_sdtm_model.yaml` at the pinned commit, with `class_uri` and `slot_uri`
+pointing back at CDISC's term IRIs so nothing is renamed. Measured, and the two
+generators disagree about whether that works: `gen-jsonld-context` honours both,
+mapping `AssignedTerm` to `cosmos_sdtm:AssignedTerm` and `domain` to
+`cosmos_sdtm:domain`. `gen-owl` mints `qbc:AssignedTerm` and demotes the published
+IRI to a `skos:exactMatch`, and drops the `slot_uri` on `domain` **entirely**,
+emitting `qbc:domain` with no mapping back. Both readings ship. The OWL one is
+arguably the more honest — the stand-in *is* this repo's declaration, exact-matched
+to CDISC's term, which is the core/overlay boundary stated in RDF.
+
+**What dropping the import does not fix.** `linkml-convert` still fails, at
+`conceptId: C70856` on the inherited data element concept —
+`ValueError: Unknown CURIE prefix: @base`. That is decision D2 and `known-gaps.md`
+§7a resurfacing through every published class the overlay reuses: the qualified
+concept has resolvable identity, and the DEC it points at does not. **So there is no
+`linkml-convert` comparison path for the overlay A-Box**, and decision D8's habit of
+checking the direct renderer against the generator cannot be exercised here.
+
+**A collision this decision introduces, left visible on purpose.** `conceptId`,
+`value` and `sourceAnchor` are each declared on more than one class in the overlay
+schema. LinkML collapses them onto one property IRI and `gen-owl` responds by
+emitting a bare `owl:DatatypeProperty` with no range and no pattern, warning
+`Ambiguous attribute` for each. `gen-shacl` keeps the per-class patterns apart —
+`AssignedTerm.conceptId` `^(C[0-9]+|CNEW)$` against `ConceptTerm.conceptId`
+`^(C[0-9]+)$`. Attaching `slot_uri` to the attributes silences the warning; measured,
+that is all it does — the two attributes still resolve to one IRI and their
+definitions are **merged** onto it rather than dropped. A loud collapse is worth more
+than a quiet one, so the warning stays. This is decision D1's finding at overlay
+scale, in a schema this repo wrote.
+
+**Why the patched BC model, and it is not a preference.** The published model's
+`cosmos_bc` prefix carries no separator (`known-gaps.md` §1a). Measured against the
+unrepaired copy, the class-level `skos:broadMatch` resolves to
+`https://www.cdisc.org/cosmos/biomedical_concept_v1.0BiomedicalConcept`, while the
+core T-Box declares `…/biomedical_concept_v1.0/BiomedicalConcept`. **The one
+machine-readable link the whole overlay hangs on landed in no graph.** Importing
+`build/cosmos_bc_model.patched.yaml` fixes it, and fixes the self-containment
+question at the same time. The consequence is an ordering constraint: the overlay
+notebooks run after `10_fetch_cosmos.ipynb` and `20_generate.ipynb`.
+
+---
+
+## D20 — Enum values in the overlay SETTLED 2026-09-01
+
+**Question.** A qualified concept's `resultScale` is a permissible value of an enum
+CDISC published. Which IRI does the A-Box use, and what happens to the T-Box range?
+
+**Settled: the A-Box resolves CDISC's enums out of the CORE T-Box**, so the overlay
+shares those nodes with `cosmos_bc_v1.instances.ttl` —
+`cosmos_bc:BiomedicalConceptResultScaleEnum#Quantitative`, not a value of this
+repo's own. `MappingRelationEnum` is the overlay's, and resolves out of the overlay
+T-Box. Both go through the same guard `50_render_bc.ipynb` uses: a value the
+declaring T-Box does not have raises rather than being written.
+
+**Why not mint the overlay's own.** It would give the same enum two IRIs, break the
+join to core, and rename a term CDISC published — which is what D7 declined.
+
+**The generator does not cooperate, and this is the finding.** `gen-owl` names an
+imported enum after the **importing** schema, in either merge mode. With
+`mergeimports` it redeclares three CDISC enums under `qbc:` —
+`BiomedicalConceptResultScaleEnum`, `DataElementConceptDataTypeEnum`,
+`PackageTypeEnum` — which is a D7 violation produced by a default. Hence
+`mergeimports: False` in `70_generate_qbc.ipynb`, the only pinned option that differs
+from `20_generate.ipynb`; unmerged, the overlay declares only its own nine classes.
+
+**Unmerged still leaves a dangling reference, in two places.** `rdfs:range` on
+`qbc:resultScale`, and `owl:allValuesFrom` inside the `owl:Restriction` on
+`QualifiedBiomedicalConcept` — both naming `qbc:BiomedicalConceptResultScaleEnum`,
+which is declared nowhere. A first repair that fixed only the range passed its own
+check while the second pointer survived; the guard now looks at every object
+position.
+
+**Settled: retarget both to `cosmos_bc:BiomedicalConceptResultScaleEnum`**, which the
+core T-Box already declares as `owl:unionOf` over exactly its five permissible
+values. This is the idiom `usdm-rdf` uses for a multi-target range —
+`rdfs:range [ a owl:Class ; owl:unionOf ( … ) ]`, with
+`examples/05_polymorphic_associations.ipynb` showing the SPARQL that reads it —
+reached here by **pointing at** the union rather than inlining a copy of it, so the
+overlay cannot drift from core and no CDISC term is renamed. The deliverable stays at
+660 triples.
+
+**This is an authored edit to generated output, and it is named rather than
+silent.** There is precedent inside the core: `20_generate.ipynb` replaces the
+generated `owl:Ontology` node, because `ontology_uri_suffix` would otherwise name an
+ontology after a file. The repair runs **after** the header is authored — before it,
+the guard trips on the generated `owl:imports`, which is the literal relative import
+path until the header replaces it — and it asserts the set of dangling IRIs is
+exactly the expected one before repairing, and that nothing dangles after.
+
+**Why this problem exists here and not in `usdm-rdf`, which is the part worth telling
+CDISC.** A USDM coded attribute keeps `rdfs:range usdm:Code` and carries
+`usdm:boundCodelist` to the codelist's NCIt C-code, letting NCIt name the permitted
+values. `BiomedicalConceptResultScaleEnum` carries no `meaning:` on any of its five
+values, so there is nothing to bind to and the generator's invented IRIs become **the
+only identity a COSMoS result scale has anywhere**.
+
+**But COSMoS is not uniformly unanchored, and the exception is what makes the ask
+actionable.** `known-gaps.md` §4 already records it for the SDTM model:
+`OriginTypeEnum` and `OriginSourceEnum` carry a `code_set` **and** a `meaning:` on
+every permissible value, which is why decision D1 sees nine `NCIT_*` top-level classes
+in that rendering. Adding the BC model, measured 2026-09-01: all three of its enums
+are bare, so across both models **9 of 11 enums are bare and 2 are fully anchored**.
+
+So the mechanism exists, CDISC already uses it, and it renders correctly through the
+same generator on the same pin. The ask is therefore not "adopt terminology
+governance" but **"do for the other nine enums what you already did for `OriginType`
+and `OriginSource`"** — one `meaning:` line per permissible value, with an in-file
+precedent to point at.
+
+**Where the ask is harder than one line.** Anchoring needs a concept to point at, and
+for result scale most of them do not exist. Verified 2026-09-01 against the NCI EVS
+REST API, which is public: the only NCIt concept for the attribute, `Result Scale`
+C227331, is NCI-authored with no CDISC contributing source, in no CDISC subset, and
+with no members. At value level `Ordinal Scale` C47797 and `Nominal Scale` C47798
+exist as proper scale concepts; there is no "Quantitative Scale", because quantitative
+is a class of scales rather than one; and `Narrative` C80446 and `Temporal` C73990
+exist only as generic concepts, not scales. Two of five anchor. Note also that
+C227331's own definition names four scales and omits Temporal, which the COSMoS enum
+includes.
+
+That is the same gap as `known-gaps.md` §4 — the 33 predicate terms and 101 linking
+phrases carrying no `code_set` and no per-value `meaning` — one layer down, on the
+enums this repo actually renders.
+
+---
+
+## D21 — `data_type` on the BC↔DEC edge OPEN — direction settled, implementation pending
+
+**The defect, measured 2026-09-01.** `50_render_bc.ipynb` renders each data element
+concept once, from whichever row arrives first. For `dec_label` and `ncit_dec_code`
+that is correct — **0 of 226** distinct DECs carry more than one value. For
+`data_type` and `example_set` it is not: they vary for **8** and **68** DECs
+respectively, because they are properties of the **(BC, DEC) pair** and not of the
+DEC. Six thousand and twenty-nine pairs collapse onto 226 nodes.
+
+**What the shipped deliverable therefore says.** `cosmos_bc_v1.instances.ttl`
+misstates `dataType` for **1,009 of 6,027** pairs, across **723 of 1,469** concepts
+and 8 DECs, and `exampleSet` for **3,092** pairs across 68 DECs. `C70856` Observation
+Result carries seven different `data_type` values across the pinned package — string
+303, decimal 296, integer 53, datetime 12, boolean 6, float 2, duration 1. Glucose
+`C105585` and HCV RNA `C142330` both publish it as **string**; the deliverable says
+**decimal**.
+
+**Direction settled: reify the BC→DEC edge.** The DEC node keeps what is constant —
+short name, NCIt code, identity. `data_type` and `example_set` move onto a node for
+the pair. It renders what the package says, collapses nothing and invents nothing.
+The cost is a larger A-Box and a node kind the published schema has no class for,
+which is itself reportable in D11's style.
+
+**Rejected: multi-value them on the DEC node.** Nothing is dropped, but which BC said
+which is lost — `C70856` would simply be seven types — and it violates the published
+`sh:maxCount 1` while saying less than the reified form.
+
+**Rejected: drop them and report in CSV.** Strictly derived and free of
+contradiction, but it removes from the graph the very attribute the overlay's
+inherit-once argument is about.
+
+**Already exercised in the overlay.** `75_render_qbc.ipynb` renders a data element
+concept as the qualified concept's **use** of it — a node at `{concept}/dec/{code}`
+carrying `dataType` and `exampleSet`, linked to the shared NCIt concept by
+`cosmos_bc:conceptId` rendered as an edge — and asserts that no `dataType` is ever
+written onto a shared NCIt node. So the shape core is moving to is already in the
+repo and already validated.
+
+**Why this matters beyond the fix.** It is the strongest independent evidence for the
+claim the overlay exists to make. The sibling schema annotates its result DEC
+`dataType: float  # AUTHORITATIVE (today: string)`. That is not merely an opinion
+about where the type should live: measured at this pin, `dataType` is **not a
+property of the data element concept at all** in what CDISC publishes. It is a
+property of the edge, which is why one DEC can be seven types at once, and why
+"inherit once from the result DEC" is impossible today rather than merely unusual.
+
+**Ships with D18** — same notebook, same baselines, one re-render.
 
 ---
 

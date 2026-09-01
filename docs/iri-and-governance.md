@@ -5,8 +5,8 @@ Records the IRI scheme for `cosmos-rdf` and the governance handoff to CDISC.
 
 **Lineage.** This document is adapted from `usdm-rdf/docs/iri-and-governance.md`.
 Where an argument is identical it is cited rather than restated; only the parts
-that differ for COSMoS are argued here. At P0 the namespace is **not yet
-registered** — no w3id PR has been submitted and no IRI in it dereferences.
+that differ for COSMoS are argued here. The namespace is **not yet registered** —
+no w3id PR has been submitted and no IRI in it dereferences.
 
 ## Ontology IRI
 
@@ -68,8 +68,10 @@ first is settled; the other two are not:
   and 101 linking phrases the DSS model publishes carry no `code_set` and no
   per-value `meaning` (`known-gaps.md` §4). Their IRIs must be minted in this
   repo's namespace. That is an authored act on top of a published vocabulary and
-  it must be labelled as such — and it is the one place decision D7 will have to
-  be revisited, since it is the first time a *term* would need a w3id name.
+  it must be labelled as such. **Decision D7 has since been revisited, but not
+  here** — the overlay got there first: D13 names nine classes and thirty-two
+  properties under `…/cosmos/qbc/`, so the relationship predicates are no longer
+  the first terms that would need a w3id name.
 
 ## Layering — what may live under this namespace
 
@@ -78,9 +80,10 @@ between `COSMoS_Graph.xlsx` and `COSMoS_Graph_Overlay.xlsx`.
 
 1. **Core** — a mechanical rendering of *published* COSMoS. Not opinion: the
    standard in queryable form. This is the part offerable to CDISC governance.
-2. **Overlay** — the *authored* qualified-BC layer: sibling concepts with
-   resolvable IRIs, typed SKOS mappings, interpretation-regime pointers. Linked
-   into core by `skos:broader`.
+2. **Overlay** — the *authored* qualified-BC layer: qualified concepts with
+   resolvable IRIs, typed SKOS mappings, and interpretation-regime assertions
+   that carry a subject state but deliberately no regime pointer (D15). Linked
+   into core by `skos:broader` (D14).
 
 Anything this repo decides that the standard did not — disambiguating the six
 colliding slot names, minting predicate IRIs, choosing a variable order rule —
@@ -95,10 +98,10 @@ any point CDISC can host the deliverables under their own infrastructure and
 submit a w3id PR that changes the redirect target. No minted IRI changes; no
 consumer refetches.
 
-The offer is explicit, not implicit. Status at P0: **not yet offered** — there
-is nothing generated to offer. The venue when there is will be the COSMoS side of
-CDISC rather than the USDM Governance Group; identifying the right body is part
-of P5, not an assumption to record here.
+The offer is explicit, not implicit. Status: **not yet offered**, though there is
+now something to offer — nine deliverables across core and overlay. The venue will
+be the COSMoS side of CDISC rather than the USDM Governance Group; identifying the
+right body is part of P5, not an assumption to record here.
 
 ## Not decided here
 

@@ -138,7 +138,8 @@ This is the same gap the qualified-BC work is about, met one layer down.
 At P3 the deliverables are the two OWL graphs, the two JSON-LD contexts, the two
 SHACL shapes graphs and `cosmos_bc_v1.instances.ttl`. **The DSS instance layer is
 deferred** (decision D4): 1,475 specializations, 13,922 variables, roughly 450,000
-triples. Decisions D3 and D5 govern it and are settled but not yet exercised.
+triples. Decisions D3 and D5 govern it; D5 is not yet exercised, and D3 now is —
+decision D17 mints eight Dataset Specialization IRIs in the overlay.
 
 There is no overlay, no w3id registration and no WIDOCO rendering. The phases in
 `README.md` say what is intended; nothing there is a promise.
