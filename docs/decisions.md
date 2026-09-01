@@ -4,8 +4,7 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 `docs/iri-and-governance.md` (D1–D6 there). Each is an argument, not a code
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
-D1, D6 and D7 are settled and implemented. D2–D5 are open; they are the ones
-named in the kickoff brief.
+D1, D2 and D6–D9 are settled and implemented. D3, D4 and D5 remain open.
 
 ---
 
@@ -94,24 +93,79 @@ join key.
 
 ---
 
-## D2 — Identity binding for concept codes OPEN
+## D2 — Identity binding for concept codes SETTLED 2026-09-01
 
 **Question.** How does a bare C-code in the export become a subject IRI?
 
-**Proposal.** Adopt `usdm-rdf` decision D4 unchanged — the **dual anchor**: the
-NCI EVS Thesaurus identifier (the form CDISC Library RDF uses) plus the
-resolvable OBO PURL, always both. Consistency across the two repos is worth more
-than any refinement here, and the argument for it is already written.
+**Settled.** The subject IRI of a concept is its **NCIt OBO PURL**,
+`http://purl.obolibrary.org/obo/NCIT_C115805`, with `skos:exactMatch` to the EVS
+identifier so `usdm-rdf` decision D4's "always both" rule holds. **Concepts with
+no NCIt code are not rendered.** This repo mints no identifier for them.
 
-**Why it is load-bearing.** The 2026-08-30 probe stopped at
-`DataElementConcept.conceptId`: an `identifier` slot holding a bare C-code with
-no prefix binding to mint an IRI from. LinkML rejects `@base` as a prefix name,
-so the fix is a proper NCIT prefix binding / `id_prefixes`, not a base hack.
-Until this is settled, instance conversion does not run at all.
+**Measured first.** Across the pinned export, `bc_id` equals `ncit_code` in all
+6,283 rows where both are present, and `dec_id` equals `ncit_dec_code` in all
+6,027. The `ncit_code` column is not additional information; it is `bc_id` again
+whenever `bc_id` is an NCIt code. So **1,469 of 1,475** biomedical concepts arrive
+with a resolvable identifier and need nothing invented.
 
-**Note.** The BC `conceptId` pattern is `^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$` — it
-admits `NEW_*` placeholders that are **not** NCIt codes and cannot be anchored.
-Their handling is part of this decision, not a detail of it.
+**The six that do not** — recorded in `reports/unidentified_concepts.csv` by
+`45_identity_probe.ipynb`, not asserted here:
+
+| id | label |
+|---|---|
+| `NEW_1` | Urine Glucose Test Strip Measurement [RETIRED] |
+| `NEW_LZZT` | TTS Acceptability Survey |
+| `NEW_LZZT1`–`NEW_LZZT4` | TTS Acceptability Survey — Patch Appearance / Size / Durability / Acceptability |
+
+Plus two data element concepts, `NEW_DEC1` (Specimen Location Detail) and
+`NEW_DEC2` (Specimen Condition).
+
+**Why not render them.** Every alternative requires this repo to name something
+CDISC did not, which is what decision D7 declined to do at the ontology level and
+what the layering rule excludes from core. A minted IRI for a placeholder is an
+assertion that the concept has an identity; it does not.
+
+**The cost, stated rather than mitigated away.** A consumer cannot tell a
+deliberate gap from an oversight by reading the graph. So the gap is recorded
+outside it: `reports/unidentified_concepts.csv` names all eight, derived from the
+pinned export on every run. A blank node — present, typed, with no identifier —
+was considered as a way of saying "this concept exists and cannot be named", and
+not taken; rendering it as absent keeps the core strictly derived.
+
+**Known consequence for P3.** Four DSSs in domain QS
+(`PATCHSURVEYACCEPTABILITY`, `PATCHSURVEYAPPEARANCE`, `PATCHSURVEYDURABILITY`,
+`PATCHSURVEYSIZE`, 32 rows) reference `NEW_LZZT1`–`4`, and one
+(`SURGMARGSTATBREAST`) references `NEW_DEC1`. Their `biomedicalConceptId` link
+will have no target. P3 must decide whether to omit the link or carry the
+placeholder as a literal; either way the report above is what explains it.
+
+### What the probe measured
+
+`45_identity_probe.ipynb` runs five attempts against real rows and asserts each
+outcome, so the notebook fails if the published schema changes:
+
+| # | Schema | Instance | Result |
+|---|---|---|---|
+| 1 | as published | bare C-code | `ValueError: Unknown CURIE prefix: @base` |
+| 2 | `+ id_prefixes: [NCIT]` | bare C-code | same — `id_prefixes` constrains prefixes, it does not expand a bare string |
+| 3 | as published | `NCIT:`-lifted | **validation** fails: `'NCIT:C91106' does not match '^(C[0-9]+\|NEW_...)$'` |
+| 4 | relaxed pattern, `range: uriorcurie` | `NCIT:`-lifted | converts; subject `obo:NCIT_C115805`, DEC references become graph links |
+| 5 | same as 4 | `NEW_LZZT1` | fails — no prefix exists, and none can |
+
+**The finding that matters is attempt 3.** The published pattern
+`^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$` forbids the only form that converts. An instance
+can be schema-valid or RDF-convertible, not both, as published. That is not a
+missing binding — it is a constraint actively ruling identity out, and it is the
+argument to CDISC.
+
+**Attempt 5 is the qualified-BC thesis as a stack trace**: a concept that
+validates perfectly and cannot be named, inside the CDISC pilot study's own
+instrument.
+
+Two smaller observations from attempt 4: the LOINC `coding` converts to a **blank
+node** — `code` + `system` are present but nothing composes them into an IRI; and
+`ncitCode` becomes a literal duplicate of the subject IRI, since the two columns
+are equal wherever both exist.
 
 ---
 
@@ -250,6 +304,73 @@ serializations add no declarations the canonical graph lacks (their D2).
 **Still open at P5:** the `.htaccess` rule set, and whether the two segments sit
 under one w3id registration or two. One registration of `/cdisc/cosmos/` covering
 both segments plus the DDS profile id is the assumption.
+
+---
+
+## D8 — How instances become RDF SETTLED 2026-09-01
+
+**Question.** Does the A-Box go through `linkml-convert`, or does this repo render
+it directly?
+
+**Settled: both, with different jobs.** P3 renders the A-Box directly from the
+un-flattened CSV with `rdflib`, using the T-Box IRIs and minting subjects per D2.
+The patched `linkml-convert` path is kept as a **comparison check** on a sample,
+not as a build step.
+
+**Why not `linkml-convert` alone.** It requires the repair set to grow from a
+typo fix into an edit of a published *constraint* — relax the `conceptId` pattern,
+change its range, and CURIE-lift every code at ingest — reapplied on every pin
+bump. A patch that edits a constraint is a different kind of object from a patch
+that adds a missing slash, and the difference should not blur.
+
+**Why not the direct renderer alone.** The claim "the published pattern forbids
+RDF" is worth more as a reproducible demonstration than as a sentence. Keeping
+both paths turns it into one, and gives the renderer an independent check: where
+both can run, they must agree.
+
+**Consequence.** The A-Box is this repo's code rather than the generator's, so
+conformance has to be shown rather than assumed — the SHACL shapes in P3 are what
+show it, and they are generated from the published schema.
+
+---
+
+## D9 — Deliverables are canonicalized before serialization SETTLED 2026-09-01
+
+**Question.** Should the Turtle output be canonicalized, or written as `rdflib`
+serializes it?
+
+**The problem, measured.** Re-running `20_generate.ipynb` with no input change
+rewrote **292 lines across the two deliverables** while the graphs stayed
+isomorphic — 535 and 2,028 triples both before and after. The cause is anonymous
+nodes: 110 in the BC graph and 421 in the SDTM one, nearly all `owl:Restriction`
+cardinality blocks, which `rdflib` relabels on every serialization.
+
+**Why that is not cosmetic.** `README.md` promises that a deviation from a fresh
+pin means a source change or a generation bug. With churning bytes it means
+neither, and a reviewer learns to ignore the diff — which is the same failure as
+the `generation_date` timestamp removed from the JSON-LD contexts, on the primary
+artifact rather than a secondary one.
+
+**Settled.** `20_generate.ipynb` passes each graph through
+`rdflib.compare.to_canonical_graph()` before writing, which labels blank nodes
+deterministically from graph structure. The notebook asserts that the canonical
+graph is isomorphic to the generated one, that the triple count is unchanged, and
+that a second canonicalization of the serialized output reproduces the same bytes.
+Verified 2026-09-01: three consecutive runs produce identical checksums.
+
+Two practical notes. `to_canonical_graph` returns a read-only aggregate, so the
+triples are copied into a writable graph before prefixes are re-bound —
+canonicalization drops prefix bindings, and without re-binding the output shows
+`ns1:` in place of `linkml:`. And the switch is a one-time reflow of the committed
+files: the canonical version is isomorphic to what was committed at P1, so no
+content changed.
+
+**Rejected.** Skolemizing the restrictions would also be stable, but it mints IRIs
+for things CDISC did not name — the act decision D7 declined at the ontology
+level. Sorting the serialized lines does not work at all, since the blank-node
+identifiers themselves differ. Accepting the churn and weakening the README claim
+was the honest fallback if canonicalization had made the file unreadable; it did
+not.
 
 ---
 

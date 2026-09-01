@@ -1,0 +1,9 @@
+layer,column,value,label,first_package_date,referenced_by_dss
+BC export,bc_id,NEW_1,Urine Glucose Test Strip Measurement [RETIRED],2025-12-16,False
+BC export,bc_id,NEW_LZZT,TTS Acceptability Survey,2025-09-23,False
+BC export,bc_id,NEW_LZZT1,TTS Acceptability Survey -  Patch Appearance,2025-09-23,True
+BC export,bc_id,NEW_LZZT2,TTS Acceptability Survey -  Patch Size,2025-09-23,True
+BC export,bc_id,NEW_LZZT3,TTS Acceptability Survey -  Patch Durability,2025-09-23,True
+BC export,bc_id,NEW_LZZT4,TTS Acceptability Survey -  Patch Acceptability,2025-09-23,True
+BC export,dec_id,NEW_DEC1,Specimen Location Detail,2026-07-14,True
+BC export,dec_id,NEW_DEC2,Specimen Condition,2026-07-14,False

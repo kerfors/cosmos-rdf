@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "NCIT": {
+      "@id": "http://purl.obolibrary.org/obo/NCIT_",
+      "@prefix": true
+    },
+    "cosmos_bc": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0/",
+    "linkml": "https://w3id.org/linkml/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@vocab": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0/",
+    "conceptId": "@id",
+    "categories": {
+      "@id": "categories"
+    },
+    "code": {
+      "@id": "code"
+    },
+    "coding": {
+      "@type": "@id",
+      "@id": "coding"
+    },
+    "dataElementConcepts": {
+      "@type": "@id",
+      "@id": "dataElementConcepts"
+    },
+    "dataType": {
+      "@context": {
+        "text": "skos:notation",
+        "description": "skos:prefLabel",
+        "meaning": "@id"
+      },
+      "@id": "dataType"
+    },
+    "definition": {
+      "@id": "definition"
+    },
+    "exampleSet": {
+      "@id": "exampleSet"
+    },
+    "href": {
+      "@type": "xsd:anyURI",
+      "@id": "href"
+    },
+    "ncitCode": {
+      "@id": "ncitCode"
+    },
+    "packageDate": {
+      "@type": "xsd:date",
+      "@id": "packageDate"
+    },
+    "packageType": {
+      "@context": {
+        "text": "skos:notation",
+        "description": "skos:prefLabel",
+        "meaning": "@id"
+      },
+      "@id": "packageType"
+    },
+    "parentConceptId": {
+      "@id": "parentConceptId"
+    },
+    "resultScales": {
+      "@context": {
+        "text": "skos:notation",
+        "description": "skos:prefLabel",
+        "meaning": "@id"
+      },
+      "@id": "resultScales"
+    },
+    "shortName": {
+      "@id": "shortName"
+    },
+    "synonyms": {
+      "@id": "synonyms"
+    },
+    "system": {
+      "@id": "system"
+    },
+    "systemName": {
+      "@id": "systemName"
+    },
+    "BiomedicalConcept": {
+      "@id": "BiomedicalConcept"
+    },
+    "Coding": {
+      "@id": "Coding"
+    },
+    "DataElementConcept": {
+      "@id": "DataElementConcept"
+    }
+  }
+}

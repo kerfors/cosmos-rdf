@@ -1,0 +1,6 @@
+attempt,tool,schema,instance,expected,outcome,detail
+1,linkml-convert,published,probe_identified.yaml,FAIL,FAIL,"ValueError: File ""probe_identified.yaml"", line 3, col 12: Unknown CURIE prefix: @base"
+2,linkml-convert,id_prefixes,probe_identified.yaml,FAIL,FAIL,"ValueError: File ""probe_identified.yaml"", line 3, col 12: Unknown CURIE prefix: @base"
+3,linkml-validate,published,probe_identified_curie.yaml,FAIL,FAIL,[ERROR] [../build/probe_identified_curie.yaml/0] 'NCIT:C91106' does not match '^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$' in /dataElementConcepts/4/conceptId
+4,linkml-convert,relaxed,probe_identified_curie.yaml,SUCCESS,SUCCESS,converted
+5,linkml-convert,relaxed,probe_unidentified_curie.yaml,FAIL,FAIL,"ValueError: File ""probe_unidentified_curie.yaml"", line 3, col 12: Unknown CURIE prefix: @base"

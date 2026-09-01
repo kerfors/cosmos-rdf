@@ -48,70 +48,49 @@ cosmos_bc:BiomedicalConcept a owl:Class ;
     rdfs:label "BiomedicalConcept" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:ncitCode ],
+            owl:onProperty cosmos_bc:href ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_bc:parentConceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_bc:synonyms ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:categories ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:href ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_bc:coding ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:parentConceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:synonyms ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:parentConceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:definition ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:definition ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:anyURI ;
             owl:onProperty cosmos_bc:href ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:resultScales ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_bc:packageDate ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty cosmos_bc:categories ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:dataElementConcepts ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_bc:packageType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:parentConceptId ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:ncitCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:synonyms ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:synonyms ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_bc:shortName ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:definition ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:packageDate ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_bc:PackageTypeEnum ;
-            owl:onProperty cosmos_bc:packageType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:parentConceptId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_bc:BiomedicalConceptResultScaleEnum ;
-            owl:onProperty cosmos_bc:resultScales ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$" ] ) ] ) ] ;
             owl:onProperty cosmos_bc:conceptId ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:href ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_bc:DataElementConcept ;
-            owl:onProperty cosmos_bc:dataElementConcepts ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:conceptId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:definition ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a rdfs:Datatype ;
                     owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
@@ -122,38 +101,59 @@ cosmos_bc:BiomedicalConcept a owl:Class ;
             owl:allValuesFrom cosmos_bc:Coding ;
             owl:onProperty cosmos_bc:coding ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:categories ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:packageType ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:href ],
+            owl:onProperty cosmos_bc:ncitCode ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty cosmos_bc:definition ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:coding ],
+            owl:onProperty cosmos_bc:dataElementConcepts ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:parentConceptId ],
+            owl:onProperty cosmos_bc:packageType ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:shortName ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:conceptId ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:date ;
             owl:onProperty cosmos_bc:packageDate ],
         [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:string ;
-                                owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$" ] ) ] ) ] ;
-            owl:onProperty cosmos_bc:conceptId ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:ncitCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_bc:PackageTypeEnum ;
+            owl:onProperty cosmos_bc:packageType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:shortName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_bc:resultScales ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:shortName ] ;
+            owl:onProperty cosmos_bc:shortName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_bc:packageType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_bc:conceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_bc:BiomedicalConceptResultScaleEnum ;
+            owl:onProperty cosmos_bc:resultScales ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_bc:shortName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:packageDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_bc:DataElementConcept ;
+            owl:onProperty cosmos_bc:dataElementConcepts ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_bc:packageDate ] ;
     skos:inScheme <https://www.cdisc.org/cosmos/biomedical_concept_v1.0> .
 
 <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/PackageTypeEnum#bc> a owl:Class ;
@@ -183,31 +183,31 @@ cosmos_bc:BiomedicalConcept a owl:Class ;
 cosmos_bc:Coding a owl:Class ;
     rdfs:label "Coding" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_bc:system ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:system ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:systemName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_bc:code ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:systemName ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty cosmos_bc:systemName ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:systemName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:systemName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:system ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty cosmos_bc:system ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cosmos_bc:code ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:code ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_bc:system ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
             owl:onProperty cosmos_bc:code ] ;
     skos:inScheme <https://www.cdisc.org/cosmos/biomedical_concept_v1.0> .
 
@@ -215,25 +215,49 @@ cosmos_bc:DataElementConcept a owl:Class ;
     rdfs:label "DataElementConcept" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_bc:ncitCode ],
+            owl:onProperty cosmos_bc:href ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:href ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_bc:DataElementConceptDataTypeEnum ;
+            owl:onProperty cosmos_bc:dataType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
             owl:onProperty cosmos_bc:href ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty cosmos_bc:exampleSet ],
         [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_bc:DataElementConceptDataTypeEnum ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_bc:ncitCode ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty cosmos_bc:dataType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:conceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:exampleSet ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ) ] ;
+            owl:onProperty cosmos_bc:ncitCode ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:ncitCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:shortName ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty cosmos_bc:dataType ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:ncitCode ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:dataType ],
+            owl:onProperty cosmos_bc:shortName ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty cosmos_bc:conceptId ],
@@ -244,32 +268,8 @@ cosmos_bc:DataElementConcept a owl:Class ;
                                 owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$" ] ) ] ) ] ;
             owl:onProperty cosmos_bc:conceptId ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:shortName ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty cosmos_bc:shortName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty cosmos_bc:href ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:string ;
-                                owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ) ] ;
-            owl:onProperty cosmos_bc:ncitCode ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:shortName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cosmos_bc:exampleSet ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:conceptId ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_bc:href ] ;
+            owl:onProperty cosmos_bc:shortName ] ;
     skos:inScheme <https://www.cdisc.org/cosmos/biomedical_concept_v1.0> .
 
 <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#boolean> a owl:Class ;

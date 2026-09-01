@@ -133,15 +133,15 @@ standard guarantees it will keep working. See decision D3.
 
 This is the same gap the qualified-BC work is about, met one layer down.
 
-## 7. This repo — only the core T-Box is generated
+## 7. This repo — T-Box and contexts only
 
-At P1 the deliverables are `cosmos_bc_v1.ttl` and `cosmos_sdtm_v1.ttl`. There is
-no shapes graph, no JSON-LD context, no A-Box, no overlay, no w3id registration
-and no WIDOCO rendering. The phases in `README.md` say what is intended; nothing
-there is a promise.
+At P2 the deliverables are `cosmos_bc_v1.ttl`, `cosmos_sdtm_v1.ttl` and the two
+matching `*.context.jsonld` files. There is no shapes graph, no A-Box, no overlay,
+no w3id registration and no WIDOCO rendering. The phases in `README.md` say what
+is intended; nothing there is a promise.
 
-Both deliverables are T-Box only. Nothing in them says anything about a single
-biomedical concept or dataset specialization — that is P3.
+All four deliverables describe the model, not the content. Nothing in them says
+anything about a single biomedical concept or dataset specialization — that is P3.
 
 **The ontology IRIs do not dereference.** The w3id namespace is not registered
 yet (P5), so `https://w3id.org/cdisc/cosmos/bc/` resolves to nothing today. Nor
@@ -149,6 +149,40 @@ do the term IRIs: they are CDISC's published strings, and both schema ids return
 404 on `cdisc.org` (checked 2026-09-01, with `https://www.cdisc.org/cosmos/`
 redirecting to a page slugged `cdisc-biomedical-concepts-old`). That half is not
 this repo's to fix — see decision D7.
+
+## 7a. Upstream — the `conceptId` pattern forbids the RDF-convertible form
+
+`^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$` admits a bare C-code and nothing else. A bare code
+cannot be expanded into an IRI: `linkml-convert` fails with
+`ValueError: Unknown CURIE prefix: @base`, and `id_prefixes` does not help,
+because it constrains which prefixes are allowed rather than supplying one. Lift
+the value to `NCIT:C115805` and conversion succeeds — but validation then fails,
+because the pattern forbids the colon.
+
+So a COSMoS instance can be **schema-valid or RDF-convertible, not both**, as
+published. Measured 2026-09-01 and asserted on every run by
+`45_identity_probe.ipynb`.
+
+Report upstream with §1 and §1a. The fix is a pattern that admits a CURIE and a
+`range: uriorcurie`; it is a larger change than the other two because it edits a
+constraint rather than correcting a typo.
+
+## 7b. Upstream — six concepts have no identifier at all
+
+`NEW_1`, `NEW_LZZT`, `NEW_LZZT1`–`NEW_LZZT4`, and the data element concepts
+`NEW_DEC1` and `NEW_DEC2`. The placeholder mechanism the standard provides
+produces a name, not an identifier: no prefix exists to expand it, and none can.
+
+Four of them are referenced by real dataset specializations —
+`PATCHSURVEYACCEPTABILITY`, `PATCHSURVEYAPPEARANCE`, `PATCHSURVEYDURABILITY`,
+`PATCHSURVEYSIZE` in domain QS, 32 rows — and `NEW_DEC1` by
+`SURGMARGSTATBREAST`. Under decision D2 this repo renders no node for them, so
+those references will have no target in the A-Box; P3 decides how to say so.
+
+Full list, derived on every run: `reports/unidentified_concepts.csv`.
+
+This is the gap the qualified-BC work exists for, met in the standard's own
+example study.
 
 ## 8. This repo — no LOINC or NCIt claim is verified
 

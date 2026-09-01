@@ -50,14 +50,16 @@ everywhere the SHA appears.
 
 ## Identity of the things being named
 
-Three identity questions, none of them settled at P0; each is a decision in
-[decisions.md](decisions.md):
+Three identity questions, each a decision in [decisions.md](decisions.md). The
+first is settled; the other two are not:
 
-- **Concept codes** (D2). The exports carry bare C-codes, not IRIs. The proposal
-  is `usdm-rdf` decision D4 unchanged: dual anchor, EVS identifier plus
-  resolvable OBO PURL, always both. The evidence for that decision (EVS host is
-  NXDOMAIN; NCI Thesaurus still declares the namespace; the OBO PURL resolves) is
-  in `usdm-rdf/docs/iri-and-governance.md` and is not re-argued here.
+- **Concept codes** (D2, settled 2026-09-01). A concept's subject IRI is its NCIt
+  OBO PURL, with `skos:exactMatch` to the EVS identifier so `usdm-rdf` decision
+  D4's "always both" rule holds. The evidence for D4 (EVS host is NXDOMAIN; NCI
+  Thesaurus still declares the namespace; the OBO PURL resolves) is in
+  `usdm-rdf/docs/iri-and-governance.md` and is not re-argued here. 1,469 of 1,475
+  concepts arrive with such a code; the six that do not are rendered as absent
+  and listed in `reports/unidentified_concepts.csv`.
 - **Dataset Specializations** (D3). `datasetSpecializationId` is a mnemonic, not
   a resolvable code, and its uniqueness across domains is unguaranteed —
   measured unique today. Mint domain-scoped IRIs; carry the mnemonic as

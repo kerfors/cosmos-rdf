@@ -5,10 +5,10 @@ Specializations — generated mechanically from the artifacts CDISC publishes in
 [cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS), plus an overlay graph
 for qualified ("sibling") biomedical concepts.
 
-**Status: P1 — the core T-Box is generated.** Two OWL deliverables exist,
-`cosmos_bc_v1.ttl` and `cosmos_sdtm_v1.ttl`, at repo version 0.1.0. There is no
-shapes graph, no JSON-LD context, no A-Box and no overlay. The phase list below
-states intent for the rest; none of it is a promise.
+**Status: P2 — core T-Box and identity.** Four deliverables exist at repo
+version 0.1.0: two OWL graphs and two JSON-LD instance contexts. There is no
+shapes graph, no A-Box and no overlay. The phase list below states intent for the
+rest; none of it is a promise.
 
 The namespace `https://w3id.org/cdisc/cosmos/` is **not yet registered**, so the
 ontology IRIs below do not dereference yet. This repo carries the same offer
@@ -110,7 +110,7 @@ graph, many views.
 |---|---|---|
 | P0 | Scaffold, source verification, `10_fetch`, decisions written | **done** |
 | P1 | Core T-Box: OWL per schema, ontology headers, validation, known gaps | **done** |
-| P2 | Identity binding (NCIT prefix) and JSON-LD context | not started |
+| P2 | Identity binding and JSON-LD contexts | **done** |
 | P3 | A-Box: un-flatten the CSV, render, SHACL shapes, validate | not started |
 | P4 | Overlay: the sibling concepts as RDF | not started |
 | P5 | Dereference and publish: w3id PR, WIDOCO, release, CI | not started |
@@ -130,6 +130,8 @@ cosmos-rdf/
 ├── .gitignore
 ├── cosmos_bc_v1.ttl                 # BC T-Box deliverable
 ├── cosmos_sdtm_v1.ttl               # DSS T-Box deliverable
+├── cosmos_bc_v1.context.jsonld      # BC JSON-LD 1.1 instance context
+├── cosmos_sdtm_v1.context.jsonld    # DSS JSON-LD 1.1 instance context
 ├── downloads/                       # gitignored — the four pinned inputs land here
 ├── build/                           # gitignored — the patched BC model, derived
 ├── patches/
@@ -137,10 +139,12 @@ cosmos-rdf/
 ├── notebooks/
 │   ├── 10_fetch_cosmos.ipynb        # pin the commit SHA, fetch four inputs, write provenance
 │   ├── 20_generate.ipynb            # apply the repair, render both schemas, author the headers
-│   └── 30_validate.ipynb            # baselines, IRI checks, graph separation, reports
+│   ├── 30_validate.ipynb            # baselines, IRI checks, graph separation, contexts, reports
+│   ├── 40_generate_context.ipynb    # JSON-LD 1.1 instance context per schema
+│   └── 45_identity_probe.ipynb      # the D2 evidence chain; not a build step
 ├── docs/
 │   ├── source-verification.md       # the P0 gate: what was verified, and how
-│   ├── decisions.md                 # D1, D6, D7 settled; D2–D5 open
+│   ├── decisions.md                 # D1, D2, D6–D8 settled; D3–D5 open
 │   ├── iri-and-governance.md        # namespace, identity, handoff
 │   └── known-gaps.md                # upstream gaps and current scope exclusions
 ├── scripts/
@@ -160,8 +164,14 @@ Requires `linkml` (developed against 1.11.1) and `rdflib`.
    timestamp, and — for the exports — the derived package date and row counts.
 2. Open `notebooks/20_generate.ipynb`. Run all cells. `cosmos_bc_v1.ttl` and
    `cosmos_sdtm_v1.ttl` appear at the repo root.
-3. Open `notebooks/30_validate.ipynb`. Run all cells. Compare against the
+3. Open `notebooks/40_generate_context.ipynb`. Run all cells. The two
+   `*.context.jsonld` files appear at the repo root.
+4. Open `notebooks/30_validate.ipynb`. Run all cells. Compare against the
    baselines below; CSV reports are written to `reports/`.
+
+`notebooks/45_identity_probe.ipynb` is optional and is not a build step. It
+measures the claim decision D2 rests on and asserts every outcome, so it fails if
+the published schema changes — which would be good news, not a bug.
 
 ## IRI scheme
 
@@ -190,6 +200,7 @@ appears in the w3id namespace.
 | `owl:ObjectProperty` | 5 | 13 |
 | `owl:DatatypeProperty` | 13 | 30 |
 | IRIs in the CDISC namespace | 40 | 205 |
+| context terms | 27 | 56 |
 
 Of the triples, 25 per graph are the authored ontology header and the
 `owl:AnnotationProperty` declarations that go with it; the rest are generated.
@@ -199,9 +210,30 @@ siblings) rather than terms in the COSMoS namespace: the Define-XML origin
 terminology, carried through from the enum `meaning:` values. They arrive already
 in the resolvable form decision D2 calls for.
 
-Deviation from a fresh pin indicates either a source change — likely benign,
-document the delta in `docs/` — or a generation bug. Investigate before
-releasing.
+The Turtle deliverables are **byte-stable**: re-running `20_generate.ipynb`
+against an unchanged pin reproduces them exactly, because the graphs are
+canonicalized before serialization (decision D9). So a `git diff` on a deliverable
+means something. Deviation from a fresh pin indicates either a source change —
+likely benign, document the delta in `docs/` — or a generation bug. Investigate
+before releasing.
+
+## Identity
+
+Decision D2: a concept's subject IRI is its **NCIt OBO PURL**. Measured against
+the pinned export, `bc_id` equals `ncit_code` in all 6,283 rows carrying both, so
+**1,469 of 1,475** biomedical concepts arrive with a resolvable identifier and
+nothing is invented for them.
+
+**Six do not, and this repo renders no node for them** — `NEW_1` and
+`NEW_LZZT`/`LZZT1`–`LZZT4`, plus two data element concepts. They are listed in
+`reports/unidentified_concepts.csv`, derived on every run, so a deliberate gap
+cannot be mistaken for an oversight.
+
+The published schema will not convert either way without editing:
+`45_identity_probe.ipynb` shows that the `conceptId` pattern
+`^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$` **forbids the only form that converts to RDF** —
+an instance can be schema-valid or RDF-convertible, not both. That is a
+constraint ruling identity out, not a missing binding.
 
 ## Known gaps
 
