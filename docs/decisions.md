@@ -4,7 +4,8 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 `docs/iri-and-governance.md` (D1–D6 there). Each is an argument, not a code
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
-D1, D2 and D6–D9 are settled and implemented. D3, D4 and D5 remain open.
+D1–D12 are settled. D5 is settled but not yet exercised, since the layer it
+governs is deferred.
 
 ---
 
@@ -169,53 +170,77 @@ are equal wherever both exist.
 
 ---
 
-## D3 — DSS identity OPEN — the load-bearing one
+## D3 — DSS identity SETTLED 2026-09-01
 
 **Question.** What is the subject IRI of a Dataset Specialization?
 
-**Facts** (`known-gaps.md` §6): `datasetSpecializationId` is declared
-`identifier: true`; its pattern enforces only an uppercase mnemonic; nothing
-enforces cross-domain uniqueness; measured today, 0 of 1,475 collide.
+**Settled.** Domain-scoped under this repo's namespace —
+`https://w3id.org/cdisc/cosmos/dss/{DOMAIN}/{MNEMONIC}`, e.g.
+`.../dss/LB/GLUCSER` — with `datasetSpecializationId` carried as
+`dcterms:identifier`.
 
-**Proposal.** Mint **domain-scoped** IRIs. Carry the mnemonic as
-`dcterms:identifier`. Do not depend on the mnemonic alone even though it would
-work at this package.
+**This does not contradict D7.** D7 declined to *rename* things CDISC named. Here
+CDISC named nothing: `datasetSpecializationId` is declared `identifier: true` but
+its pattern `^[A-Z][A-Z0-9_]*$` enforces only an uppercase mnemonic. Minting is
+unavoidable; the question was only under which namespace and at what scope.
 
-**Why not just use the mnemonic.** Because a rendering that silently relies on an
-unguaranteed property teaches consumers that the property is guaranteed. The gap
-is the finding; hiding it behind a working IRI scheme would delete the finding.
-State it in `known-gaps.md` and mint around it.
+**Why domain-scoped.** Measured at this pin, 0 of 1,475 mnemonics appear in more
+than one domain, so a flat IRI would work today. Nothing in the standard
+guarantees it, and a future collision would silently merge two different
+specializations onto one IRI. The scoping costs nothing and removes that failure
+mode.
 
----
-
-## D4 — A-Box scope OPEN
-
-**Question.** Render the full package (1,475 DSS, 1,475 BC), or T-Box plus a
-small set of worked instances first?
-
-**Bearing.** The kickoff brief is explicit that P0–P2 is publishable on its own
-and that P3 should not be committed to until P2 shows the identity binding
-holds. An OWL + SHACL rendering of COSMoS does not exist anywhere today; a
-partial A-Box on top of it is a smaller claim than a full one, and a full A-Box
-built on an unsettled D2/D3 would have to be reissued.
+**Not yet exercised.** Decision D4 defers the DSS layer, so no IRI in this scheme
+has been minted yet.
 
 ---
 
-## D5 — Row-order dependency OPEN
+## D4 — A-Box scope SETTLED 2026-09-01: the BC layer
+
+**Question.** Render the full package, or a subset first?
+
+**Settled: the Biomedical Concept layer in full; the Dataset Specialization layer
+deferred.** `cosmos_bc_v1.instances.ttl` carries 1,469 concepts, 224 data element
+concepts, 97 codings and 1,166 parent edges — 29,697 triples.
+
+**Why this cut rather than a sample.** The BC layer is where identity is settled
+and where the NCIt anchoring pays off, and it is small enough to commit and read.
+The DSS layer is where the volume is — 13,922 variables and roughly 450,000
+triples — and where D3 and D5 would first be exercised. Rendering the whole
+package at once would mean getting every decision right at full scale on the first
+attempt, with a 25–40 MB artifact in git.
+
+**Not rendered:** the six concepts with no NCIt code (D2), and their two data
+element concepts `NEW_DEC1` and `NEW_DEC2`. The 105th LOINC coding goes with them,
+since it belongs to `NEW_1`.
+
+---
+
+## D5 — Row-order dependency SETTLED 2026-09-01
 
 **Question.** May `variables` ordering rely on CSV row order?
 
-**Facts.** The DSS model requires an *ordered* `variables` list. The export has
-no order column; order survives only as file row order, and row blocks are
-contiguous (0 interleaved at this pin).
+**Settled: yes, with an explicit index and the dependency stated in the
+deliverable's provenance.** No alternative survived measurement.
 
-**The two options.** Rely on row order and **state the dependency explicitly**
-in the deliverable's provenance — or reconstruct order from SDTM convention
-(TESTCD, TEST, CAT, ORRES, …) and state *that* as a rule this repo applies.
+**What was measured.** The DSS model requires an *ordered* `variables` list; the
+export has no order column. Order cannot be reconstructed from any per-variable
+rule: **225 of 458 variables appear at more than one position** across DSSs, so
+position is a property of the specialization rather than of the variable. The
+first variable is the domain's `TESTCD` in almost every DSS — the SDTM convention
+— but that fixes position 1 and nothing beyond it.
 
-**Bearing.** The first is derived-not-asserted but depends on a file convention
-CDISC has not documented as a contract. The second is an assertion this repo
-makes, which belongs in the overlay, not the core.
+So the choice was between relying on row order and dropping order altogether, and
+dropping it contradicts a required property of the published model. Relying on it
+is derived; what must not happen is relying on it silently.
+
+**Two related measurements, both clean at this pin.** Every DSS-level column is
+constant within its group (maximum 1 distinct value across all seven), so the DSS
+node rebuilds by grouping. And `(DSS, variable)` is unique — 13,922 pairs, zero
+repeats — so each row is exactly one `SDTMVariable`, with no VLM duplication to
+resolve.
+
+**Not yet exercised** — D4 defers the layer this governs.
 
 ---
 
@@ -332,6 +357,28 @@ both can run, they must agree.
 conformance has to be shown rather than assumed — the SHACL shapes in P3 are what
 show it, and they are generated from the published schema.
 
+**Result, measured 2026-09-01.** `65_compare_render_paths.ipynb` runs both paths
+over six concepts chosen by shape — coding, several DECs, no DECs, no parent,
+multiple result scales, and one used at both layers — and compares every predicate
+on the concept node. **44 comparisons agree, 32 differ, none unexplained.** The
+agreements are the check working: `categories`, `definition`, `ncitCode`,
+`packageDate`, `shortName`, `synonyms` and `dataElementConcepts` come out
+identical from two independent implementations, with nothing tuned to make them
+match.
+
+Every difference falls into a cause already recorded — D2's authored identity
+triples, D10's composed coding IRI, D11's enum and `parentConceptId` divergences,
+D12's dual-role merge. The guard earned its place on the first run by catching two
+D12 differences that had not been written down.
+
+**And it says which side the third generator takes.** On enum values and on
+`parentConceptId`, `linkml-convert` emits literals — agreeing with `gen-shacl` and
+not with `gen-owl`. Of the three LinkML generators reading one published schema,
+two produce a document-shaped reading and one a graph-shaped reading, and the
+outlier is the one this repo's T-Box is generated from. That is worth stating
+plainly in the write-up: the divergence is not this repo's interpretation, it is
+already present inside the toolchain CDISC publishes for.
+
 ---
 
 ## D9 — Deliverables are canonicalized before serialization SETTLED 2026-09-01
@@ -371,6 +418,102 @@ level. Sorting the serialized lines does not work at all, since the blank-node
 identifiers themselves differ. Accepting the churn and weakening the README claim
 was the honest fallback if canonicalization had made the file unreadable; it did
 not.
+
+---
+
+## D10 — External code anchoring SETTLED 2026-09-01
+
+**Question.** A concept's `coding` carries `code` and `system` but no IRI. Blank
+node, or compose one?
+
+**Settled: compose `system` + `code` into the coding's IRI.** The schema documents
+`system` as "the URL of the code system", and the only system present is
+`http://loinc.org/`, so `http://loinc.org/` + `64098-7` is derived from two
+published fields rather than invented. All 98 distinct codes compose to
+syntactically valid absolute IRIs.
+
+**Verified, not assumed.** `https://loinc.org/64098-7` resolves to the LOINC term
+"Six minute walk test", status Active — confirmed in a browser 2026-09-01. A
+`curl` check returns 403, which is a bot block and proves nothing either way; the
+repo's rule is that no LOINC claim goes in unverified, and this one is verified.
+
+**What is deliberately *not* asserted.** No mapping predicate is emitted between a
+biomedical concept and its LOINC term. The coding node *is* that term; what it
+means relative to the concept is left unsaid, because it is frequently not
+equivalence — the HCV RNA analysis in `cdisc-for-ai` found 16 `narrowMatch` and
+one `broadMatch` and no `exactMatch` at all. `skos:exactMatch` here would be
+precisely the unverified claim this repo refuses.
+
+**Side effect, and it is the right one.** Seven codes are referenced by more than
+one concept; identifying the coding by its IRI merges those onto one node, because
+it is one LOINC term. The A-Box now contains **no blank nodes**.
+
+---
+
+## D11 — Where the published constraints and the RDF idiom disagree SETTLED 2026-09-01
+
+**Question.** The A-Box does not conform to the SHACL generated from the published
+schema. Adjust the graph, adjust the shapes, or report it?
+
+**Settled: report it.** The shapes ship unmodified — they are CDISC's constraints,
+not this repo's opinion of them — and the A-Box keeps the RDF idiom.
+`60_validate_instances.ipynb` classifies every violation and **fails if one appears
+that is not accounted for**.
+
+**8,925 violations, four causes.**
+
+| count | cause |
+|---|---|
+| 1,693 × 2 | `sh:closed true` rejects `skos:exactMatch` and `dcterms:identifier` — identity the schema has no slot for |
+| 2,962 | `sh:in ("bc")` expects enum values as string literals; the OWL T-Box declares them as class IRIs |
+| 1,166 × 2 | `parentConceptId` is `range: string`, so rendering the parent reference as a link violates datatype and node kind |
+| ~230 | one node typed as both BC and DEC, each closed shape rejecting the other's slots (D12) |
+
+**Why this is the finding and not a defect.** Three of the four are the same thing
+seen three times: **the published constraints describe a document, not a graph.**
+`gen-owl` and `gen-shacl`, from one schema, disagree about what an enum value even
+is — one says class IRI, the other says string literal. And a parent reference
+typed as a string means that turning it into an edge is, by the model's own rules,
+an error. Conforming would mean parent references stay strings and the NCIt
+anchoring disappears from the data: the graph would stop being a graph.
+
+**Rejected.** Editing the shapes to admit the idiom would make conformance
+circular. Authoring a second "graph profile" shapes graph, in the style of
+`usdm-rdf`'s structural/terminology split, remains available if a consumer ever
+needs something to validate against — but at P3 there is no such consumer, and the
+divergence is more useful stated than smoothed over.
+
+---
+
+## D12 — Concepts used at two layers SETTLED 2026-09-01
+
+**Question.** Nineteen NCIt codes are used as both a Biomedical Concept and a Data
+Element Concept, so under D2 they resolve to one node carrying both types. Split
+them, or accept the merge?
+
+**Settled: accept the merge, and report the population rather than model around
+it.** The same treatment the unidentified concepts get.
+
+**The Demographics three are correct, not a compromise.** Race `C17049`, Sex
+`C28421` and Ethnic Group `C16564` are each a BC with one DSS in DM and a DEC on
+one DM variable — RACE, SEX, ETHNIC. The concept is the whole content of the
+observation, so there is nothing for the two roles to be distinct from. Splitting
+them would invent a distinction the data does not make.
+
+**The rest are a mixed population, and the question is curation, not modelling.**
+Fifteen have no DSS of their own as a BC; nine appear in no DSS in either role.
+`C25330` Duration surfaces 48 times as a DEC in EG, `C82571` 24 times in BE and
+DS. Whether a BC should exist that nothing specializes and that only ever appears
+as a DEC is CDISC's call, not something this rendering should resolve.
+
+Only **two** of the nineteen have labels that disagree — `C82571` "Reported Event
+Term **[RETIRED]**" against "Reported Event Term", and `C83118` likewise. The
+divergence is lifecycle annotation carried in the BC label and absent from the DEC
+label, not two meanings. Those two produce the four `sh:maxCount` violations on
+`shortName`.
+
+All nineteen are recorded in `reports/dual_role_concepts.csv` with their DSS usage
+on both sides, derived on every run.
 
 ---
 

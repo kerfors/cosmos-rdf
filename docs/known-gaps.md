@@ -133,15 +133,15 @@ standard guarantees it will keep working. See decision D3.
 
 This is the same gap the qualified-BC work is about, met one layer down.
 
-## 7. This repo — T-Box and contexts only
+## 7. This repo — the Dataset Specialization A-Box is not rendered
 
-At P2 the deliverables are `cosmos_bc_v1.ttl`, `cosmos_sdtm_v1.ttl` and the two
-matching `*.context.jsonld` files. There is no shapes graph, no A-Box, no overlay,
-no w3id registration and no WIDOCO rendering. The phases in `README.md` say what
-is intended; nothing there is a promise.
+At P3 the deliverables are the two OWL graphs, the two JSON-LD contexts, the two
+SHACL shapes graphs and `cosmos_bc_v1.instances.ttl`. **The DSS instance layer is
+deferred** (decision D4): 1,475 specializations, 13,922 variables, roughly 450,000
+triples. Decisions D3 and D5 govern it and are settled but not yet exercised.
 
-All four deliverables describe the model, not the content. Nothing in them says
-anything about a single biomedical concept or dataset specialization — that is P3.
+There is no overlay, no w3id registration and no WIDOCO rendering. The phases in
+`README.md` say what is intended; nothing there is a promise.
 
 **The ontology IRIs do not dereference.** The w3id namespace is not registered
 yet (P5), so `https://w3id.org/cdisc/cosmos/bc/` resolves to nothing today. Nor
@@ -184,7 +184,64 @@ Full list, derived on every run: `reports/unidentified_concepts.csv`.
 This is the gap the qualified-BC work exists for, met in the standard's own
 example study.
 
-## 8. This repo — no LOINC or NCIt claim is verified
+## 7c. Upstream — a fifth export exists and is fully derivable
 
-None is made yet. When one is made it will be verified against the service or
-the package first, per the working conventions in `CLAUDE.md`.
+`export/cdisc_biomedical_concepts_hierarchy_latest.csv` is published alongside the
+four pinned inputs: one row per BC, adding `bc_short_name_id`,
+`bc_hierarchy_level`, `bc_hierarchy_full` and `dec_n`.
+
+**It is not fetched, because it adds no information.** All three derived columns
+reconstruct exactly from the flat export by walking `parent_bc_id` — 1,475 of
+1,475 on each, measured 2026-09-01. Both files carry the same 1,475 concepts, with
+none unique to either. It carries no `package_date` column, so its provenance
+could not be derived the way the other inputs' is.
+
+Recording it here so a later reader does not think it was overlooked. The
+reconstruction check is also why `50_render_bc.ipynb` can take a concept's state
+from its rows at the latest `package_date` without asserting that rule: the
+publisher's own view agrees with it.
+
+## 7d. This repo — the A-Box does not conform to the published shapes
+
+8,925 violations, four causes, every one classified by
+`60_validate_instances.ipynb` and recorded in `reports/shacl_conformance.csv`. The
+full argument is decision D11. In short: `sh:closed true` rejects the identity
+triples the schema has no slot for; `gen-owl` and `gen-shacl` disagree about
+whether an enum value is a class IRI or a string; and `parentConceptId` is typed
+`string`, so rendering it as an edge is an error by the model's own rules.
+
+Not a defect to fix. Conforming would mean parent references stay strings and the
+NCIt anchoring leaves the data.
+
+## 7e. Upstream — nineteen concepts are used at two layers
+
+Nineteen NCIt codes are both a Biomedical Concept and a Data Element Concept, so
+they resolve to one node carrying both types. For Race `C17049`, Sex `C28421` and
+Ethnic Group `C16564` that is correct — each is a BC with one DSS in DM and a DEC
+on one DM variable, so the concept is the whole content of the observation.
+
+The other sixteen are a curation observation, not a modelling problem: fifteen have
+no DSS of their own as a BC, and nine appear in no DSS in either role. Only two
+have labels that disagree, and only by a `[RETIRED]` suffix carried in the BC label
+and absent from the DEC label.
+
+Reported, not resolved: `reports/dual_role_concepts.csv`, derived on every run.
+
+## 8. This repo — what is claimed about LOINC and NCIt, and what is not
+
+Two claims are made, both verified before use.
+
+**NCIt.** A concept's subject IRI is its OBO PURL (decision D2). The evidence for
+that form — the EVS host being NXDOMAIN, NCI Thesaurus still declaring the
+namespace, the OBO PURL resolving — is `usdm-rdf` decision D4 and is not
+re-established here.
+
+**LOINC.** A coding's IRI is `system` + `code` composed (decision D10).
+`https://loinc.org/64098-7` was confirmed in a browser to resolve to "Six minute
+walk test", status Active, 2026-09-01. A `curl` check returns 403, a bot block,
+which proves nothing either way.
+
+**What is deliberately not claimed:** any mapping relation between a biomedical
+concept and its LOINC term. No `skos:exactMatch`, `narrowMatch` or `broadMatch` is
+emitted. The coding node is the LOINC term; what it means relative to the concept
+is unstated, because it is often not equivalence — see decision D10.

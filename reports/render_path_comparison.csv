@@ -1,0 +1,77 @@
+concept,predicate,status,ours,linkml_convert,cause
+C100106,categories,agree,QRS Instrument Questions,QRS Instrument Questions,
+C100417,categories,agree,Clinical or Research Assessment Classification | KPS SCALE | KPS Scale Questionnaire Question | KPSS01 | Karnofsky Performance Status Scale Clinical Classification | QRS,Clinical or Research Assessment Classification | KPS SCALE | KPS Scale Questionnaire Question | KPSS01 | Karnofsky Performance Status Scale Clinical Classification | QRS,
+C100948,categories,agree,Body Measurements | Vital Signs,Body Measurements | Vital Signs,
+C102711,categories,agree,Subject Characteristics,Subject Characteristics,
+C115805,categories,agree,6 Minute Walk Functional Test | 6MWT | 6MWT Functional Test Question | Functional Assessment | QRS | SIX MINUTE WALK | SIXMW1,6 Minute Walk Functional Test | 6MWT | 6MWT Functional Test Question | Functional Assessment | QRS | SIX MINUTE WALK | SIXMW1,
+C125009,categories,agree,Clinical Interpretation,Clinical Interpretation,
+C100417,dataElementConcepts,agree,http://purl.obolibrary.org/obo/NCIT_C25372 | http://purl.obolibrary.org/obo/NCIT_C46126 | http://purl.obolibrary.org/obo/NCIT_C82515 | http://purl.obolibrary.org/obo/NCIT_C91106,http://purl.obolibrary.org/obo/NCIT_C25372 | http://purl.obolibrary.org/obo/NCIT_C46126 | http://purl.obolibrary.org/obo/NCIT_C82515 | http://purl.obolibrary.org/obo/NCIT_C91106,
+C100948,dataElementConcepts,agree,http://purl.obolibrary.org/obo/NCIT_C13717 | http://purl.obolibrary.org/obo/NCIT_C42578 | http://purl.obolibrary.org/obo/NCIT_C70856 | http://purl.obolibrary.org/obo/NCIT_C82515,http://purl.obolibrary.org/obo/NCIT_C13717 | http://purl.obolibrary.org/obo/NCIT_C42578 | http://purl.obolibrary.org/obo/NCIT_C70856 | http://purl.obolibrary.org/obo/NCIT_C82515,
+C102711,dataElementConcepts,agree,http://purl.obolibrary.org/obo/NCIT_C25372 | http://purl.obolibrary.org/obo/NCIT_C70856 | http://purl.obolibrary.org/obo/NCIT_C82515,http://purl.obolibrary.org/obo/NCIT_C25372 | http://purl.obolibrary.org/obo/NCIT_C70856 | http://purl.obolibrary.org/obo/NCIT_C82515,
+C115805,dataElementConcepts,agree,http://purl.obolibrary.org/obo/NCIT_C25372 | http://purl.obolibrary.org/obo/NCIT_C42578 | http://purl.obolibrary.org/obo/NCIT_C82515 | http://purl.obolibrary.org/obo/NCIT_C91106 | ,http://purl.obolibrary.org/obo/NCIT_C25372 | http://purl.obolibrary.org/obo/NCIT_C42578 | http://purl.obolibrary.org/obo/NCIT_C82515 | http://purl.obolibrary.org/obo/NCIT_C91106 | ,
+C100106,definition,agree,A question associated with the ADAS-Cog CDISC version functional test.,A question associated with the ADAS-Cog CDISC version functional test.,
+C100417,definition,agree,Karnofsky Performance Status Scale (KPS Scale) Karnofsky Performance Status.,Karnofsky Performance Status Scale (KPS Scale) Karnofsky Performance Status.,
+C100948,definition,agree,"A circumferential measurement of the waist, which may be classified as the area immediately below the lowest rib, at the narrowest part of the torso, midpoint between the lowest ri","A circumferential measurement of the waist, which may be classified as the area immediately below the lowest rib, at the narrowest part of the torso, midpoint between the lowest ri",
+C102711,definition,agree,"Social factors such as personal behavior, lifestyle, or environment belonging to the subject which are known to increase the likelihood of infection and disease.","Social factors such as personal behavior, lifestyle, or environment belonging to the subject which are known to increase the likelihood of infection and disease.",
+C115805,definition,agree,6 Minute Walk Test (6MWT) Distance at 6 minutes.,6 Minute Walk Test (6MWT) Distance at 6 minutes.,
+C125009,definition,agree,The determination of the meaning of a clinical result.,The determination of the meaning of a clinical result.,
+C100106,ncitCode,agree,C100106,C100106,
+C100417,ncitCode,agree,C100417,C100417,
+C100948,ncitCode,agree,C100948,C100948,
+C102711,ncitCode,agree,C102711,C102711,
+C115805,ncitCode,agree,C115805,C115805,
+C125009,ncitCode,agree,C125009,C125009,
+C100106,packageDate,agree,2025-11-18,2025-11-18,
+C100417,packageDate,agree,2025-11-18,2025-11-18,
+C100948,packageDate,agree,2025-12-16,2025-12-16,
+C102711,packageDate,agree,2026-07-14,2026-07-14,
+C115805,packageDate,agree,2025-11-18,2025-11-18,
+C125009,packageDate,agree,2024-12-17,2024-12-17,
+C100106,shortName,agree,ADAS-Cog CDISC Version Functional Test Question,ADAS-Cog CDISC Version Functional Test Question,
+C100417,shortName,agree,KPS Scale - Karnofsky Performance Status,KPS Scale - Karnofsky Performance Status,
+C100948,shortName,agree,Waist Circumference,Waist Circumference,
+C102711,shortName,agree,Social Risk Factor,Social Risk Factor,
+C115805,shortName,agree,6MWT - Distance at 6 Minutes,6MWT - Distance at 6 Minutes,
+C125009,shortName,agree,Clinical Interpretation,Clinical Interpretation,
+C100106,synonyms,agree,ADAS-Cog CDISC Version Functional Test Question,ADAS-Cog CDISC Version Functional Test Question,
+C100417,synonyms,agree,KPS Scale - Karnofsky Performance Status | KPSS01-Karnofsky Performance Status | KPSS0101,KPS Scale - Karnofsky Performance Status | KPSS01-Karnofsky Performance Status | KPSS0101,
+C100948,synonyms,agree,WSTCIR,WSTCIR,
+C102711,synonyms,agree,RISKSOC | Social Risk Factor,RISKSOC | Social Risk Factor,
+C115805,synonyms,agree,SIXMW1-Distance at 6 Minutes | SIXMW106,SIXMW1-Distance at 6 Minutes | SIXMW106,
+C100106,type,agree,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,
+C100417,type,agree,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,
+C100948,type,agree,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,
+C102711,type,agree,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,
+C115805,type,agree,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,
+C100417,coding,differ,http://loinc.org/89243-0,n2717059b89f342e9a2c4de9594c77cfeb1,ours identifies the coding by system+code (D10); linkml-convert emits a blank node
+C100948,coding,differ,http://loinc.org/56115-9,nb0b35a27256249fe9a9652640697a5d6b1,ours identifies the coding by system+code (D10); linkml-convert emits a blank node
+C115805,coding,differ,http://loinc.org/64098-7,n5b43a2c28f914d55974a7007f1ca10e7b1,ours identifies the coding by system+code (D10); linkml-convert emits a blank node
+C125009,dataType,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string,,"concept used at both layers (D12): the two roles resolve to one node, so ours carries the DataElementConcept type and slots"
+C100106,exactMatch,differ,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C100106,,ours only - authored NCIt dual anchor (D2); the schema has no slot for it
+C100417,exactMatch,differ,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C100417,,ours only - authored NCIt dual anchor (D2); the schema has no slot for it
+C100948,exactMatch,differ,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C100948,,ours only - authored NCIt dual anchor (D2); the schema has no slot for it
+C102711,exactMatch,differ,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C102711,,ours only - authored NCIt dual anchor (D2); the schema has no slot for it
+C115805,exactMatch,differ,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C115805,,ours only - authored NCIt dual anchor (D2); the schema has no slot for it
+C125009,exactMatch,differ,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C125009,,ours only - authored NCIt dual anchor (D2); the schema has no slot for it
+C125009,exampleSet,differ,Abnormal | Normal,,"concept used at both layers (D12): the two roles resolve to one node, so ours carries the DataElementConcept type and slots"
+C100106,identifier,differ,C100106,,ours only - authored dcterms:identifier carrying the bare C-code (D2)
+C100417,identifier,differ,C100417,,ours only - authored dcterms:identifier carrying the bare C-code (D2)
+C100948,identifier,differ,C100948,,ours only - authored dcterms:identifier carrying the bare C-code (D2)
+C102711,identifier,differ,C102711,,ours only - authored dcterms:identifier carrying the bare C-code (D2)
+C115805,identifier,differ,C115805,,ours only - authored dcterms:identifier carrying the bare C-code (D2)
+C125009,identifier,differ,C125009,,ours only - authored dcterms:identifier carrying the bare C-code (D2)
+C100106,packageType,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/PackageTypeEnum#bc,bc,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C100417,packageType,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/PackageTypeEnum#bc,bc,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C100948,packageType,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/PackageTypeEnum#bc,bc,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C102711,packageType,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/PackageTypeEnum#bc,bc,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C115805,packageType,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/PackageTypeEnum#bc,bc,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C125009,packageType,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/PackageTypeEnum#bc,bc,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C100106,parentConceptId,differ,http://purl.obolibrary.org/obo/NCIT_C211913,NCIT:C211913,"ours emits a link, linkml-convert a literal - published range is string (D11)"
+C100417,parentConceptId,differ,http://purl.obolibrary.org/obo/NCIT_C100116,NCIT:C100116,"ours emits a link, linkml-convert a literal - published range is string (D11)"
+C102711,parentConceptId,differ,http://purl.obolibrary.org/obo/NCIT_C17103,NCIT:C17103,"ours emits a link, linkml-convert a literal - published range is string (D11)"
+C115805,parentConceptId,differ,http://purl.obolibrary.org/obo/NCIT_C115409,NCIT:C115409,"ours emits a link, linkml-convert a literal - published range is string (D11)"
+C100417,resultScales,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Ordinal,Ordinal,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C100948,resultScales,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative,Quantitative,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C102711,resultScales,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Narrative | https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleE,Narrative | Nominal,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C115805,resultScales,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative,Quantitative,"ours emits the T-Box permissible-value IRI, linkml-convert a string (D11)"
+C125009,type,differ,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept | https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConcept,https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept,"concept used at both layers (D12): the two roles resolve to one node, so ours carries the DataElementConcept type and slots"

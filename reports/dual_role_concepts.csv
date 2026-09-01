@@ -1,0 +1,20 @@
+ncit_code,bc_short_name,dec_label,labels_agree,dss_as_bc,domains_as_bc,rows_as_dec,domains_as_dec,variables_as_dec
+C125009,Clinical Interpretation,Clinical Interpretation,True,0,,2,EG,EGORRES;EGSTRESC
+C16564,Ethnic Group,Ethnic Group,True,1,DM,1,DM,ETHNIC
+C17049,Race,Race,True,1,DM,1,DM,RACE
+C181043,Clinical Findings Indicator,Clinical Findings Indicator,True,0,,4,IE,IEORRES;IESTRESC
+C219639,Substance Use Yes No Indicator,Substance Use Yes No Indicator,True,0,,0,,
+C219640,Medical Procedure Yes No Indicator,Medical Procedure Yes No Indicator,True,0,,0,,
+C25330,Duration,Duration,True,0,,48,EG,EGORRES;EGSTRESC;EGSTRESN
+C25488,Dose,Dose,True,1,TS,2,PR,PRDOSE
+C28421,Sex,Sex,True,1,DM,1,DM,SEX
+C41184,Indication,Indication,True,0,,3,PR,PRINDC
+C50282,Lead Device,Lead Device,True,0,,0,,
+C82525,Test Occurrence,Test Occurrence,True,0,,0,,
+C82571,Reported Event Term [RETIRED],Reported Event Term,False,0,,24,BE;DS,BETERM;DSTERM
+C83056,Concomitant Medication Yes No Indicator,Concomitant Medication Yes No Indicator,True,0,,0,,
+C83063,Inclusion Exclusion Criteria Yes No Indicator,Inclusion Exclusion Criteria Yes No Indicator,True,0,,0,,
+C83118,Medical History Reported Term [RETIRED],Medical History Reported Term,False,0,,13,MH,MHTERM
+C83347,Adverse Event Yes No Indicator,Adverse Event Yes No Indicator,True,0,,0,,
+C85522,Medical History Yes No Indicator,Medical History Yes No Indicator,True,0,,0,,
+C87885,Exposure Yes No Indicator,Exposure Yes No Indicator,True,0,,0,,
