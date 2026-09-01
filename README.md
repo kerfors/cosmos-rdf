@@ -156,7 +156,11 @@ cosmos-rdf/
 │   ├── iri-and-governance.md        # namespace, identity, handoff
 │   └── known-gaps.md                # upstream gaps and current scope exclusions
 ├── scripts/
+│   ├── ci_check.py                  # deliverable integrity guard; rdflib only
 │   └── LINEAGE.md                   # what gets copied from usdm-rdf, and when
+├── .github/workflows/
+│   └── check.yml                    # runs ci_check.py on push and pull request
+├── requirements.txt                 # the notebook pipeline's environment
 ├── reports/                         # CSV reports from validation runs
 ├── queries/                         # reusable SPARQL (none yet)
 └── versions/                        # deliverable snapshots per pin bump (none yet)
@@ -164,7 +168,9 @@ cosmos-rdf/
 
 ## Reproduce
 
-Requires `linkml` (developed against 1.11.1), `rdflib`, `pandas` and `pyshacl`.
+Requires the packages in `requirements.txt` — `linkml` (developed against 1.11.1),
+`rdflib`, `pandas`, `pyshacl`, `pyyaml`. Consuming the deliverables needs none of
+them; `scripts/ci_check.py`, which is what CI runs, needs `rdflib` alone.
 
 1. Open `notebooks/10_fetch_cosmos.ipynb`. The upstream commit SHA is pinned in
    the first code cell. Run all cells. The four inputs land in `downloads/`, each
@@ -240,6 +246,11 @@ canonicalized before serialization (decision D9). So a `git diff` on a deliverab
 means something. Deviation from a fresh pin indicates either a source change —
 likely benign, document the delta in `docs/` — or a generation bug. Investigate
 before releasing.
+
+`scripts/ci_check.py` asserts all of the above against the committed files, plus
+the two guarantees the decisions rest on: no malformed IRI in a CDISC namespace,
+and nothing but the ontology and its version in the w3id namespace. It runs in CI
+on every push.
 
 ## Identity
 

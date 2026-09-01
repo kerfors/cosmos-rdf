@@ -5,20 +5,26 @@ The kickoff brief says `usdm-rdf`'s `scripts/ci_check.py` and
 shared tooling repo is factored out yet — two consumers is not enough to justify
 one. That still holds. What follows is when each copy happens.
 
-Neither is copied at P0, because both are specific to artifacts that do not
+Neither was copied at P0, because both are specific to artifacts that did not
 exist here yet, and a copy that fails on first run is worse than an absent file.
 
-## `ci_check.py` — copy at P1
+## `ci_check.py` — adapted, 2026-09-01
 
 Upstream: `usdm-rdf/scripts/ci_check.py`.
 
-Its body is entirely USDM baselines — expected triple count, named-class count,
-NodeShape counts, the JSON-LD context invariant — checked against four named
-deliverables at repo root. There is nothing in it to run until this repo has its
-first deliverable. Copy the *shape* of it (fail-fast `check(name, actual,
-expected)`, baselines declared at the top, non-zero exit on failure) when P1
-produces the first Turtle, and state in its docstring that the baselines are a
-third copy of the numbers in the validation notebook and README.
+The *shape* was copied, not the body: fail-fast `check(name, actual, expected)`,
+baselines declared at the top, non-zero exit on failure, `rdflib` as the only
+dependency so CI installs one package. The body is this repo's own, covering seven
+deliverables rather than four.
+
+It also carries two checks the upstream has no equivalent for, because they guard
+decisions rather than counts: no malformed IRI in a CDISC namespace
+(`docs/known-gaps.md` §1a), and nothing but the ontology and its version in the
+w3id namespace (decision D7). Those are the two ways this repo could silently stop
+being what it says it is.
+
+`.github/workflows/check.yml` runs it on push and pull request, mirroring
+`usdm-rdf`.
 
 ## `postprocess_widoco.py` — copy at P5
 

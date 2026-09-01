@@ -1,0 +1,15 @@
+# Environment for the notebook pipeline. Not needed to consume the deliverables —
+# scripts/ci_check.py, which is what CI runs, needs rdflib alone.
+#
+# linkml is floored rather than pinned, but note decision D6: this repo pins every
+# OwlSchemaGenerator option explicitly because the library's Python defaults differ
+# from the gen-owl CLI defaults. A generator upgrade should be checked by re-running
+# 20_generate.ipynb and 30_validate.ipynb, not assumed safe.
+#
+# Developed against linkml 1.11.1.
+
+linkml>=1.11.1
+rdflib>=7.0
+pandas>=2.0
+pyshacl>=0.26
+pyyaml>=6.0
