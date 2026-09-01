@@ -1,0 +1,582 @@
+@prefix cosmos_bc: <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qbc: <https://w3id.org/cdisc/cosmos/qbc/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:bibliographicCitation a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:identifier a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+qbc:QualifiedBiomedicalConceptCollection a owl:Class ;
+    rdfs:label "QualifiedBiomedicalConceptCollection" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:siblings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:QualifiedBiomedicalConcept ;
+            owl:onProperty qbc:siblings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:Recording ;
+            owl:onProperty qbc:recordings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:recordings ] ;
+    skos:definition "Container for the instance file: the qualified concepts and their recordings. Exists so linkml-validate has a target class." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc: a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Qualified Biomedical Concepts (overlay)" ;
+    dcterms:bibliographicCitation "Forsberg, K. (2026). CDISC COSMoS Qualified Biomedical Concepts (overlay). https://w3id.org/cdisc/cosmos/qbc/" ;
+    dcterms:created "2026-09-01"^^xsd:date ;
+    dcterms:creator "Kerstin Forsberg" ;
+    dcterms:description "An authored overlay on the mechanical rendering of CDISC COSMoS: the qualified (sibling) biomedical concept, with an identity of its own, typed mappings to external code systems, a single result scale, an authoritative result data element concept, a concept-level semantic value set, and a state-keyed interpretation-regime assertion. Every term declared here is this repo's, not CDISC's; the terms it reuses keep the IRIs CDISC published. The concepts it qualifies are the ones cosmos_bc_v1.instances.ttl renders, reached by skos:broader." ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:license <https://opensource.org/licenses/MIT> ;
+    dcterms:modified "2026-09-01"^^xsd:date ;
+    dcterms:title "CDISC COSMoS Qualified Biomedical Concepts (overlay)" ;
+    vann:preferredNamespacePrefix "qbc" ;
+    vann:preferredNamespaceUri qbc: ;
+    rdfs:comment "Authored overlay, not a rendering of published COSMoS. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/bc/> ;
+    owl:versionIRI qbc:0.1.0 ;
+    owl:versionInfo "v0.1.0" .
+
+qbc:QualifiedBiomedicalConcept a owl:Class ;
+    rdfs:label "QualifiedBiomedicalConcept" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:interpretationRegimes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:definition ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:resultDataElementConcept ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:definition ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:iri ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:qualifierDataElementConcepts ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:resultDataElementConcept ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ;
+            owl:onProperty qbc:broaderConceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_bc:definition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_bc:DataElementConcept ;
+            owl:onProperty qbc:resultDataElementConcept ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty qbc:iri ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:ConceptTerm ;
+            owl:onProperty qbc:admissibleSpecimens ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:iri ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:InterpretationRegimeAssertion ;
+            owl:onProperty qbc:interpretationRegimes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:broaderConceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:admissibleSpecimens ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cosmos_bc:shortName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_bc:shortName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:externalMappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:semanticValueSet ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:broaderConceptId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:resultScale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_bc:BiomedicalConceptResultScaleEnum ;
+            owl:onProperty qbc:resultScale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_bc:DataElementConcept ;
+            owl:onProperty qbc:qualifierDataElementConcepts ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:ExternalMapping ;
+            owl:onProperty qbc:externalMappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_bc:shortName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:resultScale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:SemanticValueSetTerm ;
+            owl:onProperty qbc:semanticValueSet ] ;
+    skos:broadMatch cosmos_bc:BiomedicalConcept ;
+    skos:definition "A sibling BC: one observation shape under a broader analyte concept. Identity is the IRI itself (read-many, citable, content-negotiated per the usdm-rdf pattern). Deliberately NOT a subclass of cosmos_bc:BiomedicalConcept — see the design decision in the file header; the analyte link is skos:broader via broaderConceptId." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:Recording a owl:Class ;
+    rdfs:label "Recording" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:specimen ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:resultCodelistBinding ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:domain ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:specimen ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:domain ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:unitCodelistBinding ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:resultCodelistBinding ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:variableOverrides ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:resultCodelistBinding ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:siblingIri ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:domain ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:unitCodelistBinding ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:unitCodelistBinding ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:variableOverrides ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:loincPins ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:AssignedTerm ;
+            owl:onProperty qbc:specimen ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty qbc:siblingIri ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:siblingIri ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ;
+            owl:onProperty qbc:recordingId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:loincPins ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:recordingId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:testCode ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:testCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:recordingId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:testCode ] ;
+    skos:definition "Thinned SDTM dataset specialization: everything the sibling already states is inherited, not re-declared. Kept here: domain placement, topic/test code, the ONE specimen this recording uses (must be in the sibling's admissibleSpecimens), per-standard codelist bindings (incl. unit subset), origin, and an optional LOINC pin at recording grain. Dropped relative to cosmos_sdtm:SDTMGroup's variables: result dataType/length/ format/significantDigits (inherited via the sibling's result DEC — verified to introduce no contradiction), and the duplicated scale information." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:AssignedTerm a owl:Class ;
+    rdfs:label "AssignedTerm" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+|CNEW)$" ] ) ] ) ] ;
+            owl:onProperty qbc:conceptId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:conceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:conceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:value ] ;
+    skos:definition "Stand-in for cosmos_sdtm:AssignedTerm, declared locally because the SDTM model is not imported (D19). Attributes copied verbatim from cosmos_sdtm_model.yaml at the pinned commit. Measured 2026-09-01: gen-jsonld-context honours the class_uri and maps the term to cosmos_sdtm:AssignedTerm, while gen-owl mints qbc:AssignedTerm and demotes the published IRI to a skos:exactMatch. Both readings are kept; the divergence is the same one decisions D8 and D11 record for the core rendering. NOTE: conceptId and value are declared on more than one class in this schema, so gen-owl reports them ambiguous and emits bare property declarations with no range or pattern. gen-shacl keeps the per-class patterns apart. The warning is left in place - see D19; silencing it with slot_uri merges the definitions instead." ;
+    skos:exactMatch cosmos_sdtm:AssignedTerm ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:ConceptTerm a owl:Class ;
+    rdfs:label "ConceptTerm" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:preferredTerm ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:preferredTerm ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:preferredTerm ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ;
+            owl:onProperty qbc:conceptId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:conceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:conceptId ] ;
+    skos:definition "BC-side coded term: an NCIt concept with its preferred term. Used for the concept-level admissible specimen set; the SDTM submission value for the same concept lives on the recording's AssignedTerm." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:ExternalMapping a owl:Class ;
+    rdfs:label "ExternalMapping" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:system ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:system ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:code ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:code ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qbc:MappingRelationEnum ;
+            owl:onProperty qbc:relation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:system ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:code ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:relation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:comment ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:relation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:comment ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:comment ] ;
+    skos:definition "Typed mapping to an external code system. Replaces the flat cosmos_bc:Coding for siblings: cardinality 0/1/>1 is handled by the mapping relation, not by the key (exactMatch = same observable; narrowMatch = finer external leaf, typically the unit dimension)." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:InterpretationRegimeAssertion a owl:Class ;
+    rdfs:label "InterpretationRegimeAssertion" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:stateValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:stateValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:stateValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:regime ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:sourceAnchor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:regime ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:sourceAnchor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:sourceAnchor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty qbc:regime ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:stateDataElementConceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:stateDataElementConceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ;
+            owl:onProperty qbc:stateDataElementConceptId ] ;
+    skos:definition "Asserts that a distinct interpretation regime applies to this sibling under a given subject state. Carries a coded pointer, NEVER the reference-range numbers (those are data, per-record/per-lab). Keyed on an existing state DEC — for glucose, Fasting Status Indicator C93566 — so fasting and post-load glucose share one sibling while carrying different regimes." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+<https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#broadMatch> a owl:Class ;
+    rdfs:label "broadMatch" ;
+    rdfs:subClassOf qbc:MappingRelationEnum .
+
+<https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> a owl:Class ;
+    rdfs:label "exactMatch" ;
+    rdfs:subClassOf qbc:MappingRelationEnum .
+
+<https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> a owl:Class ;
+    rdfs:label "narrowMatch" ;
+    rdfs:subClassOf qbc:MappingRelationEnum .
+
+qbc:SemanticValueSetTerm a owl:Class ;
+    rdfs:label "SemanticValueSetTerm" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ;
+            owl:onProperty qbc:ncitCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:ncitCode ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:ncitCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty qbc:sourceAnchor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:sourceAnchor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:sourceAnchor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qbc:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty qbc:value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty qbc:value ] ;
+    skos:definition "Concept-level admissible result value (what the observation can say), distinct from any per-standard codelist binding (how a given standard writes it). ncitCode absent when no concept exists yet." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:admissibleSpecimens a owl:ObjectProperty ;
+    rdfs:label "admissibleSpecimens" ;
+    rdfs:range qbc:ConceptTerm ;
+    skos:definition "Concept-level admissible specimen set (NCIt-coded)" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:externalMappings a owl:ObjectProperty ;
+    rdfs:label "externalMappings" ;
+    rdfs:range qbc:ExternalMapping ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:interpretationRegimes a owl:ObjectProperty ;
+    rdfs:label "interpretationRegimes" ;
+    rdfs:range qbc:InterpretationRegimeAssertion ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:loincPins a owl:DatatypeProperty ;
+    rdfs:label "loincPins" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:qualifierDataElementConcepts a owl:ObjectProperty ;
+    rdfs:label "qualifierDataElementConcepts" ;
+    rdfs:range cosmos_bc:DataElementConcept ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:recordings a owl:ObjectProperty ;
+    rdfs:label "recordings" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:semanticValueSet a owl:ObjectProperty ;
+    rdfs:label "semanticValueSet" ;
+    rdfs:range qbc:SemanticValueSetTerm ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:siblings a owl:ObjectProperty ;
+    rdfs:label "siblings" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:variableOverrides a owl:DatatypeProperty ;
+    rdfs:label "variableOverrides" ;
+    skos:definition "Residual SDTM-specific variable content" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:broaderConceptId a owl:DatatypeProperty ;
+    rdfs:label "broaderConceptId" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:onDatatype xsd:string ;
+            owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ;
+    skos:definition "NCIt C-code of the analyte concept (skos:broader)" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:code a owl:DatatypeProperty ;
+    rdfs:label "code" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:comment a owl:DatatypeProperty ;
+    rdfs:label "comment" ;
+    skos:definition "e.g. which axis the narrowMatch refines" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:domain a owl:DatatypeProperty ;
+    rdfs:label "domain" ;
+    rdfs:range xsd:string ;
+    skos:definition "Stand-in for cosmos_sdtm:domain (D19), copied verbatim. Measured 2026-09-01: gen-jsonld-context honours the slot_uri; gen-owl drops it entirely and emits qbc:domain with no mapping back." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:iri a owl:DatatypeProperty ;
+    rdfs:label "iri" ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:ncitCode a owl:DatatypeProperty ;
+    rdfs:label "ncitCode" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:preferredTerm a owl:DatatypeProperty ;
+    rdfs:label "preferredTerm" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:recordingId a owl:DatatypeProperty ;
+    rdfs:label "recordingId" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:onDatatype xsd:string ;
+            owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:regime a owl:DatatypeProperty ;
+    rdfs:label "regime" ;
+    skos:definition "Coded pointer to the regime, in a governed regime vocabulary. NOT required, and populated nowhere: no such vocabulary exists, and inventing a URI to fill the slot would be the one fabricated identifier in the whole repo. What the assertion can say without it is still the ask — that this concept has a distinct interpretation regime under this subject state, and a different one under that state. Decision D15." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:relation a owl:ObjectProperty ;
+    rdfs:label "relation" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:resultCodelistBinding a owl:DatatypeProperty ;
+    rdfs:label "resultCodelistBinding" ;
+    skos:definition "Per-standard result binding for Coded scales" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:resultDataElementConcept a owl:ObjectProperty ;
+    rdfs:label "resultDataElementConcept" ;
+    rdfs:range cosmos_bc:DataElementConcept ;
+    skos:definition "The result DEC with AUTHORITATIVE dataType; recordings inherit it (SDTMVariable.dataElementConceptId -> DEC.dataType), they do not re-declare it." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:resultScale a owl:ObjectProperty ;
+    rdfs:label "resultScale" ;
+    rdfs:range cosmos_bc:BiomedicalConceptResultScaleEnum ;
+    skos:definition "Single scale of measurement — the sibling split axis" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:siblingIri a owl:DatatypeProperty ;
+    rdfs:label "siblingIri" ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:specimen a owl:ObjectProperty ;
+    rdfs:label "specimen" ;
+    rdfs:range qbc:AssignedTerm ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:stateDataElementConceptId a owl:DatatypeProperty ;
+    rdfs:label "stateDataElementConceptId" ;
+    skos:definition "The state DEC this regime keys on (e.g. C93566)" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:stateValue a owl:DatatypeProperty ;
+    rdfs:label "stateValue" ;
+    skos:definition "Value of the state under which this regime applies (from the state DEC's value domain, e.g. Y / N; \"*\" = any state)." ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:system a owl:DatatypeProperty ;
+    rdfs:label "system" ;
+    skos:definition "Code system URI (e.g. https://loinc.org/, NCIt)" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:testCode a owl:DatatypeProperty ;
+    rdfs:label "testCode" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:unitCodelistBinding a owl:DatatypeProperty ;
+    rdfs:label "unitCodelistBinding" ;
+    skos:definition "Per-standard unit binding (codelist / subset ref)" ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
+
+qbc:MappingRelationEnum a owl:Class ;
+    rdfs:label "MappingRelationEnum" ;
+    owl:unionOf ( <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#broadMatch> ) ;
+    skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> ;
+    linkml:permissible_values <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#broadMatch>,
+        <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch>,
+        <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> .
+
+qbc:conceptId a owl:DatatypeProperty .
+
+qbc:sourceAnchor a owl:DatatypeProperty .
+
+qbc:value a owl:DatatypeProperty .
+

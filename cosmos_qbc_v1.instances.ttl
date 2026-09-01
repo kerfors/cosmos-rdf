@@ -1,0 +1,552 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_bc: <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qbc: <https://w3id.org/cdisc/cosmos/qbc/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCPL> a qbc:Recording ;
+    dcterms:identifier "GLUCPL" ;
+    qbc:domain "LB" ;
+    qbc:siblingIri qbc:GlucoseBloodQuantitative ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/LB/GLUCPL/specimen> ;
+    qbc:testCode "GLUC" ;
+    qbc:unitCodelistBinding "UNIT (C71620) subset: mg/dL;g/L;mmol/L" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCSER> a qbc:Recording ;
+    dcterms:identifier "GLUCSER" ;
+    qbc:domain "LB" ;
+    qbc:siblingIri qbc:GlucoseBloodQuantitative ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/LB/GLUCSER/specimen> ;
+    qbc:testCode "GLUC" ;
+    qbc:unitCodelistBinding "UNIT (C71620) subset: mg/dL;g/L;mmol/L" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCSERPL> a qbc:Recording ;
+    dcterms:identifier "GLUCSERPL" ;
+    qbc:domain "LB" ;
+    qbc:loincPins "14749-6",
+        "2345-7" ;
+    qbc:siblingIri qbc:GlucoseBloodQuantitative ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/LB/GLUCSERPL/specimen> ;
+    qbc:testCode "GLUC" ;
+    qbc:unitCodelistBinding "UNIT (C71620) subset: mg/dL;g/L;mmol/L; standard unit pinned mmol/L (C64387)" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCUA> a qbc:Recording ;
+    dcterms:identifier "GLUCUA" ;
+    qbc:domain "LB" ;
+    qbc:loincPins "25428-4" ;
+    qbc:resultCodelistBinding "none bound in package — inherits the sibling's semantic value set once curated" ;
+    qbc:siblingIri qbc:GlucoseUrineCategorical ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/LB/GLUCUA/specimen> ;
+    qbc:testCode "GLUC" ;
+    qbc:variableOverrides "LBMETHOD assigned: TEST STRIP" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCURIN> a qbc:Recording ;
+    dcterms:identifier "GLUCURIN" ;
+    qbc:domain "LB" ;
+    qbc:loincPins "15076-3",
+        "2350-7" ;
+    qbc:siblingIri qbc:GlucoseUrineQuantitative ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/LB/GLUCURIN/specimen> ;
+    qbc:testCode "GLUC" ;
+    qbc:unitCodelistBinding "UNIT (C71620) subset: mg/dL;mmol/L;umol/L; standard unit pinned mmol/L (C64387)" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCURINPRES> a qbc:Recording ;
+    dcterms:identifier "GLUCURINPRES" ;
+    qbc:domain "LB" ;
+    qbc:loincPins "2349-9" ;
+    qbc:resultCodelistBinding "none bound in package — inherits the sibling's semantic value set once curated" ;
+    qbc:siblingIri qbc:GlucoseUrineCategorical ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/LB/GLUCURINPRES/specimen> ;
+    qbc:testCode "GLUC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL> a qbc:Recording ;
+    dcterms:identifier "HCRNASERPL" ;
+    qbc:domain "MB" ;
+    qbc:siblingIri qbc:HCVRNASerumPlasmaQuantitative ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/specimen> ;
+    qbc:testCode "HCRNA" ;
+    qbc:unitCodelistBinding "UNIT subset: IU/mL; standard unit pinned IU/mL (C67377)" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES> a qbc:Recording ;
+    dcterms:identifier "HCRNASERPLPRES" ;
+    qbc:domain "MB" ;
+    qbc:resultCodelistBinding "none bound in package — inherits the sibling's semantic value set once curated" ;
+    qbc:siblingIri qbc:HCVRNASerumPlasmaDetection ;
+    qbc:specimen <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/specimen> ;
+    qbc:testCode "HCRNA" ;
+    qbc:variableOverrides "MBTSTDTL assigned: DETECTION (C174330) — the package's encoding of the scale split; the sibling carries scale, so the detail is recording residue" .
+
+qbc:GlucosePlasmaEquivalent a qbc:QualifiedBiomedicalConcept ;
+    skos:broader NCIT:C105585 ;
+    skos:exactMatch NCIT:C163446 ;
+    skos:narrowMatch <https://loinc.org/105272-9>,
+        <https://loinc.org/99504-3> ;
+    qbc:admissibleSpecimens NCIT:C120839 ;
+    qbc:broaderConceptId NCIT:C105585 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/mapping/105272-9>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/mapping/99504-3>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/mapping/C163446> ;
+    qbc:interpretationRegimes <https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/regime/C93566/N>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/regime/C93566/Y> ;
+    qbc:resultDataElementConcept <https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/dec/C70856> ;
+    qbc:resultScale <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative> ;
+    cosmos_bc:definition "Quantitative plasma-equivalent glucose derived from interstitial fluid (continuous or flash glucose monitoring)." ;
+    cosmos_bc:shortName "Glucose, plasma-equivalent (interstitial), quantitative" .
+
+<https://w3id.org/cdisc/cosmos/qbc/instances/> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Qualified Biomedical Concepts (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    rdfs:comment "Authored qualified biomedical concepts and their recordings. Each is linked to the COSMoS concept it qualifies by skos:broader; that concept is rendered in cosmos_bc_v1.instances.ttl, which this graph imports. Recordings carry the Dataset Specialization IRI of decision D3; the Dataset Specialization layer itself is deferred, so those IRIs have no other triples yet. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/bc/instances/>,
+        qbc: ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/qbc/instances/0.1.0> ;
+    owl:versionInfo "v0.1.0" .
+
+NCIT:C120839 a qbc:ConceptTerm ;
+    qbc:preferredTerm "Interstitial Fluid" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCPL/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C13356 ;
+    qbc:value "PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCSER/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C13325 ;
+    qbc:value "SERUM" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCSERPL/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C13325 ;
+    qbc:value "SERUM" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCUA/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C13283 ;
+    qbc:value "URINE" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCURIN/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C13283 ;
+    qbc:value "URINE" .
+
+<https://w3id.org/cdisc/cosmos/dss/LB/GLUCURINPRES/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C13283 ;
+    qbc:value "URINE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C105706 ;
+    qbc:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/specimen> a qbc:AssignedTerm ;
+    qbc:conceptId NCIT:C105706 ;
+    qbc:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C48207> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C48207 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:exampleSet "g/L",
+        "mg/dL",
+        "mmol/L" ;
+    cosmos_bc:shortName "Unit of Concentration" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C70713> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70713 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:exampleSet "Plasma",
+        "Serum" ;
+    cosmos_bc:shortName "Biospecimen Type" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C70856> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70856 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#float> ;
+    cosmos_bc:shortName "Observation Result" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C93566> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C93566 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#boolean> ;
+    cosmos_bc:shortName "Fasting Status Indicator" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/mapping/14749-6> a qbc:ExternalMapping ;
+    qbc:code "14749-6" ;
+    qbc:comment "substance (molar) concentration (SCnc), Ser/Plas, Qn — unit axis" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/mapping/2345-7> a qbc:ExternalMapping ;
+    qbc:code "2345-7" ;
+    qbc:comment "mass concentration (MCnc), Ser/Plas, Qn — unit axis" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/regime/C93566/N> a qbc:InterpretationRegimeAssertion ;
+    qbc:sourceAnchor "[VERIFY] no governed regime vocabulary exists; the pointer is deliberately absent (D15)" ;
+    qbc:stateDataElementConceptId NCIT:C93566 ;
+    qbc:stateValue "N" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/regime/C93566/Y> a qbc:InterpretationRegimeAssertion ;
+    qbc:sourceAnchor "[VERIFY] no governed regime vocabulary exists; the pointer is deliberately absent (D15)" ;
+    qbc:stateDataElementConceptId NCIT:C93566 ;
+    qbc:stateValue "Y" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/dec/C70856> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70856 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#float> ;
+    cosmos_bc:shortName "Observation Result" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/mapping/105272-9> a qbc:ExternalMapping ;
+    qbc:code "105272-9" ;
+    qbc:comment "substance (molar) concentration (SCnc), Interstitial fluid, Qn — unit axis" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/mapping/99504-3> a qbc:ExternalMapping ;
+    qbc:code "99504-3" ;
+    qbc:comment "mass concentration (MCnc), Interstitial fluid, Qn — unit axis" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/mapping/C163446> a qbc:ExternalMapping ;
+    qbc:code "C163446" ;
+    qbc:comment "NCIt has this concept at sibling grain" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> ;
+    qbc:system "http://purl.obolibrary.org/obo/NCIT_" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/regime/C93566/N> a qbc:InterpretationRegimeAssertion ;
+    qbc:sourceAnchor "[VERIFY] no governed regime vocabulary exists; the pointer is deliberately absent (D15)" ;
+    qbc:stateDataElementConceptId NCIT:C93566 ;
+    qbc:stateValue "N" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucosePlasmaEquivalent/regime/C93566/Y> a qbc:InterpretationRegimeAssertion ;
+    qbc:sourceAnchor "[VERIFY] no governed regime vocabulary exists; the pointer is deliberately absent (D15)" ;
+    qbc:stateDataElementConceptId NCIT:C93566 ;
+    qbc:stateValue "Y" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/dec/C70856> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70856 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:shortName "Observation Result" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/mapping/2349-9> a qbc:ExternalMapping ;
+    qbc:code "2349-9" ;
+    qbc:comment "presence (PrThr), Urine, Ord — method-neutral" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/mapping/25428-4> a qbc:ExternalMapping ;
+    qbc:code "25428-4" ;
+    qbc:comment "presence (PrThr), Urine, Ord, by test strip — method-refined; see recordings" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/regime/C93566/any> a qbc:InterpretationRegimeAssertion ;
+    qbc:sourceAnchor "[VERIFY] no governed regime vocabulary exists; the pointer is deliberately absent (D15)" ;
+    qbc:stateDataElementConceptId NCIT:C93566 ;
+    qbc:stateValue "*" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/value/1> a qbc:SemanticValueSetTerm ;
+    qbc:sourceAnchor "[VERIFY] no authoritative source in package; LOINC answer list not consulted" ;
+    qbc:value "[VERIFY]" .
+
+qbc:GlucoseUrineQuantitative a qbc:QualifiedBiomedicalConcept ;
+    skos:broader NCIT:C105585 ;
+    skos:narrowMatch <https://loinc.org/15076-3>,
+        <https://loinc.org/2350-7> ;
+    qbc:admissibleSpecimens NCIT:C13283 ;
+    qbc:broaderConceptId NCIT:C105585 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/mapping/15076-3>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/mapping/2350-7> ;
+    qbc:qualifierDataElementConcepts <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C48207>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C70713>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C93566> ;
+    qbc:resultDataElementConcept <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C70856> ;
+    qbc:resultScale <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative> ;
+    cosmos_bc:definition "Quantitative determination of glucose concentration in urine." ;
+    cosmos_bc:shortName "Glucose, urine, quantitative" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C48207> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C48207 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:exampleSet "mg/dL",
+        "mmol/L",
+        "umol/L" ;
+    cosmos_bc:shortName "Unit of Concentration" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C70713> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70713 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:exampleSet "Urine" ;
+    cosmos_bc:shortName "Biospecimen Type" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C70856> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70856 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#float> ;
+    cosmos_bc:shortName "Observation Result" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/dec/C93566> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C93566 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#boolean> ;
+    cosmos_bc:shortName "Fasting Status Indicator" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/mapping/15076-3> a qbc:ExternalMapping ;
+    qbc:code "15076-3" ;
+    qbc:comment "substance (molar) concentration (SCnc), Urine, Qn — unit axis" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineQuantitative/mapping/2350-7> a qbc:ExternalMapping ;
+    qbc:code "2350-7" ;
+    qbc:comment "mass concentration (MCnc), Urine, Qn — unit axis" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+qbc:HCVRNASerumPlasmaDetection a qbc:QualifiedBiomedicalConcept ;
+    skos:broadMatch <https://loinc.org/111469-3> ;
+    skos:broader NCIT:C142330 ;
+    skos:narrowMatch <https://loinc.org/104715-8>,
+        <https://loinc.org/11259-9> ;
+    qbc:admissibleSpecimens NCIT:C13325,
+        NCIT:C13356 ;
+    qbc:broaderConceptId NCIT:C142330 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/mapping/104715-8>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/mapping/111469-3>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/mapping/11259-9> ;
+    qbc:qualifierDataElementConcepts <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/dec/C70713> ;
+    qbc:resultDataElementConcept <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/dec/C70856> ;
+    qbc:resultScale <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Ordinal> ;
+    qbc:semanticValueSet <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/value/1> ;
+    cosmos_bc:definition "Qualitative determination of the presence of hepatitis C virus RNA in a serum or plasma specimen." ;
+    cosmos_bc:shortName "Hepatitis C Virus RNA, serum/plasma, detection (qualitative)" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/dec/C70713> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70713 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:exampleSet "Plasma",
+        "Serum" ;
+    cosmos_bc:shortName "Biospecimen Type" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/dec/C70856> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70856 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:shortName "Observation Result" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/mapping/104715-8> a qbc:ExternalMapping ;
+    qbc:code "104715-8" ;
+    qbc:comment "PrThr Ord, Molgen" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/mapping/111469-3> a qbc:ExternalMapping ;
+    qbc:code "111469-3" ;
+    qbc:comment "LABORDERS.ONTOLOGY collation/order term at component x system grain; not a reportable test" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#broadMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/mapping/11259-9> a qbc:ExternalMapping ;
+    qbc:code "11259-9" ;
+    qbc:comment "PrThr Ord, Probe.amp.tar" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaDetection/value/1> a qbc:SemanticValueSetTerm ;
+    qbc:sourceAnchor "[VERIFY] no authoritative source in package; LOINC answer list not consulted" ;
+    qbc:value "[VERIFY]" .
+
+qbc:HCVRNASerumPlasmaQuantitative a qbc:QualifiedBiomedicalConcept ;
+    skos:broadMatch <https://loinc.org/111469-3> ;
+    skos:broader NCIT:C142330 ;
+    skos:narrowMatch <https://loinc.org/104714-1>,
+        <https://loinc.org/104721-6>,
+        <https://loinc.org/104755-4>,
+        <https://loinc.org/10676-5>,
+        <https://loinc.org/11011-4>,
+        <https://loinc.org/20416-4>,
+        <https://loinc.org/20571-6>,
+        <https://loinc.org/29609-5>,
+        <https://loinc.org/34703-9>,
+        <https://loinc.org/34704-7>,
+        <https://loinc.org/38180-6>,
+        <https://loinc.org/42003-4>,
+        <https://loinc.org/42617-1>,
+        <https://loinc.org/47252-2>,
+        <https://loinc.org/49758-6> ;
+    qbc:admissibleSpecimens NCIT:C13325,
+        NCIT:C13356 ;
+    qbc:broaderConceptId NCIT:C142330 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/104714-1>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/104721-6>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/104755-4>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/10676-5>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/11011-4>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/111469-3>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/20416-4>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/20571-6>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/29609-5>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/34703-9>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/34704-7>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/38180-6>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/42003-4>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/42617-1>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/47252-2>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/49758-6> ;
+    qbc:qualifierDataElementConcepts <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/dec/C48207>,
+        <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/dec/C70713> ;
+    qbc:resultDataElementConcept <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/dec/C70856> ;
+    qbc:resultScale <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative> ;
+    cosmos_bc:definition "Quantitative determination of the amount of hepatitis C virus RNA (viral load) in a serum or plasma specimen." ;
+    cosmos_bc:shortName "Hepatitis C Virus RNA, serum/plasma, quantitative" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/dec/C48207> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C48207 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:exampleSet "IU/mL" ;
+    cosmos_bc:shortName "Unit of Concentration" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/dec/C70713> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70713 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#string> ;
+    cosmos_bc:exampleSet "Plasma",
+        "Serum" ;
+    cosmos_bc:shortName "Biospecimen Type" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/dec/C70856> a cosmos_bc:DataElementConcept ;
+    cosmos_bc:conceptId NCIT:C70856 ;
+    cosmos_bc:dataType <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/DataElementConceptDataTypeEnum#float> ;
+    cosmos_bc:shortName "Observation Result" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/104714-1> a qbc:ExternalMapping ;
+    qbc:code "104714-1" ;
+    qbc:comment "LaCnc log IU/mL, Molgen" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/104721-6> a qbc:ExternalMapping ;
+    qbc:code "104721-6" ;
+    qbc:comment "ACnc IU/mL, Molgen" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/104755-4> a qbc:ExternalMapping ;
+    qbc:code "104755-4" ;
+    qbc:comment "LnCnc, Molgen" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/10676-5> a qbc:ExternalMapping ;
+    qbc:code "10676-5" ;
+    qbc:comment "ACnc IU/mL, Probe.amp" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/11011-4> a qbc:ExternalMapping ;
+    qbc:code "11011-4" ;
+    qbc:comment "ACnc IU/mL, Probe.amp.tar" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/111469-3> a qbc:ExternalMapping ;
+    qbc:code "111469-3" ;
+    qbc:comment "LABORDERS.ONTOLOGY collation/order term at component x system grain; not a reportable test" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#broadMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/20416-4> a qbc:ExternalMapping ;
+    qbc:code "20416-4" ;
+    qbc:comment "NCnc copies/mL, Probe.amp.tar" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/20571-6> a qbc:ExternalMapping ;
+    qbc:code "20571-6" ;
+    qbc:comment "NCnc eq/mL, Probe.amp.sig" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/29609-5> a qbc:ExternalMapping ;
+    qbc:code "29609-5" ;
+    qbc:comment "ACnc IU/mL, Probe.amp.sig" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/34703-9> a qbc:ExternalMapping ;
+    qbc:code "34703-9" ;
+    qbc:comment "ACnc, Probe.amp.tar, detection limit 500 IU/mL in method" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/34704-7> a qbc:ExternalMapping ;
+    qbc:code "34704-7" ;
+    qbc:comment "ACnc, Probe.amp.tar, detection limit 50 IU/mL in method" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/38180-6> a qbc:ExternalMapping ;
+    qbc:code "38180-6" ;
+    qbc:comment "LaCnc log IU/mL, Probe.amp.tar" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/42003-4> a qbc:ExternalMapping ;
+    qbc:code "42003-4" ;
+    qbc:comment "LnCnc log copies/mL, Probe.amp.sig" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/42617-1> a qbc:ExternalMapping ;
+    qbc:code "42617-1" ;
+    qbc:comment "LaCnc log IU/mL, Probe.amp.sig" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/47252-2> a qbc:ExternalMapping ;
+    qbc:code "47252-2" ;
+    qbc:comment "LnCnc log copies/mL, Probe.amp.tar" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+<https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/mapping/49758-6> a qbc:ExternalMapping ;
+    qbc:code "49758-6" ;
+    qbc:comment "ACnc, Probe.amp.tar, detection limit 5 IU/mL in method" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "https://loinc.org/" .
+
+qbc:GlucoseUrineCategorical a qbc:QualifiedBiomedicalConcept ;
+    skos:broader NCIT:C105585 ;
+    skos:exactMatch <https://loinc.org/2349-9>,
+        <https://loinc.org/25428-4> ;
+    qbc:admissibleSpecimens NCIT:C13283 ;
+    qbc:broaderConceptId NCIT:C105585 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/mapping/2349-9>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/mapping/25428-4> ;
+    qbc:interpretationRegimes <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/regime/C93566/any> ;
+    qbc:resultDataElementConcept <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/dec/C70856> ;
+    qbc:resultScale <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Ordinal> ;
+    qbc:semanticValueSet <https://w3id.org/cdisc/cosmos/qbc/GlucoseUrineCategorical/value/1> ;
+    cosmos_bc:definition "Categorical (ordinal) determination of glucose presence in urine, with or without test strip." ;
+    cosmos_bc:shortName "Glucose, urine, categorical (presence)" .
+
+qbc:GlucoseBloodQuantitative a qbc:QualifiedBiomedicalConcept ;
+    skos:broader NCIT:C105585 ;
+    skos:narrowMatch <https://loinc.org/14749-6>,
+        <https://loinc.org/2345-7> ;
+    qbc:admissibleSpecimens NCIT:C13325,
+        NCIT:C13356 ;
+    qbc:broaderConceptId NCIT:C105585 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/mapping/14749-6>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/mapping/2345-7> ;
+    qbc:interpretationRegimes <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/regime/C93566/N>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/regime/C93566/Y> ;
+    qbc:qualifierDataElementConcepts <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C48207>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C70713>,
+        <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C93566> ;
+    qbc:resultDataElementConcept <https://w3id.org/cdisc/cosmos/qbc/GlucoseBloodQuantitative/dec/C70856> ;
+    qbc:resultScale <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative> ;
+    cosmos_bc:definition "Quantitative determination of glucose concentration in a blood-derived specimen (plasma, serum, or serum/plasma)." ;
+    cosmos_bc:shortName "Glucose, blood-derived, quantitative" .
+
+NCIT:C13356 a qbc:ConceptTerm ;
+    qbc:preferredTerm "Plasma" .
+
+NCIT:C13283 a qbc:ConceptTerm ;
+    qbc:preferredTerm "Urine" .
+
+NCIT:C13325 a qbc:ConceptTerm ;
+    qbc:preferredTerm "Serum" .
+

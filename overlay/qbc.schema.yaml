@@ -1,0 +1,358 @@
+# =====================================================================
+# Qualified Biomedical Concept schema — the cosmos-rdf overlay
+#
+# Authored content. The core rendering of published COSMoS is
+# cosmos_bc_v1.ttl / cosmos_sdtm_v1.ttl; this schema is the overlay
+# layer, and every term it declares is this repo's, not CDISC's.
+#
+# Lineage: cdisc-for-ai/cosmos-bc-dss/sibling-bc/sibling_bc.schema.yaml
+# (2026-08-29), itself derived from docs/Glucose_Siblings_LinkML_Sketch.yaml
+# (2026-08-24). Those copies stay in place; this is the one that
+# generates a deliverable. Decisions D13-D19.
+#
+# Boundary rules (shared vocabulary for the whole sketch):
+#   1. Identity of an observable = component x system x scale x
+#      (method where pinned). Unit, TESTCD, domain, codelist binding,
+#      LOINC pin are recording attributes.
+#   2. Value type and scale are owned by the concept's result DEC and
+#      inherited once; a recording may refine, never contradict.
+#   3. Semantic value set (what the observation can say) is
+#      concept-level; codelist binding (how a standard writes it) is
+#      per implementation standard.
+#   4. Interpretation regime is a function of sibling x subject state;
+#      it is a coded pointer, never the numbers.
+#   5. Composition (OGTT, panels) sits above the concept layer; a
+#      regrouping that touches no sibling is packaging, not a BC.
+#   6. What is not derivable from the package is marked, not guessed
+#      (convention: sourceAnchor starting "[VERIFY]").
+#
+# Design decisions carried in (2026-08-29):
+#   - QualifiedBiomedicalConcept is its OWN class, deliberately not
+#     is_a cosmos_bc:BiomedicalConcept. That class's identifier slot
+#     (conceptId) is pattern-locked to C-codes/NEW_, and LinkML allows
+#     one identifier per class: subclassing would force either abusing
+#     that pattern with IRIs or adopting NEW_ — both rejected identity
+#     models. The relationship is stated machine-readably instead:
+#     class-level broad_mappings + instance-level broaderConceptId.
+#     Trade-off: existing COSMoS queries keyed on conceptId do not see
+#     siblings; if CDISC later grants a compatible identity, promotion
+#     to is_a is a mechanical refactor — the reverse is not.
+#   - admissibleSpecimens ranges over a BC-side ConceptTerm (NCIt
+#     concept + preferred term), not cosmos_sdtm:AssignedTerm; the
+#     recording's specimen keeps the SDTM AssignedTerm.
+#   - Namespace note: https://w3id.org/cdisc/... is demonstration
+#     authority, intended to transfer; see the DDS-conversation open
+#     questions. Prefixes are declared once so a swap is one line.
+#
+# Changed on the move into cosmos-rdf (2026-09-01):
+#   - D13: schema id and default prefix move to .../cosmos/qbc/, so
+#     every term this schema declares is named under the overlay
+#     segment rather than under .../cosmos/bc/, which D7 reserved for
+#     the ontology IRI of the core BC rendering.
+#   - D19: the SDTM model is no longer imported; AssignedTerm and the
+#     `domain` slot are declared locally.
+#   - The BC import is now this repo's own patched copy, and the
+#     cosmos_bc prefix carries the separator. Measured 2026-09-01: as
+#     written before this change, the class-level skos:broadMatch
+#     resolved to ...biomedical_concept_v1.0BiomedicalConcept and
+#     therefore did not join the core graph at all.
+#   - D15: the regime slot is no longer required, and the five
+#     invented regime URIs are gone from the instance files.
+# =====================================================================
+
+id: https://w3id.org/cdisc/cosmos/qbc
+name: COSMoS-Qualified-Biomedical-Concepts
+description: >-
+  Draft extension of the COSMoS v1.0 LinkML schemas: a qualified
+  (sibling) Biomedical Concept with resolvable-IRI identity, typed
+  external mappings, single result scale, authoritative result value
+  type, semantic value set, and a state-keyed interpretation-regime
+  pointer — plus a thinned recording class in which the SDTM dataset
+  details keep only the mapping-side content.
+
+imports:
+  - linkml:types
+  - ../build/cosmos_bc_model.patched      # this repo's own pinned BC model, repaired per D6
+  # THE SDTM MODEL IS DELIBERATELY NOT IMPORTED (D19). Importing both
+  # published schemas is the configuration decision D1 proved broken:
+  # six slot names are declared in both, LinkML merges imports
+  # last-wins, and gen-jsonld-context fails outright on `conceptId`.
+  # This schema needed exactly two things from the SDTM model — the
+  # AssignedTerm class and the `domain` slot — so both are declared
+  # locally below.
+  #
+  # The BC import is the PATCHED copy 20_generate.ipynb writes to
+  # build/, not downloads/. The published model's cosmos_bc prefix
+  # has no separator (known-gaps 1a); against the unrepaired copy
+  # every cosmos_bc term IRI this schema references is malformed and
+  # the broadMatch to BiomedicalConcept misses the core graph.
+  # So the overlay notebooks run after 10_fetch and 20_generate.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  qbc: https://w3id.org/cdisc/cosmos/qbc/
+  cosmos_bc: https://www.cdisc.org/cosmos/biomedical_concept_v1.0/
+  cosmos_sdtm: https://www.cdisc.org/cosmos/sdtm_v1.0/
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  loinc: https://loinc.org/
+  skos: http://www.w3.org/2004/02/skos/core#
+
+default_prefix: qbc
+default_range: string
+
+classes:
+
+  QualifiedBiomedicalConceptCollection:
+    tree_root: true
+    description: >-
+      Container for the instance file: the qualified concepts and
+      their recordings. Exists so linkml-validate has a target class.
+    attributes:
+      siblings:
+        range: QualifiedBiomedicalConcept
+        multivalued: true
+        inlined_as_list: true
+      recordings:
+        range: Recording
+        multivalued: true
+        inlined_as_list: true
+
+  QualifiedBiomedicalConcept:
+    broad_mappings:
+      - cosmos_bc:BiomedicalConcept
+    description: >-
+      A sibling BC: one observation shape under a broader analyte
+      concept. Identity is the IRI itself (read-many, citable,
+      content-negotiated per the usdm-rdf pattern). Deliberately NOT
+      a subclass of cosmos_bc:BiomedicalConcept — see the design
+      decision in the file header; the analyte link is skos:broader
+      via broaderConceptId.
+    slots:
+      - iri
+      - shortName
+      - definition
+      - broaderConceptId          # the NCIt analyte (skos:broader)
+      - externalMappings          # typed: exactMatch / narrowMatch
+      - resultScale               # SINGLE-valued
+      - resultDataElementConcept  # authoritative dataType lives here
+      - qualifierDataElementConcepts
+      - semanticValueSet          # Coded scales: admissible concepts
+      - admissibleSpecimens       # concept-level; recording picks one
+      - interpretationRegimes     # the one genuinely new construct
+    slot_usage:
+      iri:
+        identifier: true
+
+  AssignedTerm:
+    class_uri: cosmos_sdtm:AssignedTerm
+    description: >-
+      Stand-in for cosmos_sdtm:AssignedTerm, declared locally because
+      the SDTM model is not imported (D19). Attributes copied verbatim
+      from cosmos_sdtm_model.yaml at the pinned commit. Measured
+      2026-09-01: gen-jsonld-context honours the class_uri and maps
+      the term to cosmos_sdtm:AssignedTerm, while gen-owl mints
+      qbc:AssignedTerm and demotes the published IRI to a
+      skos:exactMatch. Both readings are kept; the divergence is the
+      same one decisions D8 and D11 record for the core rendering.
+      NOTE: conceptId and value are declared on more than one class in
+      this schema, so gen-owl reports them ambiguous and emits bare
+      property declarations with no range or pattern. gen-shacl keeps
+      the per-class patterns apart. The warning is left in place - see
+      D19; silencing it with slot_uri merges the definitions instead.
+    attributes:
+      conceptId:
+        description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
+        range: string
+        pattern: "^(C[0-9]+|CNEW)$"
+        required: false
+      value:
+        description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
+        range: string
+        required: true
+
+  ConceptTerm:
+    description: >-
+      BC-side coded term: an NCIt concept with its preferred term.
+      Used for the concept-level admissible specimen set; the SDTM
+      submission value for the same concept lives on the recording's
+      AssignedTerm.
+    attributes:
+      conceptId:
+        description: NCIt C-code
+        pattern: "^(C[0-9]+)$"
+      preferredTerm:
+        required: true
+
+  ExternalMapping:
+    description: >-
+      Typed mapping to an external code system. Replaces the flat
+      cosmos_bc:Coding for siblings: cardinality 0/1/>1 is handled by
+      the mapping relation, not by the key (exactMatch = same
+      observable; narrowMatch = finer external leaf, typically the
+      unit dimension).
+    attributes:
+      relation:
+        range: MappingRelationEnum
+        required: true
+      code:
+        required: true
+      system:
+        description: Code system URI (e.g. https://loinc.org/, NCIt)
+        required: true
+      comment:
+        description: e.g. which axis the narrowMatch refines
+
+  SemanticValueSetTerm:
+    description: >-
+      Concept-level admissible result value (what the observation can
+      say), distinct from any per-standard codelist binding (how a
+      given standard writes it). ncitCode absent when no concept
+      exists yet.
+    attributes:
+      value:
+        required: true
+      ncitCode:
+        pattern: "^(C[0-9]+)$"
+      sourceAnchor:
+        description: >-
+          Where this value is asserted (package, guidance, LOINC
+          answer list); starts "[VERIFY]" when no source could be
+          named.
+
+  InterpretationRegimeAssertion:
+    description: >-
+      Asserts that a distinct interpretation regime applies to this
+      sibling under a given subject state. Carries a coded pointer,
+      NEVER the reference-range numbers (those are data,
+      per-record/per-lab). Keyed on an existing state DEC — for
+      glucose, Fasting Status Indicator C93566 — so fasting and
+      post-load glucose share one sibling while carrying different
+      regimes.
+    attributes:
+      stateDataElementConceptId:
+        description: The state DEC this regime keys on (e.g. C93566)
+        pattern: "^(C[0-9]+)$"
+        required: true
+      stateValue:
+        description: >-
+          Value of the state under which this regime applies (from
+          the state DEC's value domain, e.g. Y / N; "*" = any state).
+        required: true
+      regime:
+        description: >-
+          Coded pointer to the regime, in a governed regime vocabulary.
+          NOT required, and populated nowhere: no such vocabulary
+          exists, and inventing a URI to fill the slot would be the
+          one fabricated identifier in the whole repo. What the
+          assertion can say without it is still the ask — that this
+          concept has a distinct interpretation regime under this
+          subject state, and a different one under that state.
+          Decision D15.
+        range: uriorcurie
+        required: false
+      sourceAnchor:
+        description: >-
+          Same convention as SemanticValueSetTerm: starts "[VERIFY]"
+          while the regime vocabulary does not exist.
+
+  Recording:
+    description: >-
+      Thinned SDTM dataset specialization: everything the sibling
+      already states is inherited, not re-declared. Kept here:
+      domain placement, topic/test code, the ONE specimen this
+      recording uses (must be in the sibling's admissibleSpecimens),
+      per-standard codelist bindings (incl. unit subset), origin, and
+      an optional LOINC pin at recording grain. Dropped relative to
+      cosmos_sdtm:SDTMGroup's variables: result dataType/length/
+      format/significantDigits (inherited via the sibling's result
+      DEC — verified to introduce no contradiction), and the
+      duplicated scale information.
+    slots:
+      - recordingId               # today's ds_id, now explicitly a mnemonic
+      - siblingIri                # points at the sibling, not the analyte
+      - domain
+      - testCode                  # assigned --TESTCD value
+      - specimen                  # AssignedTerm; one of sibling's admissible set
+      - loincPins                 # recording-grain LOINC codes (unit variants)
+      - unitCodelistBinding       # per-standard CT binding, e.g. UNIT subset
+      - resultCodelistBinding     # per-standard CT binding for Coded scales
+      - variableOverrides         # anything genuinely SDTM-shaped that remains
+
+slots:
+  iri:
+    range: uri
+  broaderConceptId:
+    description: NCIt C-code of the analyte concept (skos:broader)
+    pattern: "^(C[0-9]+)$"
+    required: true
+  externalMappings:
+    range: ExternalMapping
+    multivalued: true
+    inlined_as_list: true
+  resultScale:
+    description: Single scale of measurement — the sibling split axis
+    range: BiomedicalConceptResultScaleEnum
+    required: true
+  resultDataElementConcept:
+    description: >-
+      The result DEC with AUTHORITATIVE dataType; recordings inherit
+      it (SDTMVariable.dataElementConceptId -> DEC.dataType), they do
+      not re-declare it.
+    range: DataElementConcept
+    required: true
+    inlined: true
+  qualifierDataElementConcepts:
+    range: DataElementConcept
+    multivalued: true
+    inlined_as_list: true
+  semanticValueSet:
+    range: SemanticValueSetTerm
+    multivalued: true
+    inlined_as_list: true
+  admissibleSpecimens:
+    description: Concept-level admissible specimen set (NCIt-coded)
+    range: ConceptTerm
+    multivalued: true
+    inlined_as_list: true
+  interpretationRegimes:
+    range: InterpretationRegimeAssertion
+    multivalued: true
+    inlined_as_list: true
+  recordingId:
+    identifier: true
+    pattern: "^[A-Z][A-Z0-9_]*$"
+  siblingIri:
+    range: uri
+    required: true
+  domain:
+    slot_uri: cosmos_sdtm:domain
+    description: >-
+      Stand-in for cosmos_sdtm:domain (D19), copied verbatim. Measured
+      2026-09-01: gen-jsonld-context honours the slot_uri; gen-owl
+      drops it entirely and emits qbc:domain with no mapping back.
+    range: string
+    required: true
+  testCode:
+    required: true
+  specimen:
+    range: AssignedTerm
+    required: false
+    inlined: true
+  loincPins:
+    multivalued: true
+    inlined_as_list: true
+  unitCodelistBinding:
+    description: Per-standard unit binding (codelist / subset ref)
+  resultCodelistBinding:
+    description: Per-standard result binding for Coded scales
+  variableOverrides:
+    description: Residual SDTM-specific variable content
+    multivalued: true
+    inlined_as_list: true
+
+enums:
+  MappingRelationEnum:
+    permissible_values:
+      exactMatch:
+      narrowMatch:
+      broadMatch:
