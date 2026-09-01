@@ -14,6 +14,11 @@ registered** — no w3id PR has been submitted and no IRI in it dereferences.
 the `usdm-rdf` argument (per-IRI dereference at the redirect layer; the
 trade-off is more `.htaccess` rules, and it is bounded).
 
+**Settled at P1 (decision D7, option A): two segments, one per deliverable —
+`…/cosmos/bc/` and `…/cosmos/sdtm/` — naming the ontologies only.** The class and
+property IRIs stay as CDISC published them. So this namespace holds exactly two
+ontology IRIs and their version IRIs today, not a vocabulary of terms.
+
 **Why this segment.** The DDS profile developed in `cdisc-for-ai` needs a profile
 id under the same segment. One w3id PR covers both — the ontology namespace and
 the profile id — so the segment is registered once and used twice.
@@ -28,9 +33,8 @@ this repo's invention. Release identity therefore lives entirely in
 generic bare-numeric `versionIRI` rewrite rule from `usdm-rdf` decision D3
 carries over unchanged.
 
-Whether the eventual layout is one namespace or two — `…/cosmos/bc/` and
-`…/cosmos/sdtm/` — depends on decision D1 in [decisions.md](decisions.md), which
-is open. The registered segment is the same either way.
+The two segments follow from decision D1 (two graphs, settled by test). The
+registration is of `/cdisc/cosmos/` and covers both, plus the DDS profile id.
 
 ## Provenance instead of a version tag
 
@@ -62,7 +66,8 @@ Three identity questions, none of them settled at P0; each is a decision in
   and 101 linking phrases the DSS model publishes carry no `code_set` and no
   per-value `meaning` (`known-gaps.md` §4). Their IRIs must be minted in this
   repo's namespace. That is an authored act on top of a published vocabulary and
-  it must be labelled as such.
+  it must be labelled as such — and it is the one place decision D7 will have to
+  be revisited, since it is the first time a *term* would need a w3id name.
 
 ## Layering — what may live under this namespace
 
@@ -97,5 +102,6 @@ of P5, not an assumption to record here.
 
 - Which serialization is canonical for content negotiation, and the `.htaccess`
   rule set. P5. `usdm-rdf/docs/htaccess.txt` is the reference to adapt.
-- The project annotation namespace and its properties. There are no annotations
-  yet because there is no generator yet.
+- A project annotation namespace. The P1 headers use only published vocabulary —
+  Dublin Core, VANN, OWL, RDFS — so nothing has needed one yet. The first
+  candidate is the relationship-predicate vocabulary above.

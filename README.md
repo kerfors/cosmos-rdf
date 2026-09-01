@@ -5,15 +5,15 @@ Specializations — generated mechanically from the artifacts CDISC publishes in
 [cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS), plus an overlay graph
 for qualified ("sibling") biomedical concepts.
 
-**Status: P0 — scaffold and source verification. Nothing is generated yet.**
-There is no ontology, no shapes graph, no context, no A-Box and no overlay in
-this repo. What exists is the pinned source, the fetch pipeline, and the written
-decisions. The phase list below states intent; none of it is a promise.
+**Status: P1 — the core T-Box is generated.** Two OWL deliverables exist,
+`cosmos_bc_v1.ttl` and `cosmos_sdtm_v1.ttl`, at repo version 0.1.0. There is no
+shapes graph, no JSON-LD context, no A-Box and no overlay. The phase list below
+states intent for the rest; none of it is a promise.
 
-The namespace `https://w3id.org/cdisc/cosmos/` is **not yet registered**. When
-there are deliverables, this repo will carry the same offer `usdm-rdf` carries:
-draft, not a normative CDISC artifact, offered for transfer to CDISC governance —
-transfer is a single PR against the w3id `.htaccess`. See
+The namespace `https://w3id.org/cdisc/cosmos/` is **not yet registered**, so the
+ontology IRIs below do not dereference yet. This repo carries the same offer
+`usdm-rdf` carries: draft, not a normative CDISC artifact, offered for transfer to
+CDISC governance — transfer is a single PR against the w3id `.htaccess`. See
 [docs/iri-and-governance.md](docs/iri-and-governance.md).
 
 ## Why this repo exists
@@ -109,7 +109,7 @@ graph, many views.
 | Phase | Content | State |
 |---|---|---|
 | P0 | Scaffold, source verification, `10_fetch`, decisions written | **done** |
-| P1 | Core T-Box: `gen-owl` per schema, validation, known gaps | not started |
+| P1 | Core T-Box: OWL per schema, ontology headers, validation, known gaps | **done** |
 | P2 | Identity binding (NCIT prefix) and JSON-LD context | not started |
 | P3 | A-Box: un-flatten the CSV, render, SHACL shapes, validate | not started |
 | P4 | Overlay: the sibling concepts as RDF | not started |
@@ -128,28 +128,80 @@ cosmos-rdf/
 ├── CLAUDE.md
 ├── LICENSE                          # MIT — mirrors the upstream COSMoS license
 ├── .gitignore
+├── cosmos_bc_v1.ttl                 # BC T-Box deliverable
+├── cosmos_sdtm_v1.ttl               # DSS T-Box deliverable
 ├── downloads/                       # gitignored — the four pinned inputs land here
+├── build/                           # gitignored — the patched BC model, derived
+├── patches/
+│   └── cosmos_bc_prefix.patch       # written by 20_generate; the one repair, for review
 ├── notebooks/
-│   └── 10_fetch_cosmos.ipynb        # pin the commit SHA, fetch four inputs, write provenance
+│   ├── 10_fetch_cosmos.ipynb        # pin the commit SHA, fetch four inputs, write provenance
+│   ├── 20_generate.ipynb            # apply the repair, render both schemas, author the headers
+│   └── 30_validate.ipynb            # baselines, IRI checks, graph separation, reports
 ├── docs/
 │   ├── source-verification.md       # the P0 gate: what was verified, and how
-│   ├── decisions.md                 # D1–D5, all open
+│   ├── decisions.md                 # D1, D6, D7 settled; D2–D5 open
 │   ├── iri-and-governance.md        # namespace, identity, handoff
 │   └── known-gaps.md                # upstream gaps and current scope exclusions
 ├── scripts/
 │   └── LINEAGE.md                   # what gets copied from usdm-rdf, and when
-├── reports/                         # validation reports (none yet)
+├── reports/                         # CSV reports from validation runs
 ├── queries/                         # reusable SPARQL (none yet)
 └── versions/                        # deliverable snapshots per pin bump (none yet)
 ```
 
 ## Reproduce
 
+Requires `linkml` (developed against 1.11.1) and `rdflib`.
+
 1. Open `notebooks/10_fetch_cosmos.ipynb`. The upstream commit SHA is pinned in
    the first code cell. Run all cells. The four inputs land in `downloads/`, each
    with a `.fetch_meta_*.json` sidecar recording URL, SHA-256, size, retrieval
    timestamp, and — for the exports — the derived package date and row counts.
-2. There is no step 2 yet. P1 adds `20_generate`.
+2. Open `notebooks/20_generate.ipynb`. Run all cells. `cosmos_bc_v1.ttl` and
+   `cosmos_sdtm_v1.ttl` appear at the repo root.
+3. Open `notebooks/30_validate.ipynb`. Run all cells. Compare against the
+   baselines below; CSV reports are written to `reports/`.
+
+## IRI scheme
+
+Decision D7, option A ([docs/decisions.md](docs/decisions.md)): **the ontology is
+named under w3id, the terms are not.**
+
+| | `cosmos_bc_v1.ttl` | `cosmos_sdtm_v1.ttl` |
+|---|---|---|
+| ontology IRI | `https://w3id.org/cdisc/cosmos/bc/` | `https://w3id.org/cdisc/cosmos/sdtm/` |
+| `owl:versionIRI` | `…/cosmos/bc/0.1.0` | `…/cosmos/sdtm/0.1.0` |
+| term namespace (`vann:preferredNamespaceUri`) | `https://www.cdisc.org/cosmos/biomedical_concept_v1.0/` | `https://www.cdisc.org/cosmos/sdtm_v1.0/` |
+
+Every class and property IRI is the one the published schema declares. This
+rendering renames nothing; it mints a name for itself and for its releases only.
+The ontology IRI and the term namespace differing is the point of the decision,
+not an oversight — and `30_validate.ipynb` guards it, failing if any term ever
+appears in the w3id namespace.
+
+## Expected baselines (pinned commit `031429b1`, package date 2026-07-14)
+
+| | `cosmos_bc_v1.ttl` | `cosmos_sdtm_v1.ttl` |
+|---|---|---|
+| triples | 535 | 2,028 |
+| top-level `owl:Class` | 6 | 24 |
+| enum permissible values | 15 | 146 |
+| `owl:ObjectProperty` | 5 | 13 |
+| `owl:DatatypeProperty` | 13 | 30 |
+| IRIs in the CDISC namespace | 40 | 205 |
+
+Of the triples, 25 per graph are the authored ontology header and the
+`owl:AnnotationProperty` declarations that go with it; the rest are generated.
+
+Nine of the SDTM top-level classes are OBO PURLs (`obo:NCIT_C170547` and
+siblings) rather than terms in the COSMoS namespace: the Define-XML origin
+terminology, carried through from the enum `meaning:` values. They arrive already
+in the resolvable form decision D2 calls for.
+
+Deviation from a fresh pin indicates either a source change — likely benign,
+document the delta in `docs/` — or a generation bug. Investigate before
+releasing.
 
 ## Known gaps
 

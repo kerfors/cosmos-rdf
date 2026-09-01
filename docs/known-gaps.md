@@ -33,6 +33,43 @@ at this pin:
 
 Two independent tools, one upstream issue. Worth reporting upstream.
 
+## 1a. Upstream — the BC schema's namespace prefix has no trailing separator
+
+`cosmos_bc_model.yaml` declares:
+
+```yaml
+cosmos_bc: https://www.cdisc.org/cosmos/biomedical_concept_v1.0
+```
+
+with no trailing `/` or `#`, where `cosmos_sdtm_model.yaml` declares its own
+prefix **with** the slash. LinkML concatenates directly, so every IRI generated
+from the BC model is malformed:
+
+```
+https://www.cdisc.org/cosmos/biomedical_concept_v1.0BiomedicalConcept
+https://www.cdisc.org/cosmos/biomedical_concept_v1.0categories
+```
+
+against the SDTM model's well-formed `…/cosmos/sdtm_v1.0/assignedTerm`.
+
+This is a one-character defect with an outsized effect: it makes the mechanical
+RDF rendering of the BC layer unusable as published, and it affects any consumer
+running any LinkML generator over that file, not just this repo.
+
+**It cannot be repaired from a wrapper schema.** Redeclaring the prefix with the
+slash in an importing schema is rejected —
+`ValueError: Prefix: cosmos_bc mismatch between <importing schema> and COSMoS-Biomedical-Concepts-Schema`
+— and `gen-owl` has no prefix-override option. So the repair is a **vendored,
+patched copy** of `cosmos_bc_model.yaml`: one character, recorded as a patch
+against the pinned commit, reapplied on every pin bump.
+
+Verified 2026-09-01 — with the trailing slash added and nothing else changed,
+`gen-owl` and `gen-jsonld-context` both succeed and the IRIs come out as
+`https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConcept`.
+
+Report upstream together with §1: the fix is one character and needs no
+modelling discussion.
+
 ## 2. Upstream — neither published schema declares a `version`
 
 `cosmos_bc_model.yaml` and `cosmos_sdtm_model.yaml` carry an `id` and a `name`
@@ -96,11 +133,22 @@ standard guarantees it will keep working. See decision D3.
 
 This is the same gap the qualified-BC work is about, met one layer down.
 
-## 7. This repo — nothing is generated yet
+## 7. This repo — only the core T-Box is generated
 
-At P0 there are no deliverables. No ontology, no shapes, no context, no A-Box,
-no overlay, no w3id registration, no WIDOCO rendering. The phases in
-`README.md` say what is intended; nothing there is a promise.
+At P1 the deliverables are `cosmos_bc_v1.ttl` and `cosmos_sdtm_v1.ttl`. There is
+no shapes graph, no JSON-LD context, no A-Box, no overlay, no w3id registration
+and no WIDOCO rendering. The phases in `README.md` say what is intended; nothing
+there is a promise.
+
+Both deliverables are T-Box only. Nothing in them says anything about a single
+biomedical concept or dataset specialization — that is P3.
+
+**The ontology IRIs do not dereference.** The w3id namespace is not registered
+yet (P5), so `https://w3id.org/cdisc/cosmos/bc/` resolves to nothing today. Nor
+do the term IRIs: they are CDISC's published strings, and both schema ids return
+404 on `cdisc.org` (checked 2026-09-01, with `https://www.cdisc.org/cosmos/`
+redirecting to a page slugged `cdisc-biomedical-concepts-old`). That half is not
+this repo's to fix — see decision D7.
 
 ## 8. This repo — no LOINC or NCIt claim is verified
 
