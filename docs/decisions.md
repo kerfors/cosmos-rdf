@@ -5,7 +5,9 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
 D1–D12 are settled. D5 is settled but not yet exercised, since the layer it
-governs is deferred.
+governs is deferred. D13–D18 are open and listed at the end: they are the
+questions the overlay phase has to answer, recorded here so that what is
+unresolved is visible rather than merely unmentioned.
 
 ---
 
@@ -514,6 +516,59 @@ label, not two meanings. Those two produce the four `sh:maxCount` violations on
 
 All nineteen are recorded in `reports/dual_role_concepts.csv` with their DSS usage
 on both sides, derived on every run.
+
+---
+
+## Open — the questions P4 has to answer
+
+Stubs. Each will get the same treatment as D1–D12 — an argument with the
+measurement that settled it — when it is acted on.
+
+### D13 — the namespace for qualified concepts OPEN
+
+Sibling concepts have no CDISC identity, so minting is unavoidable and is not
+renaming. But the draft instances mint them at
+`https://w3id.org/cdisc/cosmos/bc/…`, which decision D7 made the **ontology IRI of
+the core BC graph** — an authored concept inside the namespace reserved for the
+mechanical rendering. Needs a distinct segment. Settle before rendering anything:
+every instance IRI moves with it.
+
+### D14 — how a qualified concept links to its broader concept OPEN
+
+The link target already exists: the BC A-Box renders `obo:NCIT_C105585` as a real
+node. Open is which predicate carries the relation, and whether the class-level
+`skos:broadMatch` that `gen-owl` derives from `broad_mappings` stays alongside it.
+
+### D15 — interpretation regimes OPEN
+
+The draft schema declares the slot; no instance populates it, and no governed
+vocabulary exists behind it. Emit a stub vocabulary marked ungoverned, emit
+nothing, or emit only the fact that the slot exists. Note that D2 and D11 both
+lean toward reporting an absence rather than manufacturing a presence.
+
+### D16 — external mappings as real predicates OPEN
+
+`exactMatch` / `narrowMatch` / `broadMatch` map cleanly onto SKOS. This is the one
+place the repo would **assert** a mapping relation, in deliberate contrast to
+decision D10, which refuses to assert one for a published COSMoS coding. The
+difference — these are authored, curated and reviewable; those are not — is the
+argument, and it has to be written rather than assumed.
+
+### D17 — recordings that point at Dataset Specializations OPEN
+
+Recordings reference DSS mnemonics. D3 settled the DSS IRI scheme, but D4 deferred
+the DSS A-Box, so the targets do not exist yet. Link anyway and accept dangling
+references, or hold recordings until that layer lands.
+
+### D18 — `categories` as nodes OPEN — direction settled, implementation pending
+
+**Direction settled 2026-09-01: a category becomes an unresolved label-node in
+core; the resolution of a token to the concept it names is authored, and belongs
+to the overlay.** The token is published; the identity behind the token is
+inferred. Synonyms stay literals.
+
+See `known-gaps.md` §7f for what the current deliverable does and why it is a gap.
+Implementation waits for the overlay so both halves ship together.
 
 ---
 

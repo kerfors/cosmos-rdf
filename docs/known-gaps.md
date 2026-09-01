@@ -227,6 +227,39 @@ and absent from the DEC label.
 
 Reported, not resolved: `reports/dual_role_concepts.csv`, derived on every run.
 
+## 7f. This repo — `categories` is rendered as literals, and that drops a grouping mechanism
+
+`cosmos_bc_v1.instances.ttl` emits `categories` as **4,389 string literals over
+408 distinct tokens** — `QRS` carried by 291 concepts, `Laboratory Tests` by 186,
+104 tokens used exactly once. So the attribute that connects concepts to one
+another is flat text, and the BC layer cannot be traversed by classification.
+
+That followed the schema's `range: string` and was never argued. It should have
+been, because the publisher has documented the opposite.
+
+CDISC's knowledge-base article *Searching CDISC Biomedical Concepts*
+(<https://www.cdisc.org/kb/articles/cdisc-published/searching-cdisc-biomedical-concepts>)
+states that the NCIt hierarchy "does not consistently align with CDISC-specific
+needs", that "relying on NCIt alone is not sufficient for locating all BCs
+associated with a specific QRS instrument", and that the `categories` attribute is
+what carries the grouping. Of synonyms it says plainly: "it does not function as a
+way to gather or group related BCs."
+
+The data agrees independently. Categories are shared and connect concepts;
+synonyms are 2,866 uses over 2,839 distinct values with only **23** shared by more
+than one concept. So synonyms are correctly literals, and categories are not.
+
+**Direction, not yet implemented** (decision D18): a category becomes an
+unresolved label-node in the core rendering — the published token, asserting
+nothing beyond its existence and which concepts carry it — while resolving a token
+to the concept it names is an authored join and belongs to the overlay layer.
+
+Note the consequence when it lands: the published shape types `categories` as
+`sh:datatype xsd:string` with `sh:nodeKind sh:Literal`, so nodes will add a fifth
+cause to the conformance report in §7d. It is the sharpest of them — CDISC's
+article says `categories` is how related concepts are gathered, and CDISC's
+published constraint says it is a string.
+
 ## 8. This repo — what is claimed about LOINC and NCIt, and what is not
 
 Two claims are made, both verified before use.
