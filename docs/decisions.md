@@ -4,11 +4,10 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 `docs/iri-and-governance.md` (D1–D6 there). Each is an argument, not a code
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
-D1–D17, D19 and D20 are settled. D5 is settled but not yet exercised, since the
-layer it governs is deferred; D3 is now exercised by the overlay (see D17).
-**D18 and D21 are open with their direction settled and their implementation
-pending** — both change the core A-Box, and they ship together in one re-render,
-so there is one set of baselines rather than two.
+D1–D21 are settled. D5 is settled but not yet exercised, since the layer it
+governs is deferred; D3 is exercised by the overlay (see D17). D18 and D21 were
+implemented together in one re-render of the core A-Box on 2026-09-02, so there
+is one set of baselines rather than two.
 
 ---
 
@@ -733,19 +732,40 @@ of what the HCV RNA case demonstrates.
 
 ---
 
-## D18 — `categories` as nodes OPEN — direction settled, implementation pending
+## D18 — `categories` as nodes SETTLED 2026-09-02
 
-**Direction settled 2026-09-01: a category becomes an unresolved label-node in core;
-the resolution of a token to the concept it names is authored, and belongs to the
-overlay.** The token is published; the identity behind the token is inferred.
-Synonyms stay literals — measured, 2,866 synonym tokens of which only 23 are shared
-by more than one concept, so making them nodes would add 2,839 nodes and almost no
-edges, where 408 category tokens are shared heavily.
+**Settled: a category is a label-node in core.** A concept's `categories` value
+becomes an edge to `https://w3id.org/cdisc/cosmos/bc/category/{token}`, and that
+node carries the token as `rdfs:label` and nothing else — no `rdf:type`, no claim
+about what the token names. The resolution of a token to the concept it names is
+authored, and belongs to the overlay. The token is published; the identity behind
+it is inferred. Synonyms stay literals — measured, 2,866 synonym tokens of which
+only 23 are shared by more than one concept, so making them nodes would add 2,839
+nodes and almost no edges, where the category tokens are shared heavily.
 
-See `known-gaps.md` §7f for what the current deliverable does and why it is a gap.
+**The slug rule.** The token, percent-encoded with nothing left unescaped. It is
+exact and reversible, and `50_render_bc.ipynb` asserts the round-trip from label to
+IRI on every run. Measured at this pin: 408 distinct tokens in the export, 33 of
+them carrying a character outside letters, digits and space (`Tumor/Lesion
+Results`, `Alzheimer's Disease Assessment Scale-Cognitive …`, `RECIST 1.1`), and no
+two tokens differing only in case. **405** land on a rendered concept; `Surveys`,
+`Acceptability Surveys` and `Questionnaires` occur only on the six concepts decision
+D2 omits.
 
-**Implementation waits so that it ships with D21**, which changes the same notebook
-and the same baselines. One re-render, one set of baselines, one release.
+**This is the first time core mints an IRI under w3id**, and it is deliberate. D7
+declined to rename anything CDISC named; a category token has no CDISC identity to
+rename — it is an ungoverned string, see the caution below — so minting is not
+renaming. Same ground as D13. The guard in `30_validate.ipynb` and
+`scripts/ci_check.py` must admit the `category/` segment by name.
+
+**Measured after the change.** 4,366 category edges to 405 nodes. Two new causes in
+the conformance report, 4,366 each: the published shape types `categories` as
+`sh:datatype xsd:string` with `sh:nodeKind sh:Literal`. Those are the sharpest of
+the six — CDISC's own article says `categories` is how related concepts are
+gathered, and CDISC's own constraint says it is a string.
+
+See `known-gaps.md` §7f for what the deliverable did before this decision and why
+it was a gap.
 
 **A caution added 2026-09-01.** An earlier reading of NCIt held that CDISC publishes
 a governed codelist for category values. It does not — see the verification
@@ -904,7 +924,7 @@ enums this repo actually renders.
 
 ---
 
-## D21 — `data_type` on the BC↔DEC edge OPEN — direction settled, implementation pending
+## D21 — `data_type` on the BC↔DEC edge SETTLED 2026-09-02
 
 **The defect, measured 2026-09-01.** `50_render_bc.ipynb` renders each data element
 concept once, from whichever row arrives first. For `dec_label` and `ncit_dec_code`
@@ -921,11 +941,46 @@ Result carries seven different `data_type` values across the pinned package — 
 `C105585` and HCV RNA `C142330` both publish it as **string**; the deliverable says
 **decimal**.
 
-**Direction settled: reify the BC→DEC edge.** The DEC node keeps what is constant —
-short name, NCIt code, identity. `data_type` and `example_set` move onto a node for
-the pair. It renders what the package says, collapses nothing and invents nothing.
-The cost is a larger A-Box and a node kind the published schema has no class for,
-which is itself reportable in D11's style.
+**Settled: reify the BC→DEC edge as the concept's use of the DEC.** The shared node
+`obo:NCIT_C70856` keeps what is constant — identity, `shortName`, `ncitCode`. A
+node at `https://w3id.org/cdisc/cosmos/bc/{BC}/dec/{DEC}`, typed
+`DataElementConcept`, carries `dataType` and `exampleSet` for that pair, plus
+`shortName`, and reaches the shared node by `conceptId` rendered as an edge. The
+concept's `dataElementConcepts` points at the use-node. It renders what the package
+says, collapses nothing and invents nothing.
+
+**Why the use-node is the honest reading of the schema, not a workaround.**
+`dataElementConcepts` inlines a `DataElementConcept` whose `conceptId` is its
+identifier. That inlined object *is* the pair: one per concept, with its own
+`dataType`. The use-node renders the object the schema describes; the shared node
+is what its identifier resolves to under decision D2. Both are typed
+`DataElementConcept` because the schema has one class for both readings.
+
+**Why under w3id and not under the concept's PURL.** The natural path
+`obo:NCIT_C105585/dec/C70856` sits in OBO's namespace, which is not this repo's to
+mint under. The use-node therefore lives under this repo's `bc/` segment, beside
+the category nodes of D18 — one D7 revisit for both.
+
+**Measured after the change.** 6,004 use-nodes (6,029 pairs at the latest package
+date; 6,027 with an identified DEC; 6,004 with both sides identified), 224 shared
+nodes, 63,030 triples against 29,697 before, 4.1 MB against 1.6 MB, no blank nodes,
+byte-identical on macOS and Linux. The renderer asserts that no pair carries more
+than one `data_type` or `example_set` — true at this pin — so if the grain ever
+moves again, generation fails rather than collapsing silently.
+
+**What it costs in the conformance report, and why the cost is the finding.**
+Three causes of 6,004 each — the use-node's `conceptId` is an IRI where the
+published shape says `xsd:string`, `sh:Literal`, and pattern `^(C[0-9]+|NEW_…)$`
+— and one of 224: `sh:minCount 1` on `dataType`, which the shared node no longer
+carries. That last one is the D21 finding stated by CDISC's own shape: it
+requires exactly one data type on a data element concept, and at this pin a data
+element concept has up to seven.
+
+**Consequence for the merged graph.** Before this decision a consumer loading core
+and overlay together saw Observation Result as `decimal` in core and `float` in
+the overlay for glucose — the wrong disagreement. Now the core pair says `string`
+and the overlay pair says `float`, which is the inherit-once argument the overlay
+exists to make, readable from the graph rather than from prose.
 
 **Rejected: multi-value them on the DEC node.** Nothing is dropped, but which BC said
 which is lost — `C70856` would simply be seven types — and it violates the published
@@ -950,7 +1005,7 @@ property of the data element concept at all** in what CDISC publishes. It is a
 property of the edge, which is why one DEC can be seven types at once, and why
 "inherit once from the result DEC" is impossible today rather than merely unusual.
 
-**Ships with D18** — same notebook, same baselines, one re-render.
+**Shipped with D18** on 2026-09-02 — one re-render, one set of baselines.
 
 ---
 
