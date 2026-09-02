@@ -55,14 +55,14 @@ qbc: a owl:Ontology ;
     dcterms:description "An authored overlay on the mechanical rendering of CDISC COSMoS: the qualified (sibling) biomedical concept, with an identity of its own, typed mappings to external code systems, a single result scale, an authoritative result data element concept, a concept-level semantic value set, and a state-keyed interpretation-regime assertion. Every term declared here is this repo's, not CDISC's; the terms it reuses keep the IRIs CDISC published. The concepts it qualifies are the ones cosmos_bc_v1.instances.ttl renders, reached by skos:broader." ;
     dcterms:identifier "2026-07-14" ;
     dcterms:license <https://opensource.org/licenses/MIT> ;
-    dcterms:modified "2026-09-01"^^xsd:date ;
+    dcterms:modified "2026-09-02"^^xsd:date ;
     dcterms:title "CDISC COSMoS Qualified Biomedical Concepts (overlay)" ;
     vann:preferredNamespacePrefix "qbc" ;
     vann:preferredNamespaceUri qbc: ;
     rdfs:comment "Authored overlay, not a rendering of published COSMoS. Draft - not a normative CDISC artifact." ;
     owl:imports <https://w3id.org/cdisc/cosmos/bc/> ;
-    owl:versionIRI qbc:0.1.0 ;
-    owl:versionInfo "v0.1.0" .
+    owl:versionIRI qbc:0.2.0 ;
+    owl:versionInfo "v0.2.0" .
 
 qbc:QualifiedBiomedicalConcept a owl:Class ;
     rdfs:label "QualifiedBiomedicalConcept" ;

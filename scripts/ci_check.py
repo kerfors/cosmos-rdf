@@ -32,7 +32,7 @@ BC_NS = "https://www.cdisc.org/cosmos/biomedical_concept_v1.0"
 SDTM_NS = "https://www.cdisc.org/cosmos/sdtm_v1.0"
 W3ID = "https://w3id.org/cdisc/cosmos/"
 QBC_NS = W3ID + "qbc/"
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 # Operational baselines: COSMoS commit 031429b1, package date 2026-07-14.
 ONTOLOGIES = {

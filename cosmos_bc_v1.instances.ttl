@@ -24492,8 +24492,8 @@ NCIT:C99531 a cosmos_bc:BiomedicalConcept ;
     dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_biomedical_concepts_latest.csv> ;
     rdfs:comment "Biomedical Concept instances rendered from the pinned COSMoS export. Concepts with no NCIt code are not represented. Draft - not a normative CDISC artifact." ;
     owl:imports <https://w3id.org/cdisc/cosmos/bc/> ;
-    owl:versionIRI <https://w3id.org/cdisc/cosmos/bc/instances/0.1.0> ;
-    owl:versionInfo "v0.1.0" .
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/bc/instances/0.2.0> ;
+    owl:versionInfo "v0.2.0" .
 
 <http://loinc.org/107146-3> a cosmos_bc:Coding ;
     cosmos_bc:code "107146-3" ;

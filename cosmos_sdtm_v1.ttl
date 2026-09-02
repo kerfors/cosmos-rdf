@@ -36,14 +36,14 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
     dcterms:creator "Kerstin Forsberg" ;
     dcterms:description "A mechanical OWL rendering of the LinkML schema CDISC publishes as model/cosmos_sdtm_model.yaml in cdisc-org/COSMoS: the SDTM group, variable, relationship and codelist classes, their required and ordered slots, identifier patterns, and the controlled enumerations - including the reification vocabulary (predicate terms, linking phrases) and the Define-XML origin terminology with its NCIt meanings. Class and property IRIs are the ones the published schema declares; this rendering does not rename them." ;
     dcterms:license <https://opensource.org/licenses/MIT> ;
-    dcterms:modified "2026-09-01"^^xsd:date ;
+    dcterms:modified "2026-09-02"^^xsd:date ;
     dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/model/cosmos_sdtm_model.yaml> ;
     dcterms:title "CDISC COSMoS SDTM Dataset Specializations (RDF/OWL rendering)" ;
     vann:preferredNamespacePrefix "cosmos_sdtm" ;
     vann:preferredNamespaceUri cosmos_sdtm: ;
     rdfs:comment "Mechanical rendering of a published CDISC COSMoS LinkML schema. Draft - not a normative CDISC artifact." ;
-    owl:versionIRI <https://w3id.org/cdisc/cosmos/sdtm/0.1.0> ;
-    owl:versionInfo "v0.1.0" .
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/sdtm/0.2.0> ;
+    owl:versionInfo "v0.2.0" .
 
 cosmos_sdtm:SDTMGroup a owl:Class ;
     rdfs:label "SDTMGroup" ;

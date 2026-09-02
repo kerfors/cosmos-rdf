@@ -101,8 +101,8 @@ qbc:GlucosePlasmaEquivalent a qbc:QualifiedBiomedicalConcept ;
     rdfs:comment "Authored qualified biomedical concepts and their recordings. Each is linked to the COSMoS concept it qualifies by skos:broader; that concept is rendered in cosmos_bc_v1.instances.ttl, which this graph imports. Recordings carry the Dataset Specialization IRI of decision D3; the Dataset Specialization layer itself is deferred, so those IRIs have no other triples yet. Draft - not a normative CDISC artifact." ;
     owl:imports <https://w3id.org/cdisc/cosmos/bc/instances/>,
         qbc: ;
-    owl:versionIRI <https://w3id.org/cdisc/cosmos/qbc/instances/0.1.0> ;
-    owl:versionInfo "v0.1.0" .
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/qbc/instances/0.2.0> ;
+    owl:versionInfo "v0.2.0" .
 
 NCIT:C120839 a qbc:ConceptTerm ;
     qbc:preferredTerm "Interstitial Fluid" .

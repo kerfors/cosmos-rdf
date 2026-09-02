@@ -5,7 +5,7 @@ Specializations — generated mechanically from the artifacts CDISC publishes in
 [cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS), plus an overlay graph
 for qualified ("sibling") biomedical concepts.
 
-**Status: P4, overlay rendered.** Nine deliverables at repo version 0.1.0: two
+**Status: P4, overlay rendered.** Nine deliverables at repo version 0.2.0: two
 core OWL graphs, two JSON-LD contexts, two SHACL shapes graphs, the BC instance
 graph, and the overlay's own OWL graph and instance graph. The Dataset
 Specialization A-Box is deferred (decision D4). The phase list below states intent
@@ -218,7 +218,7 @@ named under w3id, the terms are not.**
 | | `cosmos_bc_v1.ttl` | `cosmos_sdtm_v1.ttl` |
 |---|---|---|
 | ontology IRI | `https://w3id.org/cdisc/cosmos/bc/` | `https://w3id.org/cdisc/cosmos/sdtm/` |
-| `owl:versionIRI` | `…/cosmos/bc/0.1.0` | `…/cosmos/sdtm/0.1.0` |
+| `owl:versionIRI` | `…/cosmos/bc/0.2.0` | `…/cosmos/sdtm/0.2.0` |
 | term namespace (`vann:preferredNamespaceUri`) | `https://www.cdisc.org/cosmos/biomedical_concept_v1.0/` | `https://www.cdisc.org/cosmos/sdtm_v1.0/` |
 
 Every class and property IRI is the one the published schema declares. This
@@ -238,7 +238,7 @@ subject, which *is* the Dataset Specialization IRI `…/dss/{DOMAIN}/{MNEMONIC}`
 | | `cosmos_qbc_v1.ttl` |
 |---|---|
 | ontology IRI | `https://w3id.org/cdisc/cosmos/qbc/` |
-| `owl:versionIRI` | `…/cosmos/qbc/0.1.0` |
+| `owl:versionIRI` | `…/cosmos/qbc/0.2.0` |
 | `owl:imports` | `…/cosmos/bc/` |
 | term namespace | `https://w3id.org/cdisc/cosmos/qbc/` — the overlay's terms are its own |
 
