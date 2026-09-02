@@ -141,8 +141,9 @@ deferred** (decision D4): 1,475 specializations, 13,922 variables, roughly 450,0
 triples. Decisions D3 and D5 govern it; D5 is not yet exercised, and D3 now is —
 decision D17 mints eight Dataset Specialization IRIs in the overlay.
 
-There is no overlay, no w3id registration and no WIDOCO rendering. The phases in
-`README.md` say what is intended; nothing there is a promise.
+The overlay is rendered — `cosmos_qbc_v1.ttl` and `cosmos_qbc_v1.instances.ttl`,
+decisions D13–D21. There is no w3id registration and no WIDOCO rendering. The
+phases in `README.md` say what is intended; nothing there is a promise.
 
 **The ontology IRIs do not dereference.** The w3id namespace is not registered
 yet (P5), so `https://w3id.org/cdisc/cosmos/bc/` resolves to nothing today. Nor
@@ -204,12 +205,14 @@ publisher's own view agrees with it.
 
 ## 7d. This repo — the A-Box does not conform to the published shapes
 
-8,925 violations, four causes, every one classified by
+41,620 violations, six causes, every one classified by
 `60_validate_instances.ipynb` and recorded in `reports/shacl_conformance.csv`. The
 full argument is decision D11. In short: `sh:closed true` rejects the identity
 triples the schema has no slot for; `gen-owl` and `gen-shacl` disagree about
-whether an enum value is a class IRI or a string; and `parentConceptId` is typed
-`string`, so rendering it as an edge is an error by the model's own rules.
+whether an enum value is a class IRI or a string; `parentConceptId` and
+`categories` are typed `string`, so rendering either as an edge is an error by the
+model's own rules; and the shape requires exactly one `dataType` on a data element
+concept that has up to seven (§7f, decisions D18 and D21).
 
 Not a defect to fix. Conforming would mean parent references stay strings and the
 NCIt anchoring leaves the data.
@@ -228,12 +231,13 @@ and absent from the DEC label.
 
 Reported, not resolved: `reports/dual_role_concepts.csv`, derived on every run.
 
-## 7f. This repo — `categories` is rendered as literals, and that drops a grouping mechanism
+## 7f. This repo — `categories` was rendered as literals, and that dropped a grouping mechanism
 
-`cosmos_bc_v1.instances.ttl` emits `categories` as **4,389 string literals over
-408 distinct tokens** — `QRS` carried by 291 concepts, `Laboratory Tests` by 186,
-104 tokens used exactly once. So the attribute that connects concepts to one
-another is flat text, and the BC layer cannot be traversed by classification.
+Until 2026-09-02, `cosmos_bc_v1.instances.ttl` emitted `categories` as **4,389
+string literals over 408 distinct tokens** — `QRS` carried by 291 concepts,
+`Laboratory Tests` by 186, 104 tokens used exactly once. So the attribute that
+connects concepts to one another was flat text, and the BC layer could not be
+traversed by classification.
 
 That followed the schema's `range: string` and was never argued. It should have
 been, because the publisher has documented the opposite.
@@ -250,16 +254,20 @@ The data agrees independently. Categories are shared and connect concepts;
 synonyms are 2,866 uses over 2,839 distinct values with only **23** shared by more
 than one concept. So synonyms are correctly literals, and categories are not.
 
-**Direction, not yet implemented** (decision D18): a category becomes an
-unresolved label-node in the core rendering — the published token, asserting
-nothing beyond its existence and which concepts carry it — while resolving a token
-to the concept it names is an authored join and belongs to the overlay layer.
+**Implemented 2026-09-02** (decision D18): a category is an unresolved label-node
+in the core rendering — the published token, asserting nothing beyond its
+existence and which concepts carry it — while resolving a token to the concept it
+names is an authored join and belongs to the overlay layer. 405 nodes, 4,366
+edges.
 
-Note the consequence when it lands: the published shape types `categories` as
-`sh:datatype xsd:string` with `sh:nodeKind sh:Literal`, so nodes will add a fifth
-cause to the conformance report in §7d. It is the sharpest of them — CDISC's
-article says `categories` is how related concepts are gathered, and CDISC's
-published constraint says it is a string.
+The published shape types `categories` as `sh:datatype xsd:string` with
+`sh:nodeKind sh:Literal`, so the nodes add a cause to the conformance report in
+§7d. It is the sharpest of them — CDISC's article says `categories` is how related
+concepts are gathered, and CDISC's published constraint says it is a string.
+
+The same re-render corrected a defect of this repo's own: `dataType` and
+`exampleSet` were rendered once per data element concept, when at this pin they
+vary by (concept, DEC) pair — decision D21.
 
 ## 8. This repo — what is claimed about LOINC and NCIt, and what is not
 

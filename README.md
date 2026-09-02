@@ -5,11 +5,11 @@ Specializations — generated mechanically from the artifacts CDISC publishes in
 [cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS), plus an overlay graph
 for qualified ("sibling") biomedical concepts.
 
-**Status: P3, Biomedical Concept layer.** Seven deliverables at repo version
-0.1.0: two OWL graphs, two JSON-LD contexts, two SHACL shapes graphs, and the BC
-instance graph. The Dataset Specialization A-Box is deferred (decision D4) and
-there is no overlay. The phase list below states intent for the rest; none of it
-is a promise.
+**Status: P4, overlay rendered.** Nine deliverables at repo version 0.1.0: two
+core OWL graphs, two JSON-LD contexts, two SHACL shapes graphs, the BC instance
+graph, and the overlay's own OWL graph and instance graph. The Dataset
+Specialization A-Box is deferred (decision D4). The phase list below states intent
+for the rest; none of it is a promise.
 
 The namespace `https://w3id.org/cdisc/cosmos/` is **not yet registered**, so the
 ontology IRIs below do not dereference yet. This repo carries the same offer
@@ -113,7 +113,7 @@ graph, many views.
 | P1 | Core T-Box: OWL per schema, ontology headers, validation, known gaps | **done** |
 | P2 | Identity binding and JSON-LD contexts | **done** |
 | P3 | A-Box and shapes | **BC layer done**; DSS layer deferred (D4) |
-| P4 | Overlay: the sibling concepts as RDF | not started |
+| P4 | Overlay: the qualified concepts as RDF | **done** — six concepts, eight recordings (D13–D21) |
 | P5 | Dereference and publish: w3id PR, WIDOCO, release, CI | not started |
 | P6 | The DDS profile gains a sentence saying it is a projection | not started |
 
@@ -136,6 +136,12 @@ cosmos-rdf/
 ├── cosmos_bc_v1.shapes.ttl          # BC SHACL shapes, generated, unmodified
 ├── cosmos_sdtm_v1.shapes.ttl        # DSS SHACL shapes, generated, unmodified
 ├── cosmos_bc_v1.instances.ttl       # BC A-Box
+├── cosmos_qbc_v1.ttl                # overlay T-Box: the qualified-BC schema as OWL
+├── cosmos_qbc_v1.instances.ttl      # overlay A-Box: six qualified concepts, eight recordings
+├── overlay/
+│   ├── qbc.schema.yaml              # authored LinkML schema for the overlay
+│   ├── glucose.instances.yaml       # authored instances, first worked case
+│   └── hcvrna.instances.yaml        # authored instances, second worked case
 ├── downloads/                       # gitignored — the four pinned inputs land here
 ├── build/                           # gitignored — the patched BC model, derived
 ├── patches/
@@ -149,10 +155,12 @@ cosmos-rdf/
 │   ├── 50_render_bc.ipynb           # the BC A-Box
 │   ├── 55_generate_shapes.ipynb     # SHACL per schema
 │   ├── 60_validate_instances.ipynb  # conformance report; every violation classified
-│   └── 65_compare_render_paths.ipynb # direct renderer vs linkml-convert (D8)
+│   ├── 65_compare_render_paths.ipynb # direct renderer vs linkml-convert (D8)
+│   ├── 70_generate_qbc.ipynb        # overlay T-Box, after 10 and 20
+│   └── 75_render_qbc.ipynb          # overlay A-Box, after 70 and 50; asserts the join to core
 ├── docs/
 │   ├── source-verification.md       # the P0 gate: what was verified, and how
-│   ├── decisions.md                 # D1–D12, all settled
+│   ├── decisions.md                 # D1–D21, all settled
 │   ├── iri-and-governance.md        # namespace, identity, handoff
 │   └── known-gaps.md                # upstream gaps and current scope exclusions
 ├── scripts/
@@ -189,6 +197,12 @@ them; `scripts/ci_check.py`, which is what CI runs, needs `rdflib` alone.
 7. Open `notebooks/60_validate_instances.ipynb`. Run all cells. It reports
    non-conformance — see **Conformance** below — and fails only on a violation it
    cannot account for.
+8. Open `notebooks/70_generate_qbc.ipynb`. Run all cells. `cosmos_qbc_v1.ttl`
+   appears at the repo root. It imports the patched BC model step 2 wrote to
+   `build/`, so it runs after step 2.
+9. Open `notebooks/75_render_qbc.ipynb`. Run all cells. `cosmos_qbc_v1.instances.ttl`
+   appears at the repo root, and the notebook asserts that the overlay joins the
+   core A-Box from step 5.
 
 `notebooks/45_identity_probe.ipynb` and `notebooks/65_compare_render_paths.ipynb`
 are optional and are not build steps. The first measures the claim decision D2
@@ -213,6 +227,21 @@ The ontology IRI and the term namespace differing is the point of the decision,
 not an oversight — and `30_validate.ipynb` guards it, failing if any term ever
 appears in the w3id namespace.
 
+**Where this repo does mint under w3id, each case is a decision and a guard admits
+it by name.** In the core A-Box: a category label-node at `…/bc/category/{token}`
+(D18) and a concept's use of a data element concept at `…/bc/{BC}/dec/{DEC}`
+(D21) — neither names anything CDISC named. In the overlay: the qualified
+concepts and the overlay's own terms under `…/qbc/` (D13), and a recording's
+subject, which *is* the Dataset Specialization IRI `…/dss/{DOMAIN}/{MNEMONIC}`
+(D3, D17). `scripts/ci_check.py` fails on any w3id IRI outside those forms.
+
+| | `cosmos_qbc_v1.ttl` |
+|---|---|
+| ontology IRI | `https://w3id.org/cdisc/cosmos/qbc/` |
+| `owl:versionIRI` | `…/cosmos/qbc/0.1.0` |
+| `owl:imports` | `…/cosmos/bc/` |
+| term namespace | `https://w3id.org/cdisc/cosmos/qbc/` — the overlay's terms are its own |
+
 ## Expected baselines (pinned commit `031429b1`, package date 2026-07-14)
 
 | | `cosmos_bc_v1.ttl` | `cosmos_sdtm_v1.ttl` |
@@ -232,8 +261,15 @@ Of the OWL triples, 25 per graph are the authored ontology header and the
 `owl:AnnotationProperty` declarations that go with it; the rest are generated. The
 shapes graphs are generated in full, with nothing authored.
 
-`cosmos_bc_v1.instances.ttl`: 29,697 triples — 1,469 concepts, 224 data element
-concepts, 97 codings, 1,166 parent edges, no blank nodes.
+`cosmos_bc_v1.instances.ttl`: 63,030 triples — 1,469 concepts, 224 data element
+concepts plus 6,004 (concept, DEC) use-nodes carrying `dataType` and `exampleSet`
+(D21), 405 category label-nodes (D18), 97 codings, 1,166 parent edges, no blank
+nodes.
+
+`cosmos_qbc_v1.ttl`: 660 triples, 9 classes, importing the core BC ontology.
+`cosmos_qbc_v1.instances.ttl`: 467 triples — 6 qualified concepts, 8 recordings,
+28 external mappings, 15 DEC uses, 5 interpretation-regime assertions; every
+`skos:broader` lands on a concept the core A-Box renders.
 
 Nine of the SDTM top-level classes are OBO PURLs (`obo:NCIT_C170547` and
 siblings) rather than terms in the COSMoS namespace: the Define-XML origin
@@ -248,9 +284,11 @@ likely benign, document the delta in `docs/` — or a generation bug. Investigat
 before releasing.
 
 `scripts/ci_check.py` asserts all of the above against the committed files, plus
-the two guarantees the decisions rest on: no malformed IRI in a CDISC namespace,
-and nothing but the ontology and its version in the w3id namespace. It runs in CI
-on every push.
+the guarantees the decisions rest on: no malformed IRI in a CDISC namespace; in
+the core T-Boxes nothing but the ontology and its version in the w3id namespace;
+in the A-Boxes and the overlay, every w3id IRI in a form a decision admits by
+name; no `dataType` on a shared DEC node; and the overlay's join to core. It runs
+in CI on every push.
 
 ## Identity
 
@@ -275,21 +313,26 @@ constraint ruling identity out, not a missing binding.
 The BC A-Box **does not conform** to the SHACL generated from the published
 schema, and the report is the point (decision D11). The shapes ship unmodified —
 they are CDISC's constraints, not this repo's opinion of them — and
-`60_validate_instances.ipynb` classifies all **8,925** violations into four causes,
+`60_validate_instances.ipynb` classifies all **41,620** violations into six causes,
 failing only if one appears that is not accounted for.
 
 | count | cause |
 |---|---|
 | 1,693 × 2 | `sh:closed true` rejects `skos:exactMatch` and `dcterms:identifier` — identity the schema has no slot for |
-| 2,962 | `sh:in ("bc")` expects enum values as string literals; the OWL T-Box declares them as class IRIs |
+| 8,742 | `sh:in ("bc")` expects enum values as string literals; the OWL T-Box declares them as class IRIs |
 | 1,166 × 2 | `parentConceptId` is `range: string`, so rendering the parent reference as a link violates datatype and node kind |
-| ~230 | one node typed as both BC and DEC, each closed shape rejecting the other's slots |
+| ~190 | one node typed as both BC and DEC, each closed shape rejecting the other's slots (D12) |
+| 4,366 × 2 | `categories` is `range: string`; the A-Box renders a category as a label-node (D18) |
+| 6,004 × 3 + 224 | the use-node's `conceptId` is an edge, not a bare C-code; and the shared DEC node carries no `dataType`, where the shape requires exactly one (D21) |
 
-Three of the four are the same thing seen three times: **the published constraints
+Most of these are the same thing seen several times: **the published constraints
 describe a document, not a graph.** `gen-owl` and `gen-shacl`, from one schema,
 disagree about what an enum value is. A parent reference typed as a string means
 that turning it into an edge is, by the model's own rules, an error. Conforming
-would mean the graph stops being a graph.
+would mean the graph stops being a graph. The last two causes are the sharpest:
+CDISC's own article says `categories` is how related concepts are gathered, and
+CDISC's own shape says it is a string; and the shape requires exactly one
+`dataType` on a data element concept that, at this pin, has up to seven.
 
 `65_compare_render_paths.ipynb` shows the split is inside the toolchain rather
 than in this repo's reading of it: over six concepts, 44 predicate comparisons
