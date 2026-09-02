@@ -152,6 +152,52 @@ authoritative, and the scale enum reduces to three values that anchor cleanly to
 NCIt's Scale branch. The question was put to the DDS maintainer on 2026-09-01: is
 result scale meant to be one axis or two?
 
+## 4b. Upstream — what NCIt already holds for the two bare BC enums
+
+Verified 2026-09-02 against the NCI EVS REST API (NCIt 26.07d, public, no key:
+`https://api-evsrest.nci.nih.gov/api/v1/`). Recorded so that the ask in §4 and
+§4a can be sized: how much would have to be created, and how much already exists.
+
+**No CDISC data-type codelist exists.** `C165634 CDISC Define-XML Terminology` has
+fifteen child subsets — origin type and source, standard name/type/status, ODM
+context, the ADaM subclasses, analysis purpose and reason — and none is a data
+type. ODM and Define-XML data types have always been XML Schema enumerations, not
+controlled terminology. The one CDISC-sourced concept in the area, `C201319
+Biomedical Concept Property Response Data Type`, is an *attribute name* (a member
+of `C201256`, and a child of `C42645 Data Type`) with no value set behind it. So a
+value set for `DataElementConceptDataTypeEnum` would be new, not a binding to
+something existing.
+
+**But `C42645 Data Type` has 118 children — the ISO 21090 / HL7 data types — and
+they cover most of the nine values:**
+
+| `DataElementConceptDataTypeEnum` | existing NCIt concept | |
+|---|---|---|
+| `boolean` | `C45254` Boolean | reuse |
+| `string` | `C45253` String, or `C95818` Character String Data Type | reuse, one to choose |
+| `integer` | `C95821` Integer Data Type | reuse |
+| `float` | `C48150` Float | reuse |
+| `date` | `C48871` Date Data Type | reuse |
+| `datetime` | `C54086` Timestamp Data Type, or `C95678` Point in Time Date and Time Data Type | one to choose |
+| `decimal` | `C95826` Real Data Type, or `C48870` Double | no "Decimal" concept exists |
+| `uri` | `C95829` URL Data Type | URL is narrower than URI |
+| `duration` | — | nothing; a new concept |
+
+**For `BiomedicalConceptResultScaleEnum`**, per §4a: `C47798 Nominal Scale` and
+`C47797 Ordinal Scale` exist under `C25664 Scale`; Quantitative needs one new
+concept parenting `C47799 Interval Scale` and `C47800 Ratio Scale`; `C227331
+Result Scale` exists as the natural subset name but its definition lists narrative
+among the scales and omits temporal; Temporal and Narrative have no scale concept
+because they are not scales.
+
+**What that sizes the ask to.** Two subsets — one under `C227331`, one under
+`C201319` — reusing eight existing data-type concepts and the two scale concepts,
+choosing between candidates for three (`string`, `datetime`, `decimal`), accepting
+one approximation (`uri`), and minting two (`duration`, a quantitative scale). Then, on the COSMoS side, the
+`meaning:` line per value and `code_set` per enum that `OriginTypeEnum` already
+demonstrates. That is a new-term request, not a modelling discussion — and it is
+the same shape as the two enums CDISC has already anchored.
+
 ## 5. Flattening losses in the CSV export — measured
 
 The published CSV is a flat view of a nested model. The kickoff brief listed the

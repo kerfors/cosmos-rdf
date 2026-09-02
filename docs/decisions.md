@@ -930,6 +930,11 @@ predicted by it and do combine. Two of the five values are data types. That is w
 the overlay's single-valued `resultScale` is defensible only over the three, and
 the reason the one-axis-or-two question was put to the DDS maintainer.
 
+**What NCIt already holds is in `known-gaps.md` §4b**: for the nine data types,
+eight reusable ISO 21090 concepts under `C42645`, no `duration`, no CDISC
+codelist; for scale, the two real scale concepts and no quantitative one. The ask
+is sized there — two subsets, two new concepts.
+
 ---
 
 ## D21 — `data_type` on the BC↔DEC edge SETTLED 2026-09-02
