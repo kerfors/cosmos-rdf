@@ -922,6 +922,14 @@ That is the same gap as `known-gaps.md` §4 — the 33 predicate terms and 101 l
 phrases carrying no `code_set` and no per-value `meaning` — one layer down, on the
 enums this repo actually renders.
 
+**And the enum is not one axis — measured.** `known-gaps.md` §4a cross-tabulates
+`result_scales` against the Observation Result data type at the pin: `Temporal`
+and `Narrative` are predicted by the data type (datetime/duration and string) and
+never combine with a real scale; `Nominal`, `Ordinal` and `Quantitative` are not
+predicted by it and do combine. Two of the five values are data types. That is why
+the overlay's single-valued `resultScale` is defensible only over the three, and
+the reason the one-axis-or-two question was put to the DDS maintainer.
+
 ---
 
 ## D21 — `data_type` on the BC↔DEC edge SETTLED 2026-09-02

@@ -104,6 +104,54 @@ exactly the terms an RDF rendering wants as predicates, have no external
 identity: this repo must mint IRIs for them in its own namespace and say so.
 That is a gap in the standard, not in the rendering.
 
+## 4a. Upstream — the result-scale enum mixes two axes
+
+`BiomedicalConceptResultScaleEnum` has five permissible values: `Nominal`,
+`Ordinal`, `Quantitative`, `Narrative`, `Temporal`. None carries a `meaning:`
+(decision D20). Read as terminology, they are not one axis: Nominal and Ordinal
+are scales of measurement, and NCIt has both under its Scale branch (`C47798`,
+`C47797`); Quantitative is a class of scales — Interval and Ratio together — with
+no concept of its own; Narrative (`C80446`) and Temporal (`C73990`) are kinds of
+value, not scales, and NCIt's own `Result Scale` concept `C227331` defines four
+values and omits Temporal.
+
+**The pinned export says the same thing independently.** Cross-tabulating each
+single-scale concept's `result_scales` against the `data_type` of its Observation
+Result data element concept (`C70856`), at commit `031429b1`:
+
+| `result_scales` | concepts | Observation Result `data_type` |
+|---|---|---|
+| `Quantitative` | 390 | decimal 285, integer 51, float 2, string 15 |
+| `Nominal` | 334 | string 162, integer 1 |
+| `Ordinal` | 327 | string 48, boolean 4, decimal 1 |
+| **`Temporal`** | **29** | **datetime 12, duration 1, decimal 3** |
+| **`Narrative`** | **8** | **string 7** |
+
+(The remainder in each row have no `C70856`. The three `Temporal` decimals are
+Disease-Free, Overall and Progression-free Survival — time-to-event in days,
+a duration by another name.)
+
+So `Temporal` and `Narrative` are predicted by the result data type: they say what
+kind of value the result is, which is exactly what `DataElementConceptDataTypeEnum`
+already says with `datetime`, `date`, `duration` and `string`. The three genuine
+scales are not predicted by data type — `Ordinal` results are strings, booleans
+and decimals — because a scale is a different thing from a type.
+
+**The combinations agree.** 91 concepts carry more than one scale: `Ordinal;
+Quantitative` 51 times, `Nominal;Quantitative` 13, `Nominal;Ordinal` 12. `Temporal`
+combines with nothing — 29 of 29 single-valued. The real scales combine because a
+concept can be reported on more than one; a data type does not combine with a
+scale because it is not one.
+
+**Why this repo cares.** The overlay's identity rule for a qualified concept is
+component × system × scale, with `resultScale` single-valued — the sibling split
+axis (`overlay/qbc.schema.yaml`, header rule 1, and decision D20). That rule needs
+scale to be one axis. If two of the five values are data types, they belong on the
+result data element concept's `dataType`, which the overlay already treats as
+authoritative, and the scale enum reduces to three values that anchor cleanly to
+NCIt's Scale branch. The question was put to the DDS maintainer on 2026-09-01: is
+result scale meant to be one axis or two?
+
 ## 5. Flattening losses in the CSV export — measured
 
 The published CSV is a flat view of a nested model. The kickoff brief listed the

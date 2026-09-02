@@ -291,7 +291,14 @@ slots:
     multivalued: true
     inlined_as_list: true
   resultScale:
-    description: Single scale of measurement — the sibling split axis
+    description: >-
+      Single scale of measurement — the sibling split axis. Ranges over
+      CDISC's five-value enum unchanged (D20), but the identity rule
+      component x system x scale only holds over Nominal, Ordinal and
+      Quantitative: measured at the pin, Temporal and Narrative are
+      predicted by the result DEC's dataType and never combine with a
+      scale, so they are data types carried in the wrong enum. See
+      known-gaps.md 4a. Neither is used by any qualified concept here.
     range: BiomedicalConceptResultScaleEnum
     required: true
   resultDataElementConcept:
