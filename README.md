@@ -160,7 +160,7 @@ cosmos-rdf/
 │   └── 75_render_qbc.ipynb          # overlay A-Box, after 70 and 50; asserts the join to core
 ├── docs/
 │   ├── source-verification.md       # the P0 gate: what was verified, and how
-│   ├── decisions.md                 # D1–D21, all settled
+│   ├── decisions.md                 # D1–D22, all settled
 │   ├── iri-and-governance.md        # namespace, identity, handoff
 │   └── known-gaps.md                # upstream gaps and current scope exclusions
 ├── scripts/
@@ -266,10 +266,11 @@ concepts plus 6,004 (concept, DEC) use-nodes carrying `dataType` and `exampleSet
 (D21), 405 category label-nodes (D18), 97 codings, 1,166 parent edges, no blank
 nodes.
 
-`cosmos_qbc_v1.ttl`: 660 triples, 9 classes, importing the core BC ontology.
-`cosmos_qbc_v1.instances.ttl`: 467 triples — 6 qualified concepts, 8 recordings,
-28 external mappings, 15 DEC uses, 5 interpretation-regime assertions; every
-`skos:broader` lands on a concept the core A-Box renders.
+`cosmos_qbc_v1.ttl`: 661 triples, 9 classes, importing the core BC ontology.
+`cosmos_qbc_v1.instances.ttl`: 478 triples — 6 qualified concepts, 8 recordings,
+28 external mappings, 15 DEC uses, 9 admissible-specimen uses, 5
+interpretation-regime assertions; every `skos:broader` lands on a concept the core
+A-Box renders, and no NCIt concept is the subject of an overlay triple (D22).
 
 Nine of the SDTM top-level classes are OBO PURLs (`obo:NCIT_C170547` and
 siblings) rather than terms in the COSMoS namespace: the Define-XML origin

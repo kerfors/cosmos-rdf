@@ -235,7 +235,7 @@ qbc:Recording a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qbc:testCode ] ;
-    skos:definition "Thinned SDTM dataset specialization: everything the sibling already states is inherited, not re-declared. Kept here: domain placement, topic/test code, the ONE specimen this recording uses (must be in the sibling's admissibleSpecimens), per-standard codelist bindings (incl. unit subset), origin, and an optional LOINC pin at recording grain. Dropped relative to cosmos_sdtm:SDTMGroup's variables: result dataType/length/ format/significantDigits (inherited via the sibling's result DEC — verified to introduce no contradiction), and the duplicated scale information." ;
+    skos:definition "Thinned SDTM dataset specialization: everything the sibling already states is inherited, not re-declared. Kept here: domain placement, topic/test code, the ONE specimen this recording uses, per-standard codelist bindings (incl. unit subset), origin, and an optional LOINC pin at recording grain. Dropped relative to cosmos_sdtm:SDTMGroup's variables: result dataType/length/ format/significantDigits (inherited via the sibling's result DEC — verified to introduce no contradiction), and the duplicated scale information." ;
     skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
 
 qbc:AssignedTerm a owl:Class ;
@@ -417,7 +417,7 @@ qbc:SemanticValueSetTerm a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty qbc:value ] ;
-    skos:definition "Concept-level admissible result value (what the observation can say), distinct from any per-standard codelist binding (how a given standard writes it). ncitCode absent when no concept exists yet." ;
+    skos:definition "Concept-level admissible result value (what the observation can say), distinct from any per-standard codelist binding (how a given standard writes it). ncitCode absent when no concept exists yet. A value is never a \"[VERIFY]\" placeholder: where no set can be curated the slot is absent, and the renderer refuses a marker in the value position (D22)." ;
     skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
 
 qbc:admissibleSpecimens a owl:ObjectProperty ;
@@ -540,6 +540,7 @@ qbc:siblingIri a owl:DatatypeProperty ;
 qbc:specimen a owl:ObjectProperty ;
     rdfs:label "specimen" ;
     rdfs:range qbc:AssignedTerm ;
+    skos:definition "The SDTM specimen assigned term this recording uses. It sits at a different grain from the qualified concept's admissibleSpecimens: that set is NCIt concept-level (Serum C13325, Plasma C13356), while SDTM CT carries composite submission values (SERUM OR PLASMA C105706). So a recording's specimen is not required to be a member of the admissible set, and 75_render_qbc reports membership per recording rather than asserting it. Measured 2026-09-02: 6 of 8 recordings use a member, 2 (HCV RNA) use the composite. D22." ;
     skos:inScheme <https://w3id.org/cdisc/cosmos/qbc> .
 
 qbc:stateDataElementConceptId a owl:DatatypeProperty ;

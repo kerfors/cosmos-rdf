@@ -71,10 +71,10 @@ INSTANCE_CATEGORIES = 405      # D18: label-nodes
 # check above does not apply to it; the check is instead that every w3id IRI it
 # carries is its own, or the core BC ontology it imports.
 OVERLAY_TBOX = "cosmos_qbc_v1.ttl"
-OVERLAY_TBOX_TRIPLES = 660
+OVERLAY_TBOX_TRIPLES = 661
 OVERLAY_CLASSES = 9            # declared classes; enum permissible values excluded
 OVERLAY_INSTANCES = "cosmos_qbc_v1.instances.ttl"
-OVERLAY_INSTANCE_TRIPLES = 467
+OVERLAY_INSTANCE_TRIPLES = 478
 OVERLAY_CONCEPTS = 6
 OVERLAY_RECORDINGS = 8
 
@@ -96,7 +96,7 @@ W3ID_ADMITTED = {
         (r"qbc/instances/" + re.escape(VERSION) + r"$", "this graph's version IRI"),
         (r"qbc/[A-Za-z]+$", "an overlay term, or a qualified concept (D13)"),
         (r"qbc/[A-Za-z]+Enum#[A-Za-z]+$", "an overlay permissible value (D20)"),
-        (r"qbc/[A-Za-z]+/(dec|mapping|value|regime)/[^/]+(/[^/]+)?$", "a qualified concept's own nodes (D15, D16, D21)"),
+        (r"qbc/[A-Za-z]+/(dec|mapping|value|regime|specimen)/[^/]+(/[^/]+)?$", "a qualified concept's own nodes (D15, D16, D21, D22)"),
         (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*$", "a recording IS the Dataset Specialization IRI (D3, D17)"),
         (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*/specimen$", "a recording's specimen (D17)"),
     ],
@@ -304,6 +304,13 @@ check(
 check(
     f"{OVERLAY_INSTANCES} dataType on a node the core A-Box describes",
     sorted(str(s) for s, _, _ in overlay_instances.triples((None, data_type, None)) if (s, None, None) in instances),
+    [],
+)
+# Decision D22: the overlay writes onto its own nodes only. Shared NCIt concepts
+# are reached by edges and are never the subject of an overlay triple.
+check(
+    f"{OVERLAY_INSTANCES} NCIt PURLs used as a subject",
+    sorted(str(s) for s in set(overlay_instances.subjects()) if str(s).startswith("http://purl.obolibrary.org/obo/NCIT_")),
     [],
 )
 check(f"{OVERLAY_INSTANCES} w3id IRIs outside the admitted forms", unadmitted(overlay_instances, W3ID_ADMITTED[OVERLAY_INSTANCES]), [])

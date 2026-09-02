@@ -207,7 +207,9 @@ classes:
       Concept-level admissible result value (what the observation can
       say), distinct from any per-standard codelist binding (how a
       given standard writes it). ncitCode absent when no concept
-      exists yet.
+      exists yet. A value is never a "[VERIFY]" placeholder: where no
+      set can be curated the slot is absent, and the renderer refuses
+      a marker in the value position (D22).
     attributes:
       value:
         required: true
@@ -260,8 +262,7 @@ classes:
       Thinned SDTM dataset specialization: everything the sibling
       already states is inherited, not re-declared. Kept here:
       domain placement, topic/test code, the ONE specimen this
-      recording uses (must be in the sibling's admissibleSpecimens),
-      per-standard codelist bindings (incl. unit subset), origin, and
+      recording uses, per-standard codelist bindings (incl. unit subset), origin, and
       an optional LOINC pin at recording grain. Dropped relative to
       cosmos_sdtm:SDTMGroup's variables: result dataType/length/
       format/significantDigits (inherited via the sibling's result
@@ -272,7 +273,7 @@ classes:
       - siblingIri                # points at the sibling, not the analyte
       - domain
       - testCode                  # assigned --TESTCD value
-      - specimen                  # AssignedTerm; one of sibling's admissible set
+      - specimen                  # AssignedTerm; see the grain note on the slot
       - loincPins                 # recording-grain LOINC codes (unit variants)
       - unitCodelistBinding       # per-standard CT binding, e.g. UNIT subset
       - resultCodelistBinding     # per-standard CT binding for Coded scales
@@ -335,6 +336,15 @@ slots:
   testCode:
     required: true
   specimen:
+    description: >-
+      The SDTM specimen assigned term this recording uses. It sits at
+      a different grain from the qualified concept's admissibleSpecimens:
+      that set is NCIt concept-level (Serum C13325, Plasma C13356), while
+      SDTM CT carries composite submission values (SERUM OR PLASMA
+      C105706). So a recording's specimen is not required to be a member
+      of the admissible set, and 75_render_qbc reports membership per
+      recording rather than asserting it. Measured 2026-09-02: 6 of 8
+      recordings use a member, 2 (HCV RNA) use the composite. D22.
     range: AssignedTerm
     required: false
     inlined: true

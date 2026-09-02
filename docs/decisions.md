@@ -4,7 +4,7 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 `docs/iri-and-governance.md` (D1–D6 there). Each is an argument, not a code
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
-D1–D21 are settled. D5 is settled but not yet exercised, since the layer it
+D1–D22 are settled. D5 is settled but not yet exercised, since the layer it
 governs is deferred; D3 is exercised by the overlay (see D17). D18 and D21 were
 implemented together in one re-render of the core A-Box on 2026-09-02, so there
 is one set of baselines rather than two.
@@ -1006,6 +1006,77 @@ property of the edge, which is why one DEC can be seven types at once, and why
 "inherit once from the result DEC" is impossible today rather than merely unusual.
 
 **Shipped with D18** on 2026-09-02 — one re-render, one set of baselines.
+
+---
+
+## D22 — What the overlay writes, and where SETTLED 2026-09-02
+
+**Question.** Reviewing the rendered overlay against the rule D21 states for one
+slot — a claim about a shared node goes on the overlay's own node, never on the
+shared one — found three places where the overlay did not follow its own rule. All
+three are the same rule; this entry settles it once and applies it three times.
+
+**The rule.** The overlay reaches shared concepts by edges and writes onto its own
+nodes only. No NCIt PURL is ever the subject of an overlay triple. And an absence
+is rendered as an absence, never as a placeholder in a value position.
+
+### Part 1 — admissible specimens were written onto the shared NCIt node
+
+**Measured before.** Four NCIt PURLs — Serum `C13325`, Plasma `C13356`, Urine
+`C13283`, Interstitial Fluid `C120839` — carried `rdf:type qbc:ConceptTerm` and
+`qbc:preferredTerm`, asserted by the overlay directly onto the shared identity
+node. No other graph described those nodes at the time, so nothing contradicted;
+but the Dataset Specialization layer will describe specimens, and D21 had just
+declined the identical move for `dataType`.
+
+**Settled.** An admissible specimen is the qualified concept's *use* of an NCIt
+concept: a node at `{concept}/specimen/{code}`, typed `ConceptTerm`, carrying
+`preferredTerm`, reaching the PURL by `conceptId` as an edge — the D21 shape
+again. Nine use-nodes over four distinct concepts.
+
+### Part 2 — a missing value set was rendered as a value
+
+**Measured before.** Two `SemanticValueSetTerm` nodes — on
+`GlucoseUrineCategorical` and `HCVRNASerumPlasmaDetection` — carried
+`qbc:value "[VERIFY]"`. The marker is the repo's convention for provenance that
+could not be established, and it belongs in `sourceAnchor`; in the value position
+it told a consumer that the observation can say `[VERIFY]`.
+
+**Settled: absent, not marked.** The same shape D15 settled for the regime pointer
+— source and deliverable agree, and nothing invented exists anywhere. The two
+entries are removed from the instance files, the comment explaining that no set
+can be curated stays, and `75_render_qbc.ipynb` raises on any value that starts
+with `[VERIFY]`. Zero value terms render at this pin. `sourceAnchor` keeps the
+convention.
+
+### Part 3 — a constraint the schema stated, did not enforce, and the data broke
+
+**Measured.** The schema's `Recording` description said the specimen "must be in
+the sibling's admissibleSpecimens". Six of eight recordings satisfy it. The two
+HCV RNA recordings do not: their specimen is `SERUM OR PLASMA` `C105706`, and the
+admissible set is Serum `C13325` and Plasma `C13356`.
+
+**Why it cannot hold, and why that is the finding.** The two sides sit at
+different grains. `admissibleSpecimens` is NCIt concept-level — atomic specimens.
+A recording's specimen is an SDTM CT submission value, and CT carries composites
+such as `SERUM OR PLASMA`, one code for a disjunction. A recording lives at the
+SDTM grain, so membership in the concept-level set is a measurement, not a
+constraint.
+
+**Settled: report, do not assert.** The sentence is gone from the schema; the
+`specimen` slot's description states the grain difference; the renderer prints
+membership per recording — six members, two composites — as a count rather than
+a failure.
+
+**Rejected: add `C105706` to HCV RNA's admissible set.** It makes the rule true
+by changing the data, and it puts a composite submission value into a set the
+schema defines as concept-level.
+
+**Guarded.** `75_render_qbc.ipynb` asserts that no NCIt PURL is a subject in the
+overlay graph and that no `qbc:value` starts with `[VERIFY]`; `scripts/ci_check.py`
+asserts the first of those on the committed deliverable and admits the
+`specimen/` use-node form by name. Overlay A-Box 478 triples, from 467; T-Box 661,
+from 660, the difference being the `specimen` slot's new description.
 
 ---
 

@@ -110,11 +110,11 @@ siblings:
     admissibleSpecimens:
       - {conceptId: C13325, preferredTerm: Serum}
       - {conceptId: C13356, preferredTerm: Plasma}
-    semanticValueSet:
-      # No value set exists in the package (MBORRES/MBSTRESC text,
-      # nothing bound); the admissible set must be curated.
-      - value: "[VERIFY]"
-        sourceAnchor: "[VERIFY] no authoritative source in package; LOINC answer list not consulted"
+    # semanticValueSet deliberately absent (D22): no value set exists
+    # in the package (MBORRES/MBSTRESC text, nothing bound) and the
+    # LOINC answer list was not consulted. The admissible set must be
+    # curated; until it is, the slot is empty rather than holding a
+    # "[VERIFY]" placeholder as a value.
     externalMappings:
       # Both detection leaves are method-pinned; no method-neutral
       # Ord code exists -> narrowMatch.

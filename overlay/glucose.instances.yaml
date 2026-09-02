@@ -149,11 +149,11 @@ siblings:
       exampleSet: []
     admissibleSpecimens:
       - {conceptId: C13283, preferredTerm: Urine}
-    semanticValueSet:
-      # No value set exists in the package or on the pinned LOINC
-      # codes' parts; the admissible ordinal set must be curated.
-      - value: "[VERIFY]"
-        sourceAnchor: "[VERIFY] no authoritative source in package; LOINC answer list not consulted"
+    # semanticValueSet deliberately absent (D22): no value set exists
+    # in the package or on the pinned LOINC codes' parts, and the LOINC
+    # answer list was not consulted. The admissible ordinal set must be
+    # curated; until it is, the slot is empty rather than holding a
+    # "[VERIFY]" placeholder as a value.
     externalMappings:
       - relation: exactMatch
         code: "2349-9"
