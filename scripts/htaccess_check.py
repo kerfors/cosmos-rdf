@@ -5,7 +5,9 @@ follows them ([OR] between conditions, AND by default), rules apply in order and
 the first match ends the chain (every rule carries [L]). Each IRI is resolved under
 six client profiles - no Accept header, Turtle, N-Triples, RDF/XML, JSON-LD, and a
 browser - and must land on the document that has it as subject, in the
-serialization the client asked for; a browser lands on the release index page.
+serialization the client asked for; a browser lands on the ontology's WIDOCO
+documentation for an ontology IRI or one of the overlay's terms, and on the release
+index otherwise. Non-version IRIs resolve through /latest/, version IRIs to their tag.
 Reserved dss/ IRIs must match no rule. With a site directory given, every target
 must also exist there, so the rule set and scripts/build_pages.py agree.
 
@@ -31,6 +33,11 @@ GRAPHS = {
     "cosmos_qbc_v1.instances": "qbc/instances/",
 }
 SHAPES = ["cosmos_bc_v1.shapes.ttl", "cosmos_sdtm_v1.shapes.ttl", "cosmos_qbc_v1.shapes.ttl"]
+DOC = {
+    "cosmos_bc_v1": "doc-cosmos_bc_v1/index-en.html",
+    "cosmos_sdtm_v1": "doc-cosmos_sdtm_v1/index-en.html",
+    "cosmos_qbc_v1": "doc-cosmos_qbc_v1/index-en.html",
+}
 FIXED = {
     "bc/context.jsonld": "cosmos_bc_v1.context.jsonld",
     "sdtm/context.jsonld": "cosmos_sdtm_v1.context.jsonld",
@@ -100,6 +107,19 @@ for file in [f"{b}.ttl" for b in GRAPHS] + SHAPES:
 VERSION_PATH = re.compile(r"(bc|sdtm|qbc)(/instances)?/([0-9]+\.[0-9]+\.[0-9]+)")
 
 
+def browser_target(path, base):
+    """Where a browser lands. An ontology IRI and, for the overlay, one of its terms
+    resolve to the WIDOCO documentation - the term to its own section. Everything else,
+    including every version IRI and every individual, lands on the release index."""
+    if VERSION_PATH.fullmatch(path):
+        return "index.html"
+    if path in ("bc", "bc/", "qbc", "qbc/") or path == "sdtm" or path.startswith("sdtm/"):
+        return DOC[base]
+    if base == "cosmos_qbc_v1" and path.startswith("qbc/"):
+        return f"{DOC[base]}#{path[len('qbc/'):]}"
+    return "index.html"
+
+
 def expected_base(iri):
     """The graph that describes the IRI (file base without extension), or None for reserved."""
     path = iri[len(W3ID):]
@@ -138,28 +158,29 @@ for iri in sorted(seen):
         if base.endswith("index.html"):
             expected = base
         elif path in FIXED:
-            expected = f"{SITE}v0.3.0/{base}"                      # fixed paths: one file, no negotiation
+            expected = f"{SITE}latest/{base}"                      # fixed paths: one file, no negotiation
         else:
             version = VERSION_PATH.fullmatch(path)
-            release = f"v{version.group(3)}" if version else "v0.3.0"
-            expected = f"{SITE}{release}/{'index.html' if ext == 'index.html' else base + '.' + ext}"
+            release = f"v{version.group(3)}" if version else "latest"
+            leaf = browser_target(path, base) if ext == "index.html" else f"{base}.{ext}"
+            expected = f"{SITE}{release}/{leaf}"
         if landed != expected:
             failures.append((iri, profile, f"landed on {landed}, expected {expected}"))
             continue
-        outcomes[(profile, expected.rsplit("/", 1)[-1] if expected.startswith(SITE) else "repository README")] += 1
+        outcomes[(profile, expected.split("#", 1)[0].rsplit("/", 1)[-1] if expected.startswith(SITE) else "repository README")] += 1
         if site_dir and expected.startswith(SITE):
-            relative = expected[len(SITE):]
+            relative = expected[len(SITE):].split("#", 1)[0]
             if not (site_dir / relative).exists() and not relative.startswith("v0.2.") and not relative.startswith("v0.1."):
                 failures.append((iri, profile, f"target missing from site: {relative}"))
 
 # --- paths that occur in no graph but the file must still answer: the fixed paths,
 #     the namespace root, and the reserved segment.
 for path, expected in [
-    ("bc/context.jsonld", f"{SITE}v0.3.0/cosmos_bc_v1.context.jsonld"),
-    ("sdtm/context.jsonld", f"{SITE}v0.3.0/cosmos_sdtm_v1.context.jsonld"),
-    ("bc/shapes", f"{SITE}v0.3.0/cosmos_bc_v1.shapes.ttl"),
-    ("sdtm/shapes", f"{SITE}v0.3.0/cosmos_sdtm_v1.shapes.ttl"),
-    ("qbc/shapes", f"{SITE}v0.3.0/cosmos_qbc_v1.shapes.ttl"),
+    ("bc/context.jsonld", f"{SITE}latest/cosmos_bc_v1.context.jsonld"),
+    ("sdtm/context.jsonld", f"{SITE}latest/cosmos_sdtm_v1.context.jsonld"),
+    ("bc/shapes", f"{SITE}latest/cosmos_bc_v1.shapes.ttl"),
+    ("sdtm/shapes", f"{SITE}latest/cosmos_sdtm_v1.shapes.ttl"),
+    ("qbc/shapes", f"{SITE}latest/cosmos_qbc_v1.shapes.ttl"),
     ("", f"{SITE}index.html"),
     ("dss/", None),
     ("dss/LB/GLUCPL", None),

@@ -197,6 +197,15 @@ for tag in tags:
     print(f"{tag}: {len(served)} files")
 
 latest = releases[-1][0]
+
+# /latest/ is a copy of the newest release. The w3id rules for non-version IRIs
+# target it, so a release needs no pull request against the .htaccess; a version
+# IRI still resolves to its own tag through the generic rules there.
+current = site / "latest"
+if current.exists():
+    shutil.rmtree(current)
+shutil.copytree(site / latest, current)
+print(f"latest: copy of {latest}")
 items = "".join(
     f"<li><a href=\"{t}/\"><code>{t}</code></a> &mdash; {n} files{' (current w3id target)' if t == latest else ''}</li>"
     for t, n in reversed(releases)
@@ -206,7 +215,8 @@ items = "".join(
     "<h1>cosmos-rdf</h1>"
     "<p>An RDF/OWL rendering of CDISC COSMoS &mdash; Biomedical Concepts and SDTM Dataset Specializations &mdash; "
     "generated mechanically from the artifacts CDISC publishes, plus an overlay graph of qualified biomedical concepts. "
-    "This site serves the deliverables per release for <code>https://w3id.org/cdisc/cosmos/</code>. "
+    "This site serves the deliverables per release for <code>https://w3id.org/cdisc/cosmos/</code>, "
+    "which resolves its non-version IRIs through <code>latest/</code> - a copy of the newest release below. "
     "Draft, not a normative CDISC artifact. <a href=\"https://github.com/kerfors/cosmos-rdf\">Repository</a></p>"
     f"<h2>Releases</h2><ul>{items}</ul>",
 ), encoding="utf-8")
