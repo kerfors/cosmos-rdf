@@ -4,7 +4,10 @@ name: pages
 # dereference target of https://w3id.org/cdisc/cosmos/ (docs/htaccess.txt):
 # /vX.Y.Z/<graph>.{ttl,nt,rdf,jsonld} per tag, Turtle canonical and the other
 # three derived from it here, plus an index page per release and at the root.
-# Nothing is copied by hand: the site is a function of the tags.
+# Each ontology at the tag is also documented with WIDOCO into /vX.Y.Z/doc-<name>/,
+# with its imports resolved against the sibling ontology at the same tag rather
+# than over the network. Nothing is copied by hand: the site is a function of the
+# tags.
 
 on:
   push:
@@ -21,6 +24,12 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  # WIDOCO publishes no Maven artifact; the jar is a GitHub release asset, so it is
+  # pinned by version and checksum here rather than by a dependency range.
+  WIDOCO_VERSION: "1.4.25"
+  WIDOCO_SHA256: "be57a270fffb91e55810fa308717e704a44e2e7c027a3d68125a49da6c8b4e2b"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,8 +41,17 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install rdflib==7.1.4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Fetch WIDOCO
+        run: |
+          curl -sSLf -o widoco.jar \
+            "https://github.com/dgarijo/Widoco/releases/download/v$WIDOCO_VERSION/widoco-$WIDOCO_VERSION-jar-with-dependencies_JDK-17.jar"
+          echo "$WIDOCO_SHA256  widoco.jar" | sha256sum -c -
       - name: Build the site from every release tag
-        run: python scripts/build_pages.py site
+        run: python scripts/build_pages.py site --widoco widoco.jar
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

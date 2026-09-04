@@ -242,15 +242,18 @@ triples. Decisions D3 and D5 govern it; D5 is not yet exercised, and D3 now is �
 decision D17 mints eight Dataset Specialization IRIs in the overlay.
 
 The overlay is rendered — `cosmos_qbc_v1.ttl` and `cosmos_qbc_v1.instances.ttl`,
-decisions D13–D21. There is no w3id registration and no WIDOCO rendering. The
-phases in `README.md` say what is intended; nothing there is a promise.
+decisions D13–D21. The w3id namespace is registered and the three ontologies are
+rendered with WIDOCO; the Dataset Specialization A-Box and per-individual HTML
+are not. The phases in `README.md` say what is intended; nothing there is a
+promise.
 
-**The ontology IRIs do not dereference.** The w3id namespace is not registered
-yet (P5), so `https://w3id.org/cdisc/cosmos/bc/` resolves to nothing today. Nor
-do the term IRIs: they are CDISC's published strings, and both schema ids return
-404 on `cdisc.org` (checked 2026-09-01, with `https://www.cdisc.org/cosmos/`
-redirecting to a page slugged `cdisc-biomedical-concepts-old`). That half is not
-this repo's to fix — see decision D7.
+**The core term IRIs do not dereference.** The w3id namespace is registered
+(P5), so `https://w3id.org/cdisc/cosmos/bc/` and everything this repo mints under
+it resolve. The class and property IRIs of the core rendering do not: they are
+CDISC's published strings, and both schema ids return 404 on `cdisc.org` (checked
+2026-09-01, with `https://www.cdisc.org/cosmos/` redirecting to a page slugged
+`cdisc-biomedical-concepts-old`). That half is not this repo's to fix — see
+decision D7.
 
 ## 7a. Upstream — the `conceptId` pattern forbids the RDF-convertible form
 

@@ -46,7 +46,17 @@ derived from each Turtle graph with `rdflib` — so nothing is copied by hand an
 the w3id version rule always has a target. Run by `.github/workflows/pages.yml`
 on every tag push.
 
-## `postprocess_widoco.py` — copy at P5
+Since 2026-09-04 it also documents the ontologies: `--widoco <jar>` renders every
+root `.ttl` that is neither a shapes nor an instances graph into
+`/vX.Y.Z/doc-<name>/`. Two things there are load-bearing. WIDOCO has no flag to
+stop OWLAPI dereferencing `owl:imports` and ignores a `catalog-v001.xml` beside
+the file, so the import IRI is rewritten to the sibling ontology at the same tag
+— otherwise a release would be documented against whatever w3id happened to be
+serving while the build ran. And WIDOCO silently drops a term carrying no
+`rdfs:label`, so `coverage()` asserts that the undocumented set is exactly the
+unlabelled set; any other gap fails the build.
+
+## `postprocess_widoco.py` — not copied, 2026-09-04
 
 Upstream: `usdm-rdf/scripts/postprocess_widoco.py`.
 
@@ -56,4 +66,8 @@ annotation set are USDM-specific, and this repo has not yet decided its own
 annotation namespace (see `docs/iri-and-governance.md`, "Not decided here").
 The reusable parts are the fail-fast contract — every entity div must resolve to
 an IRI in the graph, and every named entity in the graph must have a div — and
-the NCIt dual-anchor pair check. Copy at P5 when there is HTML to render.
+the NCIt dual-anchor pair check. P5 rendered the HTML and the copy was still not
+made: there is nothing to inject until this repo decides an annotation namespace.
+Half of the reusable contract went into `build_pages.py` as `coverage()`, in the
+graph-to-div direction only; the div-to-graph direction and the dual-anchor check
+remain uncopied.

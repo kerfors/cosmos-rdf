@@ -179,9 +179,12 @@ target — is fixed in the generator and carried by a one-line follow-up PR.
 
 ## Not decided here
 
-- Per-IRI HTML descriptions (WIDOCO or a rendered page). P5, second step; the
-  browser rule already points where they will live, so adding them changes
-  `build_pages.py` and nothing in the `.htaccess`.
+- Per-IRI HTML for individuals. The ontologies are documented: `build_pages.py
+  --widoco` renders each of them into `/vX.Y.Z/doc-<name>/`, linked from the
+  release index, and the `.htaccess` did not change. An individual has no page of
+  its own — a browser hitting one still lands on the release index. Giving each
+  its own page means new browser rules and therefore a second w3id PR, which
+  makes it a decision rather than a build change.
 - A project annotation namespace. The P1 headers use only published vocabulary —
   Dublin Core, VANN, OWL, RDFS — so nothing has needed one yet. The first
   candidate is the relationship-predicate vocabulary above.

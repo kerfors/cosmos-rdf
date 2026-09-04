@@ -117,7 +117,7 @@ graph, many views.
 | P2 | Identity binding and JSON-LD contexts | **done** |
 | P3 | A-Box and shapes | **BC layer done**; DSS layer deferred (D4) |
 | P4 | Overlay: the qualified concepts as RDF | **done** — six concepts, eight recordings, three admitted result scales (D13–D23) |
-| P5 | Dereference and publish: w3id PR, WIDOCO, release, CI | not started |
+| P5 | Dereference and publish: w3id PR, WIDOCO, release, CI | **mostly done** — w3id registered, Pages rebuilt per tag, WIDOCO ontology docs; individuals have no page of their own |
 | P6 | The DDS profile gains a sentence saying it is a projection | not started |
 
 P0–P2 is publishable on its own — an OWL + SHACL rendering of COSMoS does not
