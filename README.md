@@ -11,11 +11,11 @@ graph, and the overlay's own OWL graph, instance graph and shapes graph. The Dat
 Specialization A-Box is deferred (decision D4). The phase list below states intent
 for the rest; none of it is a promise.
 
-The namespace `https://w3id.org/cdisc/cosmos/` is **not yet registered** — the
-w3id PR is generated in `docs/` and checked, but not submitted — so the IRIs below
-do not dereference yet. When it is, every IRI resolves to the document that
-describes it, with content negotiation, from a GitHub Pages site rebuilt from the
-release tags (`docs/iri-and-governance.md`, "Resolution"). This repo carries the same offer
+The namespace `https://w3id.org/cdisc/cosmos/` is **registered** (w3id PR #6642,
+merged 2026-09-04): every IRI resolves to the document that describes it, with
+content negotiation over Turtle, N-Triples, RDF/XML and JSON-LD, from a GitHub
+Pages site rebuilt from the release tags (`docs/iri-and-governance.md`,
+"Resolution"). `dss/` is reserved and not yet registered (D4). This repo carries the same offer
 `usdm-rdf` carries: draft, not a normative CDISC artifact, offered for transfer to
 CDISC governance — transfer is a single PR against the w3id `.htaccess`. See
 [docs/iri-and-governance.md](docs/iri-and-governance.md).

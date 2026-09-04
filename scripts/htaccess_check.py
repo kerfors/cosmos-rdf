@@ -111,7 +111,7 @@ def expected_base(iri):
         segment = path.rsplit("/", 1)[0] + "/"
         return next(b for b, s in GRAPHS.items() if s == segment)
     if path == "":
-        return "https://github.com/kerfors/cosmos-rdf#readme"
+        return f"{SITE}index.html"
     if path in ("bc", "sdtm", "qbc"):
         return next(b for b, s in GRAPHS.items() if s == path + "/")
     where = described_in.get(iri, set())
@@ -135,7 +135,7 @@ for iri in sorted(seen):
             if landed is not None:
                 failures.append((iri, profile, f"reserved segment matched {landed}"))
             continue
-        if base.startswith("https://"):
+        if base.endswith("index.html"):
             expected = base
         elif path in FIXED:
             expected = f"{SITE}v0.3.0/{base}"                      # fixed paths: one file, no negotiation
@@ -160,7 +160,7 @@ for path, expected in [
     ("bc/shapes", f"{SITE}v0.3.0/cosmos_bc_v1.shapes.ttl"),
     ("sdtm/shapes", f"{SITE}v0.3.0/cosmos_sdtm_v1.shapes.ttl"),
     ("qbc/shapes", f"{SITE}v0.3.0/cosmos_qbc_v1.shapes.ttl"),
-    ("", "https://github.com/kerfors/cosmos-rdf#readme"),
+    ("", f"{SITE}index.html"),
     ("dss/", None),
     ("dss/LB/GLUCPL", None),
 ]:

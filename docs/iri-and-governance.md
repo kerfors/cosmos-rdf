@@ -5,9 +5,9 @@ Records the IRI scheme for `cosmos-rdf` and the governance handoff to CDISC.
 
 **Lineage.** This document is adapted from `usdm-rdf/docs/iri-and-governance.md`.
 Where an argument is identical it is cited rather than restated; only the parts
-that differ for COSMoS are argued here. The namespace is **not yet registered**:
-the w3id PR is drafted (`docs/htaccess.txt`, `docs/w3id-readme.md`, checked by
-`scripts/htaccess_check.py`) but not submitted, so no IRI in it dereferences yet.
+that differ for COSMoS are argued here. The namespace is **registered** — w3id PR
+#6642, merged 2026-09-04, from `docs/htaccess.txt` and `docs/w3id-readme.md`,
+checked by `scripts/htaccess_check.py` — except the reserved `dss/` segment.
 
 ## Ontology IRI
 
@@ -106,7 +106,7 @@ right body is part of P5, not an assumption to record here.
 
 ## Resolution — the w3id rule set (P5, drafted 2026-09-04)
 
-`docs/htaccess.txt` is the `/cdisc/cosmos/.htaccess` to submit; `docs/w3id-readme.md`
+`docs/htaccess.txt` is the `/cdisc/cosmos/.htaccess` as registered; `docs/w3id-readme.md`
 is its README. The w3id `/cdisc/` directory holds only `usdm/v4/`, registered to
 the same contact, so `cosmos/` is a sibling under a segment already held. The file
 is **generated** by `notebooks/80_generate_htaccess.ipynb` — one part of it is a
@@ -157,7 +157,10 @@ one pattern written five times: `Accept: application/n-triples`, `application/rd
 and `application/ld+json` go to the derived files; a browser (`text/html` or a
 Mozilla user agent) goes to the release's `index.html`, which is where per-IRI HTML
 anchors will go; everything else — `text/turtle` and no Accept header — goes to
-the canonical Turtle. 56 rules.
+the canonical Turtle. The namespace root goes to the site's release index — not to
+the repository README, because a `#` in a redirect target is percent-encoded by
+mod_rewrite and GitHub answers `%23readme` with 400; measured live after the first
+merge, fixed by a one-line follow-up PR. 56 rules.
 
 **Checked, not assumed.** `htaccess_check.py` simulates mod_rewrite (conditions,
 `[OR]`, first match wins) for 6,550 distinct w3id IRIs under six client profiles,
@@ -167,10 +170,12 @@ built site directory — that every target exists there. The `qbc/` terms land o
 the ontology 47 ways (44 terms, root, bare id, version); no IRI is "reached through
 an import".
 
-**Order of operations for the PR.** Enable Pages, run the workflow once
-(`workflow_dispatch`), confirm `…/v0.3.0/cosmos_qbc_v1.ttl` answers `text/turtle`,
-then open the w3id PR. Submitting before the site answers would register 303s to
-404s.
+**Order of operations, as done 2026-09-04.** Pages enabled, workflow run once,
+`…/v0.3.0/cosmos_qbc_v1.ttl` confirmed to answer `text/turtle`, then the w3id PR —
+submitting before the site answers would have registered 303s to 404s. Verified live
+after the merge: 19 IRI forms × 6 client profiles, each 303 → 200 with the media
+type asked for; `dss/` 404. The one defect found live — the namespace root's `#readme`
+target — is fixed in the generator and carried by a one-line follow-up PR.
 
 ## Not decided here
 
