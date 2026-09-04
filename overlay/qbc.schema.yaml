@@ -58,6 +58,13 @@
 #     therefore did not join the core graph at all.
 #   - D15: the regime slot is no longer required, and the five
 #     invented regime URIs are gone from the instance files.
+#
+# Added 2026-09-04:
+#   - D23: ResultScale — the overlay's use of a CDISC result-scale
+#     permissible value, anchored to the NCIt Scale branch on the
+#     overlay's own node. Three instances (scales.instances.yaml);
+#     a qualified concept's resultScale must be one of them. The
+#     repo's interim reading of known-gaps 4a while CDISC decides.
 # =====================================================================
 
 id: https://w3id.org/cdisc/cosmos/qbc
@@ -114,6 +121,10 @@ classes:
         inlined_as_list: true
       recordings:
         range: Recording
+        multivalued: true
+        inlined_as_list: true
+      resultScales:
+        range: ResultScale
         multivalued: true
         inlined_as_list: true
 
@@ -181,6 +192,38 @@ classes:
         description: NCIt C-code
         pattern: "^(C[0-9]+)$"
       preferredTerm:
+        required: true
+
+  ResultScale:
+    description: >-
+      A result scale the overlay admits, anchored to NCIt. The node is
+      the overlay's use of one permissible value of CDISC's
+      BiomedicalConceptResultScaleEnum: the value keeps the core IRI
+      (D20) and is reached by permissibleValue as an edge, and the
+      typed mappings to the NCIt Scale branch are written here, never
+      onto the CDISC value or the NCIt PURL (D21, D22). Three
+      instances - Nominal, Ordinal, Quantitative - and no more: the
+      other two values the enum carries, Temporal and Narrative, are
+      data types by measurement (known-gaps 4a), get no node, and a
+      qualified concept's resultScale must be one of the three. This
+      is the repo's interim reading while the one-axis-or-two question
+      is open with CDISC; if CDISC anchors the enum itself, these
+      nodes become redundant and can go. Decision D23.
+    slots:
+      - iri
+      - permissibleValue
+      - externalMappings          # exactMatch where a Scale concept exists, else narrowMatch
+    slot_usage:
+      iri:
+        identifier: true
+      externalMappings:
+        range: ExternalMapping
+        multivalued: true
+        inlined_as_list: true
+        required: true
+    attributes:
+      sourceAnchor:
+        description: Where the anchoring was verified (service, version, date)
         required: true
 
   ExternalMapping:
@@ -298,7 +341,15 @@ slots:
       Quantitative: measured at the pin, Temporal and Narrative are
       predicted by the result DEC's dataType and never combine with a
       scale, so they are data types carried in the wrong enum. See
-      known-gaps.md 4a. Neither is used by any qualified concept here.
+      known-gaps.md 4a. The overlay admits exactly the three that are
+      scales - the ResultScale nodes of D23 - and 75_render_qbc
+      refuses any other value.
+    range: BiomedicalConceptResultScaleEnum
+    required: true
+  permissibleValue:
+    description: >-
+      The CDISC permissible value this ResultScale node is the use of.
+      Same range and same core-IRI resolution as resultScale (D20).
     range: BiomedicalConceptResultScaleEnum
     required: true
   resultDataElementConcept:

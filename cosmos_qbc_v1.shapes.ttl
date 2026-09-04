@@ -1,0 +1,305 @@
+@prefix cosmos_bc: <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix qbc: <https://w3id.org/cdisc/cosmos/qbc/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+qbc:QualifiedBiomedicalConceptCollection a sh:NodeShape ;
+    rdfs:comment "Container for the instance file: the qualified concepts and their recordings. Exists so linkml-validate has a target class." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class qbc:ResultScale ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path qbc:resultScales ],
+        [ sh:class qbc:Recording ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path qbc:recordings ],
+        [ sh:class qbc:QualifiedBiomedicalConcept ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path qbc:siblings ] ;
+    sh:targetClass qbc:QualifiedBiomedicalConceptCollection .
+
+qbc:ConceptTerm a sh:NodeShape ;
+    rdfs:comment "BC-side coded term: an NCIt concept with its preferred term. Used for the concept-level admissible specimen set; the SDTM submission value for the same concept lives on the recording's AssignedTerm." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "NCIt C-code" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qbc:conceptId ;
+            sh:pattern "^(C[0-9]+)$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path qbc:preferredTerm ] ;
+    sh:targetClass qbc:ConceptTerm .
+
+qbc:InterpretationRegimeAssertion a sh:NodeShape ;
+    rdfs:comment "Asserts that a distinct interpretation regime applies to this sibling under a given subject state. Carries a coded pointer, NEVER the reference-range numbers (those are data, per-record/per-lab). Keyed on an existing state DEC — for glucose, Fasting Status Indicator C93566 — so fasting and post-load glucose share one sibling while carrying different regimes." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Coded pointer to the regime, in a governed regime vocabulary. NOT required, and populated nowhere: no such vocabulary exists, and inventing a URI to fill the slot would be the one fabricated identifier in the whole repo. What the assertion can say without it is still the ask — that this concept has a distinct interpretation regime under this subject state, and a different one under that state. Decision D15." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path qbc:regime ],
+        [ sh:datatype xsd:string ;
+            sh:description "Value of the state under which this regime applies (from the state DEC's value domain, e.g. Y / N; \"*\" = any state)." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path qbc:stateValue ],
+        [ sh:datatype xsd:string ;
+            sh:description "Same convention as SemanticValueSetTerm: starts \"[VERIFY]\" while the regime vocabulary does not exist." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path qbc:sourceAnchor ],
+        [ sh:datatype xsd:string ;
+            sh:description "The state DEC this regime keys on (e.g. C93566)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qbc:stateDataElementConceptId ;
+            sh:pattern "^(C[0-9]+)$" ] ;
+    sh:targetClass qbc:InterpretationRegimeAssertion .
+
+qbc:QualifiedBiomedicalConcept a sh:NodeShape ;
+    rdfs:comment "A sibling BC: one observation shape under a broader analyte concept. Identity is the IRI itself (read-many, citable, content-negotiated per the usdm-rdf pattern). Deliberately NOT a subclass of cosmos_bc:BiomedicalConcept — see the design decision in the file header; the analyte link is skos:broader via broaderConceptId." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class qbc:InterpretationRegimeAssertion ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 10 ;
+            sh:path qbc:interpretationRegimes ],
+        [ sh:class qbc:ConceptTerm ;
+            sh:description "Concept-level admissible specimen set (NCIt-coded)" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 9 ;
+            sh:path qbc:admissibleSpecimens ],
+        [ sh:class cosmos_bc:DataElementConcept ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path qbc:qualifierDataElementConcepts ],
+        [ sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path qbc:iri ],
+        [ sh:class qbc:ExternalMapping ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path qbc:externalMappings ],
+        [ sh:datatype xsd:string ;
+            sh:description "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_bc:definition ],
+        [ sh:class cosmos_bc:DataElementConcept ;
+            sh:description "The result DEC with AUTHORITATIVE dataType; recordings inherit it (SDTMVariable.dataElementConceptId -> DEC.dataType), they do not re-declare it." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 6 ;
+            sh:path qbc:resultDataElementConcept ],
+        [ sh:class qbc:SemanticValueSetTerm ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path qbc:semanticValueSet ],
+        [ sh:datatype xsd:string ;
+            sh:description "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_bc:shortName ],
+        [ sh:description "Single scale of measurement — the sibling split axis. Ranges over CDISC's five-value enum unchanged (D20), but the identity rule component x system x scale only holds over Nominal, Ordinal and Quantitative: measured at the pin, Temporal and Narrative are predicted by the result DEC's dataType and never combine with a scale, so they are data types carried in the wrong enum. See known-gaps.md 4a. The overlay admits exactly the three that are scales - the ResultScale nodes of D23 - and 75_render_qbc refuses any other value." ;
+            sh:in ( <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Nominal> <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Ordinal> <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 5 ;
+            sh:path qbc:resultScale ],
+        [ sh:datatype xsd:string ;
+            sh:description "NCIt C-code of the analyte concept (skos:broader)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path qbc:broaderConceptId ;
+            sh:pattern "^(C[0-9]+)$" ] ;
+    sh:targetClass qbc:QualifiedBiomedicalConcept .
+
+qbc:Recording a sh:NodeShape ;
+    rdfs:comment "Thinned SDTM dataset specialization: everything the sibling already states is inherited, not re-declared. Kept here: domain placement, topic/test code, the ONE specimen this recording uses, per-standard codelist bindings (incl. unit subset), origin, and an optional LOINC pin at recording grain. Dropped relative to cosmos_sdtm:SDTMGroup's variables: result dataType/length/ format/significantDigits (inherited via the sibling's result DEC — verified to introduce no contradiction), and the duplicated scale information." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Residual SDTM-specific variable content" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path qbc:variableOverrides ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path qbc:loincPins ],
+        [ sh:datatype xsd:string ;
+            sh:description "Per-standard unit binding (codelist / subset ref)" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path qbc:unitCodelistBinding ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path qbc:testCode ],
+        [ sh:datatype xsd:string ;
+            sh:description "Stand-in for cosmos_sdtm:domain (D19), copied verbatim. Measured 2026-09-01: gen-jsonld-context honours the slot_uri; gen-owl drops it entirely and emits qbc:domain with no mapping back." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_sdtm:domain ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qbc:recordingId ;
+            sh:pattern "^[A-Z][A-Z0-9_]*$" ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path qbc:siblingIri ],
+        [ sh:class cosmos_sdtm:AssignedTerm ;
+            sh:description "The SDTM specimen assigned term this recording uses. It sits at a different grain from the qualified concept's admissibleSpecimens: that set is NCIt concept-level (Serum C13325, Plasma C13356), while SDTM CT carries composite submission values (SERUM OR PLASMA C105706). So a recording's specimen is not required to be a member of the admissible set, and 75_render_qbc reports membership per recording rather than asserting it. Measured 2026-09-02: 6 of 8 recordings use a member, 2 (HCV RNA) use the composite. D22." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path qbc:specimen ],
+        [ sh:datatype xsd:string ;
+            sh:description "Per-standard result binding for Coded scales" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path qbc:resultCodelistBinding ] ;
+    sh:targetClass qbc:Recording .
+
+qbc:ResultScale a sh:NodeShape ;
+    rdfs:comment "A result scale the overlay admits, anchored to NCIt. The node is the overlay's use of one permissible value of CDISC's BiomedicalConceptResultScaleEnum: the value keeps the core IRI (D20) and is reached by permissibleValue as an edge, and the typed mappings to the NCIt Scale branch are written here, never onto the CDISC value or the NCIt PURL (D21, D22). Three instances - Nominal, Ordinal, Quantitative - and no more: the other two values the enum carries, Temporal and Narrative, are data types by measurement (known-gaps 4a), get no node, and a qualified concept's resultScale must be one of the three. This is the repo's interim reading while the one-axis-or-two question is open with CDISC; if CDISC anchors the enum itself, these nodes become redundant and can go. Decision D23." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path qbc:iri ],
+        [ sh:class qbc:ExternalMapping ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path qbc:externalMappings ],
+        [ sh:description "The CDISC permissible value this ResultScale node is the use of. Same range and same core-IRI resolution as resultScale (D20)." ;
+            sh:in ( <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Nominal> <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Ordinal> <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path qbc:permissibleValue ],
+        [ sh:datatype xsd:string ;
+            sh:description "Where the anchoring was verified (service, version, date)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path qbc:sourceAnchor ] ;
+    sh:targetClass qbc:ResultScale .
+
+qbc:SemanticValueSetTerm a sh:NodeShape ;
+    rdfs:comment "Concept-level admissible result value (what the observation can say), distinct from any per-standard codelist binding (how a given standard writes it). ncitCode absent when no concept exists yet. A value is never a \"[VERIFY]\" placeholder: where no set can be curated the slot is absent, and the renderer refuses a marker in the value position (D22)." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path qbc:ncitCode ;
+            sh:pattern "^(C[0-9]+)$" ],
+        [ sh:datatype xsd:string ;
+            sh:description "Where this value is asserted (package, guidance, LOINC answer list); starts \"[VERIFY]\" when no source could be named." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path qbc:sourceAnchor ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qbc:value ] ;
+    sh:targetClass qbc:SemanticValueSetTerm .
+
+cosmos_sdtm:AssignedTerm a sh:NodeShape ;
+    rdfs:comment "Stand-in for cosmos_sdtm:AssignedTerm, declared locally because the SDTM model is not imported (D19). Attributes copied verbatim from cosmos_sdtm_model.yaml at the pinned commit. Measured 2026-09-01: gen-jsonld-context honours the class_uri and maps the term to cosmos_sdtm:AssignedTerm, while gen-owl mints qbc:AssignedTerm and demotes the published IRI to a skos:exactMatch. Both readings are kept; the divergence is the same one decisions D8 and D11 record for the core rendering. NOTE: conceptId and value are declared on more than one class in this schema, so gen-owl reports them ambiguous and emits bare property declarations with no range or pattern. gen-shacl keeps the per-class patterns apart. The warning is left in place - see D19; silencing it with slot_uri merges the definitions instead." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path qbc:conceptId ;
+            sh:pattern "^(C[0-9]+|CNEW)$" ],
+        [ sh:datatype xsd:string ;
+            sh:description "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path qbc:value ] ;
+    sh:targetClass cosmos_sdtm:AssignedTerm .
+
+qbc:ExternalMapping a sh:NodeShape ;
+    rdfs:comment "Typed mapping to an external code system. Replaces the flat cosmos_bc:Coding for siblings: cardinality 0/1/>1 is handled by the mapping relation, not by the key (exactMatch = same observable; narrowMatch = finer external leaf, typically the unit dimension)." ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path qbc:code ],
+        [ sh:datatype xsd:string ;
+            sh:description "Code system URI (e.g. https://loinc.org/, NCIt)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path qbc:system ],
+        [ sh:datatype xsd:string ;
+            sh:description "e.g. which axis the narrowMatch refines" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path qbc:comment ],
+        [ sh:in ( <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#broadMatch> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path qbc:relation ] ;
+    sh:targetClass qbc:ExternalMapping .
+

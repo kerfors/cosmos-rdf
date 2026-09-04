@@ -1,12 +1,13 @@
 """CI guard: deliverable integrity checks for the committed artifacts.
 
-Verifies that the nine generated deliverables at repo root parse and match the
+Verifies that the ten generated deliverables at repo root parse and match the
 operational baselines, and that the structural guarantees the decisions rest on
 still hold: no malformed IRI in a CDISC namespace (docs/known-gaps.md 1a); in the
 core T-Boxes nothing but the ontology and its version in the w3id namespace
 (decision D7); and in every other deliverable, every w3id IRI matches one of the
-forms a decision admits by name (D3, D13, D17, D18, D21) - so a new minting has to
-be argued here before it can pass.
+forms a decision admits by name (D3, D13, D17, D18, D21, D23) - so a new minting has
+to be argued here before it can pass; and in the overlay shapes, every enum
+constraint holds IRIs and the result-scale lists hold exactly the admitted set (D24).
 
 This is a guard against broken or partial commits, not a re-run of the pipeline.
 The deep checks live in notebooks/30_validate.ipynb, 60_validate_instances.ipynb
@@ -32,7 +33,7 @@ BC_NS = "https://www.cdisc.org/cosmos/biomedical_concept_v1.0"
 SDTM_NS = "https://www.cdisc.org/cosmos/sdtm_v1.0"
 W3ID = "https://w3id.org/cdisc/cosmos/"
 QBC_NS = W3ID + "qbc/"
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 
 # Operational baselines: COSMoS commit 031429b1, package date 2026-07-14.
 ONTOLOGIES = {
@@ -67,16 +68,20 @@ INSTANCE_DECS_SHARED = 224     # D21: the shared NCIt node per data element conc
 INSTANCE_DEC_USES = 6004       # D21: one node per (concept, DEC) pair
 INSTANCE_CATEGORIES = 405      # D18: label-nodes
 
-# The overlay (D13-D21). Its T-Box mints terms under w3id by decision, so the D7
+# The overlay (D13-D23). Its T-Box mints terms under w3id by decision, so the D7
 # check above does not apply to it; the check is instead that every w3id IRI it
 # carries is its own, or the core BC ontology it imports.
 OVERLAY_TBOX = "cosmos_qbc_v1.ttl"
-OVERLAY_TBOX_TRIPLES = 661
-OVERLAY_CLASSES = 9            # declared classes; enum permissible values excluded
+OVERLAY_TBOX_TRIPLES = 725
+OVERLAY_CLASSES = 10           # declared classes; enum permissible values excluded
 OVERLAY_INSTANCES = "cosmos_qbc_v1.instances.ttl"
-OVERLAY_INSTANCE_TRIPLES = 478
+OVERLAY_INSTANCE_TRIPLES = 515
 OVERLAY_CONCEPTS = 6
 OVERLAY_RECORDINGS = 8
+OVERLAY_SCALES = 3             # D23: the result scales the overlay admits, anchored to NCIt
+OVERLAY_SHAPES = "cosmos_qbc_v1.shapes.ttl"
+OVERLAY_SHAPES_TRIPLES = 366
+OVERLAY_NODE_SHAPES = 9
 
 # Every form a w3id IRI may take in the two A-Boxes, each admitted by a decision.
 # Anything else in the w3id namespace fails: a new minting must be added here
@@ -97,6 +102,8 @@ W3ID_ADMITTED = {
         (r"qbc/[A-Za-z]+$", "an overlay term, or a qualified concept (D13)"),
         (r"qbc/[A-Za-z]+Enum#[A-Za-z]+$", "an overlay permissible value (D20)"),
         (r"qbc/[A-Za-z]+/(dec|mapping|value|regime|specimen)/[^/]+(/[^/]+)?$", "a qualified concept's own nodes (D15, D16, D21, D22)"),
+        (r"qbc/scale/[A-Za-z]+$", "a result scale the overlay admits (D23)"),
+        (r"qbc/scale/[A-Za-z]+/mapping/C[0-9]+$", "an admitted result scale's NCIt anchor (D23)"),
         (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*$", "a recording IS the Dataset Specialization IRI (D3, D17)"),
         (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*/specimen$", "a recording's specimen (D17)"),
     ],
@@ -256,7 +263,7 @@ def unadmitted(graph, admitted):
 
 check(f"{INSTANCES} w3id IRIs outside the admitted forms", unadmitted(instances, W3ID_ADMITTED[INSTANCES]), [])
 
-# 7. The overlay T-Box (D13): parses, declares its nine classes, imports the core
+# 7. The overlay T-Box (D13): parses, declares its ten classes, imports the core
 #    BC ontology, and every w3id IRI in it is either its own or that import.
 overlay = Graph().parse(OVERLAY_TBOX, format="turtle")
 overlay_classes = {
@@ -286,7 +293,7 @@ check(
     [],
 )
 
-# 8. The overlay A-Box (D13-D21): parses, counts match, joins the core A-Box by
+# 8. The overlay A-Box (D13-D23): parses, counts match, joins the core A-Box by
 #    skos:broader, and every w3id IRI takes an admitted form.
 overlay_instances = Graph().parse(OVERLAY_INSTANCES, format="turtle")
 qbc_concept = URIRef(QBC_NS + "QualifiedBiomedicalConcept")
@@ -314,6 +321,67 @@ check(
     [],
 )
 check(f"{OVERLAY_INSTANCES} w3id IRIs outside the admitted forms", unadmitted(overlay_instances, W3ID_ADMITTED[OVERLAY_INSTANCES]), [])
+
+# Decision D23: the overlay admits exactly three result scales - Nominal, Ordinal,
+# Quantitative - as nodes of its own, each the use of a core permissible value;
+# Temporal and Narrative get no node (known-gaps.md 4a); and every qualified
+# concept's resultScale is one of the admitted values.
+qbc_scale = URIRef(QBC_NS + "ResultScale")
+permissible_value = URIRef(QBC_NS + "permissibleValue")
+result_scale = URIRef(QBC_NS + "resultScale")
+scale_enum = BC_NS + "/BiomedicalConceptResultScaleEnum#"
+scale_nodes = set(overlay_instances.subjects(RDF.type, qbc_scale))
+admitted_scales = {o for s in scale_nodes for o in overlay_instances.objects(s, permissible_value)}
+core_scales = {
+    s for s in graphs["cosmos_bc_v1.ttl"].subjects(RDF.type, OWL.Class)
+    if isinstance(s, URIRef) and str(s).startswith(scale_enum)
+}
+check(f"{OVERLAY_INSTANCES} admitted result scales", len(scale_nodes), OVERLAY_SCALES)
+check(
+    f"{OVERLAY_INSTANCES} admitted result scale values",
+    sorted(str(v).replace(scale_enum, "") for v in admitted_scales),
+    ["Nominal", "Ordinal", "Quantitative"],
+)
+check(
+    f"{OVERLAY_INSTANCES} core permissible values left without a node",
+    sorted(str(v).replace(scale_enum, "") for v in core_scales - admitted_scales),
+    ["Narrative", "Temporal"],
+)
+check(
+    f"{OVERLAY_INSTANCES} resultScale values outside the admitted set",
+    sorted(str(v) for v in set(overlay_instances.objects(None, result_scale)) - admitted_scales),
+    [],
+)
+
+# 9. The overlay shapes (D24): parse, counts match, no shape targets an imported
+#    BC class, every sh:in member is an IRI, and the two result-scale lists hold
+#    exactly the admitted set of D23.
+from rdflib.collection import Collection
+
+overlay_shapes = Graph().parse(OVERLAY_SHAPES, format="turtle")
+check(f"{OVERLAY_SHAPES} triples", len(overlay_shapes), OVERLAY_SHAPES_TRIPLES)
+check(f"{OVERLAY_SHAPES} sh:NodeShape", sum(1 for _ in overlay_shapes.subjects(RDF.type, SH.NodeShape)), OVERLAY_NODE_SHAPES)
+check(
+    f"{OVERLAY_SHAPES} shapes targeting an imported BC class",
+    sorted(str(o) for o in overlay_shapes.objects(None, SH.targetClass) if str(o).startswith(BC_NS)),
+    [],
+)
+in_lists = {
+    str(overlay_shapes.value(shape, SH.path)).replace(QBC_NS, ""): list(Collection(overlay_shapes, lst))
+    for shape, lst in overlay_shapes.subject_objects(SH["in"])
+}
+check(f"{OVERLAY_SHAPES} properties constrained by sh:in", sorted(in_lists), ["permissibleValue", "relation", "resultScale"])
+check(
+    f"{OVERLAY_SHAPES} sh:in members that are not IRIs",
+    sorted(str(v) for members in in_lists.values() for v in members if not isinstance(v, URIRef)),
+    [],
+)
+for prop in ("resultScale", "permissibleValue"):
+    check(
+        f"{OVERLAY_SHAPES} {prop} sh:in equals the admitted result scales",
+        sorted(str(v) for v in in_lists.get(prop, [])),
+        sorted(str(v) for v in admitted_scales),
+    )
 
 if failures:
     print(f"\n{len(failures)} check(s) failed: {', '.join(failures)}")

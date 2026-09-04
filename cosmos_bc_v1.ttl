@@ -35,14 +35,14 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
     dcterms:creator "Kerstin Forsberg" ;
     dcterms:description "A mechanical OWL rendering of the LinkML schema CDISC publishes as model/cosmos_bc_model.yaml in cdisc-org/COSMoS: the Biomedical Concept, Data Element Concept and Coding classes, their slots, patterns and cardinality, and the result-scale and data-type enumerations. Class and property IRIs are the ones the published schema declares; this rendering does not rename them." ;
     dcterms:license <https://opensource.org/licenses/MIT> ;
-    dcterms:modified "2026-09-02"^^xsd:date ;
+    dcterms:modified "2026-09-04"^^xsd:date ;
     dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/model/cosmos_bc_model.yaml> ;
     dcterms:title "CDISC COSMoS Biomedical Concepts (RDF/OWL rendering)" ;
     vann:preferredNamespacePrefix "cosmos_bc" ;
     vann:preferredNamespaceUri cosmos_bc: ;
     rdfs:comment "Mechanical rendering of a published CDISC COSMoS LinkML schema. Draft - not a normative CDISC artifact." ;
-    owl:versionIRI <https://w3id.org/cdisc/cosmos/bc/0.2.0> ;
-    owl:versionInfo "v0.2.0" .
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/bc/0.3.0> ;
+    owl:versionInfo "v0.3.0" .
 
 cosmos_bc:BiomedicalConcept a owl:Class ;
     rdfs:label "BiomedicalConcept" ;

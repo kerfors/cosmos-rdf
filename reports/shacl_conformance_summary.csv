@@ -1,23 +1,23 @@
 constraint,path,cause,count
-InConstraintComponent,dataType,"generator disagreement: gen-owl declares enum values as class IRIs, gen-shacl expects strings",6004
 DatatypeConstraintComponent,conceptId,published range is string; the use-node's conceptId is an edge to the shared DEC (D21),6004
+InConstraintComponent,dataType,"generator disagreement: gen-owl declares enum values as class IRIs, gen-shacl expects strings",6004
 NodeKindConstraintComponent,conceptId,published range is string; the use-node's conceptId is an edge to the shared DEC (D21),6004
 PatternConstraintComponent,conceptId,"published pattern admits a bare C-code; the use-node's conceptId is an IRI (D21, D2)",6004
 DatatypeConstraintComponent,categories,published range is string; the A-Box renders a category as a label-node (D18),4366
 NodeKindConstraintComponent,categories,published range is string; the A-Box renders a category as a label-node (D18),4366
-ClosedConstraintComponent,identifier,authored: dcterms:identifier carries the bare C-code (D2),1693
 ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form (D2, usdm-rdf D4)",1693
+ClosedConstraintComponent,identifier,authored: dcterms:identifier carries the bare C-code (D2),1693
 InConstraintComponent,packageType,"generator disagreement: gen-owl declares enum values as class IRIs, gen-shacl expects strings",1469
 InConstraintComponent,resultScales,"generator disagreement: gen-owl declares enum values as class IRIs, gen-shacl expects strings",1269
 DatatypeConstraintComponent,parentConceptId,published range is string; the A-Box renders the parent reference as a link,1166
 NodeKindConstraintComponent,parentConceptId,published range is string; the A-Box renders the parent reference as a link,1166
 MinCountConstraintComponent,dataType,"dataType is a property of the (concept, DEC) pair; the shared DEC node carries none (D21)",224
 ClosedConstraintComponent,categories,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",46
-ClosedConstraintComponent,synonyms,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",31
 ClosedConstraintComponent,dataElementConcepts,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",31
+ClosedConstraintComponent,synonyms,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",31
+ClosedConstraintComponent,definition,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",19
 ClosedConstraintComponent,packageDate,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",19
 ClosedConstraintComponent,packageType,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",19
-ClosedConstraintComponent,definition,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",19
 ClosedConstraintComponent,resultScales,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",13
 ClosedConstraintComponent,parentConceptId,"dual-role concept: one node typed as both BC and DEC, each closed shape rejects the other's slots (D12)",10
 MaxCountConstraintComponent,shortName,dual-role concept whose BC and DEC labels differ (D12),4

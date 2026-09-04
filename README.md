@@ -5,9 +5,9 @@ Specializations — generated mechanically from the artifacts CDISC publishes in
 [cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS), plus an overlay graph
 for qualified ("sibling") biomedical concepts.
 
-**Status: P4, overlay rendered.** Nine deliverables at repo version 0.2.0: two
+**Status: P4, overlay rendered.** Ten deliverables at repo version 0.3.0: two
 core OWL graphs, two JSON-LD contexts, two SHACL shapes graphs, the BC instance
-graph, and the overlay's own OWL graph and instance graph. The Dataset
+graph, and the overlay's own OWL graph, instance graph and shapes graph. The Dataset
 Specialization A-Box is deferred (decision D4). The phase list below states intent
 for the rest; none of it is a promise.
 
@@ -113,7 +113,7 @@ graph, many views.
 | P1 | Core T-Box: OWL per schema, ontology headers, validation, known gaps | **done** |
 | P2 | Identity binding and JSON-LD contexts | **done** |
 | P3 | A-Box and shapes | **BC layer done**; DSS layer deferred (D4) |
-| P4 | Overlay: the qualified concepts as RDF | **done** — six concepts, eight recordings (D13–D21) |
+| P4 | Overlay: the qualified concepts as RDF | **done** — six concepts, eight recordings, three admitted result scales (D13–D23) |
 | P5 | Dereference and publish: w3id PR, WIDOCO, release, CI | not started |
 | P6 | The DDS profile gains a sentence saying it is a projection | not started |
 
@@ -138,8 +138,10 @@ cosmos-rdf/
 ├── cosmos_bc_v1.instances.ttl       # BC A-Box
 ├── cosmos_qbc_v1.ttl                # overlay T-Box: the qualified-BC schema as OWL
 ├── cosmos_qbc_v1.instances.ttl      # overlay A-Box: six qualified concepts, eight recordings
+├── cosmos_qbc_v1.shapes.ttl         # overlay SHACL; enum constraints repaired and tightened (D24)
 ├── overlay/
 │   ├── qbc.schema.yaml              # authored LinkML schema for the overlay
+│   ├── scales.instances.yaml        # the three result scales the overlay admits, NCIt-anchored (D23)
 │   ├── glucose.instances.yaml       # authored instances, first worked case
 │   └── hcvrna.instances.yaml        # authored instances, second worked case
 ├── downloads/                       # gitignored — the four pinned inputs land here
@@ -157,10 +159,12 @@ cosmos-rdf/
 │   ├── 60_validate_instances.ipynb  # conformance report; every violation classified
 │   ├── 65_compare_render_paths.ipynb # direct renderer vs linkml-convert (D8)
 │   ├── 70_generate_qbc.ipynb        # overlay T-Box, after 10 and 20
-│   └── 75_render_qbc.ipynb          # overlay A-Box, after 70 and 50; asserts the join to core
+│   ├── 75_render_qbc.ipynb          # overlay A-Box, after 70 and 50; asserts the join to core
+│   ├── 77_generate_qbc_shapes.ipynb # overlay SHACL, after 70; the D24 repair
+│   └── 78_validate_qbc_instances.ipynb # overlay conformance report; every violation classified
 ├── docs/
 │   ├── source-verification.md       # the P0 gate: what was verified, and how
-│   ├── decisions.md                 # D1–D22, all settled
+│   ├── decisions.md                 # D1–D24, all settled
 │   ├── iri-and-governance.md        # namespace, identity, handoff
 │   └── known-gaps.md                # upstream gaps and current scope exclusions
 ├── scripts/
@@ -176,8 +180,8 @@ cosmos-rdf/
 
 ## Reproduce
 
-Requires the packages in `requirements.txt` — `linkml` (developed against 1.11.1),
-`rdflib`, `pandas`, `pyshacl`, `pyyaml`. Consuming the deliverables needs none of
+Requires the packages in `requirements.txt` — `linkml` (pinned to 1.11.1, and
+asserted by the generating notebooks), `rdflib`, `pandas`, `pyshacl`, `pyyaml`. Consuming the deliverables needs none of
 them; `scripts/ci_check.py`, which is what CI runs, needs `rdflib` alone.
 
 1. Open `notebooks/10_fetch_cosmos.ipynb`. The upstream commit SHA is pinned in
@@ -203,6 +207,12 @@ them; `scripts/ci_check.py`, which is what CI runs, needs `rdflib` alone.
 9. Open `notebooks/75_render_qbc.ipynb`. Run all cells. `cosmos_qbc_v1.instances.ttl`
    appears at the repo root, and the notebook asserts that the overlay joins the
    core A-Box from step 5.
+10. Open `notebooks/77_generate_qbc_shapes.ipynb`. Run all cells.
+    `cosmos_qbc_v1.shapes.ttl` appears at the repo root, with the enum constraints
+    repaired and the result-scale lists tightened to the admitted set (D24).
+11. Open `notebooks/78_validate_qbc_instances.ipynb`. Run all cells. It reports
+    the overlay's non-conformance to its own shapes, classified, and asserts that
+    the repaired constraints produce no result.
 
 `notebooks/45_identity_probe.ipynb` and `notebooks/65_compare_render_paths.ipynb`
 are optional and are not build steps. The first measures the claim decision D2
@@ -218,7 +228,7 @@ named under w3id, the terms are not.**
 | | `cosmos_bc_v1.ttl` | `cosmos_sdtm_v1.ttl` |
 |---|---|---|
 | ontology IRI | `https://w3id.org/cdisc/cosmos/bc/` | `https://w3id.org/cdisc/cosmos/sdtm/` |
-| `owl:versionIRI` | `…/cosmos/bc/0.2.0` | `…/cosmos/sdtm/0.2.0` |
+| `owl:versionIRI` | `…/cosmos/bc/0.3.0` | `…/cosmos/sdtm/0.3.0` |
 | term namespace (`vann:preferredNamespaceUri`) | `https://www.cdisc.org/cosmos/biomedical_concept_v1.0/` | `https://www.cdisc.org/cosmos/sdtm_v1.0/` |
 
 Every class and property IRI is the one the published schema declares. This
@@ -233,12 +243,14 @@ it by name.** In the core A-Box: a category label-node at `…/bc/category/{toke
 (D21) — neither names anything CDISC named. In the overlay: the qualified
 concepts and the overlay's own terms under `…/qbc/` (D13), and a recording's
 subject, which *is* the Dataset Specialization IRI `…/dss/{DOMAIN}/{MNEMONIC}`
-(D3, D17). `scripts/ci_check.py` fails on any w3id IRI outside those forms.
+(D3, D17); and the three result scales the overlay admits at `…/qbc/scale/{value}`,
+anchored to NCIt (D23). `scripts/ci_check.py` fails on any w3id IRI outside those
+forms.
 
 | | `cosmos_qbc_v1.ttl` |
 |---|---|
 | ontology IRI | `https://w3id.org/cdisc/cosmos/qbc/` |
-| `owl:versionIRI` | `…/cosmos/qbc/0.2.0` |
+| `owl:versionIRI` | `…/cosmos/qbc/0.3.0` |
 | `owl:imports` | `…/cosmos/bc/` |
 | term namespace | `https://w3id.org/cdisc/cosmos/qbc/` — the overlay's terms are its own |
 
@@ -266,11 +278,16 @@ concepts plus 6,004 (concept, DEC) use-nodes carrying `dataType` and `exampleSet
 (D21), 405 category label-nodes (D18), 97 codings, 1,166 parent edges, no blank
 nodes.
 
-`cosmos_qbc_v1.ttl`: 661 triples, 9 classes, importing the core BC ontology.
-`cosmos_qbc_v1.instances.ttl`: 478 triples — 6 qualified concepts, 8 recordings,
-28 external mappings, 15 DEC uses, 9 admissible-specimen uses, 5
-interpretation-regime assertions; every `skos:broader` lands on a concept the core
-A-Box renders, and no NCIt concept is the subject of an overlay triple (D22).
+`cosmos_qbc_v1.ttl`: 725 triples, 10 classes, importing the core BC ontology.
+`cosmos_qbc_v1.instances.ttl`: 515 triples — 6 qualified concepts, 8 recordings,
+3 admitted result scales, 32 external mappings (28 on concepts, 4 NCIt scale
+anchors), 15 DEC uses, 9 admissible-specimen uses, 5 interpretation-regime
+assertions; every `skos:broader` lands on a concept the core A-Box renders, no
+NCIt concept is the subject of an overlay triple (D22), and every `resultScale`
+is one of the three scales the overlay admits (D23).
+`cosmos_qbc_v1.shapes.ttl`: 366 triples, 9 closed node shapes, 42 property shapes;
+the three `sh:in` lists hold IRIs, and the two result-scale lists hold exactly the
+admitted set (D24).
 
 Nine of the SDTM top-level classes are OBO PURLs (`obo:NCIT_C170547` and
 siblings) rather than terms in the COSMoS namespace: the Define-XML origin
@@ -334,6 +351,14 @@ would mean the graph stops being a graph. The last two causes are the sharpest:
 CDISC's own article says `categories` is how related concepts are gathered, and
 CDISC's own shape says it is a string; and the shape requires exactly one
 `dataType` on a data element concept that, at this pin, has up to seven.
+
+The overlay A-Box does not conform to its own shapes either — **130** results in
+`78_validate_qbc_instances.ipynb`, all classified, none unexplained — but there the
+enum disagreement is repaired rather than recorded (D24), so the constraints D23
+rests on produce no result at all. The rest are the graph-over-document decisions
+seen from the shapes side: C-codes rendered as edges, SKOS predicates beside the
+schema's slots, the DSS IRI as a recording's subject, and the two SDTM stand-ins
+where `gen-shacl` and `gen-owl` read `class_uri` and `slot_uri` differently (D19).
 
 `65_compare_render_paths.ipynb` shows the split is inside the toolchain rather
 than in this repo's reading of it: over six concepts, 44 predicate comparisons

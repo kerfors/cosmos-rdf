@@ -101,8 +101,28 @@ qbc:GlucosePlasmaEquivalent a qbc:QualifiedBiomedicalConcept ;
     rdfs:comment "Authored qualified biomedical concepts and their recordings. Each is linked to the COSMoS concept it qualifies by skos:broader; that concept is rendered in cosmos_bc_v1.instances.ttl, which this graph imports. Recordings carry the Dataset Specialization IRI of decision D3; the Dataset Specialization layer itself is deferred, so those IRIs have no other triples yet. Draft - not a normative CDISC artifact." ;
     owl:imports <https://w3id.org/cdisc/cosmos/bc/instances/>,
         qbc: ;
-    owl:versionIRI <https://w3id.org/cdisc/cosmos/qbc/instances/0.2.0> ;
-    owl:versionInfo "v0.2.0" .
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/qbc/instances/0.3.0> ;
+    owl:versionInfo "v0.3.0" .
+
+<https://w3id.org/cdisc/cosmos/qbc/scale/Nominal> a qbc:ResultScale ;
+    skos:exactMatch NCIT:C47798 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/scale/Nominal/mapping/C47798> ;
+    qbc:permissibleValue <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Nominal> ;
+    qbc:sourceAnchor "NCI EVS REST, NCIt 26.08e, 2026-09-04; known-gaps.md 4b" .
+
+<https://w3id.org/cdisc/cosmos/qbc/scale/Ordinal> a qbc:ResultScale ;
+    skos:exactMatch NCIT:C47797 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/scale/Ordinal/mapping/C47797> ;
+    qbc:permissibleValue <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Ordinal> ;
+    qbc:sourceAnchor "NCI EVS REST, NCIt 26.08e, 2026-09-04; known-gaps.md 4b" .
+
+<https://w3id.org/cdisc/cosmos/qbc/scale/Quantitative> a qbc:ResultScale ;
+    skos:narrowMatch NCIT:C47799,
+        NCIT:C47800 ;
+    qbc:externalMappings <https://w3id.org/cdisc/cosmos/qbc/scale/Quantitative/mapping/C47799>,
+        <https://w3id.org/cdisc/cosmos/qbc/scale/Quantitative/mapping/C47800> ;
+    qbc:permissibleValue <https://www.cdisc.org/cosmos/biomedical_concept_v1.0/BiomedicalConceptResultScaleEnum#Quantitative> ;
+    qbc:sourceAnchor "NCI EVS REST, NCIt 26.08e, 2026-09-04; known-gaps.md 4b" .
 
 <https://w3id.org/cdisc/cosmos/dss/LB/GLUCPL/specimen> a qbc:AssignedTerm ;
     qbc:conceptId NCIT:C13356 ;
@@ -530,6 +550,30 @@ qbc:HCVRNASerumPlasmaQuantitative a qbc:QualifiedBiomedicalConcept ;
 <https://w3id.org/cdisc/cosmos/qbc/HCVRNASerumPlasmaQuantitative/specimen/C13356> a qbc:ConceptTerm ;
     qbc:conceptId NCIT:C13356 ;
     qbc:preferredTerm "Plasma" .
+
+<https://w3id.org/cdisc/cosmos/qbc/scale/Nominal/mapping/C47798> a qbc:ExternalMapping ;
+    qbc:code "C47798" ;
+    qbc:comment "Nominal Scale, child of C25664 Scale" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> ;
+    qbc:system "http://purl.obolibrary.org/obo/NCIT_" .
+
+<https://w3id.org/cdisc/cosmos/qbc/scale/Ordinal/mapping/C47797> a qbc:ExternalMapping ;
+    qbc:code "C47797" ;
+    qbc:comment "Ordinal Scale, child of C25664 Scale" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#exactMatch> ;
+    qbc:system "http://purl.obolibrary.org/obo/NCIT_" .
+
+<https://w3id.org/cdisc/cosmos/qbc/scale/Quantitative/mapping/C47799> a qbc:ExternalMapping ;
+    qbc:code "C47799" ;
+    qbc:comment "Interval Scale, child of C25664 Scale" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "http://purl.obolibrary.org/obo/NCIT_" .
+
+<https://w3id.org/cdisc/cosmos/qbc/scale/Quantitative/mapping/C47800> a qbc:ExternalMapping ;
+    qbc:code "C47800" ;
+    qbc:comment "Ratio Scale, child of C25664 Scale" ;
+    qbc:relation <https://w3id.org/cdisc/cosmos/qbc/MappingRelationEnum#narrowMatch> ;
+    qbc:system "http://purl.obolibrary.org/obo/NCIT_" .
 
 qbc:GlucoseUrineCategorical a qbc:QualifiedBiomedicalConcept ;
     skos:broader NCIT:C105585 ;

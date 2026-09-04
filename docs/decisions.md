@@ -1093,6 +1093,135 @@ from 660, the difference being the `specimen` slot's new description.
 
 ---
 
+## D23 — Result scale, read as one axis, in the overlay only SETTLED 2026-09-04
+
+**Question.** `known-gaps.md` §4a measures that `BiomedicalConceptResultScaleEnum`
+mixes two axes, and the one-axis-or-two question is with CDISC (2026-09-01 to the
+DDS maintainer; 2026-09-02 to terminology governance, §4b). Replies and any NCIt
+change will take time. Can this repo work under the reading it proposed, without
+prejudging the answer, and what does that cost if the answer is different?
+
+**Settled: the overlay admits three result scales, as nodes of its own, anchored to
+NCIt.** A node at `…/qbc/scale/{value}`, typed `qbc:ResultScale`, is the overlay's
+*use* of one permissible value of the core enum — the value keeps its core IRI (D20)
+and is reached by `qbc:permissibleValue` as an edge — and carries typed mappings to
+the NCIt Scale branch: `skos:exactMatch` to `C47798 Nominal Scale` and `C47797
+Ordinal Scale`; for Quantitative two `skos:narrowMatch`, to `C47799 Interval Scale`
+and `C47800 Ratio Scale`, because no NCIt concept parents the two and the CDISC
+value is broader than each. All four verified 2026-09-04 against the NCI EVS REST
+API (NCIt 26.08e), each a direct child of `C25664 Scale`. Authored in
+`overlay/scales.instances.yaml`; three nodes, four anchors, no new IRI form beyond
+`scale/{value}` and its `mapping/{code}` children.
+
+**The closed-world half.** Temporal and Narrative get no node, and a qualified
+concept's `resultScale` must be one of the three admitted values —
+`75_render_qbc.ipynb` raises otherwise, and `scripts/ci_check.py` asserts on the
+committed deliverable that the admitted set is exactly Nominal, Ordinal,
+Quantitative, that the core values left without a node are exactly Narrative and
+Temporal, and that no `resultScale` falls outside the set. This is the "profile =
+closed-world projection" half of the framing the DDS maintainer endorsed; the
+open-world half is that the core T-Box keeps rendering the enum with its five
+values, untouched.
+
+**Why nodes of its own and not anchors on the enum values.** The obvious shape —
+`cosmos_bc:…Enum#Nominal skos:exactMatch ncit:C47798` — puts a shared node in the
+subject position, and D21/D22 settled that the overlay writes onto its own nodes
+only. The enum value is CDISC's; the claim that it *means* an NCIt concept is this
+repo's; the claim goes on this repo's node. It is the same shape as a sibling's use
+of a data element concept (D21) and of an admissible specimen (D22), one layer up.
+
+**Why not an overlay enum of three values.** D20 declined it: two IRIs for one CDISC
+enum, and the join to core breaks. Still declined.
+
+**Why `narrowMatch` and not a minted "Quantitative Scale".** A provisional concept of
+the repo's own would be the one invented identifier in the graph, and D15 and D22
+have already refused that twice. The HCV RNA mappings set the idiom: where no exact
+external concept exists, map to what does exist with the relation that is true.
+If NCIt mints the parent, one entry changes from two `narrowMatch` to one
+`exactMatch`.
+
+**What the answer from CDISC changes — the point of the decision.** Under the
+reading this repo proposed (two axes, three scales), these nodes *are* the target
+shape, and become redundant the day COSMoS carries `meaning:` on the enum. Under
+the other reading (one axis, five values), the Nominal and Ordinal anchors are still
+correct, the Quantitative anchors are still correct, and the three-value admission
+is still the overlay's own defensible choice — it qualifies concepts by measurement
+scale, and only concepts that have one. The only thing that would then be added is
+two more nodes, anchored to whatever CDISC chooses for Temporal and Narrative. So
+the blast radius of guessing wrong is two files and no rename.
+
+**Cost.** Overlay T-Box 725 triples from 661 (one class, one slot, their
+restrictions); A-Box 515 from 478 (37 triples for three nodes and four anchors);
+`ci_check.py` admits the two new IRI forms by name and runs four D23 checks.
+
+---
+
+## D24 — The overlay's shapes repair the enum constraints; the core's do not SETTLED 2026-09-04
+
+**Question.** `55_generate_shapes.ipynb` ships the two core shapes graphs exactly as
+`gen-shacl` writes them, and `60_validate_instances.ipynb` records 8,742 `sh:in`
+violations that follow from `gen-owl` and `gen-shacl` disagreeing about what an
+enum value is (D11). The overlay now has a shapes graph of its own,
+`cosmos_qbc_v1.shapes.ttl` from `77_generate_qbc_shapes.ipynb`. Same disagreement:
+41 `sh:in` results at this pin. Record it again, or repair it?
+
+**Settled: repair it, in the overlay only, and name the edit.** The core shapes are
+CDISC's constraints and stay unmodified — recording the divergence is the finding
+there. The overlay's shapes are this repo's constraints on this repo's content, and
+a shape that rejects every value the same repo's T-Box declares is not a finding, it
+is a generator artefact standing between the deliverable and its own reading. So the
+three `sh:in` lists — `resultScale`, `permissibleValue`, `relation` — are rewritten
+from string literals to the permissible-value IRIs, resolved through the same
+T-Box guard `75_render_qbc.ipynb` uses, with `sh:nodeKind sh:IRI` added. The notebook
+asserts that exactly those three lists exist before the repair and that no
+string-valued `sh:in` member survives it. Precedent: the authored header in `20_`
+and the range retarget in `70_` (D20) — an edit to generated output, made after
+generation, guarded before and after.
+
+**And the result-scale lists are tightened, not just retyped.** `gen-shacl` writes
+the core enum's five values. The repaired lists hold the three the overlay admits,
+read from `overlay/scales.instances.yaml` — the D23 admission stated declaratively,
+in a deliverable a SHACL engine reads, instead of only in a renderer guard and a CI
+check. `78_validate_qbc_instances.ipynb` then asserts zero `sh:in` results: the
+positive half of the report.
+
+**`exclude_imports`.** Left at its default, `gen-shacl` emits node shapes for the
+imported BC classes — `BiomedicalConcept`, `DataElementConcept`, `Coding` — into the
+overlay's file: a second copy of CDISC's constraints under this repo's name, which is
+what D7 declined for terms. Measured 2026-09-04: 12 node shapes with imports, 9
+without. This is the shapes-side twin of `mergeimports: False` in `70_`. Every other
+option is pinned to the 1.11.1 default `55_` runs with (D6).
+
+**What the conformance report says, and does not say.** The overlay A-Box does not
+conform to its own generated shapes: 130 results, every one classified, none
+unexplained. The causes are the decisions already taken, seen from the shapes side:
+a C-code the schema types as string rendered as an edge to the NCIt PURL (D2 with
+D14, D15, D22); the SKOS predicates emitted beside the schema's own slots (D14, D16);
+`dcterms:identifier` on a recording whose subject is the DSS IRI (D17); and the two
+SDTM stand-ins, where `gen-shacl` honours `class_uri` and `slot_uri` and `gen-owl`
+does not (D19) — with the consequence, asserted rather than noted, that the
+`AssignedTerm` shape targets a class no node carries and the eight specimen nodes
+are never reached by it. Reports: `reports/qbc_shacl_conformance.csv` and its
+summary, grouped by focus-node type as well as constraint and path, because the same
+slot name means a different decision on a different class.
+
+**Rejected: repair the core shapes the same way.** They are not this repo's
+constraints. D11 stands.
+
+**Rejected: also repair the D19 divergences.** They are real generator disagreements
+about a published mechanism (`class_uri`, `slot_uri`), and the point of keeping both
+readings is that a consumer sees the disagreement. Repairing only the enum lists
+draws the line at "constraints the overlay's own A-Box cannot satisfy by
+construction"; the D19 ones it could, by changing the renderer, and that is a
+different decision for a different day.
+
+**Cost.** Tenth deliverable, 366 triples, 9 closed node shapes, 42 property shapes,
+byte-stable across runs (D9). `ci_check.py` checks the counts, that no shape targets
+an imported class, that every `sh:in` member is an IRI, and that the two
+result-scale lists equal the admitted set the A-Box carries.
+
+---
+
 ## Carried over from `usdm-rdf` without re-argument
 
 These are settled there and adopted here by reference, not re-decided:

@@ -1,0 +1,20 @@
+focus_type,constraint,path,cause,count
+QualifiedBiomedicalConcept,ClosedConstraintComponent,narrowMatch,"authored: the mapping relation is emitted as the SKOS predicate it names (D16, D23)",23
+ConceptTerm,DatatypeConstraintComponent,conceptId,"schema range is a C-code string; the use-node's conceptId is an edge to the NCIt PURL (D2, D22)",9
+ConceptTerm,NodeKindConstraintComponent,conceptId,"schema range is a C-code string; the use-node's conceptId is an edge to the NCIt PURL (D2, D22)",9
+ConceptTerm,PatternConstraintComponent,conceptId,"schema range is a C-code string; the use-node's conceptId is an edge to the NCIt PURL (D2, D22)",9
+Recording,ClassConstraintComponent,specimen,"D19 divergence: gen-shacl honours class_uri cosmos_sdtm:AssignedTerm, gen-owl mints qbc:AssignedTerm; the A-Box follows the T-Box and types the node so",8
+Recording,ClosedConstraintComponent,domain,"D19 divergence: gen-shacl honours slot_uri cosmos_sdtm:domain, gen-owl drops it; the A-Box follows the T-Box and writes qbc:domain",8
+Recording,ClosedConstraintComponent,identifier,authored: dcterms:identifier carries the recording mnemonic; the subject is the Dataset Specialization IRI (D17),8
+Recording,MinCountConstraintComponent,domain,"D19 divergence: gen-shacl honours slot_uri cosmos_sdtm:domain, gen-owl drops it; the A-Box follows the T-Box and writes qbc:domain",8
+QualifiedBiomedicalConcept,ClosedConstraintComponent,broader,authored: skos:broader carries the analyte link beside the schema's own slot (D14),6
+QualifiedBiomedicalConcept,DatatypeConstraintComponent,broaderConceptId,"schema range is a C-code string; the A-Box renders the analyte link as an edge to the NCIt PURL (D2, D14)",6
+QualifiedBiomedicalConcept,NodeKindConstraintComponent,broaderConceptId,"schema range is a C-code string; the A-Box renders the analyte link as an edge to the NCIt PURL (D2, D14)",6
+QualifiedBiomedicalConcept,PatternConstraintComponent,broaderConceptId,"schema range is a C-code string; the A-Box renders the analyte link as an edge to the NCIt PURL (D2, D14)",6
+InterpretationRegimeAssertion,DatatypeConstraintComponent,stateDataElementConceptId,"schema range is a C-code string; the assertion's state DEC is an edge to the NCIt PURL (D2, D15)",5
+InterpretationRegimeAssertion,NodeKindConstraintComponent,stateDataElementConceptId,"schema range is a C-code string; the assertion's state DEC is an edge to the NCIt PURL (D2, D15)",5
+InterpretationRegimeAssertion,PatternConstraintComponent,stateDataElementConceptId,"schema range is a C-code string; the assertion's state DEC is an edge to the NCIt PURL (D2, D15)",5
+QualifiedBiomedicalConcept,ClosedConstraintComponent,exactMatch,"authored: the mapping relation is emitted as the SKOS predicate it names (D16, D23)",3
+QualifiedBiomedicalConcept,ClosedConstraintComponent,broadMatch,"authored: the mapping relation is emitted as the SKOS predicate it names (D16, D23)",2
+ResultScale,ClosedConstraintComponent,exactMatch,"authored: the mapping relation is emitted as the SKOS predicate it names (D16, D23)",2
+ResultScale,ClosedConstraintComponent,narrowMatch,"authored: the mapping relation is emitted as the SKOS predicate it names (D16, D23)",2

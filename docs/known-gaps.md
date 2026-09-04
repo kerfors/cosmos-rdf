@@ -152,6 +152,12 @@ authoritative, and the scale enum reduces to three values that anchor cleanly to
 NCIt's Scale branch. The question was put to the DDS maintainer on 2026-09-01: is
 result scale meant to be one axis or two?
 
+**Meanwhile, the overlay works under the one-axis reading — decision D23.** Three
+`qbc:ResultScale` nodes, one per real scale, anchored to NCIt's Scale branch on
+the overlay's own nodes; Temporal and Narrative get none, and a qualified concept
+may use only the three. The core rendering of the enum is untouched, and the
+decision entry sizes what changes under either answer.
+
 ## 4b. Upstream — what NCIt already holds for the two bare BC enums
 
 Verified 2026-09-02 against the NCI EVS REST API (NCIt 26.07d, public, no key:

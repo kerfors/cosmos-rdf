@@ -1,0 +1,53 @@
+# =====================================================================
+# Result scales the overlay admits, anchored to NCIt — decision D23
+#
+# Instance data for qbc.schema.yaml (target class
+# QualifiedBiomedicalConceptCollection, slot resultScales). Each entry
+# is the overlay's USE of one permissible value of CDISC's
+# BiomedicalConceptResultScaleEnum: the value keeps the core IRI (D20)
+# and is reached by permissibleValue as an edge; the anchoring to the
+# NCIt Scale branch is written onto the overlay's own node, never onto
+# the CDISC enum value or the NCIt PURL (D21, D22).
+#
+# Three entries, deliberately. The enum carries five values; measured
+# at the pin (known-gaps.md 4a), Temporal and Narrative are predicted
+# by the result data type and never combine with a scale, so they are
+# data types carried in the wrong enum. This file writes down the
+# reading the repo works under while the question is open with CDISC:
+# result scale is one axis with three values, and a qualified
+# concept's resultScale must be one of them. Neither Temporal nor
+# Narrative gets an entry, and 75_render_qbc asserts that.
+#
+# NCIt concepts verified 2026-09-04 against the NCI EVS REST API
+# (https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/{code},
+# NCIt 26.08e): C47798 Nominal Scale, C47797 Ordinal Scale, C47799
+# Interval Scale, C47800 Ratio Scale, each a direct child of C25664
+# Scale. There is no NCIt concept for "quantitative scale" — it is
+# Interval and Ratio together — so Quantitative carries two
+# narrowMatch anchors, the same idiom hcvrna.instances.yaml uses where
+# no exact LOINC leaf exists. When such a concept is minted, one entry
+# changes.
+# =====================================================================
+
+resultScales:
+
+  - iri: https://w3id.org/cdisc/cosmos/qbc/scale/Nominal
+    permissibleValue: Nominal
+    externalMappings:
+      - {relation: exactMatch, code: C47798, system: "http://purl.obolibrary.org/obo/NCIT_", comment: "Nominal Scale, child of C25664 Scale"}
+    sourceAnchor: "NCI EVS REST, NCIt 26.08e, 2026-09-04; known-gaps.md 4b"
+
+  - iri: https://w3id.org/cdisc/cosmos/qbc/scale/Ordinal
+    permissibleValue: Ordinal
+    externalMappings:
+      - {relation: exactMatch, code: C47797, system: "http://purl.obolibrary.org/obo/NCIT_", comment: "Ordinal Scale, child of C25664 Scale"}
+    sourceAnchor: "NCI EVS REST, NCIt 26.08e, 2026-09-04; known-gaps.md 4b"
+
+  - iri: https://w3id.org/cdisc/cosmos/qbc/scale/Quantitative
+    permissibleValue: Quantitative
+    # No NCIt concept parents Interval and Ratio together, so no
+    # exactMatch: the CDISC value is broader than each of the two.
+    externalMappings:
+      - {relation: narrowMatch, code: C47799, system: "http://purl.obolibrary.org/obo/NCIT_", comment: "Interval Scale, child of C25664 Scale"}
+      - {relation: narrowMatch, code: C47800, system: "http://purl.obolibrary.org/obo/NCIT_", comment: "Ratio Scale, child of C25664 Scale"}
+    sourceAnchor: "NCI EVS REST, NCIt 26.08e, 2026-09-04; known-gaps.md 4b"
