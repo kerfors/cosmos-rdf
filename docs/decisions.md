@@ -4,10 +4,11 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 `docs/iri-and-governance.md` (D1–D6 there). Each is an argument, not a code
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
-D1–D25 are settled. D26–D32 are settled but not yet exercised: they design the
-Dataset Specialization A-Box that D4 deferred, and D5 with it. D3 is exercised by
-the overlay (see D17). D18 and D21 were implemented together in one re-render of
-the core A-Box on 2026-09-02, so there is one set of baselines rather than two.
+D1–D32 are settled. D26–D32 design the Dataset Specialization A-Box that D4
+deferred; `52_render_dss.ipynb` exercised them on 2026-09-06, and D3 and D5 with
+them. D3 was first exercised by the overlay (see D17). D18 and D21 were
+implemented together in one re-render of the core A-Box on 2026-09-02, so there
+is one set of baselines rather than two.
 
 ---
 
@@ -192,11 +193,11 @@ guarantees it, and a future collision would silently merge two different
 specializations onto one IRI. The scoping costs nothing and removes that failure
 mode.
 
-**Now exercised, by the overlay rather than by the layer it was written for.**
-Decision D4 still defers the Dataset Specialization A-Box, so no specialization is
-rendered — but decision D17 makes a recording's subject the Dataset Specialization
-IRI, so eight IRIs in this scheme are minted in `cosmos_qbc_v1.instances.ttl` and
-carry no other triples until that layer lands.
+**First exercised by the overlay rather than by the layer it was written for.**
+While decision D4 deferred the Dataset Specialization A-Box, decision D17 made a
+recording's subject the Dataset Specialization IRI, so eight IRIs in this scheme
+were minted in `cosmos_qbc_v1.instances.ttl` and carried no other triples. Since
+2026-09-06 all 1,475 specializations render under this scheme (D26–D32).
 
 ---
 
@@ -218,6 +219,11 @@ attempt, with a 25–40 MB artifact in git.
 **Not rendered:** the six concepts with no NCIt code (D2), and their two data
 element concepts `NEW_DEC1` and `NEW_DEC2`. The 105th LOINC coding goes with them,
 since it belongs to `NEW_1`.
+
+**The deferral ended 2026-09-06.** `52_render_dss.ipynb` renders the Dataset
+Specialization layer under D26–D32. Measured, it is 297,077 triples rather than
+the 450,000 estimated above; the argument for rendering the concept layer first
+stands, the estimate does not.
 
 ---
 
@@ -245,7 +251,8 @@ node rebuilds by grouping. And `(DSS, variable)` is unique — 13,922 pairs, zer
 repeats — so each row is exactly one `SDTMVariable`, with no VLM duplication to
 resolve.
 
-**Not yet exercised** — D4 defers the layer this governs.
+**Exercised 2026-09-06** by `52_render_dss.ipynb`. The index is `rdf:_n` on the
+specialization (D27); the dependency is stated in every domain file's header.
 
 ---
 
@@ -1252,7 +1259,7 @@ decided separately, not here.
 
 ---
 
-## D26 — The variable IRI SETTLED 2026-09-06, not yet exercised
+## D26 — The variable IRI SETTLED 2026-09-06, exercised the same day
 
 **Question.** An `SDTMVariable` is inlined under its Dataset Specialization in the
 published schema and has no identifier of its own. Blank node, or minted IRI?
@@ -1268,7 +1275,7 @@ the SDTM CT and the instrument work join.
 
 ---
 
-## D27 — How the D5 order is carried SETTLED 2026-09-06, not yet exercised
+## D27 — How the D5 order is carried SETTLED 2026-09-06, exercised and amended the same day
 
 **Question.** D5 settled that `variables` order comes from row order, with an
 explicit index. Which idiom carries the index?
@@ -1280,6 +1287,16 @@ standard RDF vocabulary with nothing minted. The closed `SDTMGroup` shape needs 
 membership properties in `sh:ignoredProperties`, listed up to the measured maximum
 variables per specialization; that list is the whole cost.
 
+**Amended at validation, 2026-09-06: the shapes are not edited.** Measured by
+`62_validate_dss_instances.ipynb`, the membership properties produce exactly
+13,922 closed-shape results — one per variable — and no other. This repo already
+treats its other authored additions, `dcterms:identifier` and `skos:exactMatch`,
+as classified non-conformance rather than patching the published shapes (D11,
+D24); `rdf:_n` is one more such cause with an exact count. Listing it in
+`sh:ignoredProperties` would make the SDTM shapes the one deliverable that is
+not the generator's output from the published model. So the cost is a line in
+the expected map, not a line in CDISC's shape.
+
 **Rejected: an index property in this repo's namespace on the variable node.**
 Cleaner to query, but it is minted vocabulary, and D25 has just drawn that line.
 
@@ -1288,7 +1305,7 @@ its variables and break the T-Box's range on `variables`.
 
 ---
 
-## D28 — `AssignedTerm` is a pair node SETTLED 2026-09-06, not yet exercised
+## D28 — `AssignedTerm` is a pair node SETTLED 2026-09-06, exercised the same day
 
 **Question.** `AssignedTerm {conceptId, value}` is inlined under a variable. Shared
 node per term, or one per use?
@@ -1304,7 +1321,7 @@ only, which the schema permits (`conceptId` optional, `value` required).
 
 ---
 
-## D29 — `CodeList` is a shared node SETTLED 2026-09-06, not yet exercised
+## D29 — `CodeList` is a shared node SETTLED 2026-09-06, exercised the same day
 
 **Settled.** 297 distinct codelists across 7,438 bound variables, and
 `submissionValue` is constant per code (0 conflicts). One node per codelist at its
@@ -1316,7 +1333,7 @@ short name only.
 
 ---
 
-## D30 — `RelationShip` is rendered as published SETTLED 2026-09-06, not yet exercised
+## D30 — `RelationShip` is rendered as published SETTLED 2026-09-06, exercised the same day
 
 **Settled.** An inline node under the variable with the four fields as published;
 `linkingPhrase` and `predicateTerm` resolve to the T-Box permissible values, the
@@ -1331,7 +1348,7 @@ has the name.
 
 ---
 
-## D31 — The BC link, and the four `NEW_` cases SETTLED 2026-09-06, not yet exercised
+## D31 — The BC link, and the four `NEW_` cases SETTLED 2026-09-06, exercised the same day
 
 **Settled.** `biomedicalConceptId` is an edge to the concept's NCIt node, as
 `conceptId` is in D21. Every `bc_id` and `dec_id` in the DSS export exists in the
@@ -1342,11 +1359,18 @@ is carried as a literal on the same property. D2 says nothing is *minted* for a
 placeholder; dropping the reference would lose published information, and the
 count is reported as the D2 counterpart on this layer.
 
+**The same rule for `dataElementConceptId`, found at generation.** One variable —
+`MILOCDTL` in `MI.SURGMARGSTATBREAST` — references `NEW_DEC1`, which the concept
+export carries with no NCIt code. It gets the same literal. Five references in
+all, listed in `reports/dss_unresolved_references.csv`; the RDF term type is the
+only marker, since minting a flag for it is exactly what D25 rules out.
+
 ---
 
-## D32 — One file per domain SETTLED 2026-09-06, not yet exercised
+## D32 — One file per domain SETTLED 2026-09-06, exercised the same day
 
-**Question.** Roughly 450,000 triples. One instance file, or one per domain?
+**Question.** Roughly 450,000 triples — measured at generation, 297,077. One
+instance file, or one per domain?
 
 **Settled: one per domain, 32 files, no combined file.** Each imports the T-Box
 and carries its own header (D7, D9). Dereferencing one variable IRI must not
@@ -1357,6 +1381,17 @@ provenance. Two export artefacts are normalised at render time and named in
 `known-gaps.md`: `length` and `significantDigits` arrive as `200.0` where the
 model says integer (cast, asserting integrality), and `packageType` is absent from
 the export and set to the enum's single value, as `50_` does for `bc`.
+
+**Settled at generation, 2026-09-06.** The files are
+`dss/cosmos_sdtm_v1.{DOMAIN}.instances.ttl`; each is the ontology
+`https://w3id.org/cdisc/cosmos/dss/{DOMAIN}` with `versionIRI`
+`…/dss/{DOMAIN}/{version}`, so the file, the ontology and the w3id segment are
+one name. Each file imports the SDTM T-Box and nothing else: the concept and DEC
+nodes that `biomedicalConceptId` and `dataElementConceptId` reach are declared in
+`cosmos_bc_v1.instances.ttl`, and importing it would pull the concept layer along
+on every variable dereference — the cost this decision exists to avoid. The header
+says so. A codelist node is repeated in every domain file that uses it (D29): same
+IRI, same triples, one node on load — 704 repeated triples across the 32 files.
 
 ---
 

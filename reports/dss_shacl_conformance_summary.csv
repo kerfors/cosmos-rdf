@@ -1,0 +1,555 @@
+domain,constraint,path,cause,count
+AE,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),81
+AE,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",6
+AE,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",8
+AE,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+AE,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",57
+AE,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",81
+AE,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",75
+AE,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",2
+AE,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",75
+AE,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",81
+AE,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+AE,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",57
+AE,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+AE,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",57
+BE,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),33
+BE,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",3
+BE,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",10
+BE,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",7
+BE,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",6
+BE,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",33
+BE,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",33
+BE,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",26
+BE,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",7
+BE,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",26
+BE,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",33
+BE,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",7
+BE,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",6
+BE,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",33
+BE,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",7
+BE,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",6
+BE,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",33
+CM,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),91
+CM,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",8
+CM,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",12
+CM,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",4
+CM,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+CM,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",69
+CM,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",91
+CM,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",65
+CM,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",4
+CM,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",65
+CM,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",91
+CM,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",4
+CM,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+CM,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",69
+CM,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",4
+CM,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+CM,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",69
+DD,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),68
+DD,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",5
+DD,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",18
+DD,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+DD,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",26
+DD,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",42
+DD,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",13
+DD,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",29
+DD,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",68
+DD,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",13
+DD,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",68
+DD,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",68
+DD,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+DD,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",26
+DD,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",42
+DD,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+DD,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",26
+DD,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",42
+DM,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),11
+DM,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",4
+DM,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",9
+DM,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",5
+DM,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",11
+DM,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",11
+DM,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1
+DM,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",5
+DM,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1
+DM,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",11
+DM,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",5
+DM,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",11
+DM,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",5
+DM,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",11
+DS,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),94
+DS,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",5
+DS,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",25
+DS,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",20
+DS,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",40
+DS,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",94
+DS,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",10
+DS,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+DS,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+DS,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",20
+DS,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+DS,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+DS,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",20
+DS,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",40
+DS,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",94
+DS,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",20
+DS,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",40
+DS,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",94
+EC,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),38
+EC,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",8
+EC,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",10
+EC,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+EC,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",4
+EC,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",28
+EC,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",22
+EC,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",20
+EC,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",2
+EC,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",20
+EC,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",38
+EC,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+EC,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",4
+EC,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",28
+EC,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+EC,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",4
+EC,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",28
+EG,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),365
+EG,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",9
+EG,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",42
+EG,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",33
+EG,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",86
+EG,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",298
+EG,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",98
+EG,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",120
+EG,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",365
+EG,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",33
+EG,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",365
+EG,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",365
+EG,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",33
+EG,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",86
+EG,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",298
+EG,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",33
+EG,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",86
+EG,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",298
+EX,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),17
+EX,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",9
+EX,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",10
+EX,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1
+EX,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",15
+EX,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",17
+EX,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+EX,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1
+EX,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+EX,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",17
+EX,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1
+EX,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",15
+EX,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1
+EX,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",15
+FA,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),111
+FA,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",5
+FA,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",17
+FA,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+FA,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",24
+FA,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",87
+FA,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",16
+FA,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",24
+FA,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",100
+FA,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+FA,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",100
+FA,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",111
+FA,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+FA,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",24
+FA,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",87
+FA,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+FA,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",24
+FA,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",87
+FT,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),232
+FT,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",7
+FT,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",30
+FT,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",23
+FT,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",83
+FT,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",186
+FT,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",57
+FT,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",83
+FT,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",192
+FT,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",23
+FT,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",192
+FT,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",232
+FT,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",23
+FT,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",83
+FT,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",186
+FT,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",23
+FT,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",83
+FT,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",186
+GF,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),646
+GF,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",9
+GF,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",47
+GF,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",38
+GF,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",227
+GF,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",570
+GF,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",214
+GF,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",102
+GF,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",628
+GF,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",38
+GF,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",628
+GF,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",646
+GF,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",38
+GF,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",227
+GF,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",570
+GF,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",38
+GF,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",227
+GF,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",570
+IE,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),14
+IE,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",2
+IE,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",4
+IE,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+IE,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+IE,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",10
+IE,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",4
+IE,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",4
+IE,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+IE,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",2
+IE,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+IE,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",13
+IE,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+IE,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+IE,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",10
+IE,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+IE,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",2
+IE,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",10
+IS,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),4097
+IS,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",9
+IS,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",335
+IS,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",326
+IS,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1159
+IS,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",3372
+IS,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1476
+IS,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1316
+IS,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",4097
+IS,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",326
+IS,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",4097
+IS,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",4097
+IS,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",326
+IS,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1159
+IS,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",3372
+IS,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",326
+IS,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1159
+IS,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",3372
+LB,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),1667
+LB,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",6
+LB,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",153
+LB,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",147
+LB,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",572
+LB,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1073
+LB,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",297
+LB,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",643
+LB,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1667
+LB,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",147
+LB,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1667
+LB,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1667
+LB,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",147
+LB,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",572
+LB,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1073
+LB,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",147
+LB,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",572
+LB,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",1073
+MB,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),142
+MB,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",7
+MB,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",21
+MB,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",14
+MB,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",58
+MB,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",103
+MB,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",48
+MB,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",43
+MB,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",142
+MB,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",14
+MB,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",142
+MB,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",142
+MB,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",14
+MB,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",58
+MB,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",103
+MB,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",14
+MB,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",58
+MB,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",103
+MH,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),136
+MH,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",3
+MH,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",16
+MH,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+MH,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",3
+MH,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",116
+MH,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",132
+MH,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",82
+MH,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",13
+MH,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",82
+MH,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",130
+MH,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+MH,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",3
+MH,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",116
+MH,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+MH,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",3
+MH,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",116
+MI,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),82
+MI,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",9
+MI,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",17
+MI,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",8
+MI,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",47
+MI,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",65
+MI,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",41
+MI,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",23
+MI,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",80
+MI,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",8
+MI,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",80
+MI,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",82
+MI,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",8
+MI,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",47
+MI,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",65
+MI,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",8
+MI,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",47
+MI,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",65
+MK,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),471
+MK,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",10
+MK,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",60
+MK,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",50
+MK,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",131
+MK,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",371
+MK,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",122
+MK,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",189
+MK,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",471
+MK,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",50
+MK,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",471
+MK,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",471
+MK,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",50
+MK,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",131
+MK,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",371
+MK,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",50
+MK,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",131
+MK,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",371
+PR,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),166
+PR,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",7
+PR,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",23
+PR,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",16
+PR,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",17
+PR,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",165
+PR,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",166
+PR,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",133
+PR,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",16
+PR,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",133
+PR,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",166
+PR,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",16
+PR,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",17
+PR,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",165
+PR,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",16
+PR,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",17
+PR,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",165
+QS,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),134
+QS,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",17
+QS,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",34
+QS,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+QS,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",44
+QS,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",96
+QS,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",39
+QS,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",51
+QS,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",134
+QS,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",17
+QS,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",134
+QS,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",134
+QS,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+QS,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",44
+QS,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",96
+QS,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",13
+QS,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",44
+QS,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",96
+RE,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),1020
+RE,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",4
+RE,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",139
+RE,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",135
+RE,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",380
+RE,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",750
+RE,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",135
+RE,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",615
+RE,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1020
+RE,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",135
+RE,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1020
+RE,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1020
+RE,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",135
+RE,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",380
+RE,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",750
+RE,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",135
+RE,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",380
+RE,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",750
+RP,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),645
+RP,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",8
+RP,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",102
+RP,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",94
+RP,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",204
+RP,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",363
+RP,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+RP,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",243
+RP,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",645
+RP,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+RP,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",645
+RP,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",645
+RP,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",94
+RP,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",204
+RP,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",363
+RP,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",94
+RP,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",204
+RP,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",363
+RS,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),1190
+RS,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",163
+RS,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",320
+RS,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",157
+RS,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",498
+RS,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",876
+RS,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",393
+RS,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",434
+RS,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1190
+RS,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",157
+RS,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1190
+RS,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",1190
+RS,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",157
+RS,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",498
+RS,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",876
+RS,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",157
+RS,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",498
+RS,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",876
+SC,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),464
+SC,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",7
+SC,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",82
+SC,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",75
+SC,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",150
+SC,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",314
+SC,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",75
+SC,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",239
+SC,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",464
+SC,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",75
+SC,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",464
+SC,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",464
+SC,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",75
+SC,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",150
+SC,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",314
+SC,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",75
+SC,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",150
+SC,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",314
+SR,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),125
+SR,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",8
+SR,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",20
+SR,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+SR,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",24
+SR,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",89
+SR,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+SR,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",41
+SR,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",125
+SR,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+SR,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",125
+SR,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",125
+SR,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+SR,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",24
+SR,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",89
+SR,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+SR,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",24
+SR,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",89
+SU,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),208
+SU,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",4
+SU,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",16
+SU,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+SU,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",208
+SU,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",208
+SU,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",112
+SU,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",12
+SU,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",112
+SU,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",208
+SU,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+SU,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",208
+SU,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",12
+SU,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",208
+TR,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),129
+TR,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",8
+TR,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",17
+TR,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",9
+TR,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",26
+TR,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",99
+TR,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",38
+TR,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",30
+TR,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",120
+TR,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",9
+TR,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",120
+TR,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",129
+TR,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",9
+TR,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",26
+TR,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",99
+TR,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",9
+TR,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",26
+TR,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",99
+TS,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),607
+TS,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",31
+TS,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",160
+TS,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",129
+TS,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",258
+TS,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",607
+TS,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",129
+TS,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",607
+TS,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",129
+TS,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",607
+TS,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",607
+TS,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",129
+TS,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",258
+TS,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",607
+TS,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",129
+TS,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",258
+TS,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",607
+TU,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),118
+TU,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",10
+TU,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",21
+TU,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",11
+TU,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",35
+TU,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",89
+TU,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",37
+TU,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",22
+TU,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",118
+TU,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",11
+TU,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",118
+TU,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",118
+TU,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",11
+TU,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",35
+TU,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",89
+TU,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",11
+TU,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",35
+TU,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",89
+UR,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),94
+UR,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",9
+UR,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",19
+UR,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",10
+UR,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",21
+UR,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",64
+UR,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",11
+UR,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",31
+UR,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+UR,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",10
+UR,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+UR,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",94
+UR,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",10
+UR,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",21
+UR,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",64
+UR,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",10
+UR,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",21
+UR,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",64
+VS,ClosedConstraintComponent,_n,authored: rdf:_n carries the D5 variable order on the closed SDTMGroup shape (D27),626
+VS,ClosedConstraintComponent,exactMatch,"authored: skos:exactMatch to the EVS form on the codelist node (D29, D2)",9
+VS,ClosedConstraintComponent,identifier,"authored: dcterms:identifier carries the mnemonic or the codelist C-code (D3, D29)",87
+VS,DatatypeConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",78
+VS,DatatypeConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",173
+VS,DatatypeConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",470
+VS,InConstraintComponent,comparator,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",110
+VS,InConstraintComponent,dataType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",360
+VS,InConstraintComponent,linkingPhrase,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",626
+VS,InConstraintComponent,packageType,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",78
+VS,InConstraintComponent,predicateTerm,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",626
+VS,InConstraintComponent,role,"generator disagreement: the enum has no meaning:, so gen-owl declares class IRIs and gen-shacl expects strings (known-gaps 4b)",626
+VS,NodeKindConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",78
+VS,NodeKindConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",173
+VS,NodeKindConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",470
+VS,PatternConstraintComponent,biomedicalConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",78
+VS,PatternConstraintComponent,conceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",173
+VS,PatternConstraintComponent,dataElementConceptId,"published range is string; the reference is rendered as an edge to the NCIt node (D21, D28, D31)",470

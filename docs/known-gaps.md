@@ -233,19 +233,50 @@ standard guarantees it will keep working. See decision D3.
 
 This is the same gap the qualified-BC work is about, met one layer down.
 
-## 7. This repo — the Dataset Specialization A-Box is not rendered
+## 7. This repo — what the Dataset Specialization A-Box normalises, carries as-is, and does not yet do
 
-At P3 the deliverables are the two OWL graphs, the two JSON-LD contexts, the two
-SHACL shapes graphs and `cosmos_bc_v1.instances.ttl`. **The DSS instance layer is
-deferred** (decision D4): 1,475 specializations, 13,922 variables, roughly 450,000
-triples. Decisions D3 and D5 govern it; D5 is not yet exercised, and D3 now is —
-decision D17 mints eight Dataset Specialization IRIs in the overlay.
+The layer decision D4 deferred is rendered since 2026-09-06 —
+`dss/cosmos_sdtm_v1.{DOMAIN}.instances.ttl`, 32 files, decisions D26–D32,
+`52_render_dss.ipynb`. It is a mechanical rendering of the export, and these
+are the places where that is not quite literally true, or where the export
+itself is not consistent.
+
+**Two normalisations at render time** (decision D32). `length` and
+`significant_digits` arrive as decimals (`200.0`) where the model says integer;
+they are cast, and the notebook stops if one is ever not integral.
+`packageType` is not in the export at all and is set to the enum's single value,
+as `50_` does for the concept layer. Both are stated in every file's header.
+
+**One dependency on the export that is not a value.** The order of `variables`
+is the export's row order (decision D5); it is carried as `rdf:_n` membership
+(D27) and stated in every file's header. There is no other source for it.
+
+**Five published references resolve to nothing.** Four specializations
+(`QS.PATCHSURVEY*`) reference `NEW_` concepts and one variable
+(`MI.SURGMARGSTATBREAST.MILOCDTL`) references `NEW_DEC1`; none has an NCIt code,
+so under decision D2 there is no node to point at. The published string is
+carried as a literal on the same property (D31) — the term type is the marker,
+nothing is minted to flag it — and `reports/dss_unresolved_references.csv`
+lists them. This is the D2 gap (§7b) seen from the other side.
+
+**Upstream — 68 relationship objects name a variable outside their own
+specialization.** Ten distinct names (`TSVALCD`, `SUDECOD`, `RSLNKGRP`, …).
+Rendered verbatim as literals (D30), no edge derived;
+`reports/dss_unresolved_relationship_objects.csv` is the list, and it is
+curator input rather than a rendering defect.
+
+**Schema-permitted, and not gaps.** 476 assigned terms carry a value and no
+concept (`conceptId` is optional); seven variables carry no `role` (optional).
+Counted in the notebook, not reported.
+
+**Not yet done for this layer.** The `dss/` w3id segment is reserved and not
+registered, so nothing under it dereferences yet; the eight overlay recordings
+(D17) are no longer dangling but `75_` has not re-measured it. Per-individual
+HTML is not rendered for any layer. The phases in `README.md` say what is
+intended; nothing there is a promise.
 
 The overlay is rendered — `cosmos_qbc_v1.ttl` and `cosmos_qbc_v1.instances.ttl`,
-decisions D13–D21. The w3id namespace is registered and the three ontologies are
-rendered with WIDOCO; the Dataset Specialization A-Box and per-individual HTML
-are not. The phases in `README.md` say what is intended; nothing there is a
-promise.
+decisions D13–D21 — and frozen in scope by decision D25.
 
 **The core term IRIs do not dereference.** The w3id namespace is registered
 (P5), so `https://w3id.org/cdisc/cosmos/bc/` and everything this repo mints under
@@ -319,6 +350,23 @@ concept that has up to seven (§7f, decisions D18 and D21).
 
 Not a defect to fix. Conforming would mean parent references stay strings and the
 NCIt anchoring leaves the data.
+
+**The Dataset Specialization layer, same stance, tighter check.** 117,424
+results over the 32 domain files, five causes, every one classified by
+`62_validate_dss_instances.ipynb` and summarised in
+`reports/dss_shacl_conformance_summary.csv`. The notebook goes one step further
+than `60_`: each cause's count is predicted from the data graph and asserted
+equal, per domain, so a violation is accounted for exactly rather than
+explained. The causes are the `rdf:_n` order on the closed `SDTMGroup` shape
+(D27, not patched — see the amendment there), the two identity triples (D3,
+D29), the enum disagreement, and the three `*ConceptId` references rendered as
+edges (D21, D28, D31); the five references carried as literals (§7) conform.
+
+One measurement falls out of it. The enum disagreement hits six enums and not
+`OriginTypeEnum` or `OriginSourceEnum`: those two carry `meaning:` in the
+published model, so both generators emit the NCIt IRI and the rendering
+conforms. The same rendering, on the same package, passes where the model is
+anchored and fails where it is not — which is the §4b ask, measured.
 
 ## 7e. Upstream — nineteen concepts are used at two layers
 
