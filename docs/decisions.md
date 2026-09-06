@@ -4,10 +4,10 @@ Numbered decisions for this repo, in the style of `usdm-rdf`
 `docs/iri-and-governance.md` (D1–D6 there). Each is an argument, not a code
 change; a decision moves from OPEN to SETTLED only when it has been acted on.
 
-D1–D22 are settled. D5 is settled but not yet exercised, since the layer it
-governs is deferred; D3 is exercised by the overlay (see D17). D18 and D21 were
-implemented together in one re-render of the core A-Box on 2026-09-02, so there
-is one set of baselines rather than two.
+D1–D25 are settled. D26–D32 are settled but not yet exercised: they design the
+Dataset Specialization A-Box that D4 deferred, and D5 with it. D3 is exercised by
+the overlay (see D17). D18 and D21 were implemented together in one re-render of
+the core A-Box on 2026-09-02, so there is one set of baselines rather than two.
 
 ---
 
@@ -1219,6 +1219,144 @@ different decision for a different day.
 byte-stable across runs (D9). `ci_check.py` checks the counts, that no shape targets
 an imported class, that every `sh:in` member is an IRI, and that the two
 result-scale lists equal the admitted set the A-Box carries.
+
+---
+
+## D25 — Scope: the overlay stops; this repo renders what CDISC publishes SETTLED 2026-09-06
+
+**Question.** The qualified-BC overlay (D13–D24) was to grow: more sibling
+concepts, compositions of them (OGTT), interpretation regimes. Continue here, or
+draw the line?
+
+**Settled: draw it.** `cosmos-rdf` is a mechanistic RDF rendering of the COSMoS
+package. Authored content — siblings, compositions, regimes, admissible specimen
+sets — is not recoverable from the package and does not belong in the same
+artifact a reviewer is asked to check for fidelity; the two arguments contaminate
+each other. Compositions also have no anchor to point at in any layer (measured
+2026-09-06 against the SDTM and instrument CT extracts: zero test codes for OGTT or
+glucose tolerance; no CT for `PRTRT`), which makes them a new layer, not an
+overlay. Constructs are tried in `cdisc-for-ai`; only a settled one becomes a
+deliverable here. The overlay reached that bar for its worked cases; the rest has
+not.
+
+**One exception, short-term.** The overlay stays in place to carry the result-scale
+and unit-dimension reading (D20, D23, `known-gaps.md` §4a) — a reading of a
+published enum, and the open question with CDISC. Once that closes, the overlay
+is frozen at a tag.
+
+**What stays as it is.** The w3id routing for `qbc/` — an IRI that stops resolving
+is worse than one that resolves to frozen content. D17: recordings *are* the DSS
+IRIs, and D26–D32 make those resolve. Whether a later concept layer, wherever it
+lives, keeps minting into `…/cosmos/qbc/` or mints its own namespace and links is
+decided separately, not here.
+
+---
+
+## D26 — The variable IRI SETTLED 2026-09-06, not yet exercised
+
+**Question.** An `SDTMVariable` is inlined under its Dataset Specialization in the
+published schema and has no identifier of its own. Blank node, or minted IRI?
+
+**Settled: minted, under the specialization** —
+`https://w3id.org/cdisc/cosmos/dss/{DOMAIN}/{MNEMONIC}/{VARIABLE}`, with `name`
+carried as published. Measured at this pin: `(specialization, variable)` is unique
+across all 13,922 rows (D5), so the IRI is well-defined. The D3 argument holds
+unchanged — CDISC named nothing, so minting is unavoidable, and the only question
+is the namespace. Blank nodes would make the volume layer unaddressable: nothing
+could cite "`LBTESTCD` as it appears in `GLUCSER`", which is the grain at which
+the SDTM CT and the instrument work join.
+
+---
+
+## D27 — How the D5 order is carried SETTLED 2026-09-06, not yet exercised
+
+**Question.** D5 settled that `variables` order comes from row order, with an
+explicit index. Which idiom carries the index?
+
+**Settled: RDF container membership on the specialization node** — `rdf:_1`,
+`rdf:_2`, … beside the plain `variables` edges. The `variables` edges stay exactly
+what the T-Box declares (`allValuesFrom SDTMVariable`), and the order is stated in
+standard RDF vocabulary with nothing minted. The closed `SDTMGroup` shape needs the
+membership properties in `sh:ignoredProperties`, listed up to the measured maximum
+variables per specialization; that list is the whole cost.
+
+**Rejected: an index property in this repo's namespace on the variable node.**
+Cleaner to query, but it is minted vocabulary, and D25 has just drawn that line.
+
+**Rejected: `rdf:List`.** The list node would sit between the specialization and
+its variables and break the T-Box's range on `variables`.
+
+---
+
+## D28 — `AssignedTerm` is a pair node SETTLED 2026-09-06, not yet exercised
+
+**Question.** `AssignedTerm {conceptId, value}` is inlined under a variable. Shared
+node per term, or one per use?
+
+**Settled: one node per use, under the variable, on the D21 pattern.** Measured at
+this pin: 951 of 1,307 distinct term codes carry more than one `value` across the
+variables they are assigned to (one code, `ADCRL` on one variable and
+`Word Recall` on another). So `value` is a property of the (variable, term) pair,
+not of the term, exactly as `dataType` was of the (concept, DEC) pair in D21. The
+`conceptId` is rendered as an edge to the NCIt term with the dual anchor (D2, D15);
+the 476 uses that have a `value` and no code render as a node with the value
+only, which the schema permits (`conceptId` optional, `value` required).
+
+---
+
+## D29 — `CodeList` is a shared node SETTLED 2026-09-06, not yet exercised
+
+**Settled.** 297 distinct codelists across 7,438 bound variables, and
+`submissionValue` is constant per code (0 conflicts). One node per codelist at its
+NCIt IRI (a CDISC codelist *is* an NCIt subset — the same fact `usdm-rdf`
+example 04 relies on), `submissionValue` on it, `codelist` on the variable as an
+edge to it. `href` is not in the export and is not emitted. `subsetCodelist`
+stays a literal: the model types the slot `string`, and the export carries the
+short name only.
+
+---
+
+## D30 — `RelationShip` is rendered as published SETTLED 2026-09-06, not yet exercised
+
+**Settled.** An inline node under the variable with the four fields as published;
+`linkingPhrase` and `predicateTerm` resolve to the T-Box permissible values, the
+`subject` and `object` are literals. Measured: the fields are all filled or all
+empty (13,585 / 337, no partials), and `subject` equals the variable's own name in
+every filled row. 68 rows name an `object` that is not a variable of their own
+specialization — ten distinct: `AEDECODE`, `BETERM`, `PRTRT`, `RPSTRESN`,
+`RSLNKGRP`, `SCSTRES`, `SUDECOD`, `TRLNKGRP`, `TSVALCD`, `TULNKID`. They are
+**reported, not resolved**; a derived edge to the sibling variable node would
+hide exactly the rows a curator needs to see, and a consumer who wants the join
+has the name.
+
+---
+
+## D31 — The BC link, and the four `NEW_` cases SETTLED 2026-09-06, not yet exercised
+
+**Settled.** `biomedicalConceptId` is an edge to the concept's NCIt node, as
+`conceptId` is in D21. Every `bc_id` and `dec_id` in the DSS export exists in the
+BC export at this pin. Four specializations — `PATCHSURVEYACCEPTABILITY`,
+`PATCHSURVEYAPPEARANCE`, `PATCHSURVEYDURABILITY`, `PATCHSURVEYSIZE` — point at
+`NEW_` concepts that have no node under D2. For those four the published string
+is carried as a literal on the same property. D2 says nothing is *minted* for a
+placeholder; dropping the reference would lose published information, and the
+count is reported as the D2 counterpart on this layer.
+
+---
+
+## D32 — One file per domain SETTLED 2026-09-06, not yet exercised
+
+**Question.** Roughly 450,000 triples. One instance file, or one per domain?
+
+**Settled: one per domain, 32 files, no combined file.** Each imports the T-Box
+and carries its own header (D7, D9). Dereferencing one variable IRI must not
+download 25–40 MB, and per-domain files map onto one generic w3id rule —
+`dss/{DOMAIN}/…` resolves to `latest/dss/{DOMAIN}` — so the layer adds no
+per-release coupling. The row-order dependency (D5) is stated in each file's
+provenance. Two export artefacts are normalised at render time and named in
+`known-gaps.md`: `length` and `significantDigits` arrive as `200.0` where the
+model says integer (cast, asserting integrality), and `packageType` is absent from
+the export and set to the enum's single value, as `50_` does for `bc`.
 
 ---
 
