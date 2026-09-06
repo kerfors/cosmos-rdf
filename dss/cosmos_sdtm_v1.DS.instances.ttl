@@ -1,0 +1,2527 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, DS (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain DS, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/DS/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ADVEVENT" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C41331 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Adverse Event [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "CONSENT" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSTERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C16735 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Informed Consent Obtained" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "CONSWDRL" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSTERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C170610 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Withdrawal of Consent from Protocol-Specified Activity" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "DEAD" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C28554 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Dead [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "DSSTUDYPARTICIPATION" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C224898 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Study Participation Disposition" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "DSSTUDYTREATMENT" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C224899 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Study Treatment Disposition" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ELIGMET" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSTERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C132447 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Eligibility Criteria Met" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "FAILCONT" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C139236 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Failure to Meet Continuation Criteria [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "FAILRAND" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C105448 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Failure to Meet Randomization Criteria [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LACKEFFICACY" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C48226 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Lack of Efficacy [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LTFUP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C48227 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Lost to Follow Up [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PHYDECISION" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C48250 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Physician Decision [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PROGDISEASE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C35571 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Progressive Disease [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PROTCOMP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C25250 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Protocol Completed [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PROTDEV" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C50996 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Protocol Deviation [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "RAND" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSTERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C114209 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Randomized" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SITETRANSFER" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSTERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C186208 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Site Transfer" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SUBJPREG" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C191656 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Subject Pregnancy [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SUBJWITHDRAW" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSCAT> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSDECOD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSTERM> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C49634 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-03-31"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Withdrawal By Subject [RETIRED]" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "UNBLIND" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSCAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSTERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C142742 ;
+    cosmos_sdtm:domain "DS" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Treatment Unblinded" ;
+    cosmos_sdtm:source "DS.DECODE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C41331 ;
+    cosmos_sdtm:value "ADVERSE EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74588 ;
+    cosmos_sdtm:value "PROTOCOL MILESTONE" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C16735 ;
+    cosmos_sdtm:value "INFORMED CONSENT OBTAINED" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C150824 ;
+    cosmos_sdtm:value "OTHER EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C170610 ;
+    cosmos_sdtm:value "WITHDRAWAL OF CONSENT FROM PROTOCOL-SPECIFIED ACTIVITY" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28554 ;
+    cosmos_sdtm:value "DEATH" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C170569 ;
+    cosmos_sdtm:value "STUDY PARTICIPATION" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C170570 ;
+    cosmos_sdtm:value "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74588 ;
+    cosmos_sdtm:value "PROTOCOL MILESTONE" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C132447 ;
+    cosmos_sdtm:value "ELIGIBILITY CRITERIA MET" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C139236 ;
+    cosmos_sdtm:value "FAILURE TO MEET CONTINUATION CRITERIA" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105448 ;
+    cosmos_sdtm:value "FAILURE TO MEET RANDOMIZATION CRITERIA" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C48226 ;
+    cosmos_sdtm:value "LACK OF EFFICACY" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C48227 ;
+    cosmos_sdtm:value "LOST TO FOLLOW-UP" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C48250 ;
+    cosmos_sdtm:value "PHYSICIAN DECISION" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C35571 ;
+    cosmos_sdtm:value "PROGRESSIVE DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C25250 ;
+    cosmos_sdtm:value "COMPLETED" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C50996 ;
+    cosmos_sdtm:value "PROTOCOL DEVIATION" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74588 ;
+    cosmos_sdtm:value "PROTOCOL MILESTONE" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C114209 ;
+    cosmos_sdtm:value "RANDOMIZED" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C150824 ;
+    cosmos_sdtm:value "OTHER EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C186208 ;
+    cosmos_sdtm:value "SITE TRANSFER" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C191656 ;
+    cosmos_sdtm:value "PREGNANCY" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C74590 ;
+    cosmos_sdtm:value "DISPOSITION EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C49634 ;
+    cosmos_sdtm:value "WITHDRAWAL BY SUBJECT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C150824 ;
+    cosmos_sdtm:value "OTHER EVENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "DSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C142742 ;
+    cosmos_sdtm:value "TREATMENT UNBLINDED" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "DSDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "DSTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "DSSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "DSDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "DSTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ADVEVENT/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C114118 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSENT/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C150811 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/CONSWDRL/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DEAD/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25638 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25638 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYPARTICIPATION/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25638 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NCOMPLT_STUDYTREATMENT" ;
+    cosmos_sdtm:valueList "ADVERSE EVENT",
+        "APPROVED DRUG AVAILABLE FOR INDICATION",
+        "COMPLETED",
+        "DEATH",
+        "DISEASE RELAPSE",
+        "FAILURE TO MEET CONTINUATION CRITERIA",
+        "INVESTIGATOR DECISION",
+        "LACK OF EFFICACY",
+        "LOGISTICAL PROBLEM",
+        "LOST TO FOLLOW-UP",
+        "NO LONGER CLINICALLY BENEFITING",
+        "NON-COMPLIANCE",
+        "NON-COMPLIANCE WITH NON-STUDY DEVICE",
+        "NON-COMPLIANCE WITH STUDY DEVICE",
+        "NON-COMPLIANCE WITH STUDY DRUG",
+        "NON-COMPLIANCE WITH STUDY SCHEDULE",
+        "PARTNER PREGNANCY",
+        "PHYSICIAN DECISION",
+        "PREGNANCY",
+        "PROGRESSIVE DISEASE",
+        "PROTOCOL DEVIATION",
+        "PROTOCOL VIOLATION",
+        "PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET",
+        "RANDOMIZED BY MISTAKE",
+        "RANDOMIZED BY MISTAKE WITH STUDY TREATMENT",
+        "RECOVERY",
+        "REQUIRES PROHIBITED MEDICATION",
+        "REQUIRES PROHIBITED PROCEDURE",
+        "SERIOUS ADVERSE EVENT",
+        "SITE TERMINATED BY SPONSOR",
+        "SPONSOR REQUEST",
+        "STUDY TERMINATED BY SPONSOR",
+        "TECHNICAL PROBLEMS",
+        "UNDERWENT PROHIBITED PROCEDURE",
+        "USED PROHIBITED MEDICATION",
+        "WITHDRAWAL BY PARENT/GUARDIAN",
+        "WITHDRAWAL BY SUBJECT",
+        "WITHDRAWAL OF ASSENT",
+        "WITHDRAWAL OF CONSENT" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25638 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/DSSTUDYTREATMENT/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C114118 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/ELIGMET/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILCONT/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/FAILRAND/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LACKEFFICACY/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/LTFUP/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PHYDECISION/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROGDISEASE/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTCOMP/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/PROTDEV/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C114118 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/RAND/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C150811 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SITETRANSFER/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJPREG/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C66727 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C170443 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STUDY PARTICIPATION",
+        "STUDY TREATMENT" .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/SUBJWITHDRAW/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSCAT/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74558 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C150811 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82517 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DSTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DS/UNBLIND/DSTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+NCIT:C114118 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C114118" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C114118> ;
+    cosmos_sdtm:submissionValue "PROTMLST" .
+
+NCIT:C150811 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C150811" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C150811> ;
+    cosmos_sdtm:submissionValue "OTHEVENT" .
+
+NCIT:C170443 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C170443" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170443> ;
+    cosmos_sdtm:submissionValue "DSSCAT" .
+
+NCIT:C66727 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66727" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66727> ;
+    cosmos_sdtm:submissionValue "NCOMPLT" .
+
+NCIT:C74558 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C74558" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74558> ;
+    cosmos_sdtm:submissionValue "DSCAT" .
+

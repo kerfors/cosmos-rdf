@@ -1,0 +1,69 @@
+domain,specialization,variable,linking_phrase,predicate_term,object
+AE,AE,AETERM,is original text for,IS_ORIGINAL_TEXT_FOR,AEDECODE
+AE,AEPRESP,AETERM,is original text for,IS_ORIGINAL_TEXT_FOR,AEDECODE
+BE,COLLECTING,BECAT,groups values in,GROUPS,BETERM
+BE,COLLECTING,BESPEC,is the material type of the subject of the activity in,IS_ATTRIBUTE_FOR,BETERM
+RP,MENARAGE,RPSTRESU,is the unit for the value in,IS_UNIT_FOR,RPSTRESN
+RP,MENFDUR,RPSTRESU,is the unit for the value in,IS_UNIT_FOR,RPSTRESN
+RP,MENOAGE,RPSTRESU,is the unit for the value in,IS_UNIT_FOR,RPSTRESN
+RP,MENSDUR,RPSTRESU,is the unit for the value in,IS_UNIT_FOR,RPSTRESN
+RP,MENSDURA,RPSTRESU,is the unit for the value in,IS_UNIT_FOR,RPSTRESN
+RS,BESTRESP,RSLNKGRP,identifies overall response supported by tumor assessments identified by,GROUPS_BY,TRLNKGRP
+RS,OVRLRESP,RSLNKGRP,identifies overall response supported by tumor assessments identified by,GROUPS_BY,TRLNKGRP
+RS,OVRLRESP_LUGANO,RSLNKGRP,identifies overall response supported by tumor assessments identified by,GROUPS_BY,TRLNKGRP
+RS,OVRLRESP_RANO,RSLNKGRP,identifies overall response supported by tumor assessments identified by,GROUPS_BY,TRLNKGRP
+RS,RDIORESP_RANO,RSLNKGRP,identifies overall response supported by tumor assessments identified by,GROUPS_BY,TRLNKGRP
+SC,EGESTAGE,SCSTRESU,is the unit for the value in,IS_UNIT_FOR,SCSTRES
+SC,GSTABRTH,SCSTRESU,is the unit for the value in,IS_UNIT_FOR,SCSTRES
+SU,ALCOHOLHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,BEERHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,CAFFEINEHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,CIGARETTEHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,CIGARHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,COFFEEHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,COLAHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,DISTILLEDSPIRITSHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,PIPEHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,TEAHIX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,TOBACCOHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+SU,WINEHX,SUTRT,is original text for,IS_ORIGINAL_TEXT_FOR,SUDECOD
+TR,LDIAM,TRLNKID,associates the tumor identified in,IDENTIFIES_TUMOR_IN,TULNKID
+TR,LDIAM,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,LDIAM_RECIST1_1,TRLNKID,associates the tumor identified in,IDENTIFIES_TUMOR_IN,TULNKID
+TR,LDIAM_RECIST1_1,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,LNSTATE,TRLNKID,associates the tumor identified in,IDENTIFIES_TUMOR_IN,TULNKID
+TR,LNSTATE,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,LNSTATE_RECIST1_1,TRLNKID,associates the tumor identified in,IDENTIFIES_TUMOR_IN,TULNKID
+TR,LNSTATE_RECIST1_1,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,LPERP,TRLNKID,associates the tumor identified in,IDENTIFIES_TUMOR_IN,TULNKID
+TR,LPERP,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,LPERP_RECIST1_1,TRLNKID,associates the tumor identified in,IDENTIFIES_TUMOR_IN,TULNKID
+TR,LPERP_RECIST1_1,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,NEW_TUMSTATE_RECIST1_1,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,NONNODAL_TUMSTATE_RECIST1_1,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TR,TUMSTATE,TRLNKGRP,groups tumor assessments used in overall response identified by,GROUPS_BY,RSLNKGRP
+TS,AGEMAX,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,AGEMIN,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,CAGTNAM,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,CRMDUR,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,CSRARDTC,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,DCUTDTC,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,EMPIPDCN,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,EVSNDORG,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,EXPARECN,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,EXPASTAT,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,LENGTH,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,PLNTRDUR,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,PTRTDUR,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,PUBMEDID,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,REGID,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,SDMDUR,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,SENDTC,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,SSTDTC,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TS,TRGFUDUR,TSVCDREF,is the name of the reference terminology for,IS_REFERENCE_TERMINOLOGY_FOR,TSVALCD
+TU,TUMERGE,TUREFID,identifies the image from the procedure in,IDENTIFIES_PRODUCT_IN,PRTRT
+TU,TUMERGE_RECIST1_1,TUREFID,identifies the image from the procedure in,IDENTIFIES_PRODUCT_IN,PRTRT
+TU,TUMIDENT,TUREFID,identifies the image from the procedure in,IDENTIFIES_PRODUCT_IN,PRTRT
+TU,TUMIDENT_RECIST1_1,TUREFID,identifies the image from the procedure in,IDENTIFIES_PRODUCT_IN,PRTRT
+TU,TUSPLIT,TUREFID,identifies the image from the procedure in,IDENTIFIES_PRODUCT_IN,PRTRT
+TU,TUSPLIT_RECIST1_1,TUREFID,identifies the image from the procedure in,IDENTIFIES_PRODUCT_IN,PRTRT

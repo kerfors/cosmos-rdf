@@ -1,0 +1,791 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, BE (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain BE, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/BE/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "COLLECTING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BECAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BEPARTY> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BESPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C70945 ;
+    cosmos_sdtm:domain "BE" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Biospecimen Collection" ;
+    cosmos_sdtm:source "BE.BETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BEPARTY>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BESPEC> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "CULTURING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BECAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BETERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEPARTY> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BESPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C17201 ;
+    cosmos_sdtm:domain "BE" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Biospecimen Culturing" ;
+    cosmos_sdtm:source "BE.BETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEPARTY>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BESPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BETERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "FLASHFREEZING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BECAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BETERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEPARTY> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BESPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C63521 ;
+    cosmos_sdtm:domain "BE" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Biospecimen Flash Freezing" ;
+    cosmos_sdtm:source "BE.BETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEPARTY>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BESPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BETERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ISOLATING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BECAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BETERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEPARTY> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BESPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C128947 ;
+    cosmos_sdtm:domain "BE" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Biospecimen Isolation" ;
+    cosmos_sdtm:source "BE.BETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEPARTY>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BESPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BETERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SHIPPING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BECAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BETERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEPARTY> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BESPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C179747 ;
+    cosmos_sdtm:domain "BE" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Biospecimen Shipping" ;
+    cosmos_sdtm:source "BE.BETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEPARTY>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BESPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BETERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "STORING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BECAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BETERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEPARTY> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BESPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C179748 ;
+    cosmos_sdtm:domain "BE" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Biospecimen Storage" ;
+    cosmos_sdtm:source "BE.BETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEPARTY>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BESPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BETERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "THAWING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BECAT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BETERM> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEPARTY> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BESPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C158280 ;
+    cosmos_sdtm:domain "BE" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Biospecimen Thawing" ;
+    cosmos_sdtm:source "BE.BETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEPARTY>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BESPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BETERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "BECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BESPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "BESPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BECAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CULTURING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "BECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C17201 ;
+    cosmos_sdtm:value "CULTURING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "BEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BESPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "BESPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BETERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "Culturing" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "BEDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "BETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BECAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "PREPARATION" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "BECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C63521 ;
+    cosmos_sdtm:value "FLASH FREEZING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "BEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BESPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "BESPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BETERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "Flash Freezing" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "BEDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "BETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BECAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "PREPARATION" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "BECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C128947 ;
+    cosmos_sdtm:value "ISOLATING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "BEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BESPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "BESPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BETERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "Isolating" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "BEDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "BETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BECAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "TRANSPORT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "BECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C40353 ;
+    cosmos_sdtm:value "SHIPPING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "BEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BESPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "BESPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BETERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "Shipping" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "BEDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "BETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BECAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "STORING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "BECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C60824 ;
+    cosmos_sdtm:value "STORING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "BEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BESPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "BESPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BETERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "Storing" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "BEDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "BETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BECAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "PREPARATION" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "BECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C48165 ;
+    cosmos_sdtm:value "THAWING" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "BEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BESPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in> ;
+    cosmos_sdtm:object "BETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "BESPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BETERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "Thawing" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "BEDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "BETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BECAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BEPARTY> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C189265 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BEPARTY" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BESPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BESPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/COLLECTING/BESPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BECAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BECAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124297 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BEPARTY> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C189265 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BEPARTY" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BESPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BESPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BESPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BETERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BETERM" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/CULTURING/BETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BECAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BECAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124297 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BEPARTY> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C189265 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BEPARTY" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BESPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BESPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BESPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BETERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BETERM" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/FLASHFREEZING/BETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BECAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BECAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124297 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BEPARTY> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C189265 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BEPARTY" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BESPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BESPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BESPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BETERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BETERM" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/ISOLATING/BETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BECAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BECAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124297 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BEPARTY> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C189265 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BEPARTY" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BESPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BESPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BESPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BETERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BETERM" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/SHIPPING/BETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BECAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BECAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124297 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BEPARTY> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C189265 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BEPARTY" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BESPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BESPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BESPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/STORING/BETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BETERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BETERM" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/STORING/BETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BECAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BECAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEDECOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124297 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82977 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BEPARTY> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C189265 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BEPARTY" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BESPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "BESPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BESPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BETERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82571 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BETERM" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/BE/THAWING/BETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+NCIT:C124297 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C124297" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124297> ;
+    cosmos_sdtm:submissionValue "BEDECOD" .
+
+NCIT:C189265 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C189265" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C189265> ;
+    cosmos_sdtm:submissionValue "ACCPARTY" .
+
+NCIT:C78734 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C78734" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C78734> ;
+    cosmos_sdtm:submissionValue "SPECTYPE" .
+

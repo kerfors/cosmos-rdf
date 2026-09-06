@@ -1,0 +1,403 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, EX (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain EX, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/EX/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "EXPOSUREUNBLIND" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXTRT> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOC> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLAT> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDIR> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXFAST> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EPOCH> ;
+    rdf:_16 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXSTDTC> ;
+    rdf:_17 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXENDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXREFID> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSE> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSTXT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSU> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRM> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRQ> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSRGM> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXROUTE> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C177924 ;
+    cosmos_sdtm:domain "EX" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Exposure Unblinded" ;
+    cosmos_sdtm:source "EX.EXTRT" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EPOCH>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDIR>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSE>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRM>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRQ>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSRGM>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSTXT>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSU>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXENDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXFAST>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOT>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXROUTE>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXTRT> .
+
+NCIT:C66726 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66726" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66726> ;
+    cosmos_sdtm:submissionValue "FRM" .
+
+NCIT:C66729 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66729" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66729> ;
+    cosmos_sdtm:submissionValue "ROUTE" .
+
+NCIT:C66742 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66742" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66742> ;
+    cosmos_sdtm:submissionValue "NY" .
+
+NCIT:C71113 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C71113" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71113> ;
+    cosmos_sdtm:submissionValue "FREQ" .
+
+NCIT:C71620 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C71620" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71620> ;
+    cosmos_sdtm:submissionValue "UNIT" .
+
+NCIT:C74456 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C74456" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74456> ;
+    cosmos_sdtm:submissionValue "LOC" .
+
+NCIT:C99073 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C99073" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99073> ;
+    cosmos_sdtm:submissionValue "LAT" .
+
+NCIT:C99074 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C99074" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99074> ;
+    cosmos_sdtm:submissionValue "DIR" .
+
+NCIT:C99079 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C99079" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99079> ;
+    cosmos_sdtm:submissionValue "EPOCH" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDIR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "EXLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "EXDIR" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20administered%20amount%20of%20the%20treatment%20in> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "EXDOSE" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20physical%20form%20of%20the%20product%20in> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "EXDOSFRM" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRQ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20frequency%20of%20administration%20of%20the%20amount%20in> ;
+    cosmos_sdtm:object "EXDOSE" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "EXDOSFRQ" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSTXT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20administered%20amount%20of%20the%20treatment%20in> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "EXDOSTXT" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for> ;
+    cosmos_sdtm:object "EXDOSE" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "EXDOSU" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXENDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20end%20date%20for> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "EXENDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXFAST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20subject%27s%20fasting%20status%20during%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SUBJECT_STATE_FOR> ;
+    cosmos_sdtm:subject "EXFAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "EXLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "EXLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20administration%20anatomical%20location%20for%20the%20treatment%20in> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "EXLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXROUTE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20part%20of%20the%20body%20through%20which%20is%20administered%20the%20treatment%20in> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "EXROUTE" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "EXTRT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "EXSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EPOCH> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99079 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EPOCH" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDIR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99074 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C54215 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXDIR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDIR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83039 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXDOSE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66726 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83111 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXDOSFRM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRQ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71113 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83043 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXDOSFRQ" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSFRQ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSRGM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83277 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXDOSRGM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSTXT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83279 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 100 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXDOSTXT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSTXT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83035 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXDOSU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXDOSU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXENDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83282 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXENDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXENDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXFAST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C93566 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXFAST" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXFAST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXLAT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXLOC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXLOT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXLOT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C113358 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXROUTE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66729 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83121 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXROUTE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXROUTE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83288 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "EXSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/EX/EXPOSUREUNBLIND/EXTRT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83091 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "EXTRT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+

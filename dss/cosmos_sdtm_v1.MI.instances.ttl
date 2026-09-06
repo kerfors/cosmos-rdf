@@ -1,0 +1,2075 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, MI (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain MI, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/MI/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ESTRCPTAPRPSCORE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MILOC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112274 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Estrogen Receptor Allred Proportion Positive Score" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ESTRCPTASINTSCORE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MILOC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112274 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Estrogen Receptor Allred  Staining Intensity Score" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ESTRCPTATOTSCORE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MILOC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112274 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Estrogen Receptor Allred Total Score" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HER2STAININGINT" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIMETHOD> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIRESCAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISPEC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MILOC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112312 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Human Epidermal Growth Factor Receptor 2 Measurement Staining Intensity" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIRESCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PROGESTRAPRPSCORE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MILOC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C117846 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Progesterone Receptor Allred Proportion Positive Score" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PROGESTRASINTSCORE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MILOC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C117846 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Progesterone Receptor Allred  Staining Intensity Score" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PROGESTRATOTSCORE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MILOC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C117846 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Progesterone Receptor Allred Total Score" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SURGMARGSTATBREAST" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIEVAL> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISTRESC> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISPEC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDIR> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOCDTL> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C123560 ;
+    cosmos_sdtm:domain "MI" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Surgical Margins Status Breast Tissue" ;
+    cosmos_sdtm:source "MI.MITESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDIR>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIEVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOCDTL>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITESTCD> .
+
+NCIT:C78735 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C78735" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C78735> ;
+    cosmos_sdtm:submissionValue "EVAL" .
+
+NCIT:C99073 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C99073" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99073> ;
+    cosmos_sdtm:submissionValue "LAT" .
+
+NCIT:C99074 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C99074" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99074> ;
+    cosmos_sdtm:submissionValue "DIR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C23020 ;
+    cosmos_sdtm:value "IHC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MIMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112274 ;
+    cosmos_sdtm:value "Estrogen Receptor" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112274 ;
+    cosmos_sdtm:value "ESTRCPT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C125985 ;
+    cosmos_sdtm:value "ALLRED PROPORTION POSITIVE SCORE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MITSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C23020 ;
+    cosmos_sdtm:value "IHC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MIMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112274 ;
+    cosmos_sdtm:value "Estrogen Receptor" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112274 ;
+    cosmos_sdtm:value "ESTRCPT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C125986 ;
+    cosmos_sdtm:value "ALLRED STAINING INTENSITY SCORE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MITSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C23020 ;
+    cosmos_sdtm:value "IHC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MIMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112274 ;
+    cosmos_sdtm:value "Estrogen Receptor" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112274 ;
+    cosmos_sdtm:value "ESTRCPT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C125987 ;
+    cosmos_sdtm:value "ALLRED TOTAL SCORE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MITSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C23020 ;
+    cosmos_sdtm:value "IHC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MIMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIRESCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20grouping%20of%20values%20in> ;
+    cosmos_sdtm:object "MIORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES> ;
+    cosmos_sdtm:subject "MIRESCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112312 ;
+    cosmos_sdtm:value "Human Epidermal Growth Factor Receptor 2" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112312 ;
+    cosmos_sdtm:value "HER2" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C127762 ;
+    cosmos_sdtm:value "STAINING INTENSITY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MITSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C23020 ;
+    cosmos_sdtm:value "IHC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MIMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C117846 ;
+    cosmos_sdtm:value "Progesterone Receptor" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C117846 ;
+    cosmos_sdtm:value "PROGESTR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C125985 ;
+    cosmos_sdtm:value "ALLRED PROPORTION POSITIVE SCORE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MITSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C23020 ;
+    cosmos_sdtm:value "IHC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MIMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C117846 ;
+    cosmos_sdtm:value "Progesterone Receptor" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C117846 ;
+    cosmos_sdtm:value "PROGESTR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C125986 ;
+    cosmos_sdtm:value "ALLRED STAINING INTENSITY SCORE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MITSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C23020 ;
+    cosmos_sdtm:value "IHC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MIMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C117846 ;
+    cosmos_sdtm:value "Progesterone Receptor" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C117846 ;
+    cosmos_sdtm:value "PROGESTR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C125987 ;
+    cosmos_sdtm:value "ALLRED TOTAL SCORE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MITSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MIDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIEVAL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C17723 ;
+    cosmos_sdtm:value "PATHOLOGIST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIEVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "MIEVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "MILOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12971 ;
+    cosmos_sdtm:value "BREAST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MILOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MIORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C12801 ;
+    cosmos_sdtm:value "TISSUE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MISPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MISTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C123560 ;
+    cosmos_sdtm:value "Surgical Margins Status" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MITESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MITEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C123560 ;
+    cosmos_sdtm:value "SGMGSTAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MITEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MITESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170500 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MISTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C125922 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MITSTDTL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTAPRPSCORE/MITSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170500 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MISTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C125922 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MITSTDTL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTASINTSCORE/MITSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170500 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MISTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C125922 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MITSTDTL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/ESTRCPTATOTSCORE/MITSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170500 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIRESCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82498 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIRESCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MIRESCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "Negative",
+        "Positive" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MISTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C125922 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MITSTDTL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/HER2STAININGINT/MITSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170500 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MISTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C125922 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MITSTDTL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRAPRPSCORE/MITSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170500 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MISTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C125922 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MITSTDTL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRASINTSCORE/MITSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170500 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MISTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C125922 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MITSTDTL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/PROGESTRATOTSCORE/MITSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDIR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99074 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C54215 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIDIR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIEVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIEVAL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MIEVAL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIEVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILAT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "LEFT",
+        "RIGHT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171435 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MILOCDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId "NEW_DEC1" ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MILOCDTL" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MIORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MIORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NEGATIVE TUMOR TISSUE MARGIN",
+        "POSITIVE TUMOR TISSUE MARGINS",
+        "POSITIVE TUMOR TISSUE MARGINS -- INVASIVE CELLS ON INKED TISSUE EDGE (WITH OR WITHOUT DCIS)",
+        "POSITIVE TUMOR TISSUE MARGINS ONLY DCIS CELLS -- ON INKED TISSUE EDGE" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MISPEC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MISTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MISTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NEGATIVE TUMOR TISSUE MARGIN",
+        "POSITIVE TUMOR TISSUE MARGINS",
+        "POSITIVE TUMOR TISSUE MARGINS -- INVASIVE CELLS ON INKED TISSUE EDGE (WITH OR WITHOUT DCIS)",
+        "POSITIVE TUMOR TISSUE MARGINS ONLY DCIS CELLS -- ON INKED TISSUE EDGE" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132262 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C132263 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MITESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MI/SURGMARGSTATBREAST/MITESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+NCIT:C125922 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C125922" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C125922> ;
+    cosmos_sdtm:submissionValue "MIFTSDTL" .
+
+NCIT:C85492 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C85492" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C85492> ;
+    cosmos_sdtm:submissionValue "METHOD" .
+
+NCIT:C132262 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C132262" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132262> ;
+    cosmos_sdtm:submissionValue "MITS" .
+
+NCIT:C132263 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C132263" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132263> ;
+    cosmos_sdtm:submissionValue "MITSCD" .
+
+NCIT:C74456 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C74456" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74456> ;
+    cosmos_sdtm:submissionValue "LOC" .
+
+NCIT:C78734 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C78734" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C78734> ;
+    cosmos_sdtm:submissionValue "SPECTYPE" .
+

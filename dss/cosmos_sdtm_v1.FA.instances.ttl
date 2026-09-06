@@ -1,0 +1,2426 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, FA (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain FA, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/FA/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ACMITYPE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FADTC> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FALNKID> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAEVAL> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C118936 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Acute Myocardial Infarction Type" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAEVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "CATMTHID" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119229 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Coronary Artery Thrombosis Method of Identification" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HETYPE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119231 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Healthcare Encounter Type" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HFLBFNW" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119232 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Lab Findings of New or Worsening Heart Failure" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HFPEFNW" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119233 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Physical Examination Findings of New or Worsening Heart Failure" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HFTHERIN" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119234 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Heart Failure Therapy Intensification Type" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ISCETYP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119236 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Ischemic Evidence Type" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "NINVIMGC" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FADTC> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FALNKID> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAEVAL> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C123443 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Non-Invasive Imaging Change" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAEVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "NWSYMP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119238 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "New or Worsening Symptom" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "PCIAAC" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119239 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "PCI Acute Angiographic Complication" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "STCTIMNG" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FADTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FALNKID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C123424 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Stent Thrombosis, Coronary, ARC Timing" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FALNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "STROKTYP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAOBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FACAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAORRES> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FADTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C119579 ;
+    cosmos_sdtm:domain "FA" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Stroke Type" ;
+    cosmos_sdtm:source "FA.FATESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FACAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FADTC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAOBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATEST>,
+        <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAEVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "FAEVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "FAMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAOBJ/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ACUTE MYOCARDIAL INFARCTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C118936 ;
+    cosmos_sdtm:value "Acute Myocardial Infarction Type" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C118936 ;
+    cosmos_sdtm:value "ACMITYPE" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAOBJ/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CORONARY ARTERY THROMBOSIS" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119229 ;
+    cosmos_sdtm:value "Coronary Artery Thrombosis Method Ident" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119229 ;
+    cosmos_sdtm:value "CATMTHID" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119231 ;
+    cosmos_sdtm:value "Healthcare Encounter Type" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119231 ;
+    cosmos_sdtm:value "HETYPE" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAOBJ/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "HEART FAILURE" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119232 ;
+    cosmos_sdtm:value "Heart Failure New/Worsening Lab Findings" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119232 ;
+    cosmos_sdtm:value "HFLBFNW" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAOBJ/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "HEART FAILURE" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119233 ;
+    cosmos_sdtm:value "Heart Failure New/Worsening PE Findings" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119233 ;
+    cosmos_sdtm:value "HFPEFNW" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAOBJ/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "HEART FAILURE" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119234 ;
+    cosmos_sdtm:value "Heart Failure Therapy, Intensification" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119234 ;
+    cosmos_sdtm:value "HFTHERIN" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119236 ;
+    cosmos_sdtm:value "Ischemic Evidence Type" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119236 ;
+    cosmos_sdtm:value "ISCETYP" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAEVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "FAEVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "FAMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C123443 ;
+    cosmos_sdtm:value "Non-Invasive Imaging Change" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C123443 ;
+    cosmos_sdtm:value "NINVIMGC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119238 ;
+    cosmos_sdtm:value "New or Worsening Symptoms" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119238 ;
+    cosmos_sdtm:value "NWSYMP" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119239 ;
+    cosmos_sdtm:value "PCI Acute Angiographic Complication" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119239 ;
+    cosmos_sdtm:value "PCIAAC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C123424 ;
+    cosmos_sdtm:value "Stent Thrombosis, Coronary, ARC Timing" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C123424 ;
+    cosmos_sdtm:value "STCTIMNG" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FACAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "FACAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FADTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "FADTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAOBJ/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "STROKE" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAOBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "FAOBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FAORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "FACAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "FASCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "FAORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "FASTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119579 ;
+    cosmos_sdtm:value "Stroke Type" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "FATESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "FATEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C119579 ;
+    cosmos_sdtm:value "STROKTYP" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "FATEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "FATESTCD" .
+
+NCIT:C78735 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C78735" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C78735> ;
+    cosmos_sdtm:submissionValue "EVAL" .
+
+NCIT:C85492 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C85492" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C85492> ;
+    cosmos_sdtm:submissionValue "METHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAEVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FAEVAL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAEVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ADJUDICATOR",
+        "INVESTIGATOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FAMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "AUTOPSY",
+        "CORONARY ANGIOGRAPHY" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAOBJ/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "TYPE 1 MYOCARDIAL INFARCTION",
+        "TYPE 2 MYOCARDIAL INFARCTION",
+        "TYPE 3 MYOCARDIAL INFARCTION",
+        "TYPE 4A MYOCARDIAL INFARCTION",
+        "TYPE 4B MYOCARDIAL INFARCTION",
+        "TYPE 4C MYOCARDIAL INFARCTION",
+        "TYPE 5 MYOCARDIAL INFARCTION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "TYPE 1 MYOCARDIAL INFARCTION",
+        "TYPE 2 MYOCARDIAL INFARCTION",
+        "TYPE 3 MYOCARDIAL INFARCTION",
+        "TYPE 4A MYOCARDIAL INFARCTION",
+        "TYPE 4B MYOCARDIAL INFARCTION",
+        "TYPE 4C MYOCARDIAL INFARCTION",
+        "TYPE 5 MYOCARDIAL INFARCTION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ACMITYPE/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAOBJ/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ANGIOGRAPHY",
+        "AUTOPSY" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ANGIOGRAPHY",
+        "AUTOPSY" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/CATMTHID/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "HEART FAILURE HOSPITALIZATION",
+        "URGENT HEART FAILURE VISIT" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "HEART FAILURE HOSPITALIZATION",
+        "URGENT HEART FAILURE VISIT" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HETYPE/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAOBJ/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INCREASE IN HEART FAILURE BIOMARKER",
+        "INVASIVE DIAGNOSTIC EVIDENCE OF HEART FAILURE",
+        "NON-INVASIVE DIAGNOSTIC EVIDENCE OF HEART FAILURE",
+        "RADIOLOGICAL EVIDENCE OF PULMONARY CONGESTION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INCREASE IN HEART FAILURE BIOMARKER",
+        "INVASIVE DIAGNOSTIC EVIDENCE OF HEART FAILURE",
+        "NON-INVASIVE DIAGNOSTIC EVIDENCE OF HEART FAILURE",
+        "RADIOLOGICAL EVIDENCE OF PULMONARY CONGESTION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFLBFNW/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAOBJ/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CLINICALLY SIGNIFICANT OR RAPID WEIGHT GAIN",
+        "INCREASED JUGULAR VENOUS PRESSURE OR HEPATOJUGULAR REFLUX",
+        "INCREASING ABDOMINAL DISTENTION OR ASCITES",
+        "PERIPHERAL EDEMA",
+        "PULMONARY RALES/CRACKLES/CREPITATIONS",
+        "S3 GALLOP" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CLINICALLY SIGNIFICANT OR RAPID WEIGHT GAIN",
+        "INCREASED JUGULAR VENOUS PRESSURE OR HEPATOJUGULAR REFLUX",
+        "INCREASING ABDOMINAL DISTENTION OR ASCITES",
+        "PERIPHERAL EDEMA",
+        "PULMONARY RALES/CRACKLES/CREPITATIONS",
+        "S3 GALLOP" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFPEFNW/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAOBJ/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "AUGMENTATION OF ORAL DIURETIC THERAPY",
+        "INTRAVENOUS DIURETIC, INOTROPE, OR VASODILATOR THERAPY",
+        "MECHANICAL OR SURGICAL INTERVENTION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "AUGMENTATION OF ORAL DIURETIC THERAPY",
+        "INTRAVENOUS DIURETIC, INOTROPE, OR VASODILATOR THERAPY",
+        "MECHANICAL OR SURGICAL INTERVENTION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/HFTHERIN/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CORONARY LESION ON ANGIOGRAPHY",
+        "CORONARY REVASCULARIZATION",
+        "INDUCIBLE MYOCARDIAL ISCHEMIA",
+        "RESTING ECG CHANGES" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CORONARY LESION ON ANGIOGRAPHY",
+        "CORONARY REVASCULARIZATION",
+        "INDUCIBLE MYOCARDIAL ISCHEMIA",
+        "RESTING ECG CHANGES" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/ISCETYP/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAEVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FAEVAL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAEVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ADJUDICATOR",
+        "INVESTIGATOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FAMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CORONARY ANGIOGRAPHY" .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NEW LOSS OF VIABLE MYOCARDIUM",
+        "NEW REGIONAL WALL MOTION ABNORMALITY" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NEW LOSS OF VIABLE MYOCARDIUM",
+        "NEW REGIONAL WALL MOTION ABNORMALITY" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NINVIMGC/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "DECREASED EXERCISE TOLERANCE",
+        "DYSPNEA",
+        "FATIGUE",
+        "VOLUME OVERLOAD",
+        "WORSENED END-ORGAN PERFUSION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "DECREASED EXERCISE TOLERANCE",
+        "DYSPNEA",
+        "FATIGUE",
+        "VOLUME OVERLOAD",
+        "WORSENED END-ORGAN PERFUSION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/NWSYMP/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "LOSS OF A SIDE BRANCH",
+        "LOSS OF MAJOR CORONARY",
+        "SLOW-FLOW/NO-FLOW/EMBOLIZATION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "LOSS OF A SIDE BRANCH",
+        "LOSS OF MAJOR CORONARY",
+        "SLOW-FLOW/NO-FLOW/EMBOLIZATION" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/PCIAAC/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FALNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117050 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FALNKID" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STENT THROMBOSIS ARC ACUTE",
+        "STENT THROMBOSIS ARC LATE",
+        "STENT THROMBOSIS ARC SUBACUTE",
+        "STENT THROMBOSIS ARC VERY LATE" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "STENT THROMBOSIS ARC ACUTE",
+        "STENT THROMBOSIS ARC LATE",
+        "STENT THROMBOSIS ARC SUBACUTE",
+        "STENT THROMBOSIS ARC VERY LATE" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STCTIMNG/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FACAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FACAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FACAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FADTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FADTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FADTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAOBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAOBJ/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82546 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAOBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAOBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FAORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FAORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "HEMORRHAGIC STROKE",
+        "ISCHEMIC STROKE",
+        "UNDETERMINED STROKE" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "FASCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C119016 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FASTRESC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FASTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "HEMORRHAGIC STROKE",
+        "ISCHEMIC STROKE",
+        "UNDETERMINED STROKE" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119014 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C119015 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "FATESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/FA/STROKTYP/FATESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+NCIT:C119014 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C119014" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C119014> ;
+    cosmos_sdtm:submissionValue "CVFATS" .
+
+NCIT:C119015 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C119015" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C119015> ;
+    cosmos_sdtm:submissionValue "CVFATSCD" .
+
+NCIT:C119016 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C119016" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C119016> ;
+    cosmos_sdtm:submissionValue "CVFARS" .
+

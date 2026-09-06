@@ -1,0 +1,2839 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, SR (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain SR, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/SR/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ASRINDEX" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLOC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLAT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112221 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Allergen Skin Response Index" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ASRINT" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLOC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLAT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112222 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Allergen Skin Response Intensity" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "BLISTINDFA" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLOC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C122195 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Blistering Indicator as Findings About" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "FLARESZ" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLOC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112283 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Flare Size" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "FLRLDIAM" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLAT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRESU> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESN> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESU> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLOC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112281 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Flare Longest Diameter" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "FLRMDIAM" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLAT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRESU> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESN> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESU> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLOC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112282 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Flare Mean Diameter" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "IDRLDIAM" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLAT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRESU> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESN> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESU> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLOC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C122196 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Induration Longest Diameter" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "REACTGR" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLOC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C179819 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Reaction Grade" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "WHEALSZ" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLOC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112429 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Wheal Size" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "WHLINT" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLOC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C130186 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Wheal Diameter Interpretation" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "WHLLDIAM" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLAT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRESU> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESN> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESU> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLOC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112427 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Wheal Longest Diameter" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "WHLMDIAM" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLAT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SROBJ> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRESU> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESN> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESU> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLOC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C112428 ;
+    cosmos_sdtm:domain "SR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Wheal Mean Diameter" ;
+    cosmos_sdtm:source "SR.SRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLAT>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SROBJ>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112221 ;
+    cosmos_sdtm:value "Allergen Skin Response Index" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112221 ;
+    cosmos_sdtm:value "ASRINDEX" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112222 ;
+    cosmos_sdtm:value "Allergen Skin Response Intensity" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112222 ;
+    cosmos_sdtm:value "ASRINT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C122195 ;
+    cosmos_sdtm:value "Blistering Indicator" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C122195 ;
+    cosmos_sdtm:value "BLISTIND" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112283 ;
+    cosmos_sdtm:value "Flare Size" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112283 ;
+    cosmos_sdtm:value "FLARESZ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112281 ;
+    cosmos_sdtm:value "Flare Longest Diameter" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112281 ;
+    cosmos_sdtm:value "FLRLDIAM" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112282 ;
+    cosmos_sdtm:value "Flare Mean Diameter" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112282 ;
+    cosmos_sdtm:value "FLRMDIAM" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C122196 ;
+    cosmos_sdtm:value "Induration Longest Diameter" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C122196 ;
+    cosmos_sdtm:value "IDRLDIAM" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C179819 ;
+    cosmos_sdtm:value "Reaction Grade" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C179819 ;
+    cosmos_sdtm:value "REACTGR" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112429 ;
+    cosmos_sdtm:value "Wheal Size" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112429 ;
+    cosmos_sdtm:value "WHEALSZ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C130186 ;
+    cosmos_sdtm:value "Wheal Diameter Interpretation" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C130186 ;
+    cosmos_sdtm:value "WHLINT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112427 ;
+    cosmos_sdtm:value "Wheal Longest Diameter" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112427 ;
+    cosmos_sdtm:value "WHLLDIAM" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "SRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "SRLOC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "SRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SROBJ/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> ;
+    cosmos_sdtm:subject "SROBJ" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "SRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "SRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112428 ;
+    cosmos_sdtm:value "Wheal Mean Diameter" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "SRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C112428 ;
+    cosmos_sdtm:value "WHLMDIAM" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "SRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "SRTESTCD" .
+
+NCIT:C66742 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66742" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66742> ;
+    cosmos_sdtm:submissionValue "NY" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINDEX/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/ASRINT/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "N",
+        "U",
+        "Y" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "N",
+        "U",
+        "Y" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/BLISTINDFA/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66733 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 10 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "LARGE",
+        "MEDIUM",
+        "SMALL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66733 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 10 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "LARGE",
+        "MEDIUM",
+        "SMALL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLARESZ/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RULER MEASUREMENT METHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRLDIAM/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/FLRMDIAM/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RULER MEASUREMENT METHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/IDRLDIAM/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/REACTGR/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66733 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 10 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "LARGE",
+        "MEDIUM",
+        "SMALL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66733 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 10 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "LARGE",
+        "MEDIUM",
+        "SMALL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHEALSZ/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLINT/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RULER MEASUREMENT METHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLLDIAM/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C99073 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25185 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C13717 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "SRMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SROBJ> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SROBJ" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SROBJ/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "8.3" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 3 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "cm",
+        "in",
+        "mm" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112023 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C112024 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/SR/WHLMDIAM/SRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+NCIT:C66733 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66733" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66733> ;
+    cosmos_sdtm:submissionValue "SIZE" .
+
+NCIT:C71620 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C71620" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71620> ;
+    cosmos_sdtm:submissionValue "UNIT" .
+
+NCIT:C112023 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C112023" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C112023> ;
+    cosmos_sdtm:submissionValue "SRTEST" .
+
+NCIT:C112024 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C112024" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C112024> ;
+    cosmos_sdtm:submissionValue "SRTESTCD" .
+
+NCIT:C74456 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C74456" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74456> ;
+    cosmos_sdtm:submissionValue "LOC" .
+
+NCIT:C85492 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C85492" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C85492> ;
+    cosmos_sdtm:submissionValue "METHOD" .
+
+NCIT:C99073 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C99073" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C99073> ;
+    cosmos_sdtm:submissionValue "LAT" .
+

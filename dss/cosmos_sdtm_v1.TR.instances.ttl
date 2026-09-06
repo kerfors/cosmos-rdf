@@ -1,0 +1,3065 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, TR (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain TR, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/TR/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LDIAM" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVALID> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRGRPID> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRREFID> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKID> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKGRP> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRESU> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESU> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVAL> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C96684 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Longest Diameter" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LDIAM_RECIST1_1" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVALID> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRGRPID> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREFID> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKID> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKGRP> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTAT> ;
+    rdf:_16 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASND> ;
+    rdf:_17 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASNE> ;
+    rdf:_18 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRESU> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESU> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVAL> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C96684 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Longest Diameter (RECIST 1.1 Classification)" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASND>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASNE>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTAT>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LNSTATE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKID> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKGRP> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRSTRESC> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRMETHOD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVAL> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVALID> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRGRPID> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRREFID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C124448 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Lymph Node State" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LNSTATE_RECIST1_1" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKID> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKGRP> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTAT> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASND> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASNE> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTRESC> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRMETHOD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVAL> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVALID> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRGRPID> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREFID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C124448 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Lymph Node State (RECIST 1.1 Classification)" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASND>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASNE>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTAT>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LPERP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVALID> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRGRPID> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRREFID> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKID> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKGRP> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRESU> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESU> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVAL> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C96685 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Longest Perpendicular" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "LPERP_RECIST1_1" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVALID> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRGRPID> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREFID> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKID> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKGRP> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTAT> ;
+    rdf:_16 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASND> ;
+    rdf:_17 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASNE> ;
+    rdf:_18 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRESU> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESU> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVAL> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C96685 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Longest Perpendicular (RECIST 1.1 Classification)" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASND>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASNE>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTAT>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "NEW_TUMSTATE_RECIST1_1" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRLNKGRP> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRSTRESC> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRMETHOD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVAL> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVALID> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRGRPID> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRREFID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C96643 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "New Tumor State (RECIST 1.1 Classification)" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "NONNODAL_TUMSTATE_RECIST1_1" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRLNKGRP> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTAT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASND> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASNE> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTRESC> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRMETHOD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVAL> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVALID> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRGRPID> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREFID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C96643 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Non-nodal Tumor State (RECIST 1.1 Classification)" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASND>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASNE>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTAT>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "TUMSTATE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRLNKGRP> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRORRES> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRSTRESC> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRMETHOD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVAL> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVALID> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRGRPID> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRREFID> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C96643 ;
+    cosmos_sdtm:domain "TR" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Tumor Status" ;
+    cosmos_sdtm:source "TR.TRTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVAL>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVALID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRGRPID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRLNKGRP>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRREFID>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTESTCD> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates%20the%20tumor%20identified%20in> ;
+    cosmos_sdtm:object "TULNKID" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> ;
+    cosmos_sdtm:subject "TRLNKID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96684 ;
+    cosmos_sdtm:value "Longest Diameter" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96684 ;
+    cosmos_sdtm:value "LDIAM" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates%20the%20tumor%20identified%20in> ;
+    cosmos_sdtm:object "TULNKID" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> ;
+    cosmos_sdtm:subject "TRLNKID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASND/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASND" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASNE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20the%20lesion%20was%20not%20evaluable%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASNE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRSTAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96684 ;
+    cosmos_sdtm:value "Longest Diameter" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96684 ;
+    cosmos_sdtm:value "LDIAM" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates%20the%20tumor%20identified%20in> ;
+    cosmos_sdtm:object "TULNKID" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> ;
+    cosmos_sdtm:subject "TRLNKID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C124448 ;
+    cosmos_sdtm:value "Lymph Node State" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C124448 ;
+    cosmos_sdtm:value "LNSTATE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRGRPID/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "NON-TARGET" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates%20the%20tumor%20identified%20in> ;
+    cosmos_sdtm:object "TULNKID" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> ;
+    cosmos_sdtm:subject "TRLNKID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASND/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASND" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASNE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20the%20lesion%20was%20not%20evaluable%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASNE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRSTAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C124448 ;
+    cosmos_sdtm:value "Lymph Node State" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C124448 ;
+    cosmos_sdtm:value "LNSTATE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates%20the%20tumor%20identified%20in> ;
+    cosmos_sdtm:object "TULNKID" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> ;
+    cosmos_sdtm:subject "TRLNKID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96685 ;
+    cosmos_sdtm:value "Longest Perpendicular" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96685 ;
+    cosmos_sdtm:value "LPERP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates%20the%20tumor%20identified%20in> ;
+    cosmos_sdtm:object "TULNKID" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> ;
+    cosmos_sdtm:subject "TRLNKID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASND/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASND" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASNE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20the%20lesion%20was%20not%20evaluable%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASNE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRSTAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28251 ;
+    cosmos_sdtm:value "mm" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "TRSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96685 ;
+    cosmos_sdtm:value "Longest Perpendicular" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96685 ;
+    cosmos_sdtm:value "LPERP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRGRPID/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "NEW" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96643 ;
+    cosmos_sdtm:value "Tumor State" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96643 ;
+    cosmos_sdtm:value "TUMSTATE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRGRPID/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "NON-TARGET" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASND/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASND" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASNE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20the%20lesion%20was%20not%20evaluable%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRREASNE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20status%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "TRSTRESC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRSTAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96643 ;
+    cosmos_sdtm:value "Tumor State" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96643 ;
+    cosmos_sdtm:value "TUMSTATE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "TRDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVAL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> ;
+    cosmos_sdtm:subject "TREVAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVALID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in> ;
+    cosmos_sdtm:object "TREVAL" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "TREVALID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRLNKGRP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by> ;
+    cosmos_sdtm:object "RSLNKGRP" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> ;
+    cosmos_sdtm:subject "TRLNKGRP" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "TRMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRREFID/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> ;
+    cosmos_sdtm:subject "TRREFID" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "TRSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96643 ;
+    cosmos_sdtm:value "Tumor State" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "TRTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C96643 ;
+    cosmos_sdtm:value "TUMSTATE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "TRTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "TRTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117413 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRLNKID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR",
+        "RADIOLOGIST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117413 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRLNKID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASND> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASND" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASND/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT EVALUABLE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASNE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASNE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREASNE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-COMPATIBLE TECHNIQUE",
+        "OBSCURING DUE TO PHYSICAL CHANGES",
+        "POOR SCAN QUALITY",
+        "RESECTION OR FOCAL THERAPY PERFORMED" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66789 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTAT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT DONE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LDIAM_RECIST1_1/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117413 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRLNKID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-PATHOLOGICAL",
+        "PATHOLOGICAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-PATHOLOGICAL",
+        "PATHOLOGICAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR",
+        "RADIOLOGIST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRGRPID/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117413 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRLNKID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-PATHOLOGICAL",
+        "PATHOLOGICAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASND> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASND" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASND/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT EVALUABLE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASNE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASNE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREASNE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-COMPATIBLE TECHNIQUE",
+        "OBSCURING DUE TO PHYSICAL CHANGES",
+        "POOR SCAN QUALITY",
+        "RESECTION OR FOCAL THERAPY PERFORMED" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66789 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTAT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT DONE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-PATHOLOGICAL",
+        "PATHOLOGICAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LNSTATE_RECIST1_1/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117413 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRLNKID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR",
+        "RADIOLOGIST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117413 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRLNKID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRESU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASND> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASND" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASND/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT EVALUABLE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASNE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASNE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREASNE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-COMPATIBLE TECHNIQUE",
+        "OBSCURING DUE TO PHYSICAL CHANGES",
+        "POOR SCAN QUALITY",
+        "RESECTION OR FOCAL THERAPY PERFORMED" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66789 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTAT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT DONE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C42578 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 2 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/LPERP_RECIST1_1/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR",
+        "RADIOLOGIST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRGRPID/assignedTerm> ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ABSENT",
+        "EQUIVOCAL",
+        "PRESENT",
+        "UNEQUIVOCAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ABSENT",
+        "EQUIVOCAL",
+        "PRESENT",
+        "UNEQUIVOCAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NEW_TUMSTATE_RECIST1_1/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR",
+        "RADIOLOGIST" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRGRPID/assignedTerm> ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ABSENT",
+        "ENLARGEMENT FROM NADIR",
+        "PRESENT" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASND> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASND" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASND/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT EVALUABLE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASNE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard true ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREASNE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREASNE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NON-COMPATIBLE TECHNIQUE",
+        "OBSCURING DUE TO PHYSICAL CHANGES",
+        "POOR SCAN QUALITY",
+        "RESECTION OR FOCAL THERAPY PERFORMED" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66789 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTAT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "NOT DONE" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ABSENT",
+        "ENLARGEMENT FROM NADIR",
+        "PRESENT" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/NONNODAL_TUMSTATE_RECIST1_1/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRDTC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVAL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78735 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C51824 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVAL" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVAL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "INDEPENDENT ASSESSOR",
+        "INVESTIGATOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVALID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C96777 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117043 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TREVALID" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TREVALID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RADIOLOGIST 1",
+        "RADIOLOGIST 2",
+        "RADIOLOGIST 3" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRGRPID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117411 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "TRGRPID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRLNKGRP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117412 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRLNKGRP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRLNKGRP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRMETHOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CALIPER MEASUREMENT METHOD",
+        "CT SCAN",
+        "ENDOSCOPY",
+        "LYMPHANGIOGRAPHY",
+        "MAMMOGRAPHY",
+        "MRI",
+        "NUCLEAR RADIOLOGY",
+        "PET SCAN",
+        "PET/CT SCAN",
+        "PET/MRI SCAN",
+        "PHOTOGRAPHY",
+        "SCINTIGRAPHY",
+        "TOTAL BODY RADIOGRAPHY",
+        "ULTRASOUND",
+        "X-RAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRORRES" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ABSENT",
+        "EQUIVOCAL",
+        "PRESENT",
+        "UNEQUIVOCAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRREFID> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117419 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRREFID" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRREFID/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124309 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ABSENT",
+        "EQUIVOCAL",
+        "PRESENT",
+        "UNEQUIVOCAL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96778 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C96779 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "TRTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/TR/TUMSTATE/TRTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+NCIT:C66789 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66789" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66789> ;
+    cosmos_sdtm:submissionValue "ND" .
+
+NCIT:C71620 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C71620" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71620> ;
+    cosmos_sdtm:submissionValue "UNIT" .
+
+NCIT:C78735 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C78735" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C78735> ;
+    cosmos_sdtm:submissionValue "EVAL" .
+
+NCIT:C85492 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C85492" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C85492> ;
+    cosmos_sdtm:submissionValue "METHOD" .
+
+NCIT:C96777 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C96777" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C96777> ;
+    cosmos_sdtm:submissionValue "MEDEVAL" .
+
+NCIT:C96778 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C96778" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C96778> ;
+    cosmos_sdtm:submissionValue "TRTEST" .
+
+NCIT:C96779 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C96779" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C96779> ;
+    cosmos_sdtm:submissionValue "TRTESTCD" .
+
+NCIT:C124309 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C124309" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124309> ;
+    cosmos_sdtm:submissionValue "TRPROPRS" .
+

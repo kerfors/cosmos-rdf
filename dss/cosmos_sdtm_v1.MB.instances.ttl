@@ -1,0 +1,3366 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, MB (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain MB, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/MB/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HBCAGSERPL" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSPEC> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRES> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRESU> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESN> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESU> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C166039 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Hepatitis B Virus Core Antigen Concentration in Serum or Plasma" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HBCAGSERPLPRES" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBORRES> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C166039 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Hepatitis B Virus Core Antigen Presence in Serum or Plasma" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HBDNASERPL" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSPEC> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRES> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRESU> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESN> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESU> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C103404 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Hepatitis B Virus DNA Concentration in Serum or Plasma" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HBSAGSERPL" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSPEC> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRES> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRESU> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESN> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESU> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C64850 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Hepatitis B Virus Surface Antigen Concentration in Serum" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HBSAGSERPLPRES" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBORRES> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C64850 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Hepatitis B Virus Surface Antigen Presence in Serum or Plasma" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HCRNASERPL" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSPEC> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRES> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRESU> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESN> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESU> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C142330 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Hepatitis C Virus RNA Concentration in Serum or Plasma" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "HCRNASERPLPRES" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBORRES> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C142330 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Hepatitis C Virus RNA Presence in Serum or Plasma" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SAR2ABDET" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBLOINC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C171439 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigEndVersion "3-3" ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "SARS-CoV-2 Antibody Detection" ;
+    cosmos_sdtm:source "MB-MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBLOINC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SAR2RNAQNTCYC" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESN> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBLOC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBMETHOD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C171531 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "SARS-CoV-2 RNA Quantification Cycle Number" ;
+    cosmos_sdtm:source "MB-MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SAR2RNAVIRAL" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTESTCD> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBLOC> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBMETHOD> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRESU> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESN> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESU> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSPEC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C171531 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "SARS-CoV-2 RNA Viral Load" ;
+    cosmos_sdtm:source "MB-MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESN>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESU>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SARSCOV2DET" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSPEC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBLOC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C171532 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "SARS-CoV-2 Detection" ;
+    cosmos_sdtm:source "MB-MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBLOC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "TPA" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBLOINC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C184647 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "Treponema pallidum Detection by Immunofluorescence" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBLOINC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "TPADNA" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBLOINC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C198341 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "Treponema pallidum DNA by Nucleic Acid Amplification" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBLOINC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "TPLAB" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTESTCD> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTEST> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTSTDTL> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBORRES> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSTRESC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBLOINC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSPEC> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBMETHOD> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C132388 ;
+    cosmos_sdtm:domain "MB" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigEndVersion "3-3" ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "Treponema pallidum Antibody Detection in Serum" ;
+    cosmos_sdtm:source "MB.MBTESTCD" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBLOINC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBMETHOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBORRES>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSPEC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSTRESC>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTEST>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTESTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTSTDTL> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MBCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C67377 ;
+    cosmos_sdtm:value "IU/mL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C166039 ;
+    cosmos_sdtm:value "Hepatitis B Virus Core Antigen" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C166039 ;
+    cosmos_sdtm:value "HBCAG" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MBCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C166039 ;
+    cosmos_sdtm:value "Hepatitis B Virus Core Antigen" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C166039 ;
+    cosmos_sdtm:value "HBCAG" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MBCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C67377 ;
+    cosmos_sdtm:value "IU/mL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C103404 ;
+    cosmos_sdtm:value "Hepatitis B Virus DNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C103404 ;
+    cosmos_sdtm:value "HBDNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MBCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C67377 ;
+    cosmos_sdtm:value "IU/mL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C64850 ;
+    cosmos_sdtm:value "Hepatitis B Virus Surface Antigen" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C64850 ;
+    cosmos_sdtm:value "HBSAG" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MBCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C64850 ;
+    cosmos_sdtm:value "Hepatitis B Virus Surface Antigen" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C64850 ;
+    cosmos_sdtm:value "HBSAG" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MBCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C67377 ;
+    cosmos_sdtm:value "IU/mL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C142330 ;
+    cosmos_sdtm:value "Hepatitis C Virus RNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C142330 ;
+    cosmos_sdtm:value "HCRNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MBCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C142330 ;
+    cosmos_sdtm:value "Hepatitis C Virus RNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C142330 ;
+    cosmos_sdtm:value "HCRNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBLOINC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "94762-2" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBLOINC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20an%20observation%20described%20by> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION> ;
+    cosmos_sdtm:subject "MBLOINC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C16714 ;
+    cosmos_sdtm:value "IMMUNOASSAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C105706 ;
+    cosmos_sdtm:value "SERUM OR PLASMA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171439 ;
+    cosmos_sdtm:value "SARS-CoV-2 Antibody" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171439 ;
+    cosmos_sdtm:value "SAR2AB" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28408 ;
+    cosmos_sdtm:value "QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171531 ;
+    cosmos_sdtm:value "SARS-CoV-2 RNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171531 ;
+    cosmos_sdtm:value "SAR2RNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C161328 ;
+    cosmos_sdtm:value "QUANTIFICATION CYCLE NUMBER" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28408 ;
+    cosmos_sdtm:value "QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBORRES" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBORRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESU/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C117972 ;
+    cosmos_sdtm:value "log10 copies/mL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBSTRESN" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "MBSTRESU" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171531 ;
+    cosmos_sdtm:value "SARS-CoV-2 RNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171531 ;
+    cosmos_sdtm:value "SAR2RNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174331 ;
+    cosmos_sdtm:value "VIRAL LOAD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBLOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBLOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C28408 ;
+    cosmos_sdtm:value "QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171532 ;
+    cosmos_sdtm:value "Severe Acute Resp Syndrome Coronavirus 2" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C171532 ;
+    cosmos_sdtm:value "SARSCOV2" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBLOINC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "29310-0" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBLOINC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20an%20observation%20described%20by> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION> ;
+    cosmos_sdtm:subject "MBLOINC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C17370 ;
+    cosmos_sdtm:value "FLUORESCENT IMMUNOASSAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C184647 ;
+    cosmos_sdtm:value "Treponema pallidum" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C184647 ;
+    cosmos_sdtm:value "TPA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBLOINC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20an%20observation%20described%20by> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION> ;
+    cosmos_sdtm:subject "MBLOINC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBMETHOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C102656 ;
+    cosmos_sdtm:value "LINE PROBE ASSAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C198341 ;
+    cosmos_sdtm:value "Treponema pallidum DNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C198341 ;
+    cosmos_sdtm:value "TPADNA" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MBDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBLOINC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "22587-0" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBLOINC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20an%20observation%20described%20by> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION> ;
+    cosmos_sdtm:subject "MBLOINC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBMETHOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBMETHOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBORRES/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBORRES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSPEC/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C13325 ;
+    cosmos_sdtm:value "SERUM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSPEC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> ;
+    cosmos_sdtm:subject "MBSPEC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSTRESC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> ;
+    cosmos_sdtm:subject "MBSTRESC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTEST/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C132388 ;
+    cosmos_sdtm:value "Treponema pallidum Antibody" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTEST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> ;
+    cosmos_sdtm:subject "MBTEST" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTESTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C132388 ;
+    cosmos_sdtm:value "TPLAB" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTESTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MBTEST" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "MBTESTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTSTDTL/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C174330 ;
+    cosmos_sdtm:value "DETECTION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTSTDTL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in> ;
+    cosmos_sdtm:object "MBTESTCD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MBTSTDTL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "SEROLOGY",
+        "VIROLOGY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "IU/mL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPL/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "SEROLOGY",
+        "VIROLOGY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBCAGSERPLPRES/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "SEROLOGY",
+        "VIROLOGY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "IU/mL",
+        "ng/L" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBDNASERPL/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "SEROLOGY",
+        "VIROLOGY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "IU/mL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPL/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "SEROLOGY",
+        "VIROLOGY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HBSAGSERPLPRES/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "SEROLOGY",
+        "VIROLOGY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "IU/mL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48207 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPL/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBCAT" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "SEROLOGY",
+        "VIROLOGY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/HCRNASERPLPRES/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBLOINC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBLOINC/assignedTerm> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBLOINC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBLOINC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2ABDET/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171435 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ALVEOLUS",
+        "NASOPHARYNX",
+        "OROPHARYNX",
+        "UPPER RESPIRATORY SYSTEM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ENDOTRACHEAL FLUID",
+        "LAVAGE FLUID",
+        "SALIVA",
+        "SERUM OR PLASMA",
+        "SERUM OR PLASMA OR BLOOD",
+        "SWABBED MATERIAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAQNTCYC/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171435 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ALVEOLUS",
+        "NASOPHARYNX",
+        "OROPHARYNX",
+        "UPPER RESPIRATORY SYSTEM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C67391 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBORRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "RNA copies/mL",
+        "log10 copies/mL" ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ENDOTRACHEAL FLUID",
+        "LAVAGE FLUID",
+        "SALIVA",
+        "SERUM OR PLASMA",
+        "SERUM OR PLASMA OR BLOOD",
+        "SWABBED MATERIAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "12.4" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 12 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESN" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 4 ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESU/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C71620 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C67391 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSTRESU" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBSTRESU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SAR2RNAVIRAL/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBLOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171435 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBLOC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBLOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ALVEOLUS",
+        "NASOPHARYNX",
+        "OROPHARYNX",
+        "UPPER RESPIRATORY SYSTEM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "ENDOTRACHEAL FLUID",
+        "LAVAGE FLUID",
+        "SALIVA",
+        "SERUM OR PLASMA",
+        "SERUM OR PLASMA OR BLOOD",
+        "SWABBED MATERIAL" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/SARSCOV2DET/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBLOINC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBLOINC/assignedTerm> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBLOINC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBLOINC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "BLOOD",
+        "CEREBROSPINAL FLUID",
+        "FLUID",
+        "SERUM",
+        "SWABBED MATERIAL",
+        "URINE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPA/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBLOINC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBLOINC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBLOINC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBMETHOD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "BLOOD",
+        "CEREBROSPINAL FLUID",
+        "FLUID",
+        "SWABBED MATERIAL",
+        "URINE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPADNA/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBDTC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBLOINC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBLOINC/assignedTerm> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBLOINC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBLOINC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBMETHOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C85492 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82535 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBMETHOD" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBMETHOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "CHEMILUMINESCENT MICROPARTICLE IMMUNOASSAY",
+        "FLUORESCENT IMMUNOASSAY",
+        "HEMAGGLUTINATION ASSAY",
+        "IMMUNOBLOT",
+        "POLYMERASE CHAIN REACTION",
+        "RAPID IMMUNOASSAY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBORRES> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBORRES" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBORRES/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSPEC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSPEC/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C78734 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70713 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBSPEC" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSPEC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSTRESC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C70856 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBSTRESC" ;
+    cosmos_sdtm:originSource NCIT:C68608 ;
+    cosmos_sdtm:originType NCIT:C170549 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBSTRESC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:vlmTarget true .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTEST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTEST/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120528 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTEST" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTEST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTESTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTESTCD/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C120527 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MBTESTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTESTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTSTDTL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTSTDTL/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C174225 ;
+    cosmos_sdtm:comparator <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C117062 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MBTSTDTL" ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MB/TPLAB/MBTSTDTL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+NCIT:C74456 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C74456" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74456> ;
+    cosmos_sdtm:submissionValue "LOC" .
+
+NCIT:C85492 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C85492" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C85492> ;
+    cosmos_sdtm:submissionValue "METHOD" .
+
+NCIT:C71620 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C71620" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71620> ;
+    cosmos_sdtm:submissionValue "UNIT" .
+
+NCIT:C120527 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C120527" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120527> ;
+    cosmos_sdtm:submissionValue "MBTESTCD" .
+
+NCIT:C120528 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C120528" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120528> ;
+    cosmos_sdtm:submissionValue "MBTEST" .
+
+NCIT:C174225 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C174225" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174225> ;
+    cosmos_sdtm:submissionValue "MBFTSDTL" .
+
+NCIT:C78734 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C78734" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C78734> ;
+    cosmos_sdtm:submissionValue "SPECTYPE" .
+

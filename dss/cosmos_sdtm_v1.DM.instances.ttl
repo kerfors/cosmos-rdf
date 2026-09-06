@@ -1,0 +1,262 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, DM (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain DM, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/DM/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/AGE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "AGE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGE> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGEU> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/DM/AGE/DMDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C69260 ;
+    cosmos_sdtm:domain "DM" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Age" ;
+    cosmos_sdtm:source "DM.AGE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGE>,
+        <https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGEU>,
+        <https://w3id.org/cdisc/cosmos/dss/DM/AGE/DMDTC> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/BRTHDTC> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "BRTHDTC" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DM/BRTHDTC/BRTHDTC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DM/BRTHDTC/DMDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C83217 ;
+    cosmos_sdtm:domain "DM" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Date/Time of Birth" ;
+    cosmos_sdtm:source "DM.BRTHDTC" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DM/BRTHDTC/BRTHDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DM/BRTHDTC/DMDTC> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/ETHNIC> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "ETHNIC" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DM/ETHNIC/ETHNIC> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DM/ETHNIC/DMDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C16564 ;
+    cosmos_sdtm:domain "DM" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigEndVersion "3-4" ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Ethnicity" ;
+    cosmos_sdtm:source "DM.ETHNIC" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DM/ETHNIC/DMDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DM/ETHNIC/ETHNIC> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/RACE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "RACE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DM/RACE/RACE> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DM/RACE/DMDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C17049 ;
+    cosmos_sdtm:domain "DM" ;
+    cosmos_sdtm:packageDate "2026-05-26"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigEndVersion "3-4" ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Race" ;
+    cosmos_sdtm:source "DM.RACE" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DM/RACE/DMDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DM/RACE/RACE> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/SEX> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "SEX" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/DM/SEX/SEX> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/DM/SEX/DMDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C28421 ;
+    cosmos_sdtm:domain "DM" ;
+    cosmos_sdtm:packageDate "2025-04-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Sex" ;
+    cosmos_sdtm:source "DM.SEX" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/DM/SEX/DMDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/DM/SEX/SEX> .
+
+NCIT:C66731 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66731" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66731> ;
+    cosmos_sdtm:submissionValue "SEX" .
+
+NCIT:C66781 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66781" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66781> ;
+    cosmos_sdtm:submissionValue "AGEU" .
+
+NCIT:C66790 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66790" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66790> ;
+    cosmos_sdtm:submissionValue "ETHNIC" .
+
+NCIT:C74457 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C74457" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74457> ;
+    cosmos_sdtm:submissionValue "RACE" .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGEU/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for> ;
+    cosmos_sdtm:object "AGE" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> ;
+    cosmos_sdtm:subject "AGEU" .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C170981 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> ;
+    cosmos_sdtm:format "3.2" ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 6 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AGE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:significantDigits 2 .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGEU> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66781 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C50400 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AGEU" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/DM/AGE/AGEU/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "DAYS",
+        "HOURS",
+        "MONTHS",
+        "WEEKS",
+        "YEARS" .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/AGE/DMDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DMDTC" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/BRTHDTC/BRTHDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "BRTHDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/BRTHDTC/DMDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DMDTC" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/ETHNIC/DMDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DMDTC" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/ETHNIC/ETHNIC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66790 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C16564 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 100 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "ETHNIC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "HISPANIC OR LATINO",
+        "NOT HISPANIC OR LATINO",
+        "NOT REPORTED",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/RACE/DMDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DMDTC" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/RACE/RACE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74457 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C17049 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 100 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "RACE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "AMERICAN INDIAN OR ALASKA NATIVE",
+        "ASIAN",
+        "BLACK OR AFRICAN AMERICAN",
+        "NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER",
+        "NOT REPORTED",
+        "OTHER",
+        "UNKNOWN",
+        "WHITE" .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/SEX/DMDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82515 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "DMDTC" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/DM/SEX/SEX> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66731 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C28421 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 100 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "SEX" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "F",
+        "INTERSEX",
+        "M",
+        "U" .
+

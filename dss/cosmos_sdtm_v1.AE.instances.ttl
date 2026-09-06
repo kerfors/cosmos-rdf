@@ -1,0 +1,1826 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, AE (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain AE, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/AE/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "AE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AETERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AECAT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBODSYS> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBDSYCD> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOC> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOCCD> ;
+    rdf:_16 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELOC> ;
+    rdf:_17 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESEV> ;
+    rdf:_18 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESER> ;
+    rdf:_19 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACN> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEDECOD> ;
+    rdf:_20 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACNOTH> ;
+    rdf:_21 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEREL> ;
+    rdf:_22 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AERLDEV> ;
+    rdf:_23 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AERELNST> ;
+    rdf:_24 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPATT> ;
+    rdf:_25 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEOUT> ;
+    rdf:_26 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAN> ;
+    rdf:_27 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCONG> ;
+    rdf:_28 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDISAB> ;
+    rdf:_29 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDTH> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLT> ;
+    rdf:_30 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESHOSP> ;
+    rdf:_31 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESLIFE> ;
+    rdf:_32 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOD> ;
+    rdf:_33 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESMIE> ;
+    rdf:_34 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AECONTRT> ;
+    rdf:_35 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AETOXGR> ;
+    rdf:_36 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESTDTC> ;
+    rdf:_37 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENDTC> ;
+    rdf:_38 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENRF> ;
+    rdf:_39 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENRTPT> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLTCD> ;
+    rdf:_40 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENTPT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLTCD> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGTCD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C179175 ;
+    cosmos_sdtm:domain "AE" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Adverse Event Free Text Format" ;
+    cosmos_sdtm:source "AE.AETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACN>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACNOTH>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBDSYCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBODSYS>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AECONTRT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELOC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEOUT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPATT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEREL>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AERELNST>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AERLDEV>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAN>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCONG>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDISAB>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDTH>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESER>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESEV>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESHOSP>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESLIFE>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESMIE>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOCCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AETERM>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AE/AETOXGR> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "AEPRESP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECAT> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPRESP> ;
+    rdf:_13 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBODSYS> ;
+    rdf:_14 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBDSYCD> ;
+    rdf:_15 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOC> ;
+    rdf:_16 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOCCD> ;
+    rdf:_17 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELOC> ;
+    rdf:_18 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESEV> ;
+    rdf:_19 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESER> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEDECOD> ;
+    rdf:_20 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACN> ;
+    rdf:_21 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACNOTH> ;
+    rdf:_22 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEREL> ;
+    rdf:_23 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERLDEV> ;
+    rdf:_24 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERELNST> ;
+    rdf:_25 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPATT> ;
+    rdf:_26 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEOUT> ;
+    rdf:_27 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAN> ;
+    rdf:_28 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCONG> ;
+    rdf:_29 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDISAB> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLT> ;
+    rdf:_30 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDTH> ;
+    rdf:_31 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESHOSP> ;
+    rdf:_32 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESLIFE> ;
+    rdf:_33 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOD> ;
+    rdf:_34 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESMIE> ;
+    rdf:_35 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECONTRT> ;
+    rdf:_36 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETOXGR> ;
+    rdf:_37 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESTDTC> ;
+    rdf:_38 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENDTC> ;
+    rdf:_39 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENRF> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLTCD> ;
+    rdf:_40 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENRTPT> ;
+    rdf:_41 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENTPT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLTCD> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGTCD> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C179175 ;
+    cosmos_sdtm:domain "AE" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Adverse Event Prespecified" ;
+    cosmos_sdtm:source "AE.AETERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACN>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACNOTH>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBDSYCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBODSYS>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECAT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECONTRT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELOC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEOUT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPATT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEREL>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERELNST>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERLDEV>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAN>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCONG>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDISAB>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDTH>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESER>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESEV>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESHOSP>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESLIFE>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESMIE>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOCCD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOD>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETERM>,
+        <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETOXGR> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20actions%20taken> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEACN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACNOTH/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20actions%20taken> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEACNOTH" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBDSYCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEBDSYCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBODSYS/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEBODSYS" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "AECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AECONTRT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AECONTRT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20end%20date%20for> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "AEENDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEHLGT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEHLGTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEHLT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEHLTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AELLT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AELLTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AELOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "AELOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEOUT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20the%20outcome%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEOUT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPATT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20a%20pattern%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "AEPATT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEPTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEREL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEREL" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AERELNST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AERELNST" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AERLDEV/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AERLDEV" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESCAN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "AECAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "AESCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCONG/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESCONG" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDISAB/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESDISAB" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDTH/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESDTH" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESER/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses%20seriousness%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES> ;
+    cosmos_sdtm:subject "AESER" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESEV/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses%20the%20severity%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES> ;
+    cosmos_sdtm:subject "AESEV" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESHOSP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESHOSP" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESLIFE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESLIFE" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESMIE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESMIE" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AESOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOCCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AESOCCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "AESTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "AEDECODE" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "AETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AETOXGR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20severity%20of%20the%20toxicity%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "AETOXGR" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20actions%20taken> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEACN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACNOTH/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20actions%20taken> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEACNOTH" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBDSYCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEBDSYCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBODSYS/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEBODSYS" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "AECAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECONTRT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AECONTRT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20end%20date%20for> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "AEENDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEHLGT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEHLGTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AEHLT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEHLTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AELLT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AELLTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "AELOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEOUT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20the%20outcome%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEOUT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPATT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20a%20pattern%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> ;
+    cosmos_sdtm:subject "AEPATT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "AEPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPTCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AEPTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEREL/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AEREL" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERELNST/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AERELNST" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERLDEV/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AERLDEV" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAN/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESCAN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "AECAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "AESCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCONG/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESCONG" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDISAB/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESDISAB" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDTH/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESDTH" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESER/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses%20seriousness%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES> ;
+    cosmos_sdtm:subject "AESER" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESEV/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses%20the%20severity%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES> ;
+    cosmos_sdtm:subject "AESEV" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESHOSP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESHOSP" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESLIFE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESLIFE" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESMIE/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESMIE" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "AESOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOCCD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> ;
+    cosmos_sdtm:subject "AESOCCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> ;
+    cosmos_sdtm:subject "AESOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "AESTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "AEDECODE" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "AETERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETOXGR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20severity%20of%20the%20toxicity%20in> ;
+    cosmos_sdtm:object "AETERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "AETOXGR" .
+
+NCIT:C66767 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66767" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66767> ;
+    cosmos_sdtm:submissionValue "ACN" .
+
+NCIT:C66768 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66768" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66768> ;
+    cosmos_sdtm:submissionValue "OUT" .
+
+NCIT:C66769 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66769" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66769> ;
+    cosmos_sdtm:submissionValue "AESEV" .
+
+NCIT:C74456 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C74456" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74456> ;
+    cosmos_sdtm:submissionValue "LOC" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66767 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83013 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEACN" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACNOTH> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83109 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEACNOTH" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEACNOTH/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBDSYCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEBDSYCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBDSYCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBODSYS> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEBODSYS" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEBODSYS/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83198 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AECAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AECONTRT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83199 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AECONTRT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AECONTRT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83344 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83201 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLGT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLGTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLGTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEHLTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AELLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AELLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELLTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AELOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83205 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AELOC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AELOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEOUT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66768 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C49489 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEOUT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEOUT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPATT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83208 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEPATT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPATT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEPTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEPTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AEREL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C41358 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEREL" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AEREL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AERELNST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83210 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AERELNST" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AERELNST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AERLDEV> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AERLDEV" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AERLDEV/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83211 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESCAN" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83212 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCONG> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83117 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESCONG" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESCONG/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDISAB> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C113380 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESDISAB" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDISAB/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDTH> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48275 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESDTH" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESDTH/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESER> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C53252 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AESER" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESER/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESEV> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66769 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C53253 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESEV" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESEV/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESHOSP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESHOSP" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESHOSP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESLIFE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C84266 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESLIFE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESLIFE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESMIE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83053 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESMIE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESMIE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AESOC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOCCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AESOCCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOCCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83214 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AESTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83215 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AESTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C78541 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AETERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AE/AETOXGR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C78605 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AETOXGR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AE/AETOXGR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66767 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83013 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEACN" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACNOTH> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83109 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEACNOTH" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEACNOTH/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBDSYCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEBDSYCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBDSYCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBODSYS> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEBODSYS" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEBODSYS/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83198 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AECAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECONTRT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83199 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AECONTRT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AECONTRT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83344 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83201 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLGT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLGTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLGTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEHLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEHLTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AELLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AELLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELLTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C74456 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83205 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AELOC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AELOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEOUT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66768 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C49489 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEOUT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEOUT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPATT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83208 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEPATT" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPATT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C87840 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AEPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEPTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEPTCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEREL> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C41358 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AEREL" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AEREL/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERELNST> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83210 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AERELNST" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERELNST/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERLDEV> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AERLDEV" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AERLDEV/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAN> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83211 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESCAN" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAN/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83212 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCONG> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83117 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESCONG" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESCONG/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDISAB> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C113380 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESDISAB" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDISAB/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDTH> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C48275 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESDTH" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESDTH/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESER> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C53252 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AESER" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESER/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESEV> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66769 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C53253 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESEV" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESEV/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESHOSP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83052 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESHOSP" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESHOSP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESLIFE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C84266 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESLIFE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESLIFE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESMIE> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83053 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESMIE" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESMIE/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AESOC" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOCCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AESOCCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOCCD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83214 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESOD" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83215 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AESTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AESTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C78541 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "AETERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETOXGR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C78605 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "AETOXGR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/AE/AEPRESP/AETOXGR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:valueList "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5" .
+
+NCIT:C66728 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66728" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66728> ;
+    cosmos_sdtm:submissionValue "STENRF" .
+
+NCIT:C66742 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66742" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66742> ;
+    cosmos_sdtm:submissionValue "NY" .
+

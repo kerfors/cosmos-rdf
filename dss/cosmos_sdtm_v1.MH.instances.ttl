@@ -1,0 +1,3011 @@
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH> a owl:Ontology ;
+    rdfs:label "CDISC COSMoS Dataset Specializations, MH (instances)" ;
+    dcterms:identifier "2026-07-14" ;
+    dcterms:source <https://raw.githubusercontent.com/cdisc-org/COSMoS/031429b1d14823721991cd23ee88a11616686ce3/export/cdisc_sdtm_dataset_specializations_latest.csv> ;
+    rdfs:comment "Dataset Specialization instances for domain MH, rendered from the pinned COSMoS export. Variable order is the export's row order, carried as rdf:_n membership beside the variables edges. length and significantDigits are cast from the export's decimal form to integer; packageType is not in the export and is set to the enum's single value. A biomedicalConceptId or dataElementConceptId that resolves to no node is carried as the published string. The concept nodes those edges reach are declared in the Biomedical Concept instance graph, which is not imported. Draft - not a normative CDISC artifact." ;
+    owl:imports <https://w3id.org/cdisc/cosmos/sdtm/> ;
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/dss/MH/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MEDHISTFREE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHTERM> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHCAT> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSTDTC> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENDTC> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENRF> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENRTPT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENTPT> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-12-16"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Free Text Format" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MEDHISTPRESP" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHTERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENRF> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENRTPT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENTPT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHPRESP> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHOCCUR> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHEVTTYP> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSTDTC> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "Medical History Prespecified" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHEVTTYP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHALZHEIMERS" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHTERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENRF> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENRTPT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENTPT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPTCD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHEVDTYP> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPRESP> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHOCCUR> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-4" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Alzheimer's Disease" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHEVDTYP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHBRCADIAG" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHTERM> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHPRESP> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHOCCUR> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHEVTTYP> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Breast Cancer Diagnosis" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHEVTTYP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHBRCARELAPSE" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHTERM> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHPRESP> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHOCCUR> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHCAT> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHEVTTYP> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSTDTC> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2026-07-14"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-3" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Breast Cancer Disease Relapse" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHEVTTYP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSTDTC>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHCONFUSIONALEPISODES" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHTERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENRF> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENRTPT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENTPT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPTCD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHSCAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPRESP> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHOCCUR> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Confusional Episodes" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHESSENTIALTREMOR" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHTERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENRF> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENRTPT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENTPT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPTCD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHSCAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPRESP> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHOCCUR> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Essential Tremor" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHESSENTIALTREMOREXPYR" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHTERM> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHCAT> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHSCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHPRESP> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHOCCUR> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENRF> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENRTPT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENTPT> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Essential Tremor" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHEXTRAPYRAMIDAL" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHTERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENRF> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENRTPT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENTPT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPTCD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHSCAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPRESP> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHOCCUR> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Extrapyramidal Features" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHFACIALMASKING" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHTERM> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHCAT> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHSCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHPRESP> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHOCCUR> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENRF> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENRTPT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENTPT> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Facial Masking" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHRIGIDITYUPPEREXTREMITY" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHTERM> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHCAT> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHSCAT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHPRESP> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHOCCUR> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENRF> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENRTPT> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENTPT> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Rigidity Upper Extremity" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHSENSITIVITYNEUROLEPTICS" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHTERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENRF> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENRTPT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENTPT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPTCD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHLLT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHLLTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHSCAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPRESP> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHOCCUR> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Sensitivity to Neuroleptics" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHLLT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHLLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS> a cosmos_sdtm:SDTMGroup ;
+    dcterms:identifier "MHVISUALHALLUCINATIONS" ;
+    rdf:_1 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHTERM> ;
+    rdf:_10 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENRF> ;
+    rdf:_11 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENRTPT> ;
+    rdf:_12 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENTPT> ;
+    rdf:_2 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHDECOD> ;
+    rdf:_3 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPTCD> ;
+    rdf:_4 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLT> ;
+    rdf:_5 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLTCD> ;
+    rdf:_6 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHCAT> ;
+    rdf:_7 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHSCAT> ;
+    rdf:_8 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPRESP> ;
+    rdf:_9 <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHOCCUR> ;
+    cosmos_sdtm:biomedicalConceptId NCIT:C200145 ;
+    cosmos_sdtm:domain "MH" ;
+    cosmos_sdtm:packageDate "2025-07-01"^^xsd:date ;
+    cosmos_sdtm:packageType <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ;
+    cosmos_sdtm:sdtmigStartVersion "3-2" ;
+    cosmos_sdtm:shortName "Medical History Prespecified: Visual Hallucinations" ;
+    cosmos_sdtm:source "MH.MHTERM" ;
+    cosmos_sdtm:variables <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHDECOD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENRF>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENRTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENTPT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHOCCUR>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPRESP>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPTCD>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHSCAT>,
+        <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHTERM> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20end%20date%20for> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MHENDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MHSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20end%20date%20for> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MHENDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MHSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "DEMENTIA ALZHEIMER'S TYPE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHEVDTYP/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C124353 ;
+    cosmos_sdtm:value "SYMPTOM ONSET" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHEVDTYP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20aspect%20of%20the%20event%20used%20to%20define%20the%20date%20in> ;
+    cosmos_sdtm:object "MHSTDTC" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ;
+    cosmos_sdtm:subject "MHEVDTYP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10001896" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10012271" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MHSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "BREAST CANCER" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHEVTTYP/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C15220 ;
+    cosmos_sdtm:value "DIAGNOSIS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MHSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "BREAST CANCER" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "BREAST CANCER" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHEVTTYP/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:conceptId NCIT:C38155 ;
+    cosmos_sdtm:value "DISEASE RELAPSE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSTDTC/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> ;
+    cosmos_sdtm:subject "MHSTDTC" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "BREAST CANCER" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CONFUSIONAL STATE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "MENTAL CONFUSION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10027350" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10010305" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CLINICAL FEATURES OF ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "MARKED DEFICIT IN ATTENTION AND/OR FLUCTUATIONS IN LEVEL OF ATTENTION OR ALERTNESS; CONFUSIONAL EPISODES" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ESSENTIAL TREMOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ESSENTIAL TREMOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10015496" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10015496" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CLINICAL FEATURES OF ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ESSENTIAL TREMOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "EXTRAPYRAMIDAL FINDINGS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ESSENTIAL TREMOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "EXTRAPYRAMIDAL DISORDER" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "EXTRAPYRAMIDAL SYMPTOMS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10015835" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10015832" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CLINICAL FEATURES OF ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "EXTRAPYRAMIDAL FEATURES WITHOUT A RESTING TREMOR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "EXTRAPYRAMIDAL FINDINGS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "FACIAL MASKING" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "EXTRAPYRAMIDAL FINDINGS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "RIDITITY OF UPPER EXTREMITY" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "TOXICITY TO VARIOUS AGENTS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10070863" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CLINICAL FEATURES OF ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "SENSITIVITY TO NEUROLEPTICS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> ;
+    cosmos_sdtm:subject "MHCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHDECOD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "HALLUCINATION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHDECOD/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> ;
+    cosmos_sdtm:subject "MHDECOD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "HALLUCINATION" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10019063" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHOCCUR/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHOCCUR" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPRESP/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in> ;
+    cosmos_sdtm:object "MHTERM" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> ;
+    cosmos_sdtm:subject "MHPRESP" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPTCD/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "10019063" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHSCAT/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "CLINICAL FEATURES OF ALZHEIMER'S DISEASE" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHSCAT/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by> ;
+    cosmos_sdtm:object "MHCAT" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> ;
+    cosmos_sdtm:subject "MHSCAT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHTERM/assignedTerm> a cosmos_sdtm:AssignedTerm ;
+    cosmos_sdtm:value "VISUAL HALLUCINATIONS AND/OR PARANOID DELUSIONS" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHTERM/relationship> a cosmos_sdtm:RelationShip ;
+    cosmos_sdtm:linkingPhrase <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for> ;
+    cosmos_sdtm:object "MHDECOD" ;
+    cosmos_sdtm:predicateTerm <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> ;
+    cosmos_sdtm:subject "MHTERM" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83330 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83338 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTFREE/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C219752 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHEVTTYP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C124301 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C219752 ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHEVTTYP" ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83338 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MEDHISTPRESP/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHEVDTYP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHEVDTYP/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124301 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHEVDTYP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHEVDTYP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLT/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHLLTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHPTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHPTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHALZHEIMERS/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHEVTTYP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHEVTTYP/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124301 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C219752 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 40 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHEVTTYP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83338 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCADIAG/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHEVTTYP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHEVTTYP/assignedTerm> ;
+    cosmos_sdtm:codelist NCIT:C124301 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C219752 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 40 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHEVTTYP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSTDTC> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83338 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSTDTC" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHSTDTC/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHBRCARELAPSE/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLT/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHLLTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHPTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHPTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHCONFUSIONALEPISODES/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLT/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHLLTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHPTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHPTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOR/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHESSENTIALTREMOREXPYR/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLT/assignedTerm> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLT" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHLLTCD/assignedTerm> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHPTCD/assignedTerm> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHPTCD" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHEXTRAPYRAMIDAL/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHFACIALMASKING/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHRIGIDITYUPPEREXTREMITY/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHLLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHLLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHPTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHPTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHSENSITIVITYNEUROLEPTICS/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25372 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHDECOD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHDECOD/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83346 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHDECOD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHDECOD/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENRF> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82557 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRF" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "DURING",
+        "DURING/AFTER",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENRTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66728 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82558 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENRTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> ;
+    cosmos_sdtm:valueList "AFTER",
+        "BEFORE",
+        "COINCIDENT",
+        "ONGOING",
+        "UNKNOWN" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHENTPT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:dataElementConceptId NCIT:C82574 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 20 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHENTPT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLT/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHLLTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHLLTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHOCCUR> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C127786 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHOCCUR" ;
+    cosmos_sdtm:originSource NCIT:C25936 ;
+    cosmos_sdtm:originType NCIT:C170548 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHOCCUR/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_NY" ;
+    cosmos_sdtm:valueList "N",
+        "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPRESP> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:codelist NCIT:C66742 ;
+    cosmos_sdtm:dataElementConceptId NCIT:C171000 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 1 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHPRESP" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPRESP/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> ;
+    cosmos_sdtm:subsetCodelist "NY_Y" ;
+    cosmos_sdtm:valueList "Y" .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPTCD> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHPTCD/assignedTerm> ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 8 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHPTCD" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHSCAT> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHSCAT/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C25692 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue false ;
+    cosmos_sdtm:mandatoryVariable false ;
+    cosmos_sdtm:name "MHSCAT" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHSCAT/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> .
+
+<https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHTERM> a cosmos_sdtm:SDTMVariable ;
+    cosmos_sdtm:assignedTerm <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHTERM/assignedTerm> ;
+    cosmos_sdtm:dataElementConceptId NCIT:C83118 ;
+    cosmos_sdtm:dataType <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ;
+    cosmos_sdtm:isNonStandard false ;
+    cosmos_sdtm:length 200 ;
+    cosmos_sdtm:mandatoryValue true ;
+    cosmos_sdtm:mandatoryVariable true ;
+    cosmos_sdtm:name "MHTERM" ;
+    cosmos_sdtm:originSource NCIT:C70793 ;
+    cosmos_sdtm:originType NCIT:C170547 ;
+    cosmos_sdtm:relationship <https://w3id.org/cdisc/cosmos/dss/MH/MHVISUALHALLUCINATIONS/MHTERM/relationship> ;
+    cosmos_sdtm:role <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
+
+NCIT:C124301 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C124301" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124301> ;
+    cosmos_sdtm:submissionValue "MHEDTTYP" .
+
+NCIT:C66728 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66728" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66728> ;
+    cosmos_sdtm:submissionValue "STENRF" .
+
+NCIT:C66742 a cosmos_sdtm:CodeList ;
+    dcterms:identifier "C66742" ;
+    skos:exactMatch <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66742> ;
+    cosmos_sdtm:submissionValue "NY" .
+
