@@ -1,17 +1,21 @@
 """CI guard: deliverable integrity checks for the committed artifacts.
 
-Verifies that the ten generated deliverables at repo root parse and match the
-operational baselines, and that the structural guarantees the decisions rest on
-still hold: no malformed IRI in a CDISC namespace (docs/known-gaps.md 1a); in the
-core T-Boxes nothing but the ontology and its version in the w3id namespace
-(decision D7); and in every other deliverable, every w3id IRI matches one of the
-forms a decision admits by name (D3, D13, D17, D18, D21, D23) - so a new minting has
-to be argued here before it can pass; and in the overlay shapes, every enum
-constraint holds IRIs and the result-scale lists hold exactly the admitted set (D24).
+Verifies that the ten generated deliverables at repo root and the 32 Dataset
+Specialization graphs under dss/ parse and match the operational baselines, and
+that the structural guarantees the decisions rest on still hold: no malformed
+IRI in a CDISC namespace (docs/known-gaps.md 1a); in the core T-Boxes nothing
+but the ontology and its version in the w3id namespace (decision D7); and in
+every other deliverable, every w3id IRI matches one of the
+forms a decision admits by name (D3, D13, D17, D18, D21, D23, D26, D28, D30) - so a
+new minting has to be argued here before it can pass; in the overlay shapes, every
+enum constraint holds IRIs and the result-scale lists hold exactly the admitted set
+(D24); and in every domain graph the variable order is carried as rdf:_n beside the
+variables edges (D27), nothing is written onto an NCIt node but a codelist (D28,
+D29), and only the SDTM T-Box is imported (D32).
 
 This is a guard against broken or partial commits, not a re-run of the pipeline.
-The deep checks live in notebooks/30_validate.ipynb, 60_validate_instances.ipynb
-and 65_compare_render_paths.ipynb.
+The deep checks live in notebooks/30_validate.ipynb, 60_validate_instances.ipynb,
+62_validate_dss_instances.ipynb and 65_compare_render_paths.ipynb.
 
 Baselines below are a further copy of the numbers in those notebooks and in
 README.md. When the pinned commit is bumped and baselines drift, update all of
@@ -33,7 +37,7 @@ BC_NS = "https://www.cdisc.org/cosmos/biomedical_concept_v1.0"
 SDTM_NS = "https://www.cdisc.org/cosmos/sdtm_v1.0"
 W3ID = "https://w3id.org/cdisc/cosmos/"
 QBC_NS = W3ID + "qbc/"
-VERSION = "0.3.0"
+VERSION = "0.4.0"
 
 # Operational baselines: COSMoS commit 031429b1, package date 2026-07-14.
 ONTOLOGIES = {
@@ -83,7 +87,24 @@ OVERLAY_SHAPES = "cosmos_qbc_v1.shapes.ttl"
 OVERLAY_SHAPES_TRIPLES = 366
 OVERLAY_NODE_SHAPES = 9
 
-# Every form a w3id IRI may take in the two A-Boxes, each admitted by a decision.
+# The Dataset Specialization A-Box (D26-D32): one graph per domain under dss/.
+DSS_DIR = "dss"
+DSS_TRIPLES = {
+    "AE": 1652, "BE": 694, "CM": 1788, "DD": 1559, "DM": 231, "DS": 2264, "EC": 670,
+    "EG": 7789, "EX": 354, "FA": 2158, "FT": 5819, "GF": 12121, "IE": 305, "IS": 86542,
+    "LB": 35093, "MB": 2990, "MH": 2713, "MI": 1839, "MK": 10443, "PR": 3436, "QS": 3394,
+    "RE": 23031, "RP": 13285, "RS": 27141, "SC": 10106, "SR": 2535, "SU": 4059, "TR": 2760,
+    "TS": 12350, "TU": 2644, "UR": 1951, "VS": 14065,
+}
+DSS_GROUPS = 1475
+DSS_VARIABLES = 13922
+DSS_ASSIGNED_TERMS = 4776      # D28: one node per use
+DSS_RELATIONSHIPS = 13585      # D30
+DSS_CODELISTS = 297            # D29: distinct shared nodes across all domain files
+DSS_BC_LITERALS = 4            # D31: references to NEW_ concepts, carried as the published string
+DSS_DEC_LITERALS = 1           # D31: NEW_DEC1
+
+# Every form a w3id IRI may take in the A-Boxes, each admitted by a decision.
 # Anything else in the w3id namespace fails: a new minting must be added here
 # with its decision number, never by accident.
 W3ID_ADMITTED = {
@@ -106,6 +127,15 @@ W3ID_ADMITTED = {
         (r"qbc/scale/[A-Za-z]+/mapping/C[0-9]+$", "an admitted result scale's NCIt anchor (D23)"),
         (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*$", "a recording IS the Dataset Specialization IRI (D3, D17)"),
         (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*/specimen$", "a recording's specimen (D17)"),
+    ],
+    DSS_DIR: [
+        (r"sdtm/$", "core SDTM ontology, imported (D7, D32)"),
+        (r"dss/[A-Z]+$", "this graph's ontology IRI (D32)"),
+        (r"dss/[A-Z]+/" + re.escape(VERSION) + r"$", "this graph's version IRI (D32)"),
+        (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*$", "a Dataset Specialization (D3)"),
+        (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*/[A-Z][A-Z0-9_]*$", "a variable of a specialization (D26)"),
+        (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*/[A-Z][A-Z0-9_]*/assignedTerm$", "a variable's assigned term (D28)"),
+        (r"dss/[A-Z]+/[A-Z][A-Z0-9_]*/[A-Z][A-Z0-9_]*/relationship$", "a variable's relationship (D30)"),
     ],
 }
 
@@ -382,6 +412,70 @@ for prop in ("resultScale", "permissibleValue"):
         sorted(str(v) for v in in_lists.get(prop, [])),
         sorted(str(v) for v in admitted_scales),
     )
+
+# 10. The Dataset Specialization A-Box (D26-D32): every domain file parses to its
+#     baseline, names itself and its version, imports the SDTM T-Box and nothing
+#     else, carries the D27 order as rdf:_n mirroring the variables edges, writes
+#     onto no NCIt node but a codelist, and mints only admitted forms. Counts are
+#     summed across files, except codelist nodes, which repeat per file (D32) and
+#     are counted distinct.
+from pathlib import Path
+
+sdtm_group = URIRef(SDTM_NS + "/SDTMGroup")
+sdtm_variable = URIRef(SDTM_NS + "/SDTMVariable")
+assigned_term = URIRef(SDTM_NS + "/AssignedTerm")
+relationship = URIRef(SDTM_NS + "/RelationShip")
+codelist = URIRef(SDTM_NS + "/CodeList")
+variables = URIRef(SDTM_NS + "/variables")
+bc_id = URIRef(SDTM_NS + "/biomedicalConceptId")
+dec_id = URIRef(SDTM_NS + "/dataElementConceptId")
+rdf_member = str(RDF) + "_"
+
+dss_files = sorted(Path(DSS_DIR).glob("cosmos_sdtm_v1.*.instances.ttl"))
+check(f"{DSS_DIR}/ domain files", [f.name.split(".")[1] for f in dss_files], sorted(DSS_TRIPLES))
+
+dss_totals = {"groups": 0, "variables": 0, "members": 0, "terms": 0, "relationships": 0,
+              "bc_literals": 0, "dec_literals": 0, "blank": 0}
+dss_codelists = set()
+dss_unadmitted = []
+for file in dss_files:
+    domain = file.name.split(".")[1]
+    graph = Graph().parse(file, format="turtle")
+    ontology_iri = f"{W3ID}dss/{domain}"
+    check(f"{file.name} triples", len(graph), DSS_TRIPLES[domain])
+    check(f"{file.name} ontology IRI", [str(s) for s in graph.subjects(RDF.type, OWL.Ontology)], [ontology_iri])
+    check(f"{file.name} owl:versionIRI", [str(o) for o in graph.objects(URIRef(ontology_iri), OWL.versionIRI)], [f"{ontology_iri}/{VERSION}"])
+    check(f"{file.name} owl:imports", [str(o) for o in graph.objects(URIRef(ontology_iri), OWL.imports)], [W3ID + "sdtm/"])
+    member_edges = {(s, o) for s, p, o in graph if str(p).startswith(rdf_member)}
+    variable_edges = set(graph.subject_objects(variables))
+    check(f"{file.name} rdf:_n edges mirror the variables edges (D27)", member_edges == variable_edges, True)
+    check(
+        f"{file.name} NCIt nodes used as a subject that are not codelists (D28, D29)",
+        sorted(str(s) for s in set(graph.subjects()) if str(s).startswith("http://purl.obolibrary.org/obo/NCIT_")
+               and (s, RDF.type, codelist) not in graph),
+        [],
+    )
+    dss_unadmitted += unadmitted(graph, W3ID_ADMITTED[DSS_DIR])
+    dss_totals["groups"] += len(set(graph.subjects(RDF.type, sdtm_group)))
+    dss_totals["variables"] += len(set(graph.subjects(RDF.type, sdtm_variable)))
+    dss_totals["members"] += len(member_edges)
+    dss_totals["terms"] += len(set(graph.subjects(RDF.type, assigned_term)))
+    dss_totals["relationships"] += len(set(graph.subjects(RDF.type, relationship)))
+    dss_totals["bc_literals"] += sum(1 for o in graph.objects(None, bc_id) if not isinstance(o, URIRef))
+    dss_totals["dec_literals"] += sum(1 for o in graph.objects(None, dec_id) if not isinstance(o, URIRef))
+    dss_totals["blank"] += len({s for s in graph.subjects() if isinstance(s, BNode)})
+    dss_codelists |= set(graph.subjects(RDF.type, codelist))
+
+check(f"{DSS_DIR}/ SDTMGroup nodes", dss_totals["groups"], DSS_GROUPS)
+check(f"{DSS_DIR}/ SDTMVariable nodes", dss_totals["variables"], DSS_VARIABLES)
+check(f"{DSS_DIR}/ rdf:_n edges (D27)", dss_totals["members"], DSS_VARIABLES)
+check(f"{DSS_DIR}/ AssignedTerm nodes (D28)", dss_totals["terms"], DSS_ASSIGNED_TERMS)
+check(f"{DSS_DIR}/ RelationShip nodes (D30)", dss_totals["relationships"], DSS_RELATIONSHIPS)
+check(f"{DSS_DIR}/ distinct CodeList nodes (D29)", len(dss_codelists), DSS_CODELISTS)
+check(f"{DSS_DIR}/ biomedicalConceptId literals (D31)", dss_totals["bc_literals"], DSS_BC_LITERALS)
+check(f"{DSS_DIR}/ dataElementConceptId literals (D31)", dss_totals["dec_literals"], DSS_DEC_LITERALS)
+check(f"{DSS_DIR}/ blank nodes", dss_totals["blank"], 0)
+check(f"{DSS_DIR}/ w3id IRIs outside the admitted forms", sorted(set(dss_unadmitted)), [])
 
 if failures:
     print(f"\n{len(failures)} check(s) failed: {', '.join(failures)}")

@@ -8,8 +8,11 @@ browser - and must land on the document that has it as subject, in the
 serialization the client asked for; a browser lands on the ontology's WIDOCO
 documentation for an ontology IRI or one of the overlay's terms, and on the release
 index otherwise. Non-version IRIs resolve through /latest/, version IRIs to their tag.
-Reserved dss/ IRIs must match no rule. With a site directory given, every target
-must also exist there, so the rule set and scripts/build_pages.py agree.
+A dss/ IRI resolves to its domain's Dataset Specialization graph - a recording
+(D17) is a subject of the overlay graph too, and resolves to the graph that
+describes it at its own grain; its /specimen node is the overlay's alone and
+resolves there. With a site directory given, every target must also exist
+there, so the rule set and scripts/build_pages.py agree.
 
 Run from repo root: python scripts/htaccess_check.py [site-dir]
 """
@@ -32,6 +35,10 @@ GRAPHS = {
     "cosmos_qbc_v1": "qbc/",
     "cosmos_qbc_v1.instances": "qbc/instances/",
 }
+# The Dataset Specialization graphs, one per domain (D32): dss/<DOMAIN>/ resolves to
+# dss/cosmos_sdtm_v1.<DOMAIN>.instances. Read from the directory, not listed.
+for _file in sorted(Path("dss").glob("cosmos_sdtm_v1.*.instances.ttl")):
+    GRAPHS[f"dss/{_file.name[:-len('.ttl')]}"] = f"dss/{_file.name.split('.')[1]}/"
 SHAPES = ["cosmos_bc_v1.shapes.ttl", "cosmos_sdtm_v1.shapes.ttl", "cosmos_qbc_v1.shapes.ttl"]
 DOC = {
     "cosmos_bc_v1": "doc-cosmos_bc_v1/index-en.html",
@@ -84,7 +91,7 @@ def resolve(path, env):
         if all(any(cond.search(env.get(variable, "")) for variable, cond in group) for group in groups):
             match = pattern.search(path)
             if match:
-                return match.expand(target.replace("$1", r"\1"))
+                return match.expand(re.sub(r"\$([1-9])", r"\\\1", target))
     return None
 
 
@@ -104,7 +111,8 @@ for file in [f"{b}.ttl" for b in GRAPHS] + SHAPES:
             if isinstance(node, URIRef) and str(node).startswith(W3ID):
                 seen.add(str(node).split("#", 1)[0])
 
-VERSION_PATH = re.compile(r"(bc|sdtm|qbc)(/instances)?/([0-9]+\.[0-9]+\.[0-9]+)")
+VERSION_PATH = re.compile(r"(bc|sdtm|qbc|dss/[A-Z]+)(/instances)?/([0-9]+\.[0-9]+\.[0-9]+)")
+DSS_ROOT = re.compile(r"dss/[A-Z]+")
 
 
 def browser_target(path, base):
@@ -123,8 +131,8 @@ def browser_target(path, base):
 def expected_base(iri):
     """The graph that describes the IRI (file base without extension), or None for reserved."""
     path = iri[len(W3ID):]
-    if path.startswith("dss/"):
-        return None
+    if path in ("dss", "dss/"):
+        return f"{SITE}latest/index.html"
     if path in FIXED:
         return FIXED[path]
     if VERSION_PATH.fullmatch(path):
@@ -132,9 +140,20 @@ def expected_base(iri):
         return next(b for b, s in GRAPHS.items() if s == segment)
     if path == "":
         return f"{SITE}index.html"
-    if path in ("bc", "sdtm", "qbc"):
+    if path in ("bc", "sdtm", "qbc") or DSS_ROOT.fullmatch(path):
         return next(b for b, s in GRAPHS.items() if s == path + "/")
     where = described_in.get(iri, set())
+    if path.startswith("dss/"):
+        if path.endswith("/specimen"):
+            # The overlay's recording specimen (D17, D22): the DSS layer never mints
+            # this segment, so the overlay graph is the one that describes it.
+            if where != {"cosmos_qbc_v1.instances"}:
+                raise RuntimeError(f"{iri}: described in {sorted(where)}, expected the overlay graph only")
+            return "cosmos_qbc_v1.instances"
+        domain = [b for b in where if b.startswith("dss/")]
+        if len(domain) != 1:
+            raise RuntimeError(f"{iri}: described in {sorted(where)}, expected exactly one dss/ graph")
+        return domain[0]
     instance = [b for b in where if ".instances" in b]
     if instance:
         return instance[0]
@@ -182,8 +201,8 @@ for path, expected in [
     ("sdtm/shapes", f"{SITE}latest/cosmos_sdtm_v1.shapes.ttl"),
     ("qbc/shapes", f"{SITE}latest/cosmos_qbc_v1.shapes.ttl"),
     ("", f"{SITE}index.html"),
-    ("dss/", None),
-    ("dss/LB/GLUCPL", None),
+    ("dss", f"{SITE}latest/index.html"),
+    ("dss/", f"{SITE}latest/index.html"),
 ]:
     for profile, (env, _) in PROFILES.items():
         landed = resolve(path, env)
@@ -202,4 +221,4 @@ if failures:
         print(f"FAIL  {iri} [{profile}]: {why}")
     print(f"\n{len(failures)} failure(s)")
     sys.exit(1)
-print("\nevery w3id IRI resolves, in every negotiated serialization, to the document that describes it; dss/ falls through")
+print("\nevery w3id IRI resolves, in every negotiated serialization, to the document that describes it")

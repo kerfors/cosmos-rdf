@@ -98,11 +98,11 @@ qbc:GlucosePlasmaEquivalent a qbc:QualifiedBiomedicalConcept ;
 <https://w3id.org/cdisc/cosmos/qbc/instances/> a owl:Ontology ;
     rdfs:label "CDISC COSMoS Qualified Biomedical Concepts (instances)" ;
     dcterms:identifier "2026-07-14" ;
-    rdfs:comment "Authored qualified biomedical concepts and their recordings. Each is linked to the COSMoS concept it qualifies by skos:broader; that concept is rendered in cosmos_bc_v1.instances.ttl, which this graph imports. Recordings carry the Dataset Specialization IRI of decision D3; the Dataset Specialization layer itself is deferred, so those IRIs have no other triples yet. Draft - not a normative CDISC artifact." ;
+    rdfs:comment "Authored qualified biomedical concepts and their recordings. Each is linked to the COSMoS concept it qualifies by skos:broader; that concept is rendered in cosmos_bc_v1.instances.ttl, which this graph imports. Recordings carry the Dataset Specialization IRI of decision D3, and resolve to the Dataset Specialization graph of their domain, which describes them at their own grain. Draft - not a normative CDISC artifact." ;
     owl:imports <https://w3id.org/cdisc/cosmos/bc/instances/>,
         qbc: ;
-    owl:versionIRI <https://w3id.org/cdisc/cosmos/qbc/instances/0.3.0> ;
-    owl:versionInfo "v0.3.0" .
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/qbc/instances/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
 
 <https://w3id.org/cdisc/cosmos/qbc/scale/Nominal> a qbc:ResultScale ;
     skos:exactMatch NCIT:C47798 ;

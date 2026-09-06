@@ -42,8 +42,8 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
     vann:preferredNamespacePrefix "cosmos_sdtm" ;
     vann:preferredNamespaceUri cosmos_sdtm: ;
     rdfs:comment "Mechanical rendering of a published CDISC COSMoS LinkML schema. Draft - not a normative CDISC artifact." ;
-    owl:versionIRI <https://w3id.org/cdisc/cosmos/sdtm/0.3.0> ;
-    owl:versionInfo "v0.3.0" .
+    owl:versionIRI <https://w3id.org/cdisc/cosmos/sdtm/0.4.0> ;
+    owl:versionInfo "v0.4.0" .
 
 cosmos_sdtm:SDTMGroup a owl:Class ;
     rdfs:label "SDTMGroup" ;

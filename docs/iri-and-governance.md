@@ -7,7 +7,8 @@ Records the IRI scheme for `cosmos-rdf` and the governance handoff to CDISC.
 Where an argument is identical it is cited rather than restated; only the parts
 that differ for COSMoS are argued here. The namespace is **registered** — w3id PR
 #6642, merged 2026-09-04, from `docs/htaccess.txt` and `docs/w3id-readme.md`,
-checked by `scripts/htaccess_check.py` — except the reserved `dss/` segment.
+checked by `scripts/htaccess_check.py`. The `dss/` segment, reserved at
+registration, is added by the pull request that accompanies release 0.4.0.
 
 ## Ontology IRI
 
@@ -130,16 +131,19 @@ literally, and it decides the whole file:
 - An **ontology IRI** resolves to the ontology at the pinned release; a **version
   IRI** to its own release through one generic rule per graph, so a release needs
   no w3id PR (the usdm-rdf D3 rule, carried over). `sdtm/` has no instance graph
-  (D4), so everything under it is the ontology. Fixed paths serve the contexts
+  of its own, so everything under it is the ontology. Fixed paths serve the contexts
   (`bc/context.jsonld`, `sdtm/context.jsonld`) and the shapes (`bc/shapes`,
   `sdtm/shapes`, `qbc/shapes`).
-- **`dss/` is reserved and unregistered.** The recording subjects minted under it
-  (D17) are stable identity, but the graph that describes them at their own grain
-  is the deferred DSS A-Box (D4). Redirecting them to the overlay A-Box, which
-  carries them only as subjects of the overlay's thinned view, would say
-  "described" about the half that is deferred. Until D4 lands they fall through to
-  the w3id 404 — dangling by design, as D17 records. Adding the segment is a
-  second, one-block PR; the README names it as reserved.
+- **`dss/{DOMAIN}` is the Dataset Specialization graph of one domain** (D32),
+  and everything beneath it — a specialization (D3), a variable (D26), an
+  assigned term (D28), a relationship (D30) — is an individual in that graph.
+  Two generic blocks, one for the version IRI `dss/{DOMAIN}/X.Y.Z` and one for
+  the rest, so neither a release nor a new domain touches the file. A recording
+  (D17) is a specialization and resolves here, to the graph that describes it at
+  its own grain; its `/specimen` node is the overlay's alone — the DSS layer never
+  mints that segment — and one rule placed before the domain block sends it to
+  the overlay graph. While the segment was reserved, these IRIs fell through to
+  the w3id 404 by design; the recording IRIs did not change when the layer landed.
 
 **The target is the GitHub Pages site, not the raw file — because of the media
 type.** `raw.githubusercontent.com` serves Turtle as `text/plain`; a client that
@@ -174,7 +178,7 @@ an import".
 `…/v0.3.0/cosmos_qbc_v1.ttl` confirmed to answer `text/turtle`, then the w3id PR —
 submitting before the site answers would have registered 303s to 404s. Verified live
 after the merge: 19 IRI forms × 6 client profiles, each 303 → 200 with the media
-type asked for; `dss/` 404. The one defect found live — the namespace root's `#readme`
+type asked for; `dss/` 404, as then reserved. The one defect found live — the namespace root's `#readme`
 target — is fixed in the generator and carried by a one-line follow-up PR.
 
 ## Not decided here

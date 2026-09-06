@@ -15,21 +15,20 @@
 #   sdtm/          core SDTM ontology        cosmos_sdtm_v1
 #   qbc/           overlay ontology          cosmos_qbc_v1
 #   qbc/instances/ overlay instance graph    cosmos_qbc_v1.instances
-#   dss/           RESERVED, not registered: the Dataset Specialization
-#                  instance graph is deferred (cosmos-rdf decision D4). The
-#                  IRIs already minted under it (recording subjects) are
-#                  stable identity and will resolve when that layer lands;
-#                  until then they 404 by design.
+#   dss/<DOMAIN>/  Dataset Specialization instance graph of one SDTM
+#                  domain, cosmos_sdtm_v1.<DOMAIN>.instances (32 domains,
+#                  one generic rule)
 #
 # Rule: an IRI resolves to a document that has it as subject. A term of
 # the overlay ontology (class, property; enum values carry a fragment, so
 # the enum is the term) resolves to the ontology; an individual - a
 # qualified concept, a scale node, a use-node, a category label-node - to
 # its instance graph; an ontology IRI to the ontology at the current
-# release; a version IRI (bare-numeric path, e.g. bc/0.3.0) to its own
-# release through one generic rule per graph. Fixed paths serve the
-# JSON-LD contexts (bc/context.jsonld, sdtm/context.jsonld) and the SHACL
-# shapes (bc/shapes, sdtm/shapes, qbc/shapes).
+# release; a version IRI (bare-numeric path, e.g. bc/0.3.0 or
+# dss/LB/0.4.0) to its own release through one generic rule per graph.
+# Fixed paths serve the JSON-LD contexts (bc/context.jsonld,
+# sdtm/context.jsonld) and the SHACL shapes (bc/shapes, sdtm/shapes,
+# qbc/shapes).
 #
 # Targets are the GitHub Pages site of kerfors/cosmos-rdf, rebuilt from
 # every release tag: /vX.Y.Z/<graph>.{ttl,nt,rdf,jsonld}, Turtle canonical

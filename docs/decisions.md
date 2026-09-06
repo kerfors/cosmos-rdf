@@ -729,6 +729,9 @@ no other triple in the graph — dangling by design while D4 defers the layer.
 form. When the DSS A-Box lands the number should go to zero, which makes it a
 regression test for that phase.
 
+**Landed 2026-09-06.** All eight recordings are `SDTMGroup` nodes in their domain
+files; `75_` now checks that against `dss/` and fails on any that is not.
+
 **Rejected: a separate `qbc:recording/{ID}` node.** It needs a predicate to relate it
 to the specialization, the schema declares none, and minting one would be authored
 vocabulary invented to work around a self-inflicted split.

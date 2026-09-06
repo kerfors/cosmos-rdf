@@ -67,8 +67,8 @@ qbc: a owl:Ontology ;
     vann:preferredNamespaceUri qbc: ;
     rdfs:comment "Authored overlay, not a rendering of published COSMoS. Draft - not a normative CDISC artifact." ;
     owl:imports <https://w3id.org/cdisc/cosmos/bc/> ;
-    owl:versionIRI qbc:0.3.0 ;
-    owl:versionInfo "v0.3.0" .
+    owl:versionIRI qbc:0.4.0 ;
+    owl:versionInfo "v0.4.0" .
 
 qbc:QualifiedBiomedicalConcept a owl:Class ;
     rdfs:label "QualifiedBiomedicalConcept" ;

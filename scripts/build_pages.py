@@ -3,8 +3,10 @@
 For each tag vX.Y.Z the deliverables at the repo root of that tag are written to
 <site>/vX.Y.Z/: every *.ttl and *.jsonld as committed, plus N-Triples, RDF/XML and
 JSON-LD derived from each Turtle graph (the shapes graphs and contexts are copied,
-not converted - a shapes graph is served as the Turtle it was generated as). An
-index.html per release lists the files with their media types; the root index
+not converted - a shapes graph is served as the Turtle it was generated as). The
+Dataset Specialization graphs under dss/ at the tag - one per domain, decision D32 -
+are written to <site>/vX.Y.Z/dss/ the same way; tags before that layer have none.
+An index.html per release lists the files with their media types; the root index
 lists the releases. This is what https://w3id.org/cdisc/cosmos/ redirects to
 (docs/htaccess.txt), so the layout here and the targets there change together.
 
@@ -128,12 +130,14 @@ for tag in tags:
     out = site / tag
     out.mkdir(exist_ok=True)
     root_files = sorted(f for f in git("ls-tree", "--name-only", tag).splitlines() if "/" not in f)
+    dss_files = sorted(git("ls-tree", "--name-only", tag, "--", "dss/").splitlines())
     served = []
     ontologies = {}
-    for name in root_files:
+    for name in root_files + dss_files:
         if not (name.endswith(".ttl") or name.endswith(".jsonld")):
             continue
         content = subprocess.run(["git", "show", f"{tag}:{name}"], check=True, capture_output=True).stdout
+        (out / name).parent.mkdir(exist_ok=True)
         (out / name).write_bytes(content)
         served.append(name)
         if name.endswith(".ttl") and ".shapes." not in name:
@@ -144,7 +148,7 @@ for tag in tags:
             for ext, fmt, _ in DERIVED:
                 derived = out / f"{base}.{ext}"
                 derived.write_text(graph.serialize(format=fmt), encoding="utf-8")
-                served.append(derived.name)
+                served.append(f"{base}.{ext}")
     docs = []
     if jar and ontologies:
         imports = {str(iri): out / name
