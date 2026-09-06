@@ -8,7 +8,7 @@ Where an argument is identical it is cited rather than restated; only the parts
 that differ for COSMoS are argued here. The namespace is **registered** — w3id PR
 #6642, merged 2026-09-04, from `docs/htaccess.txt` and `docs/w3id-readme.md`,
 checked by `scripts/htaccess_check.py`. The `dss/` segment, reserved at
-registration, is added by the pull request that accompanies release 0.4.0.
+registration, is added by w3id PR #6655, submitted with release 0.4.0.
 
 ## Ontology IRI
 
