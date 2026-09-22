@@ -269,6 +269,14 @@ curator input rather than a rendering defect.
 concept (`conceptId` is optional); seven variables carry no `role` (optional).
 Counted in the notebook, not reported.
 
+**`subsetCodelist` is a label, rendered as one.** 296 variables carry it, under
+26 distinct names (`NY_NY` and the like), always beside a `valueList` on a
+codelist-bound variable. It is a literal here because nothing published gives it
+an identity, and the export behaves accordingly: measured in `cdisc-for-ai`
+([Link_Semantics.md](https://github.com/kerfors/cdisc-for-ai/blob/main/link-semantics/docs/Link_Semantics.md)), no name is used for two different (codelist, value list)
+combinations and no combination carries two names, but most combinations are
+never named at all. Consistent where applied, not an identifier.
+
 **Not yet done for this layer.** The `dss/` w3id segment is reserved and not
 registered, so nothing under it dereferences yet; the eight overlay recordings
 (D17) are no longer dangling but `75_` has not re-measured it. Per-individual
@@ -382,6 +390,20 @@ and absent from the DEC label.
 
 Reported, not resolved: `reports/dual_role_concepts.csv`, derived on every run.
 
+The nineteen are the whole same-node population inside this repo. Measured on
+the v0.4.0 graphs: in the concept A-Box 1,450 NCIt IRIs are subjects as a BC
+only, 205 as a DEC only, 19 as both; in the Dataset Specialization A-Box the only
+NCIt subjects are the 297 codelist nodes, and none of them is also a BC or DEC
+node. The same IRI does appear in object position under another role — 1,004 BC
+or DEC nodes are also the `conceptId` of an assigned term somewhere — but
+`conceptId` says nothing about the identity of the variable that carries it, so
+no two subjects become one. Under decision D2 a code is one node whatever role
+it plays; that only turns into a merge where the roles are both subject-side,
+and here that is the nineteen. The wider population — every C-code used in more
+than one role across the COSMoS export, SDTM CT and the test-code extracts — is
+measured in `cdisc-for-ai` ([Link_Semantics.md](https://github.com/kerfors/cdisc-for-ai/blob/main/link-semantics/docs/Link_Semantics.md)); most of those roles are not rendered
+here.
+
 ## 7f. This repo — `categories` was rendered as literals, and that dropped a grouping mechanism
 
 Until 2026-09-02, `cosmos_bc_v1.instances.ttl` emitted `categories` as **4,389
@@ -438,3 +460,27 @@ which proves nothing either way.
 concept and its LOINC term. No `skos:exactMatch`, `narrowMatch` or `broadMatch` is
 emitted. The coding node is the LOINC term; what it means relative to the concept
 is unstated, because it is often not equivalence — see decision D10.
+
+**LOINC is rendered at two grains, and only one of them is an IRI.** The
+concept-level `coding` (104 concepts, 97 coding nodes) composes `system` + `code`
+into an IRI under D10. The specialization-level `--LOINC` variables do not: 98
+carry the code as the `value` literal of an assigned term, 42 carry several codes
+as `valueList` literals, 11 carry nothing — 140 specializations in all. The export
+gives no `system` at that grain; that a `--LOINC` value is a LOINC code follows
+from the variable name, which is a reading, not a published field, so the literal
+is the mechanical rendering. A consumer asking for everything LOINC therefore
+finds the 104 concepts and not the 140 specializations unless it also reads the
+variable names. In this package the two grains never disagree: 11 specializations
+sit on a concept that has its own coding, and in all 11 the concept's code is
+among the specialization's. What the multi-code lists assert is measured in
+`cdisc-for-ai` ([Link_Semantics.md](https://github.com/kerfors/cdisc-for-ai/blob/main/link-semantics/docs/Link_Semantics.md)).
+
+**Link kinds, seen from outside.** Every relation this rendering emits between a
+model element and an NCIt or LOINC term uses the published schema's own slot —
+`conceptId`, `dataElementConceptId`, `codelist`, `parentConceptId`, `coding` — or
+is the subject IRI itself (D2). None of them is a SKOS mapping property, and none
+is transitive or symmetric, so merging these graphs with `usdm-rdf` or with NCIt
+creates no equivalence that the sources do not state. The only `skos:exactMatch`
+in the core graphs links the OBO and EVS forms of one concept. This is a
+consequence of rendering the schema mechanically (D25), not a separate decision;
+the audit that classifies the link kinds is in `cdisc-for-ai` ([Link_Semantics.md](https://github.com/kerfors/cdisc-for-ai/blob/main/link-semantics/docs/Link_Semantics.md)).
