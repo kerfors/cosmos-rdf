@@ -190,7 +190,8 @@ for tag in tags:
     (out / "index.html").write_text(page(
         f"cosmos-rdf {tag}",
         f"<h1>cosmos-rdf {tag}</h1>"
-        "<p>RDF/OWL rendering of CDISC COSMoS and the qualified-BC overlay, at this release. "
+        "<p>RDF/OWL rendering of CDISC COSMoS at this release, with the qualified-BC overlay "
+        "(frozen in scope, decision D25). Early, exploratory work. "
         "Dereference target of <code>https://w3id.org/cdisc/cosmos/</code>. "
         "Draft, not a normative CDISC artifact. "
         "<a href=\"https://github.com/kerfors/cosmos-rdf\">Repository</a> &middot; <a href=\"../\">All releases</a></p>"
@@ -218,7 +219,8 @@ items = "".join(
     "cosmos-rdf releases",
     "<h1>cosmos-rdf</h1>"
     "<p>An RDF/OWL rendering of CDISC COSMoS &mdash; Biomedical Concepts and SDTM Dataset Specializations &mdash; "
-    "generated mechanically from the artifacts CDISC publishes, plus an overlay graph of qualified biomedical concepts. "
+    "generated mechanically from the artifacts CDISC publishes. Early, exploratory work: the design is still settling. "
+    "An overlay graph of qualified biomedical concepts is frozen in scope (decision D25), kept only for an open result-scale question. "
     "This site serves the deliverables per release for <code>https://w3id.org/cdisc/cosmos/</code>, "
     "which resolves its non-version IRIs through <code>latest/</code> - a copy of the newest release below. "
     "Draft, not a normative CDISC artifact. <a href=\"https://github.com/kerfors/cosmos-rdf\">Repository</a></p>"

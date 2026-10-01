@@ -2,8 +2,13 @@
 
 An RDF/OWL rendering of CDISC COSMoS — Biomedical Concepts and SDTM Dataset
 Specializations — generated mechanically from the artifacts CDISC publishes in
-[cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS), plus an overlay graph
-for qualified ("sibling") biomedical concepts.
+[cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS). An overlay graph for
+qualified ("sibling") biomedical concepts is frozen in scope (decision D25), kept
+only for an open result-scale question with CDISC.
+
+**Early, exploratory work.** The rendering is mechanical, but the design is still
+settling and releases can change it. Treat it as a draft to look at and discuss,
+not something to build on yet.
 
 **Status: P3 complete, P5 mostly done.** Forty-two deliverables at repo version
 0.4.0: two core OWL graphs, two JSON-LD contexts, two SHACL shapes graphs, the BC
@@ -16,8 +21,8 @@ The namespace `https://w3id.org/cdisc/cosmos/` is **registered** (w3id PR #6642,
 merged 2026-09-04): every IRI resolves to the document that describes it, with
 content negotiation over Turtle, N-Triples, RDF/XML and JSON-LD, from a GitHub
 Pages site rebuilt from the release tags (`docs/iri-and-governance.md`,
-"Resolution"). The `dss/` rules ship in this release's `docs/htaccess.txt`; until
-that w3id pull request merges, `dss/` IRIs answer 404. This repo carries the same offer
+"Resolution"). The `dss/` segment was added by w3id PR #6655 (merged
+2026-09-07). This repo carries the same offer
 `usdm-rdf` carries: draft, not a normative CDISC artifact, offered for transfer to
 CDISC governance — transfer is a single PR against the w3id `.htaccess`. See
 [docs/iri-and-governance.md](docs/iri-and-governance.md).
